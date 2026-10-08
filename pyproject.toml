@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "latent-loop-confidence"
+version = "0.1.0"
+description = "An independent pilot of confidence-guided latent refinement"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["numpy>=2", "scipy>=1.14", "PyYAML>=6", "matplotlib>=3.9", "markdown>=3"]
+
+[project.optional-dependencies]
+apple = ["mlx==0.32.3; platform_system == 'Darwin' and platform_machine == 'arm64'", "mlx-lm==0.32.0; platform_system == 'Darwin' and platform_machine == 'arm64'"]
+test = ["pytest>=8"]
+
+[project.scripts]
+latent-loop = "latent_loop.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

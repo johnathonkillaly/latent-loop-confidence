@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this repository and the relevant papers if you use these experiments."
+title: "latent-loop-confidence: a synthetic pilot of confidence-guided latent refinement"
+authors:
+  - name: "latent-loop-confidence contributors"
+version: 0.1.0
+date-released: 2026-10-08
+license: MIT
+type: software
