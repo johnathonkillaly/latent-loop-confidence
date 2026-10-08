@@ -120,7 +120,7 @@ Estimated extra matrix FLOPs count multiply-add as two operations. They omit non
 
 Fixed-head timing uses the same batch-one cached validation hidden state, three warmups, synchronized execution, and 20 repetitions. Adaptive timing executes real label-free early stopping over 12 validation examples, also batch one; it includes host decision synchronization. Prompt baseline timing uses those 12 examples separately through the backbone with a full-vocabulary final projection. These head measurements exclude backbone extraction and must not be presented as end-to-end speedups. Baseline prompt median was 21.46 ms.
 
-![Accuracy and estimated incremental compute](../results/figures/accuracy_cost.png)
+![Accuracy and measured head latency](../results/figures/accuracy_cost.png)
 
 ## Middle-layer experiment
 

@@ -1,0 +1,14 @@
+{
+  "files_scanned": 117,
+  "issues": [],
+  "oversized_files": [],
+  "excluded": "virtual environment, generated features/data, ignored checkpoints, git metadata; embedded image base64 excluded from text-name matching",
+  "remote_count": 0,
+  "cpu_tests_passed": 5,
+  "mlx_cpu_integration_tests_passed": 3,
+  "real_model_smoke_completed": true,
+  "checkpoint_resume_verified": true,
+  "cpu_report_without_mlx_verified": true,
+  "original_checkpoints_modified": false,
+  "other_workstations_accessed": false
+}

@@ -132,20 +132,44 @@ def report():
         "memory_selected": (perloop + 2 * hidden * 32 * 4)
         * mean("memory_selected", "average_depth"),
     }
+    head_latency = {}
+    for variant in costs:
+        if variant == "baseline":
+            continue
+        recorded_times = []
+        for run in inputs:
+            if variant == "confidence_only":
+                key = "confidence"
+            elif variant.endswith("_selected"):
+                family = variant.removesuffix("_selected")
+                key = f"{family}_d{run['selections'][family + '_fixed_depth']}"
+            else:
+                key = variant + "_d1"
+            recorded_times.append(run["timings"][key]["median_ms"] * 1000)
+        head_latency[variant] = float(np.mean(recorded_times))
     fig, ax = plt.subplots(figsize=(7, 4))
-    for v, c in costs.items():
-        ax.errorbar(c / 1e6, mean(v) * 100, yerr=sd(v) * 100, fmt="o")
+    for v, c in head_latency.items():
+        ax.errorbar(c, mean(v) * 100, yerr=sd(v) * 100, fmt="o")
         ax.annotate(
             NAMES.get(v, v),
-            (c / 1e6, mean(v) * 100),
+            (c, mean(v) * 100),
             xytext=(4, 4),
             textcoords="offset points",
             fontsize=7,
         )
     ax.set(
-        xlabel="Estimated extra matrix FLOPs / decision (millions)",
+        xlabel="Measured head forward latency (µs; cached features, batch 1)",
         ylabel="Test accuracy (%)",
-        title="The one-pass head is competitive at lower extra compute",
+        title="One pass is competitive at lower measured head latency",
+        xlim=(min(head_latency.values()) * 0.8, max(head_latency.values()) * 1.45),
+    )
+    atomic_json(
+        "results/metrics/compute_analysis.json",
+        {
+            "estimated_extra_matrix_flops": costs,
+            "measured_head_latency_us": head_latency,
+            "timing_scope": "cached hidden states, batch one, three warmups, synchronized; mean seed medians",
+        },
     )
     save(fig, "accuracy_cost")
     fig, ax = plt.subplots(figsize=(6, 4))
@@ -453,7 +477,7 @@ Estimated extra matrix FLOPs count multiply-add as two operations. They omit non
 
 Fixed-head timing uses the same batch-one cached validation hidden state, three warmups, synchronized execution, and {config.get("latency_repeats", 20)} repetitions. Adaptive timing executes real label-free early stopping over 12 validation examples, also batch one; it includes host decision synchronization. Prompt baseline timing uses those 12 examples separately through the backbone with a full-vocabulary final projection. These head measurements exclude backbone extraction and must not be presented as end-to-end speedups. {baseline_timing_text}
 
-![Accuracy and estimated incremental compute](../results/figures/accuracy_cost.png)
+![Accuracy and measured head latency](../results/figures/accuracy_cost.png)
 
 ## Middle-layer experiment
 

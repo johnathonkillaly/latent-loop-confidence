@@ -1,0 +1,18 @@
+{
+  "estimated_extra_matrix_flops": {
+    "baseline": 0.0,
+    "confidence_only": 1051648,
+    "feedforward": 401408,
+    "wide_feedforward": 1581056,
+    "recurrence_selected": 1338026.6666666667,
+    "memory_selected": 2211840.0
+  },
+  "measured_head_latency_us": {
+    "confidence_only": 254.55566719756462,
+    "feedforward": 246.4304992220908,
+    "wide_feedforward": 240.03483182847654,
+    "recurrence_selected": 346.0068328422494,
+    "memory_selected": 573.88200063239
+  },
+  "timing_scope": "cached hidden states, batch one, three warmups, synchronized; mean seed medians"
+}
