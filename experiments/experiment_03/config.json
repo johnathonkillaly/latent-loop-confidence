@@ -1,0 +1,20 @@
+{
+  "seeds": [11, 22, 33],
+  "data_seed": 830017,
+  "sizes": {"controller_train": 1200, "controller_val": 300, "fresh_id": 600, "template_shift": 600, "depth_shift": 600},
+  "width": 64,
+  "epochs": 30,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "delta": 0.01,
+  "max_depth": 4,
+  "max_hours": 4,
+  "memory_gb": 48,
+  "extract_batch": 8,
+  "latency_examples": 24,
+  "latency_repeats": 5,
+  "costs_nats_per_loop": [0, 0.001, 0.005, 0.01, 0.025, 0.05, 0.1],
+  "classification_thresholds": [0, 0.1, 0.25, 0.4, 0.5, 0.6, 0.75, 0.9, 1],
+  "confidence_thresholds": [0, 0.25, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+  "started_utc": "2026-10-08T20:24:07+00:00"
+}

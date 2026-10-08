@@ -1,0 +1,334 @@
+{
+  "name": "candidate_confidence",
+  "seed": 22,
+  "signature": {
+    "config": {
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "data_seed": 830017,
+      "sizes": {
+        "controller_train": 1200,
+        "controller_val": 300,
+        "fresh_id": 600,
+        "template_shift": 600,
+        "depth_shift": 600
+      },
+      "width": 64,
+      "epochs": 30,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "delta": 0.01,
+      "max_depth": 4,
+      "max_hours": 4,
+      "memory_gb": 48,
+      "extract_batch": 8,
+      "latency_examples": 24,
+      "latency_repeats": 5,
+      "costs_nats_per_loop": [
+        0,
+        0.001,
+        0.005,
+        0.01,
+        0.025,
+        0.05,
+        0.1
+      ],
+      "classification_thresholds": [
+        0,
+        0.1,
+        0.25,
+        0.4,
+        0.5,
+        0.6,
+        0.75,
+        0.9,
+        1
+      ],
+      "confidence_thresholds": [
+        0,
+        0.25,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1
+      ],
+      "started_utc": "2026-10-08T20:24:07+00:00"
+    },
+    "parent": "185ed06340aed9c1cbfd3d28d2c9333394dbeb09ae18eb1a7d2128082a3a6ca2",
+    "datasets": {
+      "version": "experiment03-fresh-v1",
+      "seed": 830017,
+      "splits": {
+        "controller_train": {
+          "size": 1200,
+          "sha256": "bb93ef8f48aa74fb7768ce1d69648b6ec141624871a90f154b036622b47646a1",
+          "source_distribution": "train",
+          "label_counts": [
+            288,
+            315,
+            282,
+            315
+          ],
+          "tasks": {
+            "comparison": 200,
+            "arithmetic": 200,
+            "state": 200,
+            "pointer": 200,
+            "routing": 200,
+            "classification": 200
+          }
+        },
+        "controller_val": {
+          "size": 300,
+          "sha256": "3eff19fd13931866bf3d47948eaf3abd03471f97ed8a8c25ac525c6006b378e7",
+          "source_distribution": "val",
+          "label_counts": [
+            63,
+            84,
+            78,
+            75
+          ],
+          "tasks": {
+            "comparison": 50,
+            "arithmetic": 50,
+            "state": 50,
+            "pointer": 50,
+            "routing": 50,
+            "classification": 50
+          }
+        },
+        "fresh_id": {
+          "size": 600,
+          "sha256": "140b55a9a2980fc1c411317317cb326b0fc8ae6480583d3e20836d5ce1ebf08e",
+          "source_distribution": "test",
+          "label_counts": [
+            155,
+            135,
+            156,
+            154
+          ],
+          "tasks": {
+            "comparison": 100,
+            "arithmetic": 100,
+            "state": 100,
+            "pointer": 100,
+            "routing": 100,
+            "classification": 100
+          }
+        },
+        "template_shift": {
+          "size": 600,
+          "sha256": "d485e8f74747e45adb656051ddf4f4b7612681675112fdf69b04804c0e11031a",
+          "source_distribution": "test",
+          "label_counts": [
+            158,
+            146,
+            145,
+            151
+          ],
+          "tasks": {
+            "comparison": 100,
+            "arithmetic": 100,
+            "state": 100,
+            "pointer": 100,
+            "routing": 100,
+            "classification": 100
+          }
+        },
+        "depth_shift": {
+          "size": 600,
+          "sha256": "c50789c3e6eb0c4de914751d36e3359f9908aad18f69a4b6ea104ab8aaf39e07",
+          "source_distribution": "ood",
+          "label_counts": [
+            155,
+            147,
+            161,
+            137
+          ],
+          "tasks": {
+            "comparison": 100,
+            "arithmetic": 100,
+            "state": 100,
+            "pointer": 100,
+            "routing": 100,
+            "classification": 100
+          }
+        }
+      },
+      "historical_overlap": 0,
+      "cross_split_instance_overlap": 0,
+      "cross_split_prompt_overlap": 0,
+      "structural_disjointness": "Not claimed: shared task semantics and alpha-renamed structures are possible.",
+      "template_shift": "One new paraphrase per task, same generator and difficulty as fresh_id; tests wording transfer, not new algorithms.",
+      "depth_shift": "Existing OOD depths 5-8 and numeric range; easy tasks remain depth1."
+    }
+  },
+  "parameters": 131521,
+  "next_epoch": 30,
+  "best_val_loss": 0.5253000855445862,
+  "training_seconds": 1.5085081270044611,
+  "scale": 0.5311926579974873,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 0.6076541248957316,
+      "val_loss": 0.5707129836082458
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.5392243321736654,
+      "val_loss": 0.5530663728713989
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5256954145431518,
+      "val_loss": 0.5583053231239319
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.523261520465215,
+      "val_loss": 0.5455313324928284
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.5144280974070231,
+      "val_loss": 0.5680772662162781
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.5125047254562378,
+      "val_loss": 0.5543537139892578
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.5057953449090322,
+      "val_loss": 0.5558711290359497
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.5056888608137766,
+      "val_loss": 0.5672239065170288
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.5067958851655324,
+      "val_loss": 0.5503374338150024
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.49880982796351114,
+      "val_loss": 0.5426411628723145
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.5032780241966247,
+      "val_loss": 0.5431226491928101
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.49860257824261983,
+      "val_loss": 0.5344467759132385
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.498427498737971,
+      "val_loss": 0.5304498672485352
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.4934324252605438,
+      "val_loss": 0.5476685166358948
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.49236812988917034,
+      "val_loss": 0.5510391592979431
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.49122671961784364,
+      "val_loss": 0.5646531581878662
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.4889035677909851,
+      "val_loss": 0.5445335507392883
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.48825768669446307,
+      "val_loss": 0.5454457998275757
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.4872399342060089,
+      "val_loss": 0.550719141960144
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.485154337088267,
+      "val_loss": 0.545721709728241
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.48434248447418216,
+      "val_loss": 0.5378081798553467
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.4809604307015737,
+      "val_loss": 0.5408977270126343
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.4758957099914551,
+      "val_loss": 0.5257772207260132
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.4778454951445262,
+      "val_loss": 0.5302051305770874
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.47700514594713844,
+      "val_loss": 0.5340716242790222
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.4776736330986023,
+      "val_loss": 0.5603735446929932
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.4781828280289968,
+      "val_loss": 0.5253000855445862
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.47182923595110576,
+      "val_loss": 0.5396885871887207
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.4714015467961629,
+      "val_loss": 0.5440868735313416
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.47518959681193035,
+      "val_loss": 0.5323114991188049
+    }
+  ],
+  "started_utc": "2026-10-08T20:37:09.680425+00:00",
+  "best_epoch": 26,
+  "peak_mlx_bytes": 224316496,
+  "complete": true,
+  "completed_utc": "2026-10-08T20:37:11.204985+00:00"
+}

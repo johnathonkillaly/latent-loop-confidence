@@ -1,0 +1,64 @@
+{
+  "experiment": 3,
+  "title": "Learning When to Think",
+  "branch": "research/value-of-computation",
+  "historical_commit": "cd0a326db2203cdfec902affbc1f611641794ca3",
+  "started_utc": "2026-10-08T20:24:07+00:00",
+  "completed_numerical_and_report_utc": "2026-10-08T20:54:40.181832+00:00",
+  "status": "completed",
+  "configuration": "experiments/experiment_03/config.json",
+  "backend": "MLX Metal",
+  "device": "Apple M4 Max",
+  "precision": "FP32",
+  "memory_budget_gib": 48,
+  "max_hours": 4,
+  "max_deployed_depth": 4,
+  "new_neural_fits": 15,
+  "scalar_control_fits": 45,
+  "new_backbone_or_refiner_fits": 0,
+  "training_seeds": [
+    11,
+    22,
+    33
+  ],
+  "evaluation_splits": [
+    "controller_val",
+    "historical_test",
+    "historical_ood",
+    "fresh_id",
+    "template_shift",
+    "depth_shift"
+  ],
+  "evaluation_policy_rows": 324,
+  "peak_mlx_bytes": 3840006028,
+  "neural_fit_seconds": 19.747234538001067,
+  "extraction_command_seconds": 65.41529312499915,
+  "latency_command_seconds": 90.35916537499725,
+  "selection_split": "controller_val",
+  "controller_supervision": "fresh out-of-refiner-training trajectories",
+  "primary_target": "immediate signed next-loop conditional option loss reduction; classification threshold 0.01 nat",
+  "best_confidence_validation": "confidence",
+  "best_gain_validation": "joint_gain",
+  "best_adaptive_policy_validation": "improvement",
+  "negative_findings": [
+    "Matched-compute accuracy intervals include zero",
+    "One-pass head remains stronger on fresh-ID raw accuracy",
+    "Template transfer weakens improvement prediction",
+    "Controller synchronization overhead exceeds saved refiner time",
+    "Signed regression is imperfectly calibrated"
+  ],
+  "validation": {
+    "cpu_tests": 9,
+    "opt_in_mlx_tests": 5,
+    "all_14_tests_passed": true,
+    "historical_metric_rows_recomputed": 360,
+    "trajectory_parity": "exact on all historical depth1-4 logits",
+    "cpu_report_reproduction": "scientific_summary_identical and no MLX imported"
+  },
+  "publication": "Local commit only; public synthetic artifacts; weights and hidden tensors ignored",
+  "optional_work_deferred": [
+    "Earlier-layer probes",
+    "New eight-loop stress sweep"
+  ],
+  "reproduction": "experiments/experiment_03/reproduction.md"
+}

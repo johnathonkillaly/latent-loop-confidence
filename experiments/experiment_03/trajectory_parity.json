@@ -1,0 +1,32 @@
+[
+  {
+    "seed": 11,
+    "split": "historical_test",
+    "max_abs": 0.0
+  },
+  {
+    "seed": 11,
+    "split": "historical_ood",
+    "max_abs": 0.0
+  },
+  {
+    "seed": 22,
+    "split": "historical_test",
+    "max_abs": 0.0
+  },
+  {
+    "seed": 22,
+    "split": "historical_ood",
+    "max_abs": 0.0
+  },
+  {
+    "seed": 33,
+    "split": "historical_test",
+    "max_abs": 0.0
+  },
+  {
+    "seed": 33,
+    "split": "historical_ood",
+    "max_abs": 0.0
+  }
+]

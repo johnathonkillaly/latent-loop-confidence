@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-08T20:57:56.222088+00:00",
+  "candidate_tracked_files": 177,
+  "oversized_files_over_10_mib": [],
+  "private_path_identity_or_credential_hits": [],
+  "weights_hidden_tensors_or_cache_paths": [],
+  "scope": "Heuristic text/gzip scan; embedded figure base64 excluded from text-pattern matching. Not a proof of absence of all secrets. Synthetic examples and public provenance reviewed.",
+  "historical_preservation": {
+    "checked": 113,
+    "unchanged_except_documented_readme_link": true,
+    "timestamp": "2026-10-08T20:57:56.231293+00:00"
+  },
+  "new_results_bytes": 23548566,
+  "publication": "Ready for public exploratory research release; no remote push performed."
+}

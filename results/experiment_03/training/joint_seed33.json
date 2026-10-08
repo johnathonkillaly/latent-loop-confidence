@@ -1,0 +1,334 @@
+{
+  "name": "joint",
+  "seed": 33,
+  "signature": {
+    "config": {
+      "seeds": [
+        11,
+        22,
+        33
+      ],
+      "data_seed": 830017,
+      "sizes": {
+        "controller_train": 1200,
+        "controller_val": 300,
+        "fresh_id": 600,
+        "template_shift": 600,
+        "depth_shift": 600
+      },
+      "width": 64,
+      "epochs": 30,
+      "batch_size": 64,
+      "learning_rate": 0.001,
+      "delta": 0.01,
+      "max_depth": 4,
+      "max_hours": 4,
+      "memory_gb": 48,
+      "extract_batch": 8,
+      "latency_examples": 24,
+      "latency_repeats": 5,
+      "costs_nats_per_loop": [
+        0,
+        0.001,
+        0.005,
+        0.01,
+        0.025,
+        0.05,
+        0.1
+      ],
+      "classification_thresholds": [
+        0,
+        0.1,
+        0.25,
+        0.4,
+        0.5,
+        0.6,
+        0.75,
+        0.9,
+        1
+      ],
+      "confidence_thresholds": [
+        0,
+        0.25,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1
+      ],
+      "started_utc": "2026-10-08T20:24:07+00:00"
+    },
+    "parent": "a2839b2f61521ea02aaa15ef83ccb2129e179bf9816517a8adf343ab6055de70",
+    "datasets": {
+      "version": "experiment03-fresh-v1",
+      "seed": 830017,
+      "splits": {
+        "controller_train": {
+          "size": 1200,
+          "sha256": "bb93ef8f48aa74fb7768ce1d69648b6ec141624871a90f154b036622b47646a1",
+          "source_distribution": "train",
+          "label_counts": [
+            288,
+            315,
+            282,
+            315
+          ],
+          "tasks": {
+            "comparison": 200,
+            "arithmetic": 200,
+            "state": 200,
+            "pointer": 200,
+            "routing": 200,
+            "classification": 200
+          }
+        },
+        "controller_val": {
+          "size": 300,
+          "sha256": "3eff19fd13931866bf3d47948eaf3abd03471f97ed8a8c25ac525c6006b378e7",
+          "source_distribution": "val",
+          "label_counts": [
+            63,
+            84,
+            78,
+            75
+          ],
+          "tasks": {
+            "comparison": 50,
+            "arithmetic": 50,
+            "state": 50,
+            "pointer": 50,
+            "routing": 50,
+            "classification": 50
+          }
+        },
+        "fresh_id": {
+          "size": 600,
+          "sha256": "140b55a9a2980fc1c411317317cb326b0fc8ae6480583d3e20836d5ce1ebf08e",
+          "source_distribution": "test",
+          "label_counts": [
+            155,
+            135,
+            156,
+            154
+          ],
+          "tasks": {
+            "comparison": 100,
+            "arithmetic": 100,
+            "state": 100,
+            "pointer": 100,
+            "routing": 100,
+            "classification": 100
+          }
+        },
+        "template_shift": {
+          "size": 600,
+          "sha256": "d485e8f74747e45adb656051ddf4f4b7612681675112fdf69b04804c0e11031a",
+          "source_distribution": "test",
+          "label_counts": [
+            158,
+            146,
+            145,
+            151
+          ],
+          "tasks": {
+            "comparison": 100,
+            "arithmetic": 100,
+            "state": 100,
+            "pointer": 100,
+            "routing": 100,
+            "classification": 100
+          }
+        },
+        "depth_shift": {
+          "size": 600,
+          "sha256": "c50789c3e6eb0c4de914751d36e3359f9908aad18f69a4b6ea104ab8aaf39e07",
+          "source_distribution": "ood",
+          "label_counts": [
+            155,
+            147,
+            161,
+            137
+          ],
+          "tasks": {
+            "comparison": 100,
+            "arithmetic": 100,
+            "state": 100,
+            "pointer": 100,
+            "routing": 100,
+            "classification": 100
+          }
+        }
+      },
+      "historical_overlap": 0,
+      "cross_split_instance_overlap": 0,
+      "cross_split_prompt_overlap": 0,
+      "structural_disjointness": "Not claimed: shared task semantics and alpha-renamed structures are possible.",
+      "template_shift": "One new paraphrase per task, same generator and difficulty as fresh_id; tests wording transfer, not new algorithms.",
+      "depth_shift": "Existing OOD depths 5-8 and numeric range; easy tasks remain depth1."
+    }
+  },
+  "parameters": 66307,
+  "next_epoch": 30,
+  "best_val_loss": 1.7532081604003906,
+  "training_seconds": 1.384909919986967,
+  "scale": 0.44223562164850144,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 2.3123250738779704,
+      "val_loss": 2.2525014877319336
+    },
+    {
+      "epoch": 1,
+      "train_loss": 2.0665904537836712,
+      "val_loss": 2.1067023277282715
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.008796755472819,
+      "val_loss": 1.8881475925445557
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.9610727866490683,
+      "val_loss": 1.9147613048553467
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.9256569782892863,
+      "val_loss": 1.8182017803192139
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.8794746780395508,
+      "val_loss": 1.893044352531433
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.8606399774551392,
+      "val_loss": 1.8653197288513184
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.820239512125651,
+      "val_loss": 1.9187242984771729
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.8206766827901204,
+      "val_loss": 1.811579704284668
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.8222230911254882,
+      "val_loss": 1.812965989112854
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.7741885169347127,
+      "val_loss": 1.8119776248931885
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.7743835989634196,
+      "val_loss": 1.8658850193023682
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.7624576091766357,
+      "val_loss": 1.861844539642334
+    },
+    {
+      "epoch": 13,
+      "train_loss": 1.7569312032063802,
+      "val_loss": 1.7818753719329834
+    },
+    {
+      "epoch": 14,
+      "train_loss": 1.7251020431518556,
+      "val_loss": 1.830183506011963
+    },
+    {
+      "epoch": 15,
+      "train_loss": 1.732095890045166,
+      "val_loss": 1.8196462392807007
+    },
+    {
+      "epoch": 16,
+      "train_loss": 1.7172241799036663,
+      "val_loss": 1.9725205898284912
+    },
+    {
+      "epoch": 17,
+      "train_loss": 1.718569016456604,
+      "val_loss": 1.816213846206665
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.6935853004455566,
+      "val_loss": 1.8120821714401245
+    },
+    {
+      "epoch": 19,
+      "train_loss": 1.6799326705932618,
+      "val_loss": 1.7774827480316162
+    },
+    {
+      "epoch": 20,
+      "train_loss": 1.6879743019739786,
+      "val_loss": 1.8109123706817627
+    },
+    {
+      "epoch": 21,
+      "train_loss": 1.661014010111491,
+      "val_loss": 1.8646926879882812
+    },
+    {
+      "epoch": 22,
+      "train_loss": 1.681112494468689,
+      "val_loss": 1.7881662845611572
+    },
+    {
+      "epoch": 23,
+      "train_loss": 1.657901593844096,
+      "val_loss": 1.820387601852417
+    },
+    {
+      "epoch": 24,
+      "train_loss": 1.6629350519180297,
+      "val_loss": 1.7532081604003906
+    },
+    {
+      "epoch": 25,
+      "train_loss": 1.6463536675771078,
+      "val_loss": 1.7953641414642334
+    },
+    {
+      "epoch": 26,
+      "train_loss": 1.653377817471822,
+      "val_loss": 1.8093857765197754
+    },
+    {
+      "epoch": 27,
+      "train_loss": 1.6314719208081563,
+      "val_loss": 1.768865704536438
+    },
+    {
+      "epoch": 28,
+      "train_loss": 1.6429346577326456,
+      "val_loss": 1.771047592163086
+    },
+    {
+      "epoch": 29,
+      "train_loss": 1.6220033740997315,
+      "val_loss": 1.8081908226013184
+    }
+  ],
+  "started_utc": "2026-10-08T20:37:16.830277+00:00",
+  "best_epoch": 24,
+  "peak_mlx_bytes": 225250908,
+  "complete": true,
+  "completed_utc": "2026-10-08T20:37:18.228792+00:00"
+}

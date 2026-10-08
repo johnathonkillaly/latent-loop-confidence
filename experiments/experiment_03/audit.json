@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-10-08T20:34:51.495166+00:00",
+  "historical_commit": "cd0a326db2203cdfec902affbc1f611641794ca3",
+  "recomputed_rows": 360,
+  "all_accuracy_and_nll_checks_passed": true,
+  "recomputed_test_accuracies": {
+    "11": {
+      "baseline": 0.4483333333333333,
+      "confidence_only": 0.51,
+      "feedforward": 0.5083333333333333,
+      "recurrence_selected": 0.49833333333333335,
+      "memory_selected": 0.5083333333333333,
+      "recurrence_adaptive": 0.5116666666666667
+    },
+    "22": {
+      "baseline": 0.4483333333333333,
+      "confidence_only": 0.475,
+      "feedforward": 0.49833333333333335,
+      "recurrence_selected": 0.51,
+      "memory_selected": 0.48333333333333334,
+      "recurrence_adaptive": 0.49333333333333335
+    },
+    "33": {
+      "baseline": 0.4483333333333333,
+      "confidence_only": 0.48833333333333334,
+      "feedforward": 0.5016666666666667,
+      "recurrence_selected": 0.49,
+      "memory_selected": 0.47833333333333333,
+      "recurrence_adaptive": 0.49666666666666665
+    }
+  },
+  "means": {
+    "baseline": 0.4483333333333333,
+    "confidence_only": 0.4911111111111111,
+    "feedforward": 0.5027777777777778,
+    "recurrence_selected": 0.4994444444444444,
+    "memory_selected": 0.49,
+    "recurrence_adaptive": 0.5005555555555555
+  },
+  "dataset_hashes_verified": true,
+  "feature_signature_and_shapes_verified": true,
+  "checkpoint_hashes": {
+    "recurrence_seed11": "083a13cd5f2a97c324648d622d139d5a6354df813ee85d45bc17a1fa4b456cfa",
+    "recurrence_seed22": "185ed06340aed9c1cbfd3d28d2c9333394dbeb09ae18eb1a7d2128082a3a6ca2",
+    "recurrence_seed33": "a2839b2f61521ea02aaa15ef83ccb2129e179bf9816517a8adf343ab6055de70",
+    "feedforward_seed11": "9f7c7b22328a7b1eb304e59a23d6f7f966375acaddd2b5f4ab6442009839b11e",
+    "feedforward_seed22": "79b3a075940bb6aab0106a5b6ff5cadc199ea7d0b8659d6a1af0297449803262",
+    "feedforward_seed33": "9e06978237cba6959587fd571560e2bc4935ac1f295cbd3d5fa02172faad122b",
+    "recurrence_continuation_seed11": "c16ad122c24b85ed28e89680030984b17bb77ada9eb50f444a70451f9c21d482",
+    "recurrence_continuation_seed22": "2b65c0a52ea651ec05f5388da5b4ffa8a3e1d41856f1e0298244c16afc1b2e90",
+    "recurrence_continuation_seed33": "03d37c7f2640d3900b087af417faa262bef7a0f2b6af2b32b84fc174a07e425a",
+    "confidence_seed11": "676dab0b6dcb2a0136ac76d0e252738220490afa380d9dab34e488ae07233868",
+    "confidence_seed22": "e39d2117d8e17cc7e14691b74b5953a0d502f6a3caa6619784dd39600621f964",
+    "confidence_seed33": "9848cb71dcad44df6bb0e2a6326656b0fe596191c446e8bfc4eca855c0ab8f57"
+  },
+  "issues_and_limits": [
+    "Historical continuation target is any later allowed loss improvement, not immediate gain; final-loop labels are zero and omitted during fitting.",
+    "Historical continuation targets came from the same examples used to fit the refiner. This is not final-test leakage but can bias controller supervision; Experiment 3 uses fresh examples.",
+    "Historical metric NLL clips true-label probabilities at 1e-12. Experiment 3 target loss uses stable logsumexp without clipping; policy report retains historical metric convention and additionally records exact NLL.",
+    "Old confidence predicts candidate correctness at backbone depth zero. It is not a current recurrent-decision confidence head. An adapted candidate architecture is fitted separately here.",
+    "Train/validation/test templates share semantics and may share alpha-renamed structures; exact uniqueness does not prove structural disjointness.",
+    "Historical development adjusted answer formatting on training examples and is exploratory. The final prefix is frozen here.",
+    "Original head timings exclude backbone. They cannot establish full inference speedup; Experiment 3 measures synchronized full live inference."
+  ],
+  "source_review": {
+    "live_inputs": "Current state, current option probabilities, depth; historical live API takes no labels or future states.",
+    "causal_cache": "Final real prompt position after right padding; FP32 parity and prefix tests recorded in historical backbone metadata.",
+    "stopping": "At most four paid loops; compulsory final stop. Future-min labels are training supervision only.",
+    "cross_seed": "Separate checkpoint directories, explicit initialization seed offsets, distinct SHA256 values verified.",
+    "normalization": "Four candidate conditional softmax throughout primary comparison; vocabulary statistics explicitly separate.",
+    "test_isolation": "Historical selections from val; fresh controller selections from controller_val only."
+  }
+}

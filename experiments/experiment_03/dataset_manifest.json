@@ -1,0 +1,107 @@
+{
+  "version": "experiment03-fresh-v1",
+  "seed": 830017,
+  "splits": {
+    "controller_train": {
+      "size": 1200,
+      "sha256": "bb93ef8f48aa74fb7768ce1d69648b6ec141624871a90f154b036622b47646a1",
+      "source_distribution": "train",
+      "label_counts": [
+        288,
+        315,
+        282,
+        315
+      ],
+      "tasks": {
+        "comparison": 200,
+        "arithmetic": 200,
+        "state": 200,
+        "pointer": 200,
+        "routing": 200,
+        "classification": 200
+      }
+    },
+    "controller_val": {
+      "size": 300,
+      "sha256": "3eff19fd13931866bf3d47948eaf3abd03471f97ed8a8c25ac525c6006b378e7",
+      "source_distribution": "val",
+      "label_counts": [
+        63,
+        84,
+        78,
+        75
+      ],
+      "tasks": {
+        "comparison": 50,
+        "arithmetic": 50,
+        "state": 50,
+        "pointer": 50,
+        "routing": 50,
+        "classification": 50
+      }
+    },
+    "fresh_id": {
+      "size": 600,
+      "sha256": "140b55a9a2980fc1c411317317cb326b0fc8ae6480583d3e20836d5ce1ebf08e",
+      "source_distribution": "test",
+      "label_counts": [
+        155,
+        135,
+        156,
+        154
+      ],
+      "tasks": {
+        "comparison": 100,
+        "arithmetic": 100,
+        "state": 100,
+        "pointer": 100,
+        "routing": 100,
+        "classification": 100
+      }
+    },
+    "template_shift": {
+      "size": 600,
+      "sha256": "d485e8f74747e45adb656051ddf4f4b7612681675112fdf69b04804c0e11031a",
+      "source_distribution": "test",
+      "label_counts": [
+        158,
+        146,
+        145,
+        151
+      ],
+      "tasks": {
+        "comparison": 100,
+        "arithmetic": 100,
+        "state": 100,
+        "pointer": 100,
+        "routing": 100,
+        "classification": 100
+      }
+    },
+    "depth_shift": {
+      "size": 600,
+      "sha256": "c50789c3e6eb0c4de914751d36e3359f9908aad18f69a4b6ea104ab8aaf39e07",
+      "source_distribution": "ood",
+      "label_counts": [
+        155,
+        147,
+        161,
+        137
+      ],
+      "tasks": {
+        "comparison": 100,
+        "arithmetic": 100,
+        "state": 100,
+        "pointer": 100,
+        "routing": 100,
+        "classification": 100
+      }
+    }
+  },
+  "historical_overlap": 0,
+  "cross_split_instance_overlap": 0,
+  "cross_split_prompt_overlap": 0,
+  "structural_disjointness": "Not claimed: shared task semantics and alpha-renamed structures are possible.",
+  "template_shift": "One new paraphrase per task, same generator and difficulty as fresh_id; tests wording transfer, not new algorithms.",
+  "depth_shift": "Existing OOD depths 5-8 and numeric range; easy tasks remain depth1."
+}
