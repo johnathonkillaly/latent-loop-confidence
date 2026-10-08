@@ -1,0 +1,38 @@
+{
+  "train": {
+    "n": 1200,
+    "unconstrained_next_token_accuracy": 0.455,
+    "unconstrained_argmax_is_option": 0.9441666666666667,
+    "full_vocabulary_label_nll": 1.8254058361053467,
+    "mean_vocabulary_entropy": 0.6575984954833984,
+    "mean_option_margin": 0.591781735420227,
+    "mean_vocabulary_probability_mass_of_options": 0.9434106349945068
+  },
+  "val": {
+    "n": 300,
+    "unconstrained_next_token_accuracy": 0.47,
+    "unconstrained_argmax_is_option": 0.96,
+    "full_vocabulary_label_nll": 1.787225365638733,
+    "mean_vocabulary_entropy": 0.6839678883552551,
+    "mean_option_margin": 0.5525128841400146,
+    "mean_vocabulary_probability_mass_of_options": 0.9626069068908691
+  },
+  "test": {
+    "n": 600,
+    "unconstrained_next_token_accuracy": 0.44166666666666665,
+    "unconstrained_argmax_is_option": 0.9583333333333334,
+    "full_vocabulary_label_nll": 1.8947845697402954,
+    "mean_vocabulary_entropy": 0.6711820960044861,
+    "mean_option_margin": 0.5574494004249573,
+    "mean_vocabulary_probability_mass_of_options": 0.9585195183753967
+  },
+  "ood": {
+    "n": 300,
+    "unconstrained_next_token_accuracy": 0.45666666666666667,
+    "unconstrained_argmax_is_option": 0.9933333333333333,
+    "full_vocabulary_label_nll": 1.8012615442276,
+    "mean_vocabulary_entropy": 0.6893978118896484,
+    "mean_option_margin": 0.5382994413375854,
+    "mean_vocabulary_probability_mass_of_options": 0.9876091480255127
+  }
+}

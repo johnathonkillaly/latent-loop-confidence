@@ -1,0 +1,184 @@
+{
+  "feedforward_vs_baseline": {
+    "test": {
+      "mean_delta": 0.05444444444444444,
+      "paired_item_bootstrap95": [
+        0.021111111111111112,
+        0.08888888888888889
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        0.02,
+        0.09001388888888869
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    },
+    "ood": {
+      "mean_delta": 0.06,
+      "paired_item_bootstrap95": [
+        0.008888888888888889,
+        0.11444444444444445
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        0.006666666666666667,
+        0.11555555555555555
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    }
+  },
+  "recurrence_selected_vs_baseline": {
+    "test": {
+      "mean_delta": 0.051111111111111114,
+      "paired_item_bootstrap95": [
+        0.01611111111111111,
+        0.08611111111111111
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        0.013888888888888888,
+        0.08777777777777777
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    },
+    "ood": {
+      "mean_delta": 0.051111111111111114,
+      "paired_item_bootstrap95": [
+        -0.0044444444444444444,
+        0.10555555555555556
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.0077777777777777776,
+        0.10666666666666667
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    }
+  },
+  "memory_selected_vs_recurrence_selected": {
+    "test": {
+      "mean_delta": -0.009444444444444445,
+      "paired_item_bootstrap95": [
+        -0.027777777777777776,
+        0.008888888888888889
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.03777777777777778,
+        0.02
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    },
+    "ood": {
+      "mean_delta": -0.016666666666666666,
+      "paired_item_bootstrap95": [
+        -0.04111111111111111,
+        0.0077777777777777776
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.05333333333333334,
+        0.023333333333333334
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    }
+  },
+  "recurrence_selected_vs_feedforward": {
+    "test": {
+      "mean_delta": -0.0033333333333333335,
+      "paired_item_bootstrap95": [
+        -0.023333333333333334,
+        0.016666666666666666
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.03,
+        0.025
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    },
+    "ood": {
+      "mean_delta": -0.008888888888888889,
+      "paired_item_bootstrap95": [
+        -0.04,
+        0.023333333333333334
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.04555555555555556,
+        0.027777777777777776
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    }
+  },
+  "recurrence_adaptive_vs_recurrence_selected": {
+    "test": {
+      "mean_delta": 0.0011111111111111111,
+      "paired_item_bootstrap95": [
+        -0.01611111111111111,
+        0.017777777777777778
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.02388888888888889,
+        0.02666666666666667
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    },
+    "ood": {
+      "mean_delta": -0.012222222222222223,
+      "paired_item_bootstrap95": [
+        -0.03666666666666667,
+        0.011111111111111112
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.05002777777777777,
+        0.023333333333333334
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    }
+  },
+  "memory_adaptive_vs_memory_selected": {
+    "test": {
+      "mean_delta": 0.0016666666666666668,
+      "paired_item_bootstrap95": [
+        -0.006124999999999996,
+        0.01
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.009444444444444445,
+        0.015
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    },
+    "ood": {
+      "mean_delta": -0.0033333333333333335,
+      "paired_item_bootstrap95": [
+        -0.014472222222222213,
+        0.0077777777777777776
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.022222222222222223,
+        0.012222222222222223
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    }
+  },
+  "confidence_only_vs_baseline": {
+    "test": {
+      "mean_delta": 0.042777777777777776,
+      "paired_item_bootstrap95": [
+        0.01,
+        0.075
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        0.005555555555555556,
+        0.08
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    },
+    "ood": {
+      "mean_delta": 0.043333333333333335,
+      "paired_item_bootstrap95": [
+        0.0,
+        0.08666666666666667
+      ],
+      "hierarchical_seed_item_bootstrap95": [
+        -0.0033333333333333335,
+        0.09
+      ],
+      "caution": "Three seeds, shared examples, exploratory comparisons; no multiplicity correction."
+    }
+  }
+}

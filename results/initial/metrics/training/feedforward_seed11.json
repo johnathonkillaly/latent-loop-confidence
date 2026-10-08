@@ -1,0 +1,228 @@
+{
+  "name": "feedforward",
+  "seed": 11,
+  "next_epoch": 30,
+  "best_validation_loss": 1.2534605264663696,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 2.0798589116648625,
+      "val_loss": 1.6120524406433105,
+      "gradient_norm_mean": 45.88533478975296,
+      "gradient_norm_max": 149.51722717285156
+    },
+    {
+      "epoch": 1,
+      "train_loss": 1.4524801404852616,
+      "val_loss": 1.3451886177062988,
+      "gradient_norm_mean": 42.338391053049186,
+      "gradient_norm_max": 92.41504669189453
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.3670223261180676,
+      "val_loss": 1.375480055809021,
+      "gradient_norm_mean": 31.614190415332192,
+      "gradient_norm_max": 100.3612060546875
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.3174901761506732,
+      "val_loss": 1.2844130992889404,
+      "gradient_norm_mean": 32.871432429865784,
+      "gradient_norm_max": 70.40855407714844
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1.2891066952755577,
+      "val_loss": 1.2534605264663696,
+      "gradient_norm_mean": 16.18899996500266,
+      "gradient_norm_max": 47.36381149291992
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.3425705809342234,
+      "val_loss": 1.4455057382583618,
+      "gradient_norm_mean": 14.377201563433596,
+      "gradient_norm_max": 45.56826400756836
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.3568143091703717,
+      "val_loss": 1.3125892877578735,
+      "gradient_norm_mean": 36.522598668148646,
+      "gradient_norm_max": 102.50358581542969
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.279790809279994,
+      "val_loss": 1.2764183282852173,
+      "gradient_norm_mean": 32.309969180508666,
+      "gradient_norm_max": 90.82906341552734
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1.2734362765362388,
+      "val_loss": 1.262487769126892,
+      "gradient_norm_mean": 27.666115478465432,
+      "gradient_norm_max": 90.48267364501953
+    },
+    {
+      "epoch": 9,
+      "train_loss": 1.2678703822587665,
+      "val_loss": 1.370269536972046,
+      "gradient_norm_mean": 20.888721456653194,
+      "gradient_norm_max": 55.28559494018555
+    },
+    {
+      "epoch": 10,
+      "train_loss": 1.3223617767032825,
+      "val_loss": 1.3757257461547852,
+      "gradient_norm_mean": 55.488815006456875,
+      "gradient_norm_max": 124.6515121459961
+    },
+    {
+      "epoch": 11,
+      "train_loss": 1.3521376471770437,
+      "val_loss": 1.27944016456604,
+      "gradient_norm_mean": 74.83939848448101,
+      "gradient_norm_max": 146.35775756835938
+    },
+    {
+      "epoch": 12,
+      "train_loss": 1.2611363122337742,
+      "val_loss": 1.3010642528533936,
+      "gradient_norm_mean": 40.59982109069824,
+      "gradient_norm_max": 85.09440612792969
+    },
+    {
+      "epoch": 13,
+      "train_loss": 1.2568043156674034,
+      "val_loss": 1.303812861442566,
+      "gradient_norm_mean": 20.120763149700668,
+      "gradient_norm_max": 45.81181716918945
+    },
+    {
+      "epoch": 14,
+      "train_loss": 1.2900034691158093,
+      "val_loss": 1.3466651439666748,
+      "gradient_norm_mean": 40.21409483724519,
+      "gradient_norm_max": 101.32449340820312
+    },
+    {
+      "epoch": 15,
+      "train_loss": 1.2742807112242047,
+      "val_loss": 1.36427640914917,
+      "gradient_norm_mean": 43.12778161701403,
+      "gradient_norm_max": 110.21326446533203
+    },
+    {
+      "epoch": 16,
+      "train_loss": 1.2718682728315656,
+      "val_loss": 1.2726556062698364,
+      "gradient_norm_mean": 46.69445469504908,
+      "gradient_norm_max": 96.36001586914062
+    },
+    {
+      "epoch": 17,
+      "train_loss": 1.2424168900439614,
+      "val_loss": 1.2796303033828735,
+      "gradient_norm_mean": 29.97180962562561,
+      "gradient_norm_max": 69.21395111083984
+    },
+    {
+      "epoch": 18,
+      "train_loss": 1.2414181608902781,
+      "val_loss": 1.2751768827438354,
+      "gradient_norm_mean": 26.420296568619577,
+      "gradient_norm_max": 58.67380905151367
+    },
+    {
+      "epoch": 19,
+      "train_loss": 1.2410486246410168,
+      "val_loss": 1.383705496788025,
+      "gradient_norm_mean": 15.100896785133763,
+      "gradient_norm_max": 35.57954025268555
+    },
+    {
+      "epoch": 20,
+      "train_loss": 1.2818209999486019,
+      "val_loss": 1.321205735206604,
+      "gradient_norm_mean": 36.62270795044146,
+      "gradient_norm_max": 91.6753158569336
+    },
+    {
+      "epoch": 21,
+      "train_loss": 1.29126449007737,
+      "val_loss": 1.2855027914047241,
+      "gradient_norm_mean": 56.42980557993839,
+      "gradient_norm_max": 138.89064025878906
+    },
+    {
+      "epoch": 22,
+      "train_loss": 1.24286991671512,
+      "val_loss": 1.2663743495941162,
+      "gradient_norm_mean": 22.085236085088628,
+      "gradient_norm_max": 55.40764236450195
+    },
+    {
+      "epoch": 23,
+      "train_loss": 1.2464645787289268,
+      "val_loss": 1.280234456062317,
+      "gradient_norm_mean": 32.39060296196686,
+      "gradient_norm_max": 80.07118225097656
+    },
+    {
+      "epoch": 24,
+      "train_loss": 1.2755287070023387,
+      "val_loss": 1.2771267890930176,
+      "gradient_norm_mean": 42.80709010676334,
+      "gradient_norm_max": 88.71849060058594
+    },
+    {
+      "epoch": 25,
+      "train_loss": 1.2431299247239764,
+      "val_loss": 1.2630811929702759,
+      "gradient_norm_mean": 22.332485851488617,
+      "gradient_norm_max": 50.95756912231445
+    },
+    {
+      "epoch": 26,
+      "train_loss": 1.2406389211353503,
+      "val_loss": 1.2618690729141235,
+      "gradient_norm_mean": 23.66783231967374,
+      "gradient_norm_max": 64.1214599609375
+    },
+    {
+      "epoch": 27,
+      "train_loss": 1.2561666840001156,
+      "val_loss": 1.3343505859375,
+      "gradient_norm_mean": 33.44815262054142,
+      "gradient_norm_max": 76.69766235351562
+    },
+    {
+      "epoch": 28,
+      "train_loss": 1.317277387568825,
+      "val_loss": 1.3438185453414917,
+      "gradient_norm_mean": 35.72762072713751,
+      "gradient_norm_max": 66.00138854980469
+    },
+    {
+      "epoch": 29,
+      "train_loss": 1.2700325438850804,
+      "val_loss": 1.2902435064315796,
+      "gradient_norm_mean": 40.43701968694988,
+      "gradient_norm_max": 88.43355560302734
+    }
+  ],
+  "trainable_parameters": 196674,
+  "optimizer": "AdamW",
+  "learning_rate": 0.001,
+  "gradient_clip": 1.0,
+  "batch_size": 64,
+  "training_seconds": 0.339407581006526,
+  "best_epoch": 4,
+  "peak_mlx_bytes": 102026660,
+  "peak_process_rss_bytes": 238698496,
+  "complete": true
+}

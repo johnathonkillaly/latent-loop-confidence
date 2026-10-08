@@ -1,0 +1,7 @@
+{
+  "criterion": "whitespace-token 13-gram Jaccard > 0.85",
+  "train_to_evaluation_max_similarity": 0.08108108108108109,
+  "near_duplicates": [],
+  "exact_structured_duplicates": 0,
+  "shared_templates": true
+}

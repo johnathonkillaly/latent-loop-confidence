@@ -1,0 +1,100 @@
+[
+  {
+    "prefix": "",
+    "label_prefix": "",
+    "n": 60,
+    "split": "training prompt-format audit",
+    "accuracy": 0.31666666666666665,
+    "vocabulary_argmax_is_option": 0.0,
+    "label_ids": [
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  {
+    "prefix": "Answer:",
+    "label_prefix": " ",
+    "n": 60,
+    "split": "training prompt-format audit",
+    "accuracy": 0.55,
+    "vocabulary_argmax_is_option": 0.0,
+    "label_ids": [
+      362,
+      425,
+      356,
+      422
+    ]
+  },
+  {
+    "prefix": "The correct option is",
+    "label_prefix": " ",
+    "n": 60,
+    "split": "training prompt-format audit",
+    "accuracy": 0.38333333333333336,
+    "vocabulary_argmax_is_option": 0.0,
+    "label_ids": [
+      362,
+      425,
+      356,
+      422
+    ]
+  },
+  {
+    "prefix": "The correct answer is",
+    "label_prefix": " ",
+    "n": 60,
+    "split": "training prompt-format audit",
+    "accuracy": 0.35,
+    "vocabulary_argmax_is_option": 0.0,
+    "label_ids": [
+      362,
+      425,
+      356,
+      422
+    ]
+  },
+  {
+    "prefix": "Answer:\n",
+    "label_prefix": "",
+    "n": 60,
+    "split": "training prompt-format audit",
+    "accuracy": 0.48333333333333334,
+    "vocabulary_argmax_is_option": 0.0,
+    "label_ids": [
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  {
+    "prefix": "Answer: (",
+    "label_prefix": "",
+    "n": 60,
+    "split": "training prompt-format audit",
+    "accuracy": 0.5833333333333334,
+    "vocabulary_argmax_is_option": 0.9333333333333333,
+    "label_ids": [
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  {
+    "prefix": "The correct option is (",
+    "label_prefix": "",
+    "n": 60,
+    "split": "training prompt-format audit",
+    "accuracy": 0.5166666666666667,
+    "vocabulary_argmax_is_option": 1.0,
+    "label_ids": [
+      32,
+      33,
+      34,
+      35
+    ]
+  }
+]

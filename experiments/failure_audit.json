@@ -1,0 +1,16 @@
+[
+  {
+    "stage": "initial BF16 interception smoke check",
+    "native_vs_final_position_projection_max_abs": 0.0625,
+    "middle_one_loop_projection_max_abs": 0.0625,
+    "middle_two_loop_full_vs_prefix_hidden_max_abs": 0.875,
+    "action": "Use FP32 backbone in this pilot and rerun numerical parity and causal-prefix checks. No training results were produced from the failed check.",
+    "interpretation": "Tensor-shape-dependent BF16 accumulation was suspected; this is a numerical tolerance failure, not evidence of future-token leakage."
+  },
+  {
+    "stage": "first primary command report stage",
+    "type": "ModuleNotFoundError",
+    "message": "The pipeline reached report generation before the reporting module had been implemented. All seven trained modules per seed and their evaluated metrics were preserved.",
+    "action": "Implemented reporting and successfully regenerated the report; isolated full-pipeline smoke completed."
+  }
+]

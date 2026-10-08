@@ -1,0 +1,245 @@
+[
+  {
+    "category": "corrected",
+    "id": "f45b1d919920ea52ff95823f9cf31f71e041af9a102c57f86eaef1b6409e6c4f",
+    "label": 3,
+    "baseline_logits": [
+      21.704448699951172,
+      23.49662971496582,
+      25.664987564086914,
+      23.171260833740234
+    ],
+    "one_pass_logits": [
+      20.6290283203125,
+      20.6989803314209,
+      21.57422637939453,
+      22.62661361694336
+    ],
+    "seed": 11,
+    "task": "arithmetic",
+    "prompt": "Start with 882. Apply in order: add 9. What is the final number?\nA. 880\nB. 870\nC. 902\nD. 891\nAnswer with only the correct option letter.",
+    "choices": [
+      "880",
+      "870",
+      "902",
+      "891"
+    ],
+    "difficulty": 1
+  },
+  {
+    "category": "corrected",
+    "id": "27e7933182226940541ae5ff2f96be23de21c886c0e24979cf4ef45f0fb29672",
+    "label": 3,
+    "baseline_logits": [
+      21.422752380371094,
+      25.5916748046875,
+      24.79273796081543,
+      24.06390953063965
+    ],
+    "one_pass_logits": [
+      21.79857063293457,
+      21.554956436157227,
+      21.49384880065918,
+      22.287967681884766
+    ],
+    "seed": 11,
+    "task": "pointer",
+    "prompt": "Mapping: M2220->M9763; M8541->M8506; M4682->M1947; M9763->M4682; M4894->M7415; M7415->M8541; M8506->M2220; M1947->M4894. Start at M4894; follow exactly 4 links. Where do you end?\nA. M9763\nB. M8506\nC. M7415\nD. M2220\nAnswer with only the correct option letter.",
+    "choices": [
+      "M9763",
+      "M8506",
+      "M7415",
+      "M2220"
+    ],
+    "difficulty": 4
+  },
+  {
+    "category": "corrected",
+    "id": "f095fd27018fd9ddabc9cb23618dc42be252725c3bb4a44fdaff8398283aa46a",
+    "label": 2,
+    "baseline_logits": [
+      20.67932891845703,
+      22.684791564941406,
+      21.903827667236328,
+      19.610794067382812
+    ],
+    "one_pass_logits": [
+      19.27853775024414,
+      19.085613250732422,
+      19.665573120117188,
+      19.402894973754883
+    ],
+    "seed": 11,
+    "task": "arithmetic",
+    "prompt": "Start with 282. Apply in order: multiply 7; then multiply 8; then add 7. What is the final number?\nA. 15798\nB. 15810\nC. 15799\nD. 15800\nAnswer with only the correct option letter.",
+    "choices": [
+      "15798",
+      "15810",
+      "15799",
+      "15800"
+    ],
+    "difficulty": 3
+  },
+  {
+    "category": "degraded",
+    "id": "e689d500ac80687ed2403c3748e0abef8dd9384e41ad9c5a2f88474bf59204c1",
+    "label": 2,
+    "baseline_logits": [
+      22.331972122192383,
+      23.870887756347656,
+      24.427331924438477,
+      21.975358963012695
+    ],
+    "one_pass_logits": [
+      21.19430923461914,
+      20.608478546142578,
+      21.117568969726562,
+      21.533172607421875
+    ],
+    "seed": 11,
+    "task": "arithmetic",
+    "prompt": "Start with 142. Apply in order: multiply 3; then multiply 3. What is the final number?\nA. 1257\nB. 1267\nC. 1278\nD. 1281\nAnswer with only the correct option letter.",
+    "choices": [
+      "1257",
+      "1267",
+      "1278",
+      "1281"
+    ],
+    "difficulty": 2
+  },
+  {
+    "category": "degraded",
+    "id": "00165fff2114c0a7634db6e0b834cf2f38bb582d24f59ed6e9a921d595e50b4e",
+    "label": 2,
+    "baseline_logits": [
+      23.945520401000977,
+      25.774812698364258,
+      26.59470558166504,
+      25.017602920532227
+    ],
+    "one_pass_logits": [
+      22.0806827545166,
+      22.70528221130371,
+      23.342010498046875,
+      23.525375366210938
+    ],
+    "seed": 11,
+    "task": "comparison",
+    "prompt": "Which host has the most free memory? M4470: 492 MB; M4341: 902 MB; M9422: 1102 MB; M4263: 782 MB\nA. M4470\nB. M4263\nC. M9422\nD. M4341\nAnswer with only the correct option letter.",
+    "choices": [
+      "M4470",
+      "M4263",
+      "M9422",
+      "M4341"
+    ],
+    "difficulty": 1
+  },
+  {
+    "category": "degraded",
+    "id": "b6f46a318f68800d116c27498203d685a81cf631c055984570d44258c5d656ba",
+    "label": 0,
+    "baseline_logits": [
+      26.8869686126709,
+      25.560808181762695,
+      23.48323631286621,
+      22.616546630859375
+    ],
+    "one_pass_logits": [
+      22.340227127075195,
+      22.628610610961914,
+      21.506092071533203,
+      22.767549514770508
+    ],
+    "seed": 11,
+    "task": "comparison",
+    "prompt": "Which host has the most free memory? M3230: 492 MB; M9791: 932 MB; M8272: 922 MB; M2153: 812 MB\nA. M9791\nB. M8272\nC. M2153\nD. M3230\nAnswer with only the correct option letter.",
+    "choices": [
+      "M9791",
+      "M8272",
+      "M2153",
+      "M3230"
+    ],
+    "difficulty": 1
+  },
+  {
+    "category": "confident_error",
+    "id": "8bc9cf37384dade418480957add902e393174aee0f74515fa6444b4da22dbe5d",
+    "label": 2,
+    "baseline_logits": [
+      23.44403076171875,
+      27.943889617919922,
+      26.218982696533203,
+      21.764949798583984
+    ],
+    "one_pass_logits": [
+      20.26450538635254,
+      24.665647506713867,
+      23.480178833007812,
+      22.373050689697266
+    ],
+    "seed": 11,
+    "task": "routing",
+    "prompt": "Tool registry: read requests use M6491; write requests use M4093; calculate requests use M9950; search requests use M7492. Route this request: read.\nA. M7492\nB. M9950\nC. M6491\nD. M4093\nAnswer with only the correct option letter.",
+    "choices": [
+      "M7492",
+      "M9950",
+      "M6491",
+      "M4093"
+    ],
+    "difficulty": 1
+  },
+  {
+    "category": "confident_error",
+    "id": "7bcffa2f3d020732a5a5aef5583add54e9aff15b945a835fe2ec9384ff9e8c4c",
+    "label": 3,
+    "baseline_logits": [
+      25.798080444335938,
+      28.50436019897461,
+      21.403650283813477,
+      23.252925872802734
+    ],
+    "one_pass_logits": [
+      22.00307846069336,
+      24.517459869384766,
+      20.796907424926758,
+      23.354469299316406
+    ],
+    "seed": 11,
+    "task": "routing",
+    "prompt": "Tool registry: read requests use M5272; write requests use M7830; calculate requests use M6711; search requests use M1833. Route this request: read.\nA. M6711\nB. M1833\nC. M7830\nD. M5272\nAnswer with only the correct option letter.",
+    "choices": [
+      "M6711",
+      "M1833",
+      "M7830",
+      "M5272"
+    ],
+    "difficulty": 1
+  },
+  {
+    "category": "confident_error",
+    "id": "775de02cca82b06d3e84efc8a5b760f1a4676e8aca7a7113b97e181b7351ea84",
+    "label": 0,
+    "baseline_logits": [
+      26.18800926208496,
+      23.6231632232666,
+      29.178857803344727,
+      23.09404754638672
+    ],
+    "one_pass_logits": [
+      24.36101722717285,
+      21.259584426879883,
+      25.793481826782227,
+      21.68528175354004
+    ],
+    "seed": 11,
+    "task": "classification",
+    "prompt": "Select the item which is both ready and authorized: M9810: ready=True, authorized=True; M5591: ready=False, authorized=False; M6202: ready=False, authorized=False; M8943: ready=False, authorized=True\nA. M9810\nB. M6202\nC. M8943\nD. M5591\nAnswer with only the correct option letter.",
+    "choices": [
+      "M9810",
+      "M6202",
+      "M8943",
+      "M5591"
+    ],
+    "difficulty": 1
+  }
+]
