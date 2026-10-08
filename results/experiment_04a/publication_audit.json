@@ -1,0 +1,17 @@
+{
+  "checked_utc": "2026-10-08T22:27:34.994595+00:00",
+  "public_files_checked": 115,
+  "text_or_compressed_text_checked": 107,
+  "total_bytes": 57168280,
+  "largest_file_bytes": 3317867,
+  "private_path_or_secret_pattern_hits": [],
+  "large_hidden_tensor_or_model_files": [],
+  "historical_preservation": {
+    "historical_files": 177,
+    "all_unchanged_except_readme_link": true,
+    "checked_utc": "2026-10-08T22:27:35.015015+00:00"
+  },
+  "protocol_hashes_still_match": true,
+  "push_performed": false,
+  "notes": "Source, public synthetic data, predictions, trajectories, hashes and measured reports are ready for review. No model weights or hidden tensors are published; no remote exists."
+}

@@ -1,0 +1,17 @@
+{
+  "reported_utc": "2026-10-08T22:27:43.528980+00:00",
+  "elapsed_wall_seconds_at_report": 2818.528972,
+  "peak_recorded_mlx_gib": 3.892364766448736,
+  "peak_recorded_process_rss_gib": 1.5077056884765625,
+  "memory_budget_gib": 48,
+  "timing_command_seconds": 393.2188537499969,
+  "extraction_command_seconds": [
+    133.71251275000031,
+    159.51063012500163
+  ],
+  "statistical_fits": 36,
+  "new_neural_fits": 0,
+  "model_weight_mutation": false,
+  "prior_work_preserved": true,
+  "remote_workstation_accessed": false
+}

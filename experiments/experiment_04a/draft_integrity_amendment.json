@@ -1,0 +1,12 @@
+{
+  "stage": "Before protocol freeze and before final feature extraction or scoring",
+  "reason": "Historical alpha-structure integrity audit found one rooted pointer graph in draft fresh_id. Apply historical exclusion fingerprints; development sets unchanged. Draft sealed data regenerated without inspecting final labels or scores.",
+  "draft_overlap_counts": {
+    "harder_depth.jsonl": 0,
+    "structural_shift.jsonl": 0,
+    "fresh_id.jsonl": 1,
+    "new_template.jsonl": 0,
+    "controller_train.jsonl": 0,
+    "controller_val.jsonl": 0
+  }
+}

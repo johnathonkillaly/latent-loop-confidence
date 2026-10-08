@@ -1,0 +1,42 @@
+{
+  "completed_utc": "2026-10-08T22:28:57.301350+00:00",
+  "wall_seconds_through_final_checks": 2892.301356,
+  "status": "Experiment 4A completed; ready for local commit",
+  "public_report": "reports/experiment_04a/foundation_report.md",
+  "handoff": "reports/experiment_04a/experiment_04b_handoff.md",
+  "dataset_counts": {
+    "controller_train": 4032,
+    "controller_val": 1008,
+    "fresh_id": 1296,
+    "new_template": 1296,
+    "structural_shift": 1296,
+    "harder_depth": 1296
+  },
+  "tests": "20 passed, including MLX CPU mechanism parity",
+  "public_verification": {
+    "completed_utc": "2026-10-08T22:26:34.088397+00:00",
+    "independent_reference_labels": 10224,
+    "unique_problem_and_alpha_structure_count": 10224,
+    "trajectory_state_rows": 122688,
+    "adjacent_supervised_transitions": 92016,
+    "public_metric_recomputation_checks": 1242,
+    "all_passed": true,
+    "hidden_tensors_needed": false,
+    "preservation": {
+      "historical_files": 177,
+      "all_unchanged_except_readme_link": true,
+      "checked_utc": "2026-10-08T22:26:34.107034+00:00"
+    }
+  },
+  "frozen_protocol_verified": true,
+  "preservation": {
+    "historical_files": 177,
+    "all_unchanged_except_readme_link": true,
+    "checked_utc": "2026-10-08T22:28:57.324052+00:00"
+  },
+  "new_neural_models": 0,
+  "experiment_4b_implemented": false,
+  "experiment_4b_can_proceed": "Yes, as a new controlled study with fresh prospective final lockbox; current results do not validate a decision-value architecture.",
+  "publication_readiness": "Public source, synthetic data and reports audited; weights/hidden tensors excluded; review-ready locally.",
+  "push_performed": false
+}

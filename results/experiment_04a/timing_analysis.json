@@ -1,0 +1,80 @@
+{
+  "bootstrap_units": "Parent seeds and paired prompt groups; batch 8 has only three groups, not 24 independent timing units.",
+  "load_note": "Timing ran under existing system load and overlapped CPU public-artifact verification/bootstrap analysis for part of the run. No unrelated jobs were changed. Interleaving balances within-run comparisons but does not establish idle-system performance.",
+  "paired_differences": {
+    "1": {
+      "improvement:compact_minus_one_pass": {
+        "estimate": 0.16068445883219182,
+        "cluster_seed_bootstrap95": [
+          0.07922552117634041,
+          0.2421234132725658
+        ],
+        "parent_seeds": 3,
+        "repeats": 1000,
+        "unique_prompt_groups": 24,
+        "unit": "amortized milliseconds per item"
+      },
+      "improvement:compact_minus_fixed_4": {
+        "estimate": 0.05195004198160152,
+        "cluster_seed_bootstrap95": [
+          -0.04397070914466086,
+          0.14455467447634066
+        ],
+        "parent_seeds": 3,
+        "repeats": 1000,
+        "unique_prompt_groups": 24,
+        "unit": "amortized milliseconds per item"
+      },
+      "improvement:compact@0.5_minus_improvement:scalar@0.5": {
+        "estimate": 0.0990664307715229,
+        "cluster_seed_bootstrap95": [
+          -0.021060742882481363,
+          0.22327144502014562
+        ],
+        "parent_seeds": 3,
+        "repeats": 1000,
+        "unique_prompt_groups": 24,
+        "unit": "amortized milliseconds per item"
+      }
+    },
+    "8": {
+      "improvement:compact_minus_one_pass": {
+        "estimate": 0.22910012497353213,
+        "cluster_seed_bootstrap95": [
+          -0.027742458061968338,
+          0.49122743025186033
+        ],
+        "parent_seeds": 3,
+        "repeats": 1000,
+        "unique_prompt_groups": 3,
+        "unit": "amortized milliseconds per item"
+      },
+      "improvement:compact_minus_fixed_4": {
+        "estimate": 0.2208732498224385,
+        "cluster_seed_bootstrap95": [
+          0.00862272775066233,
+          0.4577441942375218
+        ],
+        "parent_seeds": 3,
+        "repeats": 1000,
+        "unique_prompt_groups": 3,
+        "unit": "amortized milliseconds per item"
+      },
+      "improvement:compact@0.5_minus_improvement:scalar@0.5": {
+        "estimate": -0.6341689860265534,
+        "cluster_seed_bootstrap95": [
+          -0.797858805627685,
+          -0.49685420890455134
+        ],
+        "parent_seeds": 3,
+        "repeats": 1000,
+        "unique_prompt_groups": 3,
+        "unit": "amortized milliseconds per item"
+      }
+    }
+  },
+  "padding_ratio": {
+    "1": 1.0,
+    "8": 1.692487713550199
+  }
+}

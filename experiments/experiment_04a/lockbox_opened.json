@@ -1,0 +1,12 @@
+{
+  "opened_utc": "2026-10-08T22:07:17.080770+00:00",
+  "protocol_frozen_utc": "2026-10-08T22:07:16.662885+00:00",
+  "protocol_sha256": "0db04ecb486609a270e69b260ede44b7bf498bed9864a90ec27dc910d37080c8",
+  "final_splits": [
+    "fresh_id",
+    "new_template",
+    "structural_shift",
+    "harder_depth"
+  ],
+  "status": "Opened once for fixed-protocol evaluation; final sets are now consumed and not suitable for further architecture selection."
+}

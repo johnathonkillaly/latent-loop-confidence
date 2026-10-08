@@ -1,0 +1,17 @@
+{
+  "completed_utc": "2026-10-08T22:19:27.655419+00:00",
+  "command": "LATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q",
+  "result": "20 passed in 0.52s",
+  "mlx_small_test_device": "CPU",
+  "lint": "ruff --select F,I passed on all new core files; report checked separately",
+  "versions": {
+    "mlx": "0.32.3",
+    "mlx-lm": "0.32.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1",
+    "ruff": "0.16.10"
+  },
+  "python": "3.12.15"
+}

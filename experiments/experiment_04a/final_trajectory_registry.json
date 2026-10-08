@@ -1,0 +1,194 @@
+[
+  {
+    "split": "fresh_id",
+    "seed": 11,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/fresh_id_seed11.jsonl.gz",
+    "public_sha256": "e060b5854f6a9ef82b2353d47b296eae4d146ebfa836c9ffc619e1bf5a7f225e",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/fresh_id_seed11_hidden.npz",
+    "hidden_sha256": "9a060dfba1c82239623d70a1f96d8687ec2f1180e6dd6a220acbdd160234a6ef",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "083a13cd5f2a97c324648d622d139d5a6354df813ee85d45bc17a1fa4b456cfa"
+    }
+  },
+  {
+    "split": "new_template",
+    "seed": 11,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/new_template_seed11.jsonl.gz",
+    "public_sha256": "06f966694e5625db2021518ab16bd40b75d113ddeccbae04d529d336a2ca703e",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/new_template_seed11_hidden.npz",
+    "hidden_sha256": "8d4e05acc5ef47513898636e010b33589e87145c97f21372acd9779ed0347e9c",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "083a13cd5f2a97c324648d622d139d5a6354df813ee85d45bc17a1fa4b456cfa"
+    }
+  },
+  {
+    "split": "structural_shift",
+    "seed": 11,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/structural_shift_seed11.jsonl.gz",
+    "public_sha256": "a8e50a34f50ee0aa1686cd20640593a8b4ef50c8250f4212f29039677fdfb1b8",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/structural_shift_seed11_hidden.npz",
+    "hidden_sha256": "1f4f6e3b14229df891b186f7e7dd997127b70c5378eeb9932eead17a61feaac2",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "083a13cd5f2a97c324648d622d139d5a6354df813ee85d45bc17a1fa4b456cfa"
+    }
+  },
+  {
+    "split": "harder_depth",
+    "seed": 11,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/harder_depth_seed11.jsonl.gz",
+    "public_sha256": "c221a792f6b4de53812bd3e3b3cd30cd46800448cd6b54601d8964485abe338e",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/harder_depth_seed11_hidden.npz",
+    "hidden_sha256": "df9787f09aeced47efb6adec9d878679be4705753a83b5c83a32e3580c7dd0a5",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "083a13cd5f2a97c324648d622d139d5a6354df813ee85d45bc17a1fa4b456cfa"
+    }
+  },
+  {
+    "split": "fresh_id",
+    "seed": 22,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/fresh_id_seed22.jsonl.gz",
+    "public_sha256": "864bebe9dc627bc552a4c3e8864ef68de6ee74a2cb66743212fa58e56749a29e",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/fresh_id_seed22_hidden.npz",
+    "hidden_sha256": "75d22480a2661de8cc5dfa6804a0790ef83335af567ef3c998f11dc4b2a81213",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "185ed06340aed9c1cbfd3d28d2c9333394dbeb09ae18eb1a7d2128082a3a6ca2"
+    }
+  },
+  {
+    "split": "new_template",
+    "seed": 22,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/new_template_seed22.jsonl.gz",
+    "public_sha256": "49f9fab3253bf5ffc9202acc371db2c3fdc4587f2bc4292a6fd63613506abb4f",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/new_template_seed22_hidden.npz",
+    "hidden_sha256": "043c48c5c40102fa7f48d5269756459057d9aac86346d1d91ab2346c19f9a5ba",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "185ed06340aed9c1cbfd3d28d2c9333394dbeb09ae18eb1a7d2128082a3a6ca2"
+    }
+  },
+  {
+    "split": "structural_shift",
+    "seed": 22,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/structural_shift_seed22.jsonl.gz",
+    "public_sha256": "727f3760dfae536be7eb8e6c9ea9e2903f8727138d01e20425aeb5f50509927b",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/structural_shift_seed22_hidden.npz",
+    "hidden_sha256": "4883b42eedb97454535a882953ac002eee4d81ecced48e9b58a4adaad67f73b0",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "185ed06340aed9c1cbfd3d28d2c9333394dbeb09ae18eb1a7d2128082a3a6ca2"
+    }
+  },
+  {
+    "split": "harder_depth",
+    "seed": 22,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/harder_depth_seed22.jsonl.gz",
+    "public_sha256": "d9ce0eed10e28d2cf8a0d1705cc8c2e0c56b6483dd074a4450fa9257d34f89c1",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/harder_depth_seed22_hidden.npz",
+    "hidden_sha256": "d665387ffd243f757d637e7a6efb0adfbb59e3de8174bcf6dcffbedccf8969cf",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "185ed06340aed9c1cbfd3d28d2c9333394dbeb09ae18eb1a7d2128082a3a6ca2"
+    }
+  },
+  {
+    "split": "fresh_id",
+    "seed": 33,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/fresh_id_seed33.jsonl.gz",
+    "public_sha256": "fec4707824a34a9ab55834de2ca4ae1245215890d5b2796e4b1965079c8687b0",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/fresh_id_seed33_hidden.npz",
+    "hidden_sha256": "51fb38dc9aab7e781ca6f707c345a3061396e716f4dda753bf34621940dd1cbc",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "a2839b2f61521ea02aaa15ef83ccb2129e179bf9816517a8adf343ab6055de70"
+    }
+  },
+  {
+    "split": "new_template",
+    "seed": 33,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/new_template_seed33.jsonl.gz",
+    "public_sha256": "bfb21dab42df1ab8ecf478fbf279a8e49d8ec0bbef1dcca0c5ff9dd5cd7eeff6",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/new_template_seed33_hidden.npz",
+    "hidden_sha256": "a76ac443269c54b8d9670a45ede8d5d4ba22338c0e97e7ee25f0bb10d059259d",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "a2839b2f61521ea02aaa15ef83ccb2129e179bf9816517a8adf343ab6055de70"
+    }
+  },
+  {
+    "split": "structural_shift",
+    "seed": 33,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/structural_shift_seed33.jsonl.gz",
+    "public_sha256": "152956a0eadbe1402e8a147d96afc910457401833b232f82549c17a371266e3a",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/structural_shift_seed33_hidden.npz",
+    "hidden_sha256": "5e54b0702d90479fd31290c8037782080f520cfeea2fe1b3e41deb39da2b5ded",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "a2839b2f61521ea02aaa15ef83ccb2129e179bf9816517a8adf343ab6055de70"
+    }
+  },
+  {
+    "split": "harder_depth",
+    "seed": 33,
+    "schema": "latent-loop-trajectory-v1",
+    "instances": 1296,
+    "state_rows": 5184,
+    "public_trajectory": "results/experiment_04a/trajectories/harder_depth_seed33.jsonl.gz",
+    "public_sha256": "1e910a2a54568eae4a904e9ec3eab8a482579de0a0b85fd56c426a4a50ff845a",
+    "hidden_artifact": "artifacts/experiment_04a/trajectories/harder_depth_seed33_hidden.npz",
+    "hidden_sha256": "5d75a698952dad0c4d3d04e1987549839ebaacd1c86b52254fac7f8c3a25b914",
+    "model_hashes": {
+      "backbone_id": "Qwen/Qwen3-0.6B",
+      "backbone_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "refiner_sha256": "a2839b2f61521ea02aaa15ef83ccb2129e179bf9816517a8adf343ab6055de70"
+    }
+  }
+]

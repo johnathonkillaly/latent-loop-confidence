@@ -1,0 +1,20 @@
+{
+  "start_commit": "701bcd4f2169d302259266156ee1a9cd06a05dae",
+  "started_utc": "2026-10-08T21:40:45+00:00",
+  "max_hours": 3,
+  "memory_gib": 48,
+  "parent_seeds": [11, 22, 33],
+  "split_seeds": {"controller_train": 440001, "controller_val": 440101, "fresh_id": 440201, "new_template": 440301, "structural_shift": 440401, "harder_depth": 440501},
+  "sizes": {"controller_train": 4032, "controller_val": 1008, "fresh_id": 1296, "new_template": 1296, "structural_shift": 1296, "harder_depth": 1296},
+  "max_recurrent_depth": 4,
+  "gain_delta_nats": 0.01,
+  "extract_batch": 8,
+  "bootstrap_repeats": 1000,
+  "timing_examples": 24,
+  "timing_repeats": 5,
+  "timing_batch_sizes": [1, 8],
+  "confidence_thresholds": [0, 0.25, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+  "gain_thresholds": [0, 0.1, 0.25, 0.4, 0.5, 0.6, 0.75, 0.9, 1],
+  "template_train_ids": [0, 1],
+  "template_test_ids": [2, 3]
+}

@@ -1,0 +1,62 @@
+{
+  "completed_utc": "2026-10-08T21:50:50.461667+00:00",
+  "starting_commit": "701bcd4f2169d302259266156ee1a9cd06a05dae",
+  "historical_policy_accuracy_and_exact_nll_checks": 288,
+  "historical_fresh_id_accuracy": {
+    "11": {
+      "frozen": 0.47833333333333333,
+      "one_pass": 0.49666666666666665,
+      "improvement": 0.49166666666666664,
+      "oracle_best": 0.655
+    },
+    "22": {
+      "frozen": 0.47833333333333333,
+      "one_pass": 0.5166666666666667,
+      "improvement": 0.5033333333333333,
+      "oracle_best": 0.6733333333333333
+    },
+    "33": {
+      "frozen": 0.47833333333333333,
+      "one_pass": 0.525,
+      "improvement": 0.4766666666666667,
+      "oracle_best": 0.6366666666666667
+    }
+  },
+  "checkpoint_hashes": {
+    "11": {
+      "refiner": "083a13cd5f2a97c324648d622d139d5a6354df813ee85d45bc17a1fa4b456cfa",
+      "one_pass": "9f7c7b22328a7b1eb304e59a23d6f7f966375acaddd2b5f4ab6442009839b11e",
+      "confidence": "0e0ea49c2dd49c8f7ee5ec4c547eb655f4b931bcbea63843be75311b21761170",
+      "improvement": "9c85570de8903d4c7f1239c78e952771f528ff03a1c64ba5ea79ca979087286a",
+      "joint": "3b3f827ec68a1889d6704774f15658ff8e63c023015ce4a379e0a0fa3c48195f"
+    },
+    "22": {
+      "refiner": "185ed06340aed9c1cbfd3d28d2c9333394dbeb09ae18eb1a7d2128082a3a6ca2",
+      "one_pass": "79b3a075940bb6aab0106a5b6ff5cadc199ea7d0b8659d6a1af0297449803262",
+      "confidence": "41cdd634f5ea42fe5f4e9e3439ff984b92b7e113653fb9ac62cd5aa745d13fb9",
+      "improvement": "b1b42380174473fb266b28ec8ffc464f253a0c3cf1d314c2cc372e3d5a59112b",
+      "joint": "80b239eeb526a111af48171046c63f11b5aeded9e940b4c5ee90c6e9d73d8d85"
+    },
+    "33": {
+      "refiner": "a2839b2f61521ea02aaa15ef83ccb2129e179bf9816517a8adf343ab6055de70",
+      "one_pass": "9e06978237cba6959587fd571560e2bc4935ac1f295cbd3d5fa02172faad122b",
+      "confidence": "661493f26d2c6987d64814c3d2ce88ffe366ff91bacc15957e08e00f4411f68f",
+      "improvement": "19f4e22a55ca83dcb4b5bfe9f4d86ae693bdc96da413c46e2a9e112df1de342b",
+      "joint": "97f032666c4cb51c1c5a7141a643e8af9ba32c49d0f5f572452474cf778924d8"
+    }
+  },
+  "preservation": {
+    "historical_files": 177,
+    "all_unchanged_except_readme_link": true,
+    "checked_utc": "2026-10-08T21:50:50.479455+00:00"
+  },
+  "findings": [
+    "No invalidating label leakage found in the inspected live APIs; existing neural inputs are current state, option probabilities, entropy, margin, depth, completed change.",
+    "Experiment 3 reused abstract task structures; it did not reject alpha-renamed instances or provide a prospective sealed final evaluation.",
+    "Historical candidate confidence and current-decision confidence use different supervision; comparisons here hold current argmax decisions fixed.",
+    "Scalar controls fitted to in-sample head predictions may favor calibration; heads are frozen in 4A, independent controller data avoids new stacking cross-fit leakage.",
+    "Candidate NLL is four-choice conditional; original metrics cap probabilities at 1e-12. New trajectory NLL is stable and unclipped.",
+    "Oracle best-depth uses labels/future losses and is never a deployed controller. Some oracle gains may be rank changes between wrong answers.",
+    "Host .item() calls synchronize. Full and auxiliary timing scopes require explicit transfers, warmups and executed-row counts."
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "type": "object",
+  "required": [
+    "schema_version",
+    "identity",
+    "model",
+    "depth",
+    "observation",
+    "offline_supervision"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "latent-loop-trajectory-v1"
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "instance_id",
+        "structural_hash",
+        "task_family",
+        "structural_generator_id",
+        "split",
+        "parent_seed"
+      ],
+      "properties": {
+        "instance_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "structural_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "task_family": {
+          "enum": [
+            "arithmetic",
+            "comparison",
+            "state",
+            "pointer",
+            "classification",
+            "routing"
+          ]
+        },
+        "structural_generator_id": {
+          "type": "string"
+        },
+        "split": {
+          "type": "string"
+        },
+        "parent_seed": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "backbone_id",
+        "backbone_revision",
+        "refiner_sha256"
+      ],
+      "properties": {
+        "backbone_id": {
+          "type": "string"
+        },
+        "backbone_revision": {
+          "type": "string"
+        },
+        "refiner_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "observation": {
+      "type": "object",
+      "required": [
+        "predicted_answer_index",
+        "candidate_logits",
+        "candidate_probabilities",
+        "entropy",
+        "margin",
+        "previous_state_change",
+        "hidden_state_reference"
+      ],
+      "properties": {
+        "predicted_answer_index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "candidate_logits": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "candidate_probabilities": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "entropy": {
+          "type": "number",
+          "minimum": 0
+        },
+        "margin": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "previous_state_change": {
+          "type": "number",
+          "minimum": 0
+        },
+        "hidden_state_reference": {
+          "type": "object",
+          "required": [
+            "artifact_path",
+            "sha256",
+            "array",
+            "depth_index",
+            "instance_index",
+            "dtype",
+            "dimensions"
+          ],
+          "properties": {
+            "artifact_path": {
+              "type": "string"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "array": {
+              "const": "states"
+            },
+            "depth_index": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            },
+            "instance_index": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "dtype": {
+              "const": "float32"
+            },
+            "dimensions": {
+              "const": [
+                1024
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "offline_supervision": {
+      "type": "object",
+      "required": [
+        "true_answer_index",
+        "current_correct",
+        "current_loss_nats",
+        "next_transition",
+        "signed_correctness_change",
+        "signed_loss_gain_nats"
+      ],
+      "properties": {
+        "true_answer_index": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "current_correct": {
+          "type": "boolean"
+        },
+        "current_loss_nats": {
+          "type": "number",
+          "minimum": 0
+        },
+        "next_transition": {
+          "enum": [
+            "W->R",
+            "R->W",
+            "W->W",
+            "R->R",
+            null
+          ]
+        },
+        "signed_correctness_change": {
+          "enum": [
+            -1,
+            0,
+            1,
+            null
+          ]
+        },
+        "signed_loss_gain_nats": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:latent-loop-confidence:trajectory:v1",
+  "title": "Latent loop trajectory v1 (offline record; observation is not the runtime API)",
+  "description": "Labels and future transitions are offline supervision only. Signed loss gain = current loss minus next loss.",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "depth": {
+            "const": 4
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "offline_supervision": {
+            "properties": {
+              "next_transition": {
+                "type": "null"
+              },
+              "signed_correctness_change": {
+                "type": "null"
+              },
+              "signed_loss_gain_nats": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "offline_supervision": {
+            "properties": {
+              "next_transition": {
+                "type": "string"
+              },
+              "signed_correctness_change": {
+                "type": "integer"
+              },
+              "signed_loss_gain_nats": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "frozen_utc": "2026-10-08T22:07:16.662885+00:00",
+  "source_config_data_selection_hashes": {
+    "experiments/experiment_04a/config.json": "93209c753200bf05c49893c34b27d1088268a2e116a51d4d72cd9ab86c45f29b",
+    "experiments/experiment_04a/dataset_manifest.json": "7174c697c724b709be5cbab11d8d7cc3d329e2245cd4bbc43355c8b51707b4bc",
+    "experiments/experiment_04a/historical_structure_exclusions.json": "e7875e0f2c4cce51da972bb882dc5d6c65599925be2aa2b63761c38fa9782424",
+    "experiments/experiment_04a/plan.md": "b0cc9a6033165f60688e98f9c49b6a6edfb43bf519747241cbbc69e16b2d6496",
+    "src/latent_loop/experiment04a/__init__.py": "2eed5576ec66129f22ff880fdfb9b50e8b99b1ce59372eb5341ea06c4e305ae8",
+    "src/latent_loop/experiment04a/common.py": "514e2564bd6ae02eb449fdd71d5a36b61dfe7f11cf68a36bdadde704decf04ff",
+    "src/latent_loop/experiment04a/data.py": "65b057abaf3e746161218c6538b0926bcb28c8b18468de6b54fdfec098fa1b68",
+    "src/latent_loop/experiment04a/pipeline.py": "27ffe91b20c8e06d268e4242e66948b4e22b63939b0d84b034e235402f80622c",
+    "src/latent_loop/experiment04a/science.py": "1691c4f20ab9b28dfc7fd770c021b8ea46ccdaaa7c1250f3cb58ca71861c75c2",
+    "src/latent_loop/experiment04a/timing.py": "8dfe2d517cbf4563dfa44d6980024991d48b3585fc26ebafdf8fc226d714a664",
+    "src/latent_loop/experiment04a/trajectory.py": "a2b8be456738fed8cccf61b1be4a505f89b4b910cba329ae39f57b5b360e3b33",
+    "experiments/experiment_04a/selection_seed11.json": "e22beb161fd075bece38940ceccb52a1c74c06130f6ca5e3f494db944a5fda1f",
+    "experiments/experiment_04a/selection_seed22.json": "b2fe09a7736ce0cd4f16d7661e8539f093b4eac5382c7f4250e747072bffd439",
+    "experiments/experiment_04a/selection_seed33.json": "036010eef7eacd97290b49c8a8328fb0df2711dda14b74c47f91147dfbf53592"
+  },
+  "model_hashes": {
+    "11": {
+      "refiner": "083a13cd5f2a97c324648d622d139d5a6354df813ee85d45bc17a1fa4b456cfa",
+      "one_pass": "9f7c7b22328a7b1eb304e59a23d6f7f966375acaddd2b5f4ab6442009839b11e",
+      "confidence": "0e0ea49c2dd49c8f7ee5ec4c547eb655f4b931bcbea63843be75311b21761170",
+      "improvement": "9c85570de8903d4c7f1239c78e952771f528ff03a1c64ba5ea79ca979087286a",
+      "joint": "3b3f827ec68a1889d6704774f15658ff8e63c023015ce4a379e0a0fa3c48195f"
+    },
+    "22": {
+      "refiner": "185ed06340aed9c1cbfd3d28d2c9333394dbeb09ae18eb1a7d2128082a3a6ca2",
+      "one_pass": "79b3a075940bb6aab0106a5b6ff5cadc199ea7d0b8659d6a1af0297449803262",
+      "confidence": "41cdd634f5ea42fe5f4e9e3439ff984b92b7e113653fb9ac62cd5aa745d13fb9",
+      "improvement": "b1b42380174473fb266b28ec8ffc464f253a0c3cf1d314c2cc372e3d5a59112b",
+      "joint": "80b239eeb526a111af48171046c63f11b5aeded9e940b4c5ee90c6e9d73d8d85"
+    },
+    "33": {
+      "refiner": "a2839b2f61521ea02aaa15ef83ccb2129e179bf9816517a8adf343ab6055de70",
+      "one_pass": "9e06978237cba6959587fd571560e2bc4935ac1f295cbd3d5fa02172faad122b",
+      "confidence": "661493f26d2c6987d64814c3d2ce88ffe366ff91bacc15957e08e00f4411f68f",
+      "improvement": "19f4e22a55ca83dcb4b5bfe9f4d86ae693bdc96da413c46e2a9e112df1de342b",
+      "joint": "97f032666c4cb51c1c5a7141a643e8af9ba32c49d0f5f572452474cf778924d8"
+    }
+  },
+  "final_splits": [
+    "fresh_id",
+    "new_template",
+    "structural_shift",
+    "harder_depth"
+  ],
+  "selection_data": [
+    "controller_train",
+    "controller_val"
+  ],
+  "final_evaluation_status": "Unopened; no final scores extracted during development",
+  "4b_protocol": "These 4A final sets become consumed evaluation sets when opened. 4B may use controller_train/val trajectories for development but must create a new independently seeded prospective final set."
+}

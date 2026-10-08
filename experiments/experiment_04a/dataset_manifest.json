@@ -1,0 +1,200 @@
+{
+  "version": "foundation-v1",
+  "split_seeds": {
+    "controller_train": 440001,
+    "controller_val": 440101,
+    "fresh_id": 440201,
+    "new_template": 440301,
+    "structural_shift": 440401,
+    "harder_depth": 440501
+  },
+  "splits": {
+    "controller_train": {
+      "n": 4032,
+      "sha256": "e31c23925ec8867b3f4c52c257ac7df189a760b08dc45fc6b6453a1eb6bacba9",
+      "content_sha256": "cb512a25b0bd343e2e096a9ccb9f66e56fada87e691ef1e83c7fc7a4492f73ae",
+      "seed": 440001,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ],
+      "difficulty_strata": [
+        "easy",
+        "moderate",
+        "hard"
+      ],
+      "balanced_task_count": 672,
+      "path": "artifacts/experiment_04a/datasets/development/controller_train.jsonl.gz",
+      "sealed": false
+    },
+    "controller_val": {
+      "n": 1008,
+      "sha256": "a12098aab7fe0068fc00923b13502b8bb81879f6f7d9f2bfeef745356f20bcdb",
+      "content_sha256": "8857ad3d3f51dbd6ccb093fa9e632e69ac188df1661181d479d41ca84eb58646",
+      "seed": 440101,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ],
+      "difficulty_strata": [
+        "easy",
+        "moderate",
+        "hard"
+      ],
+      "balanced_task_count": 168,
+      "path": "artifacts/experiment_04a/datasets/development/controller_val.jsonl.gz",
+      "sealed": false
+    },
+    "fresh_id": {
+      "n": 1296,
+      "sha256": "3e351fe4c92cdeabe483d086705e47ab1f50b69f8adca36b5bb75570e6a6c868",
+      "content_sha256": "566806b1f0f9b2dcb087f32de48fae09201d79bcfb3ab525b60e80060506b272",
+      "seed": 440201,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ],
+      "difficulty_strata": [
+        "easy",
+        "moderate",
+        "hard"
+      ],
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04a/datasets/sealed/fresh_id.jsonl.gz",
+      "sealed": true
+    },
+    "new_template": {
+      "n": 1296,
+      "sha256": "73048210305a66922b8f755fb4932fb188b85773bf5397d5e54a571e1b1bf237",
+      "content_sha256": "f09fbf3c0db410833419093f2d71131d1dd3130de1f19575d961b89b97fcd76f",
+      "seed": 440301,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ],
+      "difficulty_strata": [
+        "easy",
+        "moderate",
+        "hard"
+      ],
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04a/datasets/sealed/new_template.jsonl.gz",
+      "sealed": true
+    },
+    "structural_shift": {
+      "n": 1296,
+      "sha256": "dbe3e876ae4e30df38c48553332b9dcc232dcbf69d758eb29540d1da703ef071",
+      "content_sha256": "cbe6968695a90af9dfe7f24e15eba6d1f7f6cbfa6ac8a6fd85a55000544bae1e",
+      "seed": 440401,
+      "generator_ids": [
+        "boolean_program",
+        "ordered_rules",
+        "parallel_ledgers",
+        "symbolic_modular_walk",
+        "value_per_cost",
+        "weighted_conditions"
+      ],
+      "difficulty_strata": [
+        "easy",
+        "moderate",
+        "hard"
+      ],
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04a/datasets/sealed/structural_shift.jsonl.gz",
+      "sealed": true
+    },
+    "harder_depth": {
+      "n": 1296,
+      "sha256": "5c5bc78ce7b549238ecef6ce7a48d33bdaa245b74be60e83f7f0a17c5aa5e61a",
+      "content_sha256": "828401a27a2ca2973985a00e63a5b20f8510db5de400ae3ad60f98b6798b2447",
+      "seed": 440501,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ],
+      "difficulty_strata": [
+        "extrapolation"
+      ],
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04a/datasets/sealed/harder_depth.jsonl.gz",
+      "sealed": true
+    }
+  },
+  "integrity": {
+    "exact_instance_overlap": 0,
+    "alpha_renamed_instance_overlap": 0,
+    "exact_prompt_overlap": 0,
+    "compatible_historical_structure_overlap": 0,
+    "unique_instances": 10224,
+    "unique_structural_fingerprints": 10224,
+    "generation_rejections": {
+      "solver_or_uniqueness": 4439,
+      "exact_instance": 19,
+      "renamed_structure": 5,
+      "prompt": 0,
+      "historical_renamed_structure": 1
+    },
+    "topology_only_overlap": "Allowed for ID and lexical shift; withheld generator families define structural shift. Literal-free archetype independence is not claimed."
+  },
+  "withheld_generator_ids": {
+    "arithmetic": "parallel_ledgers",
+    "comparison": "value_per_cost",
+    "state": "boolean_program",
+    "pointer": "symbolic_modular_walk",
+    "classification": "weighted_conditions",
+    "routing": "ordered_rules"
+  },
+  "fingerprint_definition": "Constants, operations, and queries retained; presentation/entity names/candidate order removed. Symbolic register renamings minimized; graphs use a conservative directed WL invariant. Algorithm archetypes intentionally shared in ID/lexical splits.",
+  "semantic_solver": "Independent deterministic algebraic, matrix, bitmask, or declarative solvers; no language-model labels.",
+  "historical_exclusions_sha256": "e7875e0f2c4cce51da972bb882dc5d6c65599925be2aa2b63761c38fa9782424"
+}
