@@ -54,13 +54,18 @@ def audit(config):
     records, datasets, checked = 0, 0, 0
     final_ids = set()
     expected_labels = {}
+    split_rows = {}
     sources = {}
+    manifest = json.loads((EXP / "dataset_manifest.json").read_text())
     for split in ("train", "val", *FINAL):
         p = OUT / "datasets" / f"{split}.jsonl.gz"
         rows = trace(p)
+        split_rows[split] = rows
         datasets += len(rows)
         assert len(rows) == config["sizes"][split]
+        assert sha(p) == manifest["splits"][split]["sha256"]
         for row in rows:
+            assert row["id"] not in expected_labels, "Cross-split instance overlap"
             expected_labels[row["id"]] = (row["label"], row["task"])
             answer = solve(row["generator_id"], row["spec"])
             text = row["entities"][answer] if isinstance(answer, int) else answer
@@ -70,12 +75,44 @@ def audit(config):
                 assert row["id"] not in final_ids
                 final_ids.add(row["id"])
         sources[str(p)] = sha(p)
+    expected_paths = {}
+    baseline_by_id = {}
+    for split in FINAL:
+        rows = split_rows[split]
+        baseline_path = OUT / "baselines" / f"{split}.json.gz"
+        base = read_gzip(baseline_path)
+        assert base["ids"] == [r["id"] for r in rows]
+        assert base["labels"] == [r["label"] for r in rows]
+        baseline_by_id.update(zip(base["ids"], base["frozen_logits"]))
+        sources[str(baseline_path)] = sha(baseline_path)
+        for c in ("untrained_plain", "untrained_bounded"):
+            expected_paths[OUT / "trajectories" / f"{c}_{split}.jsonl.gz"] = (base["ids"], [1, 2, 3, 4])
+        for seed in config["seeds"]:
+            for c in CONDITIONS:
+                expected_paths[OUT / "trajectories" / f"{c}_{split}_seed{seed}.jsonl.gz"] = (base["ids"], [1] if c.startswith("one_pass") else [1, 2, 3, 4])
+            for c in ("reinjection", "multi_depth"):
+                for mode in ("none", "fixed"):
+                    expected_paths[OUT / "ablations" / f"{c}_{mode}_{split}_seed{seed}.jsonl.gz"] = (base["ids"], [1, 2, 3, 4])
+    rows = split_rows["fresh_id"]
+    selected = sorted(i for task in TASKS for i in sorted([i for i, r in enumerate(rows) if r["task"] == task], key=lambda j: rows[j]["id"])[:4])
+    for seed in config["seeds"]:
+        for c in ("recurrent", "reinjection", "multi_depth"):
+            expected_paths[OUT / "stress" / f"{c}_seed{seed}.jsonl.gz"] = ([rows[i]["id"] for i in selected], list(range(1, 9)))
+    actual_paths = {p for folder in ("trajectories", "ablations", "stress") for p in (OUT / folder).glob("*.jsonl.gz")}
+    assert actual_paths == set(expected_paths), "Missing or unexpected trajectory files"
     for folder in ("trajectories", "ablations", "stress"):
         for p in sorted((OUT / folder).glob("*.jsonl.gz")):
             sources[str(p)] = sha(p)
             rows = trace(p)
+            ids, depths = expected_paths[p]
+            assert [r["id"] for r in rows] == ids
             for row in rows:
                 assert expected_labels[row["id"]] == (row["label"], row["task"])
+                assert sorted(map(int, row["depths"])) == depths
+                assert row["initial_logits"] == baseline_by_id[row["id"]]
+                initial = np.array(row["initial_logits"])
+                assert row["initial_prediction"] == int(initial.argmax())
+                assert np.isclose(row["initial_correct_answer_probability"], softmax(initial)[row["label"]], atol=2e-6)
                 for k, r in row["depths"].items():
                     l = np.array(r["logits"])
                     probabilities = softmax(l)
@@ -83,12 +120,15 @@ def audit(config):
                     assert np.isclose(r["conditional_loss"], logsumexp(l) - l[row["label"]], atol=2e-6)
                     assert np.isclose(r["correct_answer_probability"], probabilities[row["label"]], atol=2e-6)
                     assert np.isclose(r["confidence"], probabilities.max(), atol=2e-6)
+                    ordered = np.sort(probabilities)
+                    assert np.isclose(r["margin"], ordered[-1] - ordered[-2], atol=2e-6)
+                    assert np.isclose(r["entropy"], -np.sum(probabilities * np.log(np.maximum(probabilities, 1e-12))), atol=2e-6)
                     assert np.isfinite([r["state_norm"], r["state_distance"], r["state_drift"]]).all()
                     checked += 1
                 records += 1
     atomic_json(OUT / "public_audit.json", {"all_passed": True, "independent_labels_checked": datasets,
                                             "distinct_final_problems": len(final_ids), "trajectory_examples_checked": records,
-                                            "state_metric_checks": checked, "record_hashes": sources,
+                                            "state_metric_checks": checked, "complete_trajectory_files": len(expected_paths), "record_hashes": sources,
                                             "weights_or_hidden_arrays_required": False})
 
 
@@ -141,6 +181,7 @@ def summarize(config, frozen):
         selected = frozen["selected_recurrent_family"]
         chosen = corrected_by[selected][:, 3].astype(float)
         comparisons = {f"selected_minus_{control}": bootstrap(chosen - corrected_by[control][:, 0], config["bootstrap_repeats"], 550801) for control in ("one_pass", "one_pass_compute")}
+        comparisons.update({f"selected_depth1_minus_{control}_matched_inference": bootstrap(corrected_by[selected][:, 0].astype(float) - corrected_by[control][:, 0], config["bootstrap_repeats"], 550801) for control in ("one_pass", "one_pass_compute")})
         comparisons["selected_minus_frozen"] = bootstrap(chosen - initial[None, :], config["bootstrap_repeats"], 550801)
         comparisons["selected_depth4_minus_depth1"] = bootstrap(chosen - corrected_by[selected][:, 0], config["bootstrap_repeats"], 550801)
         untrained = {}
@@ -179,7 +220,8 @@ def figures(config, summary, timed, fits, frozen, ablations, stress):
     for condition in CONDITIONS:
         d = fid["systems"][condition]["depths"]
         x = list(map(int, d)); y = [100 * d[str(k)]["accuracy"] for k in x]
-        plt.plot(x, y, "o-", label=condition, color=colors[condition])
+        bounds = np.array([d[str(k)]["accuracy_interval"]["cluster_seed_bootstrap95"] for k in x]) * 100
+        plt.errorbar(x, y, yerr=np.maximum(np.array([y - bounds[:, 0], bounds[:, 1] - y]), 0), fmt="o-", capsize=3, label=condition, color=colors[condition])
     plt.plot([1, 2, 3, 4], [100 * fid["untrained"]["untrained_plain"][str(k)]["accuracy"] for k in range(1, 5)], "--", color="gray", label="untrained plain")
     plt.axhline(100 * fid["frozen"]["accuracy"], color="black", linestyle=":", label="frozen")
     plt.xticks([1, 2, 3, 4]);plt.xlabel("Recurrent depth");plt.ylabel("Fresh-ID accuracy (%)");plt.legend(fontsize=8);save("accuracy_depth")
@@ -194,6 +236,7 @@ def figures(config, summary, timed, fits, frozen, ablations, stress):
         depth = "1" if condition.startswith("one_pass") else "4"
         acc = 100 * fid["systems"][condition]["depths"][depth]["accuracy"]
         plt.scatter(count / 1000, acc, color=colors[condition]);plt.annotate(condition, (count / 1000, acc), xytext=(10, i * 8 - 15), textcoords="offset points", fontsize=8)
+    plt.xlim(122.86, 122.94);plt.ticklabel_format(axis="x", style="plain", useOffset=False)
     plt.xlabel("Trainable parameters (thousands; almost identical)");plt.ylabel("Fresh-ID accuracy at prespecified depth (%)");save("parameters_accuracy")
     plt.figure(figsize=(8, 5))
     for condition in ("recurrent", "reinjection", "multi_depth"):
@@ -254,9 +297,16 @@ def main():
         correct = np.stack([cube(r).argmax(-1) == np.array([q["label"] for q in r]) for r in rr])
         stress[condition] = {str(k + 1): float(correct[:, k].mean()) for k in range(8)}
     validation = json.loads((OUT / "implementation_validation.json").read_text())
-    peak = max([f["peak_mlx_bytes"] for values in fits.values() for f in values] + [validation["peak_mlx_bytes"], latency["peak_mlx_bytes"]]) / 2**30
-    rss = max([f["peak_process_rss_bytes"] for values in fits.values() for f in values] + [latency["peak_process_rss_bytes"]]) / 2**30
-    duration = (datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(config["started_utc"])).total_seconds()
+    final_execution = json.loads((OUT / "final_execution.json").read_text())
+    pilots = [json.loads(p.read_text()) for p in (OUT / "training").glob("pilot_*.json")]
+    peak = max([f["peak_mlx_bytes"] for values in fits.values() for f in values] + [p["peak_mlx_bytes"] for p in pilots] + [validation["peak_mlx_bytes"], latency["peak_mlx_bytes"], final_execution["peak_mlx_bytes"]]) / 2**30
+    rss = max([f["peak_process_rss_bytes"] for values in fits.values() for f in values] + [p["peak_process_rss_bytes"] for p in pilots] + [latency["peak_process_rss_bytes"], final_execution["peak_process_rss_bytes"]]) / 2**30
+    completion_path = OUT / "report_completion.json"
+    if completion_path.exists():
+        duration = json.loads(completion_path.read_text())["experiment_duration_seconds"]
+    else:
+        duration = (datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(config["started_utc"])).total_seconds()
+        atomic_json(completion_path, {"first_report_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "experiment_duration_seconds": duration})
     output = {"completed_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "experiment_duration_seconds": duration,
               "splits": summary, "timing": timed, "reinjection_inference_ablations": ablations, "stress": stress,
               "selected_recurrent_family": frozen["selected_recurrent_family"], "selected_one_pass_family": frozen["selected_one_pass_family"],
@@ -290,13 +340,18 @@ def main():
              "## Experimental configurations", "", "| Condition | Objective / reinjection | Trainable parameters | Measured fit seconds, three seeds | Training examples/s |", "|---|---|---:|---:|---:|"]
     for condition in CONDITIONS:
         lines.append(f"| {condition} | {'depth 1' if condition.startswith('one_pass') else 'equal depths 1–4' if condition=='multi_depth' else 'uniform sampled depth'} / {'learned' if condition in ('reinjection','multi_depth') else 'none'} | {output['trainable_parameters'][condition]:,} | {output['fit_seconds'][condition]:.1f} | {sum(f['examples_processed'] for f in fits[condition])/output['fit_seconds'][condition]:.2f} |")
-    lines += ["", "One-pass and recurrent LoRA matrices have exactly equal capacity; recurrence adds one update scalar and gated variants add one reinjection scalar. The one-pass update scalar is frozen and excluded from trainable counts. This negligible difference is disclosed. Parameter count alone does not match inference cost.", "", "## Accuracy results", "", "| Split | Frozen | Historical one pass | Trained one pass | Extra-budget one pass | Selected recurrence, depth 4 | Difference vs selected one pass [95%], pp |", "|---|---:|---:|---:|---:|---:|---:|"]
+    lines += ["", "One-pass and recurrent LoRA matrices have exactly equal capacity; recurrence adds one update scalar and gated variants add one reinjection scalar. The one-pass update scalar is frozen and excluded from trainable counts. This negligible difference is disclosed. Parameter count alone does not match inference cost.", "",
+              f"The inspected model contains {validation['rank_parameter_counts']['8']['total']:,} parameters including rank-8 adapters and two scalar gates; rank 16 would train {validation['rank_parameter_counts']['16']['trainable']:,} parameters and was compatibility-tested only.", "",
+              "| Family | Mean validation NLL at prespecified depth | Best epoch per seed (one-based) |", "|---|---:|---|"]
+    for condition in CONDITIONS:
+        lines.append(f"| {condition} | {frozen['validation_selection_scores'][condition]:.6f} | {', '.join(str(f['best_epoch'] + 1) for f in fits[condition])} |")
+    lines += ["", "These validation scores, recorded before opening final data, select the reported families. Epoch selection is by NLL, so a later epoch with higher accuracy can remain unselected.", "", "## Accuracy results", "", "| Split | Frozen | Historical one pass | Trained one pass | Extra-budget one pass | Selected recurrence, depth 4 | Difference vs selected one pass [95%], pp |", "|---|---:|---:|---:|---:|---:|---:|"]
     for split in FINAL:
         s = summary[split]
         lines.append(f"| {split} | {100*s['frozen']['accuracy']:.2f}% | {100*s['historical_one_pass']['accuracy']:.2f}% | {100*s['systems']['one_pass']['depths']['1']['accuracy']:.2f}% | {100*s['systems']['one_pass_compute']['depths']['1']['accuracy']:.2f}% | {100*s['systems'][selected]['depths']['4']['accuracy']:.2f}% | {interval(s['paired_comparisons']['selected_minus_'+onepass])} |")
     lines += ["", "| Fresh-ID paired comparison | Difference [95% interval], pp |", "|---|---:|"]
     lines += [f"| {name} | {interval(value)} |" for name, value in paired.items()]
-    lines += ["", "Intervals jointly resample three training seeds and the same unique problem indices across all conditions/depths; repeated depths stay clustered. The 288 fresh-ID problems are not 864 independent seed examples. Three seeds and small task strata limit power; multiple comparisons have no multiplicity adjustment. Shift results are secondary. Conditional option NLL is not language-model perplexity or free generation accuracy.", "", "| Fresh-ID system / depth | Accuracy | NLL | ECE | Brier |", "|---|---:|---:|---:|---:|"]
+    lines += ["", "Intervals jointly resample three training seeds and the same unique problem indices across all conditions/depths; repeated depths stay clustered. The 288 fresh-ID problems are not 864 independent seed examples. Three seeds and small task strata limit power; multiple comparisons have no multiplicity adjustment. Shift results are secondary. Depth-one comparisons match the forward architecture and parameter budget, testing variable-depth training effects without additional inference recurrence; they are secondary descriptive controls, not the primary hypothesis. Conditional option NLL is not language-model perplexity or free generation accuracy.", "", "| Fresh-ID system / depth | Accuracy | NLL | ECE | Brier |", "|---|---:|---:|---:|---:|"]
     for condition in CONDITIONS:
         for k, r in fid["systems"][condition]["depths"].items():
             lines.append(f"| {condition} / {k} | {100*r['accuracy']:.2f}% | {r['nll']:.4f} | {r['ece']:.4f} | {r['brier']:.4f} |")
@@ -304,7 +359,7 @@ def main():
     for condition in ("frozen", *CONDITIONS):
         k = 1 if condition.startswith("one_pass") or condition == "frozen" else 4
         lines.append(f"| {condition} | {k} | {timed[f'{condition}:d{k}:b1']['ms_per_item']:.2f} | {timed[f'{condition}:d{k}:b8']['ms_per_item']:.2f} |")
-    lines += ["", f"Timing uses 24 validation prompts, batches 1/8, {config['timing_warmups']} warmups and {config['timing_repeats']} synchronized repeats, three seeds, and randomized condition order. Condition runs remain sequential, so between-run thermals/load are not fully controlled. Batch-8 amortization measures throughput; variable prompt lengths add padding work. Model load is excluded. The latency figure uses accuracy on the **same timed validation items**, not final accuracy from different prompts. Matrix FLOPs are not used to claim speedups.", "", "![Accuracy versus end-to-end latency](figures/accuracy_latency.png)", "", "![Parameters versus accuracy](figures/parameters_accuracy.png)", "", "## Generalization", "", "![Generalization by task family](figures/generalization_tasks.png)", "", "All families, nominal strata, withheld structural approaches and numeric shifts remain in the public summary. Cells contain few examples and are descriptive. Added compute, calibrated answer probabilities, memorized templates, or task-specific readouts remain alternative explanations for any accuracy gain.", "", "## Corrected/degraded decision analysis", "", "| Family | W→R rate [95%] | R→W rate [95%] | W→R given wrong | R→W given right |", "|---|---:|---:|---:|---:|"]
+    lines += ["", f"Timing uses 24 validation prompts, batches 1/8, {config['timing_warmups']} warmups and {config['timing_repeats']} synchronized repeats, three seeds, and randomized condition order. Condition runs remain sequential, so between-run thermals/load are not fully controlled. Batch-8 amortization measures throughput; variable prompt lengths add padding work. Model load is excluded. This is full four-candidate decision inference, not open-ended generation with a full-vocabulary output projection. The latency figure uses accuracy on the **same timed validation items**, not final accuracy from different prompts. Matrix FLOPs are not used to claim speedups.", "", "![Accuracy versus end-to-end latency](figures/accuracy_latency.png)", "", "![Parameters versus accuracy](figures/parameters_accuracy.png)", "", "## Generalization", "", "![Generalization by task family](figures/generalization_tasks.png)", "", "All families, nominal strata, withheld structural approaches and numeric shifts remain in the public summary. Cells contain few examples and are descriptive. Added compute, calibrated answer probabilities, memorized templates, or task-specific readouts remain alternative explanations for any accuracy gain.", "", "## Corrected/degraded decision analysis", "", "| Family | W→R rate [95%] | R→W rate [95%] | W→R given wrong | R→W given right |", "|---|---:|---:|---:|---:|"]
     for condition in ("recurrent", "reinjection", "multi_depth"):
         tr = fid["systems"][condition]["transitions"]
         lines.append(f"| {condition} | {interval(tr['WR'])}% | {interval(tr['RW'])}% | {100*tr['WR_given_wrong']:.2f}% | {100*tr['RW_given_right']:.2f}% |")
