@@ -1,0 +1,75 @@
+{
+  "release_commit": "0a637eb97d66eebbd740b612ab92e9095c496931",
+  "started_utc": "2026-10-09T01:40:02.203797+00:00",
+  "max_hours": 6,
+  "report_reserve_minutes": 20,
+  "memory_gib": 48,
+  "model": "Qwen/Qwen3-0.6B",
+  "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "precision": "FP32",
+  "middle_start": 12,
+  "middle_count": 3,
+  "rank": 8,
+  "rank_candidates": [
+    8,
+    16
+  ],
+  "max_depth": 4,
+  "stress_depth": 8,
+  "update_initial": 0.1,
+  "norm_cap": 2.0,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "sizes": {
+    "train": 576,
+    "val": 144,
+    "fresh_id": 288,
+    "new_template": 144,
+    "structural_shift": 144,
+    "harder_depth": 144,
+    "numeric_range": 144
+  },
+  "split_seeds": {
+    "train": 550001,
+    "val": 550101,
+    "fresh_id": 550201,
+    "new_template": 550301,
+    "structural_shift": 550401,
+    "harder_depth": 550501,
+    "numeric_range": 550601
+  },
+  "batch_size": 4,
+  "eval_batch_size": 8,
+  "epochs": 3,
+  "compute_control_epochs": 11,
+  "learning_rate": 0.0005,
+  "weight_decay": 0.01,
+  "preservation_alpha": 0.02,
+  "depth_weights": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "pilot_train": 72,
+  "pilot_val": 36,
+  "bootstrap_repeats": 1000,
+  "primary_inference_depth": 4,
+  "primary_split": "fresh_id",
+  "conditions": [
+    "one_pass",
+    "recurrent",
+    "reinjection",
+    "multi_depth",
+    "one_pass_compute"
+  ],
+  "timing_examples": 24,
+  "timing_warmups": 2,
+  "timing_repeats": 3,
+  "checkpoint_every_batches": 16,
+  "optional_memory": false,
+  "optional_trajectory_loss": false
+}

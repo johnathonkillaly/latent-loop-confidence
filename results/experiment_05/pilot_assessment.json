@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-10-09T01:46:43.763782+00:00",
+  "rank8_viable": true,
+  "pilot_completed": true,
+  "pilot_seed": 11,
+  "pilot_checkpoint_used_for_main": false,
+  "training_cost_ratio_multi_depth_to_one_pass": 3.334831496365531,
+  "cost_control_epochs": 11,
+  "cost_selection_rule": "ceil(main_epochs * pilot multi-depth/one-pass synchronized batch time ratio); fixed before main fits; no final data used",
+  "all_33_tests_pass": true,
+  "peak_mlx_gib": 15.850409872829914,
+  "pilot_interpretation": "Working stable supervised update; 36 validation items cannot establish recurrence benefit"
+}

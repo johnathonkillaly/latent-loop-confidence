@@ -1,0 +1,234 @@
+{
+  "version": "train-thinker-v1",
+  "recipe": {
+    "sizes": {
+      "train": 576,
+      "val": 144,
+      "fresh_id": 288,
+      "new_template": 144,
+      "structural_shift": 144,
+      "harder_depth": 144,
+      "numeric_range": 144
+    },
+    "split_seeds": {
+      "train": 550001,
+      "val": 550101,
+      "fresh_id": 550201,
+      "new_template": 550301,
+      "structural_shift": 550401,
+      "harder_depth": 550501,
+      "numeric_range": 550601
+    }
+  },
+  "historical_exclusion_sources": [
+    {
+      "path": "results/experiment_04a/datasets/controller_train.jsonl.gz",
+      "sha256": "e31c23925ec8867b3f4c52c257ac7df189a760b08dc45fc6b6453a1eb6bacba9"
+    },
+    {
+      "path": "results/experiment_04a/datasets/controller_val.jsonl.gz",
+      "sha256": "a12098aab7fe0068fc00923b13502b8bb81879f6f7d9f2bfeef745356f20bcdb"
+    },
+    {
+      "path": "results/experiment_04a/datasets/fresh_id.jsonl.gz",
+      "sha256": "3e351fe4c92cdeabe483d086705e47ab1f50b69f8adca36b5bb75570e6a6c868"
+    },
+    {
+      "path": "results/experiment_04a/datasets/harder_depth.jsonl.gz",
+      "sha256": "5c5bc78ce7b549238ecef6ce7a48d33bdaa245b74be60e83f7f0a17c5aa5e61a"
+    },
+    {
+      "path": "results/experiment_04a/datasets/new_template.jsonl.gz",
+      "sha256": "73048210305a66922b8f755fb4932fb188b85773bf5397d5e54a571e1b1bf237"
+    },
+    {
+      "path": "results/experiment_04a/datasets/structural_shift.jsonl.gz",
+      "sha256": "dbe3e876ae4e30df38c48553332b9dcc232dcbf69d758eb29540d1da703ef071"
+    },
+    {
+      "path": "results/experiment_04b/datasets/fresh_id.jsonl.gz",
+      "sha256": "521fef9e06e887c25ca161183f9e211792cbc163cd24ba69b7200035a1f06417"
+    },
+    {
+      "path": "results/experiment_04b/datasets/harder_depth.jsonl.gz",
+      "sha256": "54d7ade144aabf7ee5691868b93e4e6398751d1ba9d1656584738383dd785ff7"
+    },
+    {
+      "path": "results/experiment_04b/datasets/new_template.jsonl.gz",
+      "sha256": "d688e5dec74d9aced15ff3a07661cac4caaddc9c642f2ad56d95366fdc9cf435"
+    },
+    {
+      "path": "results/experiment_04b/datasets/numeric_range.jsonl.gz",
+      "sha256": "49af39eb01c61437578170a25c83c04aa69cb704ecfa9e178cad0ab1674a903e"
+    },
+    {
+      "path": "results/experiment_04b/datasets/structural_shift.jsonl.gz",
+      "sha256": "736ec536ef8454911421cc85c9a2fd9c22c69129197bcbad2bd65b5180bdae07"
+    }
+  ],
+  "historical_exclusion_list_sha256": "e7875e0f2c4cce51da972bb882dc5d6c65599925be2aa2b63761c38fa9782424",
+  "historical_identity_role": "Exclusion only; old final labels and scores never select this experiment",
+  "splits": {
+    "train": {
+      "n": 576,
+      "seed": 550001,
+      "path": "artifacts/experiment_05/datasets/development/train.jsonl.gz",
+      "sha256": "0cdb8fddd1fa73267cc87b459ea822bd5137e08ec1a3c098ca5a7cdf9163465d",
+      "sealed": false,
+      "task_count": 96,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    },
+    "val": {
+      "n": 144,
+      "seed": 550101,
+      "path": "artifacts/experiment_05/datasets/development/val.jsonl.gz",
+      "sha256": "6759d26bf924646e32df471827937929c2fac4cece2b7bb3c6f73c9f2503ce33",
+      "sealed": false,
+      "task_count": 24,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    },
+    "fresh_id": {
+      "n": 288,
+      "seed": 550201,
+      "path": "artifacts/experiment_05/datasets/sealed/fresh_id.jsonl.gz",
+      "sha256": "2ae4945d43689529cefcd085c76c4ed92274f0c953de95c5b3677de3eff7f537",
+      "sealed": true,
+      "task_count": 48,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    },
+    "new_template": {
+      "n": 144,
+      "seed": 550301,
+      "path": "artifacts/experiment_05/datasets/sealed/new_template.jsonl.gz",
+      "sha256": "87df4ad54cded044bd4351b133c1ae84579f4c8d3c899f39ec3c0aa2d8c3d027",
+      "sealed": true,
+      "task_count": 24,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    },
+    "structural_shift": {
+      "n": 144,
+      "seed": 550401,
+      "path": "artifacts/experiment_05/datasets/sealed/structural_shift.jsonl.gz",
+      "sha256": "aa059735e68f2ced3997f9c3eb07657c524ef4cd537ac204e7a5a0025e228dab",
+      "sealed": true,
+      "task_count": 24,
+      "generator_ids": [
+        "boolean_program",
+        "ordered_rules",
+        "parallel_ledgers",
+        "symbolic_modular_walk",
+        "value_per_cost",
+        "weighted_conditions"
+      ]
+    },
+    "harder_depth": {
+      "n": 144,
+      "seed": 550501,
+      "path": "artifacts/experiment_05/datasets/sealed/harder_depth.jsonl.gz",
+      "sha256": "a09f8af8d55990715b959d52a113bac97f1e59cc465bc5e13b36b23cfcd73717",
+      "sealed": true,
+      "task_count": 24,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    },
+    "numeric_range": {
+      "n": 144,
+      "seed": 550601,
+      "path": "artifacts/experiment_05/datasets/sealed/numeric_range.jsonl.gz",
+      "sha256": "4d29bc6927123deb88bbe54bf44786e6c76a4646287076bfb70296bfa0718bb0",
+      "sealed": true,
+      "task_count": 24,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    }
+  },
+  "rejections": 696,
+  "historical_exclusion_counts": [
+    16704,
+    19844,
+    16704
+  ],
+  "integrity": {
+    "historical_instance_overlap": 0,
+    "alpha_instance_overlap": 0,
+    "prompt_overlap": 0,
+    "labels_independently_verified": true,
+    "shared_algorithm_archetypes": "Allowed on ID/template/range; structural shift holds out generator families"
+  }
+}
