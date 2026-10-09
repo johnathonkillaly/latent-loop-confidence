@@ -1,0 +1,13 @@
+{
+  "stage": "report",
+  "completed_utc": "2026-10-09T00:46:32.314190+00:00",
+  "seconds": 62.96504466699844,
+  "peak_process_rss_bytes": 1449918464,
+  "budget_started_utc": "2026-10-09T00:08:38+00:00",
+  "preservation": {
+    "historical_files": 296,
+    "all_unchanged_except_readme_link": true,
+    "checked_utc": "2026-10-09T00:46:32.355773+00:00"
+  },
+  "peak_mlx_bytes": 0
+}

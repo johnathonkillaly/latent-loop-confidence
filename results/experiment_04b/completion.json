@@ -1,0 +1,46 @@
+{
+  "completed_utc": "2026-10-09T00:53:19.723537+00:00",
+  "elapsed_minutes_since_start": 44.695392283333334,
+  "branch": "research/exp04-decision-value",
+  "scientific_base_commit": "29140bd101e8a0c80ba5ef4cadf7000100e13327",
+  "neural_fits": 36,
+  "main_fits": 27,
+  "OOF_nuisance_fits": 9,
+  "substantive_neural_conditions": 8,
+  "parent_seeds": [
+    11,
+    22,
+    33
+  ],
+  "tests": {
+    "command": "LATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q",
+    "passed": 29,
+    "failed": 0
+  },
+  "lint": "Scoped F/I check passes for all new source and tests",
+  "figures_png_and_svg": 11,
+  "live_full_inference_checks": 9315,
+  "cached_native_parity_checks_before_opening": 138,
+  "public_safety": {
+    "files_scanned": 161,
+    "private_paths_or_secret_patterns": 0,
+    "weights_or_npz_in_public_outputs": 0
+  },
+  "frozen_protocol_sha256": "05ca1b00757e913208ca02acee27026fc40a286f795b9a7845db7e0fd2d9904c",
+  "all_historical_files_preserved": {
+    "historical_files": 296,
+    "all_unchanged_except_readme_link": true,
+    "checked_utc": "2026-10-09T00:53:19.766319+00:00"
+  },
+  "remote_created": false,
+  "pushed": false,
+  "primary_accuracy": {
+    "frozen": 0.33796296296296297,
+    "one_pass": 0.3330761316872428,
+    "fixed1": 0.3469650205761317,
+    "D": 0.34850823045267487,
+    "D_selector": 0.3487654320987654
+  },
+  "publication_status": "Ready for public review as a bounded synthetic study; no general reasoning or architectural novelty claim.",
+  "lockbox": "4B consumed; future model/threshold selection requires a fresh independently sealed final set."
+}

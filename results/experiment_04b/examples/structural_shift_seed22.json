@@ -1,0 +1,872 @@
+[
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "01696b85850eb8ae640574bf4089f41408b2c236b543b660a6fef818561b15c0",
+    "prompt": "Solve the following deterministic problem.\nRule: score = 1 if x>=9, otherwise 0 + 1 if y>=20, otherwise 0 + 1 if z>=4, otherwise 0; score must be >= 3. Candidate records (x,y,z): N9208_0: 21,2,7; N6872_1: 12,5,16; N4259_2: 21,25,12; N4841_3: 7,14,5. Select the unique eligible record.\nA. N9208_0\nB. N4841_3\nC. N6872_1\nD. N4259_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N9208_0",
+      "N4841_3",
+      "N6872_1",
+      "N4259_2"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      0,
+      0,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      1.974513359713157,
+      1.5265071259843097,
+      1.1496308575236611,
+      0.8463311410395455
+    ],
+    "C_by_depth": [
+      0.3131420890948771,
+      0.30187459468018585,
+      0.3005284548972853,
+      0.2687605930210111
+    ],
+    "predicted_D_by_depth": [
+      0.009124471683786245,
+      0.0003717361239514855,
+      -0.005843645591673552
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "01af39a73a35d3ebc6acb1532c9ade92c72da8bac5863c1ae4fa8097f296014e",
+    "prompt": "Compute the requested result from the supplied data.\nBinary flags: N6738_0=0, N9575_1=1, N7374_2=0, N6345_3=0, N6818_4=0, N1965_5=1. Apply sequentially: set N9575_1 to N9575_1 XOR N6345_3\nset N9575_1 to N9575_1 XOR N1965_5. Return the two bits for N7374_2 then N9575_1, in that order.\nA. 10\nB. 01\nC. 11\nD. 00\nAnswer with only the correct option letter.",
+    "choices": [
+      "10",
+      "01",
+      "11",
+      "00"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      2,
+      2,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      3.199531221559319,
+      2.1517239583029557,
+      1.3772483146481953,
+      1.013257581244492
+    ],
+    "C_by_depth": [
+      0.2072130706482132,
+      0.2345803130338743,
+      0.3531486871759612,
+      0.36850244648282515
+    ],
+    "predicted_D_by_depth": [
+      -0.012469932080089619,
+      -0.04259879895342476,
+      -0.08538622755386599
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "01ef5a187e950bbffe28c2a2441285fb9fece65a42efc507c19688bd17904f31",
+    "prompt": "Solve the following deterministic problem.\nBinary flags: N2407_0=1, N8282_1=1, N7703_2=1, N1724_3=1, N4338_4=0, N5598_5=1. Apply sequentially: set N7703_2=0; set N4338_4 to N4338_4 XOR N1724_3; set N8282_1 to N8282_1 XOR N1724_3; set N8282_1=1; set N8282_1=0. Return the two bits for N7703_2 then N1724_3, in that order.\nA. 10\nB. 11\nC. 00\nD. 01\nAnswer with only the correct option letter.",
+    "choices": [
+      "10",
+      "11",
+      "00",
+      "01"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "loss_by_depth": [
+      1.1256684557328178,
+      0.7717392171710529,
+      0.5525833919726928,
+      0.45746942906086474
+    ],
+    "C_by_depth": [
+      0.23496750227052807,
+      0.2545285494994882,
+      0.33304686870444,
+      0.3260925410392616
+    ],
+    "predicted_D_by_depth": [
+      0.02126382839819088,
+      0.0073476125756927885,
+      -0.008439721316534705
+    ],
+    "actual_D_by_depth": [
+      1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "00b1684846821b3eac87a6a74363e0192c3bb238d9a95f4876e9c60f99db73eb",
+    "prompt": "Solve the following deterministic problem.\nApply first matching rule in this ordered policy. Each rule is (minimum urgency, encryption requirement, write requirement, action); -1 means either flag value. Rules: [[7,1,1,\"Inspect system\"]]. Request: {\"encrypted\":0,\"urgency\":31,\"write\":0}. Default action if no match: No valid tool. Which action follows?\nA. No valid tool\nB. Request more information\nC. Archive data\nD. Inspect system\nAnswer with only the correct option letter.",
+    "choices": [
+      "No valid tool",
+      "Request more information",
+      "Archive data",
+      "Inspect system"
+    ],
+    "gold_label": 0,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      0,
+      0,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.05345164610628217,
+      0.14194501021588124,
+      0.34658460707643,
+      0.7395767401228888
+    ],
+    "C_by_depth": [
+      0.8729401658676459,
+      0.6189744847690871,
+      0.1892937741449612,
+      0.1809009702814341
+    ],
+    "predicted_D_by_depth": [
+      -0.010850394297019197,
+      -0.023060594527698715,
+      -0.06917713504334896
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "0173690eacb1c98f7d3a66765606535462a255e3e16f38f49db864d008ed8469",
+    "prompt": "Solve the following deterministic problem.\nRule: score = 2 if x>=8, otherwise 0 + 2 if y>=20, otherwise 0 + 3 if z>=7, otherwise 0; score must be >= 6. Candidate records (x,y,z): N3409_0: 7,26,16; N1946_1: 13,17,18; N7369_2: 26,6,12; N2782_3: 12,22,28. Select the unique eligible record.\nA. N2782_3\nB. N3409_0\nC. N1946_1\nD. N7369_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N2782_3",
+      "N3409_0",
+      "N1946_1",
+      "N7369_2"
+    ],
+    "gold_label": 0,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      0,
+      0,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.7572892812262033,
+      0.8666523880528985,
+      1.020724667895653,
+      1.2169370686744223
+    ],
+    "C_by_depth": [
+      0.3341017474975544,
+      0.3123105292901463,
+      0.2923533221712511,
+      0.2523828037169885
+    ],
+    "predicted_D_by_depth": [
+      0.010987461265013723,
+      0.01206954873254626,
+      0.00157453726934087
+    ],
+    "actual_D_by_depth": [
+      0,
+      -1,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "024abaa7268bebc0bbb3656e2faea0ad2a1c7b8f2ffab5776091eb159e70435e",
+    "prompt": "Compute the requested result from the supplied data.\nBinary flags: N2768_0=1, N2284_1=0, N7106_2=1, N2487_3=1, N2860_4=1, N2252_5=0. Apply sequentially: set N2487_3=1\nset N2284_1 to N2284_1 XOR N2860_4\nset N2284_1=0. Return the two bits for N2252_5 then N2768_0, in that order.\nA. 00\nB. 01\nC. 10\nD. 11\nAnswer with only the correct option letter.",
+    "choices": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      2,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.804531354204034,
+      1.1749625815381606,
+      1.7190531244772345,
+      2.42435206688085
+    ],
+    "C_by_depth": [
+      0.23815307057268,
+      0.25351980630816207,
+      0.3350787176384232,
+      0.33166406158078204
+    ],
+    "predicted_D_by_depth": [
+      0.008456778109277932,
+      -0.004216944970051317,
+      -0.030945958597295944
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "002bb323b4f799ed44d86fb787681b6f97c9fcddca6eb0859d91b49755749985",
+    "prompt": "Compute the requested result from the supplied data.\nOffers (RAM units, cost): N9274_0: 146, 15\nN3076_1: 238, 12\nN7775_2: 145, 11\nN9828_3: 24, 30. Eligible RAM must be at least 161. Choose the highest RAM/cost ratio among eligible offers.\nA. N9274_0\nB. N9828_3\nC. N3076_1\nD. N7775_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N9274_0",
+      "N9828_3",
+      "N3076_1",
+      "N7775_2"
+    ],
+    "gold_label": 2,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.4366769849736976,
+      3.047942340228822,
+      2.7677715626369874,
+      2.589310935795279
+    ],
+    "C_by_depth": [
+      0.405100069455659,
+      0.3518021954373548,
+      0.2649360225859584,
+      0.20934483174738386
+    ],
+    "predicted_D_by_depth": [
+      -0.006675653514876943,
+      -0.016929107981121044,
+      -0.02651379652508523
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "002bb323b4f799ed44d86fb787681b6f97c9fcddca6eb0859d91b49755749985",
+    "prompt": "Compute the requested result from the supplied data.\nOffers (RAM units, cost): N9274_0: 146, 15\nN3076_1: 238, 12\nN7775_2: 145, 11\nN9828_3: 24, 30. Eligible RAM must be at least 161. Choose the highest RAM/cost ratio among eligible offers.\nA. N9274_0\nB. N9828_3\nC. N3076_1\nD. N7775_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N9274_0",
+      "N9828_3",
+      "N3076_1",
+      "N7775_2"
+    ],
+    "gold_label": 2,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.4366769849736976,
+      3.047942340228822,
+      2.7677715626369874,
+      2.589310935795279
+    ],
+    "C_by_depth": [
+      0.405100069455659,
+      0.3518021954373548,
+      0.2649360225859584,
+      0.20934483174738386
+    ],
+    "predicted_D_by_depth": [
+      -0.006675653514876943,
+      -0.016929107981121044,
+      -0.02651379652508523
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "002bb323b4f799ed44d86fb787681b6f97c9fcddca6eb0859d91b49755749985",
+    "prompt": "Compute the requested result from the supplied data.\nOffers (RAM units, cost): N9274_0: 146, 15\nN3076_1: 238, 12\nN7775_2: 145, 11\nN9828_3: 24, 30. Eligible RAM must be at least 161. Choose the highest RAM/cost ratio among eligible offers.\nA. N9274_0\nB. N9828_3\nC. N3076_1\nD. N7775_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N9274_0",
+      "N9828_3",
+      "N3076_1",
+      "N7775_2"
+    ],
+    "gold_label": 2,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.4366769849736976,
+      3.047942340228822,
+      2.7677715626369874,
+      2.589310935795279
+    ],
+    "C_by_depth": [
+      0.405100069455659,
+      0.3518021954373548,
+      0.2649360225859584,
+      0.20934483174738386
+    ],
+    "predicted_D_by_depth": [
+      -0.006675653514876943,
+      -0.016929107981121044,
+      -0.02651379652508523
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "0005de5cb6b6727c5d4e532c4544e6d97fe9d061a9e0abe72f5a545591445acb",
+    "prompt": "Solve the following deterministic problem.\nOffers (RAM units, cost): N5982_0: 115, 24; N7353_1: 166, 18; N1461_2: 173, 7; N9300_3: 173, 22. Eligible RAM must be at least 42. Choose the highest RAM/cost ratio among eligible offers.\nA. N7353_1\nB. N1461_2\nC. N5982_0\nD. N9300_3\nAnswer with only the correct option letter.",
+    "choices": [
+      "N7353_1",
+      "N1461_2",
+      "N5982_0",
+      "N9300_3"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      0,
+      0,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.6801434429123816,
+      2.87063750403048,
+      3.1043145208767164,
+      3.377687942445103
+    ],
+    "C_by_depth": [
+      0.3367596716731655,
+      0.3144659407480417,
+      0.29071001197339924,
+      0.24874342050341638
+    ],
+    "predicted_D_by_depth": [
+      -0.018007487057543327,
+      -0.03470345735487369,
+      -0.053379226975800165
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "0005de5cb6b6727c5d4e532c4544e6d97fe9d061a9e0abe72f5a545591445acb",
+    "prompt": "Solve the following deterministic problem.\nOffers (RAM units, cost): N5982_0: 115, 24; N7353_1: 166, 18; N1461_2: 173, 7; N9300_3: 173, 22. Eligible RAM must be at least 42. Choose the highest RAM/cost ratio among eligible offers.\nA. N7353_1\nB. N1461_2\nC. N5982_0\nD. N9300_3\nAnswer with only the correct option letter.",
+    "choices": [
+      "N7353_1",
+      "N1461_2",
+      "N5982_0",
+      "N9300_3"
+    ],
+    "gold_label": 1,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      0,
+      0,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.6801434429123816,
+      2.87063750403048,
+      3.1043145208767164,
+      3.377687942445103
+    ],
+    "C_by_depth": [
+      0.3367596716731655,
+      0.3144659407480417,
+      0.29071001197339924,
+      0.24874342050341638
+    ],
+    "predicted_D_by_depth": [
+      -0.018007487057543327,
+      -0.03470345735487369,
+      -0.053379226975800165
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "0005de5cb6b6727c5d4e532c4544e6d97fe9d061a9e0abe72f5a545591445acb",
+    "prompt": "Solve the following deterministic problem.\nOffers (RAM units, cost): N5982_0: 115, 24; N7353_1: 166, 18; N1461_2: 173, 7; N9300_3: 173, 22. Eligible RAM must be at least 42. Choose the highest RAM/cost ratio among eligible offers.\nA. N7353_1\nB. N1461_2\nC. N5982_0\nD. N9300_3\nAnswer with only the correct option letter.",
+    "choices": [
+      "N7353_1",
+      "N1461_2",
+      "N5982_0",
+      "N9300_3"
+    ],
+    "gold_label": 1,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      0,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.6801434429123816,
+      2.87063750403048,
+      3.1043145208767164,
+      3.377687942445103
+    ],
+    "C_by_depth": [
+      0.3367596716731655,
+      0.3144659407480417,
+      0.29071001197339924,
+      0.24874342050341638
+    ],
+    "predicted_D_by_depth": [
+      -0.018007487057543327,
+      -0.03470345735487369,
+      -0.053379226975800165
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "024abaa7268bebc0bbb3656e2faea0ad2a1c7b8f2ffab5776091eb159e70435e",
+    "prompt": "Compute the requested result from the supplied data.\nBinary flags: N2768_0=1, N2284_1=0, N7106_2=1, N2487_3=1, N2860_4=1, N2252_5=0. Apply sequentially: set N2487_3=1\nset N2284_1 to N2284_1 XOR N2860_4\nset N2284_1=0. Return the two bits for N2252_5 then N2768_0, in that order.\nA. 00\nB. 01\nC. 10\nD. 11\nAnswer with only the correct option letter.",
+    "choices": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      2,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.804531354204034,
+      1.1749625815381606,
+      1.7190531244772345,
+      2.42435206688085
+    ],
+    "C_by_depth": [
+      0.23815307057268,
+      0.25351980630816207,
+      0.3350787176384232,
+      0.33166406158078204
+    ],
+    "predicted_D_by_depth": [
+      0.008456778109277932,
+      -0.004216944970051317,
+      -0.030945958597295944
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "0773a233e1a041124ef46f624760129e2296283226305d49bc25d73abbd89e35",
+    "prompt": "Compute the requested result from the supplied data.\nInteger state initially 11, modulo 13. Alternate transformations x <- (3*x + 3) modulo 13, then x <- (4*x + 7) modulo 13. Apply exactly 3 transformations, starting with the first. Final state?\nA. -2\nB. 1\nC. 4\nD. -10\nAnswer with only the correct option letter.",
+    "choices": [
+      "-2",
+      "1",
+      "4",
+      "-10"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.8299337955624075,
+      1.3936706306427418,
+      2.281576053671543,
+      3.451876320907054
+    ],
+    "C_by_depth": [
+      0.22807810406785264,
+      0.2521461675076508,
+      0.3363776264149903,
+      0.3234796648687909
+    ],
+    "predicted_D_by_depth": [
+      0.02666344396257661,
+      -0.004686942289214027,
+      -0.035022426634096354
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "structural_shift",
+    "instance_id": "0918d15d213a6abe31a4be24b72d39126bb1bab157487e01f30d731a66f1066f",
+    "prompt": "Solve the following deterministic problem.\nRule: score = 2 if x>=20, otherwise 0 + 1 if y>=18, otherwise 0 + 2 if z>=20, otherwise 0; score must be >= 3. Candidate records (x,y,z): N7898_0: 24,21,1; N6661_1: 14,27,0; N2626_2: 10,2,1; N2048_3: 12,5,18. Select the unique eligible record.\nA. N6661_1\nB. N7898_0\nC. N2048_3\nD. N2626_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N6661_1",
+      "N7898_0",
+      "N2048_3",
+      "N2626_2"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.6503793143084415,
+      0.930478106964383,
+      1.3071092460526437,
+      1.7978275216283919
+    ],
+    "C_by_depth": [
+      0.2948370497720035,
+      0.29079620525633487,
+      0.30579912042776974,
+      0.2775739499032947
+    ],
+    "predicted_D_by_depth": [
+      -0.00872663682236173,
+      -0.020579068304099918,
+      -0.04002422166208221
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  }
+]

@@ -1,0 +1,271 @@
+{
+  "name": "d4_plain",
+  "seed": 11,
+  "parameters": 66244,
+  "signature": {
+    "config_sha256": "dcbf3e1ee4585ed0a29f2cbcc180d2ee875d4eae439a97187dd975da58f5569b",
+    "source": {
+      "src/latent_loop/experiment04b/models.py": "e8d904d80da2e2d3cab8c6a3bcdf56fa62f76517c730e50ff238ab8d99b1b044",
+      "src/latent_loop/experiment04b/train.py": "842c869851b9158532b6b495b2ca60c3658797d2c7b521fba64171169f87ccdd"
+    },
+    "objective": "class4",
+    "weighted": false,
+    "fixed_epochs": null,
+    "extra": {
+      "train_sha256": "47ae8adf479b85f7366c7204cda98f4916724a5a58ff8304af946d571f1240f2",
+      "val_sha256": "9d8399ccfa7c80ba611b182cb8562132560f6b5e8d52082f4245400aff513aa2",
+      "partition_sha256": "b98da953d4c93742cb539b68f14e00de600d96ca5eefbcfd64a3d845b5b6bbab"
+    },
+    "input_arrays": [
+      {
+        "shape": [
+          12096,
+          1032
+        ],
+        "dtype": "float32",
+        "sha256": "4435e115086f0db82252e53154f61d39b35ab4407b54107dbbe6d6e6c4a9db06"
+      },
+      {
+        "shape": [
+          12096
+        ],
+        "dtype": "int32",
+        "sha256": "07fd6e2bafd53948226f8f702eb55519db6b61559b510a5a599dc26c27ba2364"
+      },
+      {
+        "shape": [
+          1008,
+          1032
+        ],
+        "dtype": "float32",
+        "sha256": "1d581740e17181323aea06478b7e3c390467f7962dd1cf47f0ba0186816d25ea"
+      },
+      {
+        "shape": [
+          1008
+        ],
+        "dtype": "int32",
+        "sha256": "f649f4775e43f2d4c1781d27f8aabe8c6a2c1c0f55dbb9b9d3c474ed8f3cec15"
+      }
+    ]
+  },
+  "started_utc": "2026-10-09T00:25:43.098128+00:00",
+  "next_epoch": 40,
+  "best_epoch": 37,
+  "best_validation_nll": 0.8692407608032227,
+  "history": [
+    {
+      "epoch": 0,
+      "train_objective": 1.0688545927405357,
+      "validation_original_distribution_objective": 0.9608998894691467
+    },
+    {
+      "epoch": 1,
+      "train_objective": 1.0267937282721202,
+      "validation_original_distribution_objective": 0.9491626024246216
+    },
+    {
+      "epoch": 2,
+      "train_objective": 1.0096226707100868,
+      "validation_original_distribution_objective": 0.9509050250053406
+    },
+    {
+      "epoch": 3,
+      "train_objective": 1.0055017620325089,
+      "validation_original_distribution_objective": 0.9301055669784546
+    },
+    {
+      "epoch": 4,
+      "train_objective": 0.9963954339424769,
+      "validation_original_distribution_objective": 0.9279454350471497
+    },
+    {
+      "epoch": 5,
+      "train_objective": 1.0001657083630562,
+      "validation_original_distribution_objective": 0.9223380088806152
+    },
+    {
+      "epoch": 6,
+      "train_objective": 0.99068866421779,
+      "validation_original_distribution_objective": 0.9246817231178284
+    },
+    {
+      "epoch": 7,
+      "train_objective": 0.9862959558765093,
+      "validation_original_distribution_objective": 0.9191152453422546
+    },
+    {
+      "epoch": 8,
+      "train_objective": 0.9811892906824747,
+      "validation_original_distribution_objective": 0.9174797534942627
+    },
+    {
+      "epoch": 9,
+      "train_objective": 0.9763207087914149,
+      "validation_original_distribution_objective": 0.9242440462112427
+    },
+    {
+      "epoch": 10,
+      "train_objective": 0.9729695419470469,
+      "validation_original_distribution_objective": 0.9235163927078247
+    },
+    {
+      "epoch": 11,
+      "train_objective": 0.9721053913235664,
+      "validation_original_distribution_objective": 0.9114996790885925
+    },
+    {
+      "epoch": 12,
+      "train_objective": 0.9687084605296453,
+      "validation_original_distribution_objective": 0.9044628739356995
+    },
+    {
+      "epoch": 13,
+      "train_objective": 0.9634057655930519,
+      "validation_original_distribution_objective": 0.899334192276001
+    },
+    {
+      "epoch": 14,
+      "train_objective": 0.9604886819918951,
+      "validation_original_distribution_objective": 0.9121925234794617
+    },
+    {
+      "epoch": 15,
+      "train_objective": 0.9666417613625526,
+      "validation_original_distribution_objective": 0.9092362523078918
+    },
+    {
+      "epoch": 16,
+      "train_objective": 0.9620982532699903,
+      "validation_original_distribution_objective": 0.9077526926994324
+    },
+    {
+      "epoch": 17,
+      "train_objective": 0.9502481122811636,
+      "validation_original_distribution_objective": 0.8942659497261047
+    },
+    {
+      "epoch": 18,
+      "train_objective": 0.9488078330953916,
+      "validation_original_distribution_objective": 0.8976044654846191
+    },
+    {
+      "epoch": 19,
+      "train_objective": 0.9475744614998499,
+      "validation_original_distribution_objective": 0.9005863666534424
+    },
+    {
+      "epoch": 20,
+      "train_objective": 0.9457178389032682,
+      "validation_original_distribution_objective": 0.8962780833244324
+    },
+    {
+      "epoch": 21,
+      "train_objective": 0.9471743231018385,
+      "validation_original_distribution_objective": 0.8913869261741638
+    },
+    {
+      "epoch": 22,
+      "train_objective": 0.9404267321030298,
+      "validation_original_distribution_objective": 0.8927546143531799
+    },
+    {
+      "epoch": 23,
+      "train_objective": 0.9373043576876322,
+      "validation_original_distribution_objective": 0.9174652695655823
+    },
+    {
+      "epoch": 24,
+      "train_objective": 0.9367545346419016,
+      "validation_original_distribution_objective": 0.8847177624702454
+    },
+    {
+      "epoch": 25,
+      "train_objective": 0.9450540815790495,
+      "validation_original_distribution_objective": 0.8932287096977234
+    },
+    {
+      "epoch": 26,
+      "train_objective": 0.9291507278879484,
+      "validation_original_distribution_objective": 0.8959026336669922
+    },
+    {
+      "epoch": 27,
+      "train_objective": 0.933848870297273,
+      "validation_original_distribution_objective": 0.891725480556488
+    },
+    {
+      "epoch": 28,
+      "train_objective": 0.9268278355399767,
+      "validation_original_distribution_objective": 0.8784129619598389
+    },
+    {
+      "epoch": 29,
+      "train_objective": 0.9243088290095329,
+      "validation_original_distribution_objective": 0.8895043134689331
+    },
+    {
+      "epoch": 30,
+      "train_objective": 0.9246943692366282,
+      "validation_original_distribution_objective": 0.8876708745956421
+    },
+    {
+      "epoch": 31,
+      "train_objective": 0.9204168642560641,
+      "validation_original_distribution_objective": 0.8826687335968018
+    },
+    {
+      "epoch": 32,
+      "train_objective": 0.9180741931001345,
+      "validation_original_distribution_objective": 0.8873046636581421
+    },
+    {
+      "epoch": 33,
+      "train_objective": 0.9201820194721222,
+      "validation_original_distribution_objective": 0.8888843655586243
+    },
+    {
+      "epoch": 34,
+      "train_objective": 0.9204285393158594,
+      "validation_original_distribution_objective": 0.8788467049598694
+    },
+    {
+      "epoch": 35,
+      "train_objective": 0.9174110889434814,
+      "validation_original_distribution_objective": 0.888988196849823
+    },
+    {
+      "epoch": 36,
+      "train_objective": 0.916739617784818,
+      "validation_original_distribution_objective": 0.8773519396781921
+    },
+    {
+      "epoch": 37,
+      "train_objective": 0.9173793072501818,
+      "validation_original_distribution_objective": 0.8692407608032227
+    },
+    {
+      "epoch": 38,
+      "train_objective": 0.911574050784111,
+      "validation_original_distribution_objective": 0.8802182078361511
+    },
+    {
+      "epoch": 39,
+      "train_objective": 0.9108078082402548,
+      "validation_original_distribution_objective": 0.8728165626525879
+    }
+  ],
+  "training_seconds": 0.6960555829791701,
+  "training_items": 12096,
+  "validation_items": 1008,
+  "peak_mlx_bytes": 60883180,
+  "complete": true,
+  "completed_utc": "2026-10-09T00:25:43.808630+00:00",
+  "checkpoint_sha256": "5c4f5f6df963afb72adeef1dbe759501a9c45f7799532e5b7bccb04fce7b333f",
+  "class_weights": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ]
+}

@@ -1,0 +1,872 @@
+[
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "000d3379a7a04109c70e236d5a4f781cb4961315756997eabaec7d9e86df3c6b",
+    "prompt": "Use this record to select the uniquely correct outcome.\nSemantics: initial lists inventory counts, including backorders. add increases index by amount. transfer moves amount from index to the next cyclic index (0 to 1, 1 to 2, 2 to 0). Return count at query.\nSymbol-index legend: 0=N2869_0, 1=N9671_1, 2=N8724_2, 3=N2319_3\nData record: {\"initial\":[-1,17,29],\"ops\":[[\"add\",1,7]],\"query\":0}\nA. -1\nB. 2\nC. 10\nD. -12\nAnswer with only the correct option letter.",
+    "choices": [
+      "-1",
+      "2",
+      "10",
+      "-12"
+    ],
+    "gold_label": 0,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "correct_by_depth": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "loss_by_depth": [
+      0.9102373599039808,
+      0.7953280100904152,
+      0.7919868539560646,
+      0.9316320275188978
+    ],
+    "C_by_depth": [
+      0.29241834241395515,
+      0.28857495315608694,
+      0.3080673906481048,
+      0.28468805750440646
+    ],
+    "predicted_D_by_depth": [
+      0.026922249510555385,
+      0.034441954199419006,
+      0.0243215615990537
+    ],
+    "actual_D_by_depth": [
+      1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "00a8b617c743470301bf95d36410e153da3021dac3f29957109c9388572835e4",
+    "prompt": "Use this record to select the uniquely correct outcome.\nSemantics: maps[0] and maps[1] are successor arrays. Begin at start, alternate first then second map for steps transitions. Return endpoint symbol.\nSymbol-index legend: 0=N7503_0, 1=N1158_1, 2=N9119_2, 3=N9095_3, 4=N4670_4, 5=N6011_5, 6=N5953_6, 7=N2887_7\nData record: {\"maps\":[[6,4,4,0,2,1,5,5],[6,4,4,7,7,1,7,5]],\"start\":4,\"steps\":1}\nA. N4670_4\nB. N9095_3\nC. N2887_7\nD. N9119_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N4670_4",
+      "N9095_3",
+      "N2887_7",
+      "N9119_2"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      3.3121746245523056,
+      2.4153950238901665,
+      1.6210213973433056,
+      0.9837259815036639
+    ],
+    "C_by_depth": [
+      0.2850957356672628,
+      0.2841899066907789,
+      0.3130772495023229,
+      0.2967336663258155
+    ],
+    "predicted_D_by_depth": [
+      0.01836419944360683,
+      0.011692061848882412,
+      0.004099367579884494
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "0388fdd29de7c61058c94fd081d712bcdf077d6f75a162bdcaae8143e304efdb",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: maps[0] and maps[1] are successor arrays. Begin at start, alternate first then second map for steps transitions. Return endpoint symbol.\nSymbol-index legend: 0=N4842_0, 1=N7980_1, 2=N4811_2, 3=N6390_3, 4=N3019_4, 5=N6236_5, 6=N4631_6, 7=N5742_7, 8=N8766_8, 9=N6836_9, 10=N7599_10, 11=N9492_11\nData record: {\"maps\":[[0,6,8,9,9,4,2,5,8,0,1,3],[0,7,3,10,3,10,7,10,3,5,1,3]],\"start\":3,\"steps\":5}\nA. N8766_8\nB. N7599_10\nC. N6390_3\nD. N6836_9\nAnswer with only the correct option letter.",
+    "choices": [
+      "N8766_8",
+      "N7599_10",
+      "N6390_3",
+      "N6836_9"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.1641012281886454,
+      1.622666418789052,
+      1.2339582397197368,
+      1.0138597727882015
+    ],
+    "C_by_depth": [
+      0.32508405010753955,
+      0.30435793144170015,
+      0.299378871314442,
+      0.2643241623791855
+    ],
+    "predicted_D_by_depth": [
+      -0.006357056101356539,
+      -0.017410590480733047,
+      -0.044462587121850125
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "005dbdae45f2e68b5f61996d547c2ff39455f96debb564d6075e5ca2145c4f53",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: items[i] is [free memory,free CPU]. Retain CPU >= minimum_cpu; select symbol with greatest memory among retained rows.\nSymbol-index legend: 0=N1084_0, 1=N2329_1, 2=N5490_2, 3=N3951_3\nData record: {\"items\":[[83,16],[196,23],[113,4],[30,13]],\"minimum_cpu\":17}\nA. N3951_3\nB. N2329_1\nC. N5490_2\nD. N1084_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N3951_3",
+      "N2329_1",
+      "N5490_2",
+      "N1084_0"
+    ],
+    "gold_label": 1,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.5081526400901488,
+      0.6713089289624108,
+      0.9684324966836044,
+      1.4774348861272024
+    ],
+    "C_by_depth": [
+      0.42019956499147465,
+      0.35484099840899114,
+      0.27007686029396055,
+      0.2184908633339064
+    ],
+    "predicted_D_by_depth": [
+      -0.018606209917926782,
+      -0.031106506927843725,
+      -0.04580556255433693
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "00c49a8fed7c554cbfee1c6e18f7e31ced51f84cf44a12499d4c27b71b222e8d",
+    "prompt": "Use this record to select the uniquely correct outcome.\nSemantics: A node [operation,left,right] applies that operation to its two child values. Integer leaves are constants. Return the root value.\nSymbol-index legend: 0=N8578_0, 1=N1972_1, 2=N6927_2, 3=N3051_3\nData record: {\"tree\":[\"subtract\",[\"add\",19,4],[\"multiply\",7,12]]}\nA. -60\nB. -61\nC. -58\nD. -30\nAnswer with only the correct option letter.",
+    "choices": [
+      "-60",
+      "-61",
+      "-58",
+      "-30"
+    ],
+    "gold_label": 1,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      1,
+      1,
+      2,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.593955731069709,
+      0.8172202836726825,
+      1.1736052968254462,
+      1.6990248222105748
+    ],
+    "C_by_depth": [
+      0.2584767185720396,
+      0.26700253628298987,
+      0.32596571913514794,
+      0.3141714084334075
+    ],
+    "predicted_D_by_depth": [
+      0.04422066336617282,
+      0.055784557227158374,
+      0.05350959465510799
+    ],
+    "actual_D_by_depth": [
+      0,
+      -1,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "0191fb58ad16a01854027ff1198be5507a411d97e011cbc559089d5d6b59c575",
+    "prompt": "Use this record to select the uniquely correct outcome.\nSemantics: items[i] is [x,y,flag]. Eligible means (x >= thresholds[0] OR y >= thresholds[1]) AND flag=0. Return the unique eligible symbol.\nSymbol-index legend: 0=N1051_0, 1=N2689_1, 2=N8285_2, 3=N5385_3\nData record: {\"items\":[[14,5,0],[20,11,1],[30,17,1],[29,28,1]],\"thresholds\":[5,9]}\nA. N8285_2\nB. N1051_0\nC. N2689_1\nD. N5385_3\nAnswer with only the correct option letter.",
+    "choices": [
+      "N8285_2",
+      "N1051_0",
+      "N2689_1",
+      "N5385_3"
+    ],
+    "gold_label": 1,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      1,
+      1,
+      0,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.6471066709074975,
+      0.9645096344297563,
+      1.4201463165021977,
+      2.033421099807768
+    ],
+    "C_by_depth": [
+      0.30371634014072235,
+      0.29383166139522243,
+      0.30503906095553013,
+      0.2757839461470117
+    ],
+    "predicted_D_by_depth": [
+      0.019022902963300767,
+      0.030942978865653004,
+      0.01918201163718597
+    ],
+    "actual_D_by_depth": [
+      0,
+      -1,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "0024dc2ff89ec2aa3a971c0fb8039a3b0eff9b85c427dcbb86a17893fa33b975",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: maps[0] and maps[1] are successor arrays. Begin at start, alternate first then second map for steps transitions. Return endpoint symbol.\nSymbol-index legend: 0=N7059_0, 1=N6103_1, 2=N5986_2, 3=N7240_3, 4=N2582_4, 5=N6862_5, 6=N5641_6, 7=N7031_7\nData record: {\"maps\":[[1,0,5,7,4,2,5,4],[1,5,4,0,0,6,1,6]],\"start\":6,\"steps\":1}\nA. N5641_6\nB. N7031_7\nC. N7240_3\nD. N6862_5\nAnswer with only the correct option letter.",
+    "choices": [
+      "N5641_6",
+      "N7031_7",
+      "N7240_3",
+      "N6862_5"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      4.701079947092257,
+      3.6729865546225327,
+      2.756784494376266,
+      2.0395520658605193
+    ],
+    "C_by_depth": [
+      0.35783280965954223,
+      0.3245945270282299,
+      0.2863098727295411,
+      0.24543720102460723
+    ],
+    "predicted_D_by_depth": [
+      -0.00448924826092912,
+      -0.00942119001585285,
+      -0.02709884355918113
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "0024dc2ff89ec2aa3a971c0fb8039a3b0eff9b85c427dcbb86a17893fa33b975",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: maps[0] and maps[1] are successor arrays. Begin at start, alternate first then second map for steps transitions. Return endpoint symbol.\nSymbol-index legend: 0=N7059_0, 1=N6103_1, 2=N5986_2, 3=N7240_3, 4=N2582_4, 5=N6862_5, 6=N5641_6, 7=N7031_7\nData record: {\"maps\":[[1,0,5,7,4,2,5,4],[1,5,4,0,0,6,1,6]],\"start\":6,\"steps\":1}\nA. N5641_6\nB. N7031_7\nC. N7240_3\nD. N6862_5\nAnswer with only the correct option letter.",
+    "choices": [
+      "N5641_6",
+      "N7031_7",
+      "N7240_3",
+      "N6862_5"
+    ],
+    "gold_label": 3,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      4.701079947092257,
+      3.6729865546225327,
+      2.756784494376266,
+      2.0395520658605193
+    ],
+    "C_by_depth": [
+      0.35783280965954223,
+      0.3245945270282299,
+      0.2863098727295411,
+      0.24543720102460723
+    ],
+    "predicted_D_by_depth": [
+      -0.00448924826092912,
+      -0.00942119001585285,
+      -0.02709884355918113
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "0024dc2ff89ec2aa3a971c0fb8039a3b0eff9b85c427dcbb86a17893fa33b975",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: maps[0] and maps[1] are successor arrays. Begin at start, alternate first then second map for steps transitions. Return endpoint symbol.\nSymbol-index legend: 0=N7059_0, 1=N6103_1, 2=N5986_2, 3=N7240_3, 4=N2582_4, 5=N6862_5, 6=N5641_6, 7=N7031_7\nData record: {\"maps\":[[1,0,5,7,4,2,5,4],[1,5,4,0,0,6,1,6]],\"start\":6,\"steps\":1}\nA. N5641_6\nB. N7031_7\nC. N7240_3\nD. N6862_5\nAnswer with only the correct option letter.",
+    "choices": [
+      "N5641_6",
+      "N7031_7",
+      "N7240_3",
+      "N6862_5"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      4.701079947092257,
+      3.6729865546225327,
+      2.756784494376266,
+      2.0395520658605193
+    ],
+    "C_by_depth": [
+      0.35783280965954223,
+      0.3245945270282299,
+      0.2863098727295411,
+      0.24543720102460723
+    ],
+    "predicted_D_by_depth": [
+      -0.00448924826092912,
+      -0.00942119001585285,
+      -0.02709884355918113
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "00c49a8fed7c554cbfee1c6e18f7e31ced51f84cf44a12499d4c27b71b222e8d",
+    "prompt": "Use this record to select the uniquely correct outcome.\nSemantics: A node [operation,left,right] applies that operation to its two child values. Integer leaves are constants. Return the root value.\nSymbol-index legend: 0=N8578_0, 1=N1972_1, 2=N6927_2, 3=N3051_3\nData record: {\"tree\":[\"subtract\",[\"add\",19,4],[\"multiply\",7,12]]}\nA. -60\nB. -61\nC. -58\nD. -30\nAnswer with only the correct option letter.",
+    "choices": [
+      "-60",
+      "-61",
+      "-58",
+      "-30"
+    ],
+    "gold_label": 1,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      1,
+      2,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.593955731069709,
+      0.8172202836726825,
+      1.1736052968254462,
+      1.6990248222105748
+    ],
+    "C_by_depth": [
+      0.2584767185720396,
+      0.26700253628298987,
+      0.32596571913514794,
+      0.3141714084334075
+    ],
+    "predicted_D_by_depth": [
+      0.04422066336617282,
+      0.055784557227158374,
+      0.05350959465510799
+    ],
+    "actual_D_by_depth": [
+      0,
+      -1,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "0127991f78c03e06199c1000d90746936e0102adca9fb6e090cf5a9fef81cfd0",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: initial lists register values. Ops [operation,index,value] execute in order; add increments, reset assigns, swap exchanges with register index value. Return register query.\nSymbol-index legend: 0=N4481_0, 1=N2705_1, 2=N6637_2, 3=N3757_3\nData record: {\"initial\":[28,27,7],\"ops\":[[\"reset\",1,8]],\"query\":2}\nA. 18\nB. 7\nC. 4\nD. 38\nAnswer with only the correct option letter.",
+    "choices": [
+      "18",
+      "7",
+      "4",
+      "38"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      1.3565969698185292,
+      1.5639014653012744,
+      1.8957793307111714,
+      2.3902647122734173
+    ],
+    "C_by_depth": [
+      0.3041640423336073,
+      0.29307390462822586,
+      0.308740199170511,
+      0.2827272597785954
+    ],
+    "predicted_D_by_depth": [
+      0.01065059181013052,
+      0.009935755104569143,
+      0.013195085427964576
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "0127991f78c03e06199c1000d90746936e0102adca9fb6e090cf5a9fef81cfd0",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: initial lists register values. Ops [operation,index,value] execute in order; add increments, reset assigns, swap exchanges with register index value. Return register query.\nSymbol-index legend: 0=N4481_0, 1=N2705_1, 2=N6637_2, 3=N3757_3\nData record: {\"initial\":[28,27,7],\"ops\":[[\"reset\",1,8]],\"query\":2}\nA. 18\nB. 7\nC. 4\nD. 38\nAnswer with only the correct option letter.",
+    "choices": [
+      "18",
+      "7",
+      "4",
+      "38"
+    ],
+    "gold_label": 1,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      1.3565969698185292,
+      1.5639014653012744,
+      1.8957793307111714,
+      2.3902647122734173
+    ],
+    "C_by_depth": [
+      0.3041640423336073,
+      0.29307390462822586,
+      0.308740199170511,
+      0.2827272597785954
+    ],
+    "predicted_D_by_depth": [
+      0.01065059181013052,
+      0.009935755104569143,
+      0.013195085427964576
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "0232f64bc2545060ae341a6581a127157a23e0a5db8505532dfd4776792f78b0",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: items[i] is [x,y,flag]. Eligible means x >= thresholds[0], y < thresholds[1], and flag=1. Return the unique eligible symbol.\nSymbol-index legend: 0=N4110_0, 1=N5485_1, 2=N1843_2, 3=N1642_3\nData record: {\"items\":[[20,27,0],[4,11,0],[30,12,1],[15,28,0]],\"thresholds\":[16,17]}\nA. N1843_2\nB. N1642_3\nC. N5485_1\nD. N4110_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N1843_2",
+      "N1642_3",
+      "N5485_1",
+      "N4110_0"
+    ],
+    "gold_label": 0,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      0,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.7456766003327999,
+      1.045580653794719,
+      1.497136807705047,
+      2.0752576899758424
+    ],
+    "C_by_depth": [
+      0.3544959422981511,
+      0.3219923440036222,
+      0.284300028276885,
+      0.23834147372857198
+    ],
+    "predicted_D_by_depth": [
+      0.0008542330385197597,
+      0.0027170479623000454,
+      -0.00963014834386855
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "17c43a9a8d8f066438ef0bd708f927829cec8573001fbd1a8b10851966df0cc9",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: items[i] is [free memory,free CPU]. Retain CPU >= minimum_cpu; select symbol with greatest memory among retained rows.\nSymbol-index legend: 0=N4168_0, 1=N3912_1, 2=N8322_2, 3=N8875_3\nData record: {\"items\":[[191,13],[87,10],[203,23],[96,28]],\"minimum_cpu\":18}\nA. N8322_2\nB. N3912_1\nC. N8875_3\nD. N4168_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N8322_2",
+      "N3912_1",
+      "N8875_3",
+      "N4168_0"
+    ],
+    "gold_label": 0,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      0,
+      2,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.8345028267010477,
+      1.119418106134848,
+      1.5619653897285275,
+      2.218317516805694
+    ],
+    "C_by_depth": [
+      0.3657345915597906,
+      0.32587423874390437,
+      0.28725528336196665,
+      0.24454728493597697
+    ],
+    "predicted_D_by_depth": [
+      -0.022335081557061764,
+      -0.02936779430465042,
+      -0.036962089623076705
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "new_template",
+    "instance_id": "1bf1cda5351e4780c56faa2b271d2679f9231bca101817b4497fbfbc6b407fa8",
+    "prompt": "Work item: apply the specification below exactly.\nSemantics: A node [operation,left,right] applies that operation to its two child values. Integer leaves are constants. Return the root value.\nSymbol-index legend: 0=N7155_0, 1=N8112_1, 2=N2784_2, 3=N7581_3\nData record: {\"tree\":[\"subtract\",[\"add\",[\"subtract\",-4,-5],[\"subtract\",0,-3]],[\"add\",[\"multiply\",-9,5],[\"add\",-3,-7]]]}\nA. 90\nB. 59\nC. 58\nD. 60\nAnswer with only the correct option letter.",
+    "choices": [
+      "90",
+      "59",
+      "58",
+      "60"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.8604716754453179,
+      1.211555811750479,
+      1.6736464972071445,
+      2.2404631093419347
+    ],
+    "C_by_depth": [
+      0.2983607791891806,
+      0.2941564846039958,
+      0.30312244855838055,
+      0.272132400892464
+    ],
+    "predicted_D_by_depth": [
+      0.04152510397333553,
+      0.018251800337103365,
+      0.0008855357498982336
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  }
+]

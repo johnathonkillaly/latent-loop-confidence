@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-10-09T00:51:09.624326+00:00",
+  "verified_unique_final_problems": 6480,
+  "new_state_rows": 77760,
+  "new_adjacent_transitions": 58320,
+  "public_metric_checks": 5280,
+  "neural_fits": 36,
+  "all_selectors_within_paid_prefix": true,
+  "all_stop_continue_logs_recomputed": true,
+  "all_final_labels_rechecked_by_independent_solvers": true,
+  "frozen_public_source_and_metadata_hashes_verified": true,
+  "OOF_problem_group_integrity_verified": true,
+  "historical_preservation": {
+    "historical_files": 296,
+    "all_unchanged_except_readme_link": true,
+    "checked_utc": "2026-10-09T00:51:09.667109+00:00"
+  },
+  "weights_required_for_public_audit": false
+}

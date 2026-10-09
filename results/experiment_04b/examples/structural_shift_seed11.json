@@ -1,0 +1,1394 @@
+[
+  {
+    "category": "A",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "01696b85850eb8ae640574bf4089f41408b2c236b543b660a6fef818561b15c0",
+    "prompt": "Solve the following deterministic problem.\nRule: score = 1 if x>=9, otherwise 0 + 1 if y>=20, otherwise 0 + 1 if z>=4, otherwise 0; score must be >= 3. Candidate records (x,y,z): N9208_0: 21,2,7; N6872_1: 12,5,16; N4259_2: 21,25,12; N4841_3: 7,14,5. Select the unique eligible record.\nA. N9208_0\nB. N4841_3\nC. N6872_1\nD. N4259_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N9208_0",
+      "N4841_3",
+      "N6872_1",
+      "N4259_2"
+    ],
+    "gold_label": 3,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      0,
+      1,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "loss_by_depth": [
+      1.8951366860255625,
+      1.3908832715395185,
+      0.9870332821835248,
+      0.6840984093687474
+    ],
+    "C_by_depth": [
+      0.2943570017838116,
+      0.3209038727103986,
+      0.32342120766914606,
+      0.3022076609088293
+    ],
+    "predicted_D_by_depth": [
+      -0.007049165384746203,
+      -0.008729081546689527,
+      -0.005495832615754953
+    ],
+    "actual_D_by_depth": [
+      0,
+      1,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "01ef5a187e950bbffe28c2a2441285fb9fece65a42efc507c19688bd17904f31",
+    "prompt": "Solve the following deterministic problem.\nBinary flags: N2407_0=1, N8282_1=1, N7703_2=1, N1724_3=1, N4338_4=0, N5598_5=1. Apply sequentially: set N7703_2=0; set N4338_4 to N4338_4 XOR N1724_3; set N8282_1 to N8282_1 XOR N1724_3; set N8282_1=1; set N8282_1=0. Return the two bits for N7703_2 then N1724_3, in that order.\nA. 10\nB. 11\nC. 00\nD. 01\nAnswer with only the correct option letter.",
+    "choices": [
+      "10",
+      "11",
+      "00",
+      "01"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "loss_by_depth": [
+      1.0176254759092842,
+      0.6241311269972805,
+      0.4128648634367025,
+      0.3302493600356229
+    ],
+    "C_by_depth": [
+      0.2620815884534934,
+      0.28452375571202204,
+      0.30978386799719887,
+      0.3083628410471303
+    ],
+    "predicted_D_by_depth": [
+      0.024897823477080257,
+      0.013704008362527647,
+      0.0049471431183458255
+    ],
+    "actual_D_by_depth": [
+      1,
+      0,
+      0
+    ],
+    "selected_depth": 3,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0651c36b3c66b3c6030f51e723560a7ff110ef5ffb27d71203aaff9972658279",
+    "prompt": "Solve the following deterministic problem.\nOffers (RAM units, cost): N5049_0: 210, 14; N2174_1: 193, 6; N9716_2: 26, 6; N3969_3: 32, 23. Eligible RAM must be at least 159. Choose the highest RAM/cost ratio among eligible offers.\nA. N3969_3\nB. N5049_0\nC. N9716_2\nD. N2174_1\nAnswer with only the correct option letter.",
+    "choices": [
+      "N3969_3",
+      "N5049_0",
+      "N9716_2",
+      "N2174_1"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      0,
+      0,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.9783227457266257,
+      2.0459236051712537,
+      1.2906582656060088,
+      0.7640045055394253
+    ],
+    "C_by_depth": [
+      0.3102174461252848,
+      0.33199394362504064,
+      0.32556692108067414,
+      0.3013276468912631
+    ],
+    "predicted_D_by_depth": [
+      -0.00803382955271955,
+      -0.02848873205597254,
+      -0.0997840337510293
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0173690eacb1c98f7d3a66765606535462a255e3e16f38f49db864d008ed8469",
+    "prompt": "Solve the following deterministic problem.\nRule: score = 2 if x>=8, otherwise 0 + 2 if y>=20, otherwise 0 + 3 if z>=7, otherwise 0; score must be >= 6. Candidate records (x,y,z): N3409_0: 7,26,16; N1946_1: 13,17,18; N7369_2: 26,6,12; N2782_3: 12,22,28. Select the unique eligible record.\nA. N2782_3\nB. N3409_0\nC. N1946_1\nD. N7369_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N2782_3",
+      "N3409_0",
+      "N1946_1",
+      "N7369_2"
+    ],
+    "gold_label": 0,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      0,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.9425027961529189,
+      1.2749314523062374,
+      1.6866758543396614,
+      2.162618310096004
+    ],
+    "C_by_depth": [
+      0.3045971219172198,
+      0.331663233413681,
+      0.3275297181485397,
+      0.3005752269167886
+    ],
+    "predicted_D_by_depth": [
+      0.014633241585199491,
+      0.01432621498270431,
+      0.007631371708439812
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "024abaa7268bebc0bbb3656e2faea0ad2a1c7b8f2ffab5776091eb159e70435e",
+    "prompt": "Compute the requested result from the supplied data.\nBinary flags: N2768_0=1, N2284_1=0, N7106_2=1, N2487_3=1, N2860_4=1, N2252_5=0. Apply sequentially: set N2487_3=1\nset N2284_1 to N2284_1 XOR N2860_4\nset N2284_1=0. Return the two bits for N2252_5 then N2768_0, in that order.\nA. 00\nB. 01\nC. 10\nD. 11\nAnswer with only the correct option letter.",
+    "choices": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.7657954356571359,
+      1.1388513413754602,
+      1.738652480212867,
+      2.505842373395371
+    ],
+    "C_by_depth": [
+      0.23773628915001194,
+      0.2547582903623527,
+      0.2987071283460864,
+      0.31283665659738524
+    ],
+    "predicted_D_by_depth": [
+      0.003380402864699761,
+      0.01607168991703936,
+      0.01366522980622844
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0270dbaeef5e6cbe6f41432eb208604f68fcdbf17f38342508059d57f36d8c6f",
+    "prompt": "Solve the following deterministic problem.\nRule: score = 1 if x>=17, otherwise 0 + 1 if y>=16, otherwise 0 + 1 if z>=11, otherwise 0; score must be >= 3. Candidate records (x,y,z): N1437_0: 3,5,7; N6304_1: 18,2,18; N5703_2: 29,22,22; N6550_3: 14,11,20. Select the unique eligible record.\nA. N5703_2\nB. N6304_1\nC. N6550_3\nD. N1437_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N5703_2",
+      "N6304_1",
+      "N6550_3",
+      "N1437_0"
+    ],
+    "gold_label": 0,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      0,
+      0,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.5484587274930348,
+      0.7701664031006601,
+      1.140144278504799,
+      1.7004657461306039
+    ],
+    "C_by_depth": [
+      0.289543963673612,
+      0.3165655190978635,
+      0.32170097893742894,
+      0.3024497841627796
+    ],
+    "predicted_D_by_depth": [
+      -0.05558863653469343,
+      -0.0880691292241718,
+      -0.11771734369038103
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "002bb323b4f799ed44d86fb787681b6f97c9fcddca6eb0859d91b49755749985",
+    "prompt": "Compute the requested result from the supplied data.\nOffers (RAM units, cost): N9274_0: 146, 15\nN3076_1: 238, 12\nN7775_2: 145, 11\nN9828_3: 24, 30. Eligible RAM must be at least 161. Choose the highest RAM/cost ratio among eligible offers.\nA. N9274_0\nB. N9828_3\nC. N3076_1\nD. N7775_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N9274_0",
+      "N9828_3",
+      "N3076_1",
+      "N7775_2"
+    ],
+    "gold_label": 2,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.4392693275967154,
+      3.0907711449038295,
+      2.8601796228048997,
+      2.709204968217783
+    ],
+    "C_by_depth": [
+      0.35191867476126176,
+      0.3834696677553997,
+      0.3449231297596046,
+      0.29436274920814365
+    ],
+    "predicted_D_by_depth": [
+      -0.003593672513651877,
+      -0.0006474089391157109,
+      -6.208170166665389e-05
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "002bb323b4f799ed44d86fb787681b6f97c9fcddca6eb0859d91b49755749985",
+    "prompt": "Compute the requested result from the supplied data.\nOffers (RAM units, cost): N9274_0: 146, 15\nN3076_1: 238, 12\nN7775_2: 145, 11\nN9828_3: 24, 30. Eligible RAM must be at least 161. Choose the highest RAM/cost ratio among eligible offers.\nA. N9274_0\nB. N9828_3\nC. N3076_1\nD. N7775_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N9274_0",
+      "N9828_3",
+      "N3076_1",
+      "N7775_2"
+    ],
+    "gold_label": 2,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.4392693275967154,
+      3.0907711449038295,
+      2.8601796228048997,
+      2.709204968217783
+    ],
+    "C_by_depth": [
+      0.35191867476126176,
+      0.3834696677553997,
+      0.3449231297596046,
+      0.29436274920814365
+    ],
+    "predicted_D_by_depth": [
+      -0.003593672513651877,
+      -0.0006474089391157109,
+      -6.208170166665389e-05
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "002bb323b4f799ed44d86fb787681b6f97c9fcddca6eb0859d91b49755749985",
+    "prompt": "Compute the requested result from the supplied data.\nOffers (RAM units, cost): N9274_0: 146, 15\nN3076_1: 238, 12\nN7775_2: 145, 11\nN9828_3: 24, 30. Eligible RAM must be at least 161. Choose the highest RAM/cost ratio among eligible offers.\nA. N9274_0\nB. N9828_3\nC. N3076_1\nD. N7775_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N9274_0",
+      "N9828_3",
+      "N3076_1",
+      "N7775_2"
+    ],
+    "gold_label": 2,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.4392693275967154,
+      3.0907711449038295,
+      2.8601796228048997,
+      2.709204968217783
+    ],
+    "C_by_depth": [
+      0.35191867476126176,
+      0.3834696677553997,
+      0.3449231297596046,
+      0.29436274920814365
+    ],
+    "predicted_D_by_depth": [
+      -0.003593672513651877,
+      -0.0006474089391157109,
+      -6.208170166665389e-05
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0005de5cb6b6727c5d4e532c4544e6d97fe9d061a9e0abe72f5a545591445acb",
+    "prompt": "Solve the following deterministic problem.\nOffers (RAM units, cost): N5982_0: 115, 24; N7353_1: 166, 18; N1461_2: 173, 7; N9300_3: 173, 22. Eligible RAM must be at least 42. Choose the highest RAM/cost ratio among eligible offers.\nA. N7353_1\nB. N1461_2\nC. N5982_0\nD. N9300_3\nAnswer with only the correct option letter.",
+    "choices": [
+      "N7353_1",
+      "N1461_2",
+      "N5982_0",
+      "N9300_3"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      0,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.5124466986541414,
+      2.584558888919652,
+      2.7430827167764598,
+      2.9678323132184374
+    ],
+    "C_by_depth": [
+      0.3072407242062604,
+      0.3340289965706753,
+      0.3290233763149972,
+      0.2996402139935559
+    ],
+    "predicted_D_by_depth": [
+      -0.01696137590972671,
+      -0.02411040664643159,
+      -0.013099894523797326
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0005de5cb6b6727c5d4e532c4544e6d97fe9d061a9e0abe72f5a545591445acb",
+    "prompt": "Solve the following deterministic problem.\nOffers (RAM units, cost): N5982_0: 115, 24; N7353_1: 166, 18; N1461_2: 173, 7; N9300_3: 173, 22. Eligible RAM must be at least 42. Choose the highest RAM/cost ratio among eligible offers.\nA. N7353_1\nB. N1461_2\nC. N5982_0\nD. N9300_3\nAnswer with only the correct option letter.",
+    "choices": [
+      "N7353_1",
+      "N1461_2",
+      "N5982_0",
+      "N9300_3"
+    ],
+    "gold_label": 1,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      0,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.5124466986541414,
+      2.584558888919652,
+      2.7430827167764598,
+      2.9678323132184374
+    ],
+    "C_by_depth": [
+      0.3072407242062604,
+      0.3340289965706753,
+      0.3290233763149972,
+      0.2996402139935559
+    ],
+    "predicted_D_by_depth": [
+      -0.01696137590972671,
+      -0.02411040664643159,
+      -0.013099894523797326
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0005de5cb6b6727c5d4e532c4544e6d97fe9d061a9e0abe72f5a545591445acb",
+    "prompt": "Solve the following deterministic problem.\nOffers (RAM units, cost): N5982_0: 115, 24; N7353_1: 166, 18; N1461_2: 173, 7; N9300_3: 173, 22. Eligible RAM must be at least 42. Choose the highest RAM/cost ratio among eligible offers.\nA. N7353_1\nB. N1461_2\nC. N5982_0\nD. N9300_3\nAnswer with only the correct option letter.",
+    "choices": [
+      "N7353_1",
+      "N1461_2",
+      "N5982_0",
+      "N9300_3"
+    ],
+    "gold_label": 1,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.5124466986541414,
+      2.584558888919652,
+      2.7430827167764598,
+      2.9678323132184374
+    ],
+    "C_by_depth": [
+      0.3072407242062604,
+      0.3340289965706753,
+      0.3290233763149972,
+      0.2996402139935559
+    ],
+    "predicted_D_by_depth": [
+      -0.01696137590972671,
+      -0.02411040664643159,
+      -0.013099894523797326
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0e949268cf60f17d8e48c0e1e1b9298daa8904786c73f12c3335718b1aed65ff",
+    "prompt": "Compute the requested result from the supplied data.\nInteger state initially 2, modulo 7. Alternate transformations x <- (1*x + 8) modulo 7, then x <- (4*x + 5) modulo 7. Apply exactly 1 transformations, starting with the first. Final state?\nA. 0\nB. 6\nC. 3\nD. 4\nAnswer with only the correct option letter.",
+    "choices": [
+      "0",
+      "6",
+      "3",
+      "4"
+    ],
+    "gold_label": 2,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      3,
+      3,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.7560867183397839,
+      1.4161728962897584,
+      2.4678027201983177,
+      3.8068532559448194
+    ],
+    "C_by_depth": [
+      0.26888314281395875,
+      0.2820837484202523,
+      0.30677105257152626,
+      0.3102437989677436
+    ],
+    "predicted_D_by_depth": [
+      -0.011141522614628419,
+      0.010867717291395795,
+      0.016163162231691293
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "13d27ed5e27e4e32ace8ad1b5f1fa9a464057a08d90866c89f82d137050b08cd",
+    "prompt": "Compute the requested result from the supplied data.\nTwo account balances: N2082_0=40, N1455_1=23. Negative balances are allowed\nOrdered instructions:\ntransfer 1 from N1455_1 into N2082_0\ncredit 4 to N1455_1\ntransfer 2 from N2082_0 into N1455_1. Final balance of N2082_0?\nA. 40\nB. 36\nC. 39\nD. 38\nAnswer with only the correct option letter.",
+    "choices": [
+      "40",
+      "36",
+      "39",
+      "38"
+    ],
+    "gold_label": 2,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      3,
+      3,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.682161401500192,
+      1.111282617353396,
+      1.9102826995613604,
+      3.0340899637749317
+    ],
+    "C_by_depth": [
+      0.26018308607347856,
+      0.27266869655354975,
+      0.30446687479149886,
+      0.31100537063359446
+    ],
+    "predicted_D_by_depth": [
+      -0.004174103352548947,
+      0.020476974239998363,
+      0.0394013243333169
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "1abcff10ac86b9adff4ec1c3185d07c8c4b3ec0a0925429406b307b1f9105e7d",
+    "prompt": "Solve the following deterministic problem.\nTwo account balances: N4578_0=79, N4409_1=81. Negative balances are allowed. In order: transfer 2 from N4409_1 into N4578_0; credit 16 to N4578_0; credit 1 to N4409_1; credit 9 to N4578_0; transfer 5 from N4409_1 into N4578_0. Final balance of N4578_0?\nA. 100\nB. 111\nC. 108\nD. 110\nAnswer with only the correct option letter.",
+    "choices": [
+      "100",
+      "111",
+      "108",
+      "110"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.6540407542416773,
+      1.124055312464968,
+      1.8962463490101058,
+      2.9171704791061366
+    ],
+    "C_by_depth": [
+      0.2773789204849812,
+      0.29365790507125406,
+      0.312534244425365,
+      0.3070768471105247
+    ],
+    "predicted_D_by_depth": [
+      -0.01022347775528791,
+      0.004041388188740114,
+      0.020705633684593175
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "F",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0173690eacb1c98f7d3a66765606535462a255e3e16f38f49db864d008ed8469",
+    "prompt": "Solve the following deterministic problem.\nRule: score = 2 if x>=8, otherwise 0 + 2 if y>=20, otherwise 0 + 3 if z>=7, otherwise 0; score must be >= 6. Candidate records (x,y,z): N3409_0: 7,26,16; N1946_1: 13,17,18; N7369_2: 26,6,12; N2782_3: 12,22,28. Select the unique eligible record.\nA. N2782_3\nB. N3409_0\nC. N1946_1\nD. N7369_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N2782_3",
+      "N3409_0",
+      "N1946_1",
+      "N7369_2"
+    ],
+    "gold_label": 0,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      0,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.9425027961529189,
+      1.2749314523062374,
+      1.6866758543396614,
+      2.162618310096004
+    ],
+    "C_by_depth": [
+      0.3045971219172198,
+      0.331663233413681,
+      0.3275297181485397,
+      0.3005752269167886
+    ],
+    "predicted_D_by_depth": [
+      0.014633241585199491,
+      0.01432621498270431,
+      0.007631371708439812
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "F",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "024abaa7268bebc0bbb3656e2faea0ad2a1c7b8f2ffab5776091eb159e70435e",
+    "prompt": "Compute the requested result from the supplied data.\nBinary flags: N2768_0=1, N2284_1=0, N7106_2=1, N2487_3=1, N2860_4=1, N2252_5=0. Apply sequentially: set N2487_3=1\nset N2284_1 to N2284_1 XOR N2860_4\nset N2284_1=0. Return the two bits for N2252_5 then N2768_0, in that order.\nA. 00\nB. 01\nC. 10\nD. 11\nAnswer with only the correct option letter.",
+    "choices": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.7657954356571359,
+      1.1388513413754602,
+      1.738652480212867,
+      2.505842373395371
+    ],
+    "C_by_depth": [
+      0.23773628915001194,
+      0.2547582903623527,
+      0.2987071283460864,
+      0.31283665659738524
+    ],
+    "predicted_D_by_depth": [
+      0.003380402864699761,
+      0.01607168991703936,
+      0.01366522980622844
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "F",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "059d42501f59ce035b5718d371162a1b098ada844870f78123842b4e37b979ca",
+    "prompt": "Compute the requested result from the supplied data.\nTwo account balances: N3233_0=77, N1958_1=57. Negative balances are allowed\nOrdered instructions:\ntransfer 10 from N3233_0 into N1958_1\ncredit 19 to N1958_1\ncredit 11 to N1958_1. Final balance of N3233_0?\nA. 68\nB. 66\nC. 70\nD. 67\nAnswer with only the correct option letter.",
+    "choices": [
+      "68",
+      "66",
+      "70",
+      "67"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      3,
+      3,
+      3,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.9051912332172733,
+      0.7226363171492416,
+      0.7630681509043882,
+      0.9642701374078264
+    ],
+    "C_by_depth": [
+      0.22286964010542437,
+      0.2442636721211127,
+      0.29454676653943546,
+      0.3140999677197779
+    ],
+    "predicted_D_by_depth": [
+      0.03565068454126448,
+      0.026536658430486845,
+      0.04197058583748904
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 2,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "G",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0173690eacb1c98f7d3a66765606535462a255e3e16f38f49db864d008ed8469",
+    "prompt": "Solve the following deterministic problem.\nRule: score = 2 if x>=8, otherwise 0 + 2 if y>=20, otherwise 0 + 3 if z>=7, otherwise 0; score must be >= 6. Candidate records (x,y,z): N3409_0: 7,26,16; N1946_1: 13,17,18; N7369_2: 26,6,12; N2782_3: 12,22,28. Select the unique eligible record.\nA. N2782_3\nB. N3409_0\nC. N1946_1\nD. N7369_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N2782_3",
+      "N3409_0",
+      "N1946_1",
+      "N7369_2"
+    ],
+    "gold_label": 0,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      0,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.9425027961529189,
+      1.2749314523062374,
+      1.6866758543396614,
+      2.162618310096004
+    ],
+    "C_by_depth": [
+      0.3045971219172198,
+      0.331663233413681,
+      0.3275297181485397,
+      0.3005752269167886
+    ],
+    "predicted_D_by_depth": [
+      0.014633241585199491,
+      0.01432621498270431,
+      0.007631371708439812
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "G",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "024abaa7268bebc0bbb3656e2faea0ad2a1c7b8f2ffab5776091eb159e70435e",
+    "prompt": "Compute the requested result from the supplied data.\nBinary flags: N2768_0=1, N2284_1=0, N7106_2=1, N2487_3=1, N2860_4=1, N2252_5=0. Apply sequentially: set N2487_3=1\nset N2284_1 to N2284_1 XOR N2860_4\nset N2284_1=0. Return the two bits for N2252_5 then N2768_0, in that order.\nA. 00\nB. 01\nC. 10\nD. 11\nAnswer with only the correct option letter.",
+    "choices": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.7657954356571359,
+      1.1388513413754602,
+      1.738652480212867,
+      2.505842373395371
+    ],
+    "C_by_depth": [
+      0.23773628915001194,
+      0.2547582903623527,
+      0.2987071283460864,
+      0.31283665659738524
+    ],
+    "predicted_D_by_depth": [
+      0.003380402864699761,
+      0.01607168991703936,
+      0.01366522980622844
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "G",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "059d42501f59ce035b5718d371162a1b098ada844870f78123842b4e37b979ca",
+    "prompt": "Compute the requested result from the supplied data.\nTwo account balances: N3233_0=77, N1958_1=57. Negative balances are allowed\nOrdered instructions:\ntransfer 10 from N3233_0 into N1958_1\ncredit 19 to N1958_1\ncredit 11 to N1958_1. Final balance of N3233_0?\nA. 68\nB. 66\nC. 70\nD. 67\nAnswer with only the correct option letter.",
+    "choices": [
+      "68",
+      "66",
+      "70",
+      "67"
+    ],
+    "gold_label": 3,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      3,
+      3,
+      3,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.9051912332172733,
+      0.7226363171492416,
+      0.7630681509043882,
+      0.9642701374078264
+    ],
+    "C_by_depth": [
+      0.22286964010542437,
+      0.2442636721211127,
+      0.29454676653943546,
+      0.3140999677197779
+    ],
+    "predicted_D_by_depth": [
+      0.03565068454126448,
+      0.026536658430486845,
+      0.04197058583748904
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 2,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "H",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "08e6ca09b61c313a8388c9b4aee954ce7afe65177d6b33961d9e0d0853af80ec",
+    "prompt": "Solve the following deterministic problem.\nTwo account balances: N6780_0=93, N8553_1=32. Negative balances are allowed. In order: transfer 17 from N6780_0 into N8553_1; transfer 6 from N8553_1 into N6780_0; transfer 18 from N6780_0 into N8553_1. Final balance of N6780_0?\nA. 63\nB. 33\nC. 61\nD. 64\nAnswer with only the correct option letter.",
+    "choices": [
+      "63",
+      "33",
+      "61",
+      "64"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "loss_by_depth": [
+      1.2486127204284543,
+      0.8940760254770055,
+      0.6995172580296334,
+      0.6002025689531933
+    ],
+    "C_by_depth": [
+      0.25378790374203997,
+      0.27583637717086246,
+      0.30618894684392156,
+      0.30962137870230355
+    ],
+    "predicted_D_by_depth": [
+      0.026039569715171768,
+      0.023688828416039448,
+      0.023722959078257687
+    ],
+    "actual_D_by_depth": [
+      1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "H",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "0952203a95d3125714bb9400896b88665780735ed6d5540ee2ebc66c32502b59",
+    "prompt": "Solve the following deterministic problem.\nBinary flags: N2890_0=1, N5532_1=1, N9257_2=0, N3581_3=0, N4248_4=0, N3626_5=1. Apply sequentially: set N9257_2=1; toggle N9257_2; set N2890_0 to N2890_0 XOR N2890_0. Return the two bits for N9257_2 then N3626_5, in that order.\nA. 10\nB. 11\nC. 00\nD. 01\nAnswer with only the correct option letter.",
+    "choices": [
+      "10",
+      "11",
+      "00",
+      "01"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "loss_by_depth": [
+      1.1631884483325052,
+      0.7439965998277529,
+      0.5381997575683712,
+      0.5161471506807302
+    ],
+    "C_by_depth": [
+      0.2601616150211852,
+      0.27883920119272887,
+      0.3081362334977816,
+      0.30898220945278554
+    ],
+    "predicted_D_by_depth": [
+      0.013139380559642207,
+      0.024486732096410675,
+      0.013244631359614765
+    ],
+    "actual_D_by_depth": [
+      1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "H",
+    "seed": 11,
+    "split": "structural_shift",
+    "instance_id": "097e8778a172d7adbb68938bdc370fcdcb05a1be4d356a3220eda8d12892b02c",
+    "prompt": "Compute the requested result from the supplied data.\nTwo account balances: N5914_0=85, N1819_1=35. Negative balances are allowed\nOrdered instructions:\ntransfer 2 from N1819_1 into N5914_0\ntransfer 8 from N1819_1 into N5914_0\ntransfer 9 from N1819_1 into N5914_0\ntransfer 9 from N1819_1 into N5914_0\ncredit 18 to N1819_1. Final balance of N1819_1?\nA. 25\nB. 24\nC. -6\nD. 56\nAnswer with only the correct option letter.",
+    "choices": [
+      "25",
+      "24",
+      "-6",
+      "56"
+    ],
+    "gold_label": 0,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      1,
+      3,
+      0
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.6888361596672183,
+      1.7308513448974772,
+      1.115903505359995,
+      0.767342817485229
+    ],
+    "C_by_depth": [
+      0.25298943019204084,
+      0.27073800611230275,
+      0.3044256296595027,
+      0.3101975042602645
+    ],
+    "predicted_D_by_depth": [
+      0.01659507168707694,
+      0.033294978713111406,
+      0.0432063113993915
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 4,
+    "decisions": [
+      "continue",
+      "continue",
+      "continue",
+      "stop"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  }
+]

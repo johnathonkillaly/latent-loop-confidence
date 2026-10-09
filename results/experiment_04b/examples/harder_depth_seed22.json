@@ -1,0 +1,988 @@
+[
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "00cd9c10b40b1d59bb976319b3bfea7811dc17fa55ee9d9b784c710b119fdd85",
+    "prompt": "Solve the following deterministic problem.\nMapping table: map 1: N6792_0 -> N1179_15, N4893_1 -> N1179_15, N4808_2 -> N1531_8, N1077_3 -> N5596_11, N1800_4 -> N6088_9, N4868_5 -> N6792_0, N1691_6 -> N4868_5, N2693_7 -> N4741_14, N1531_8 -> N4868_5, N6088_9 -> N1179_15, N2886_10 -> N5743_12, N5596_11 -> N6088_9, N5743_12 -> N4808_2, N3652_13 -> N2693_7, N4741_14 -> N6792_0, N1179_15 -> N4808_2. Begin at N1077_3; take exactly 8 steps. Use map 1 each step. Return the endpoint.\nA. N4808_2\nB. N4893_1\nC. N1179_15\nD. N1531_8\nAnswer with only the correct option letter.",
+    "choices": [
+      "N4808_2",
+      "N4893_1",
+      "N1179_15",
+      "N1531_8"
+    ],
+    "gold_label": 2,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      1.127630118865504,
+      1.1189670869086683,
+      1.2040242993615884,
+      1.3952624187931733
+    ],
+    "C_by_depth": [
+      0.2590799724008212,
+      0.2673664817616849,
+      0.32538191470591277,
+      0.3146147062772415
+    ],
+    "predicted_D_by_depth": [
+      -0.019558880935541506,
+      -0.03658504555319356,
+      -0.05963740929345604
+    ],
+    "actual_D_by_depth": [
+      0,
+      1,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "00f8ffc362c2a9f45953ac7f510689cf761ba5603b0cf0b7a101f4079fde246b",
+    "prompt": "Compute the requested result from the supplied data.\nSynthetic tool registry: N4835_0 supports inspect,archive,read,search,write, capacity=15, write_allowed=False, priority=71\nN8698_1 supports inspect,write,search,compute,read,archive, capacity=24, write_allowed=False, priority=23\nN2702_2 supports inspect,read,search, capacity=8, write_allowed=True, priority=74\nN4964_3 supports read,archive,inspect, capacity=20, write_allowed=True, priority=75. Request: {\"jobs\":11,\"read_only\":false,\"verbs\":[\"inspect\",\"archive\",\"compute\"],\"write\":false}. All requested verbs and capacity and write permission must match. Select lowest numeric priority among compatible tools.\nA. N4835_0\nB. N4964_3\nC. N2702_2\nD. N8698_1\nAnswer with only the correct option letter.",
+    "choices": [
+      "N4835_0",
+      "N4964_3",
+      "N2702_2",
+      "N8698_1"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.415509698369675,
+      1.8413879369400803,
+      1.4085279047339725,
+      1.1089863220134362
+    ],
+    "C_by_depth": [
+      0.2996303537735732,
+      0.292001758245143,
+      0.30725618598750615,
+      0.27953581185907095
+    ],
+    "predicted_D_by_depth": [
+      -0.0003515865183763289,
+      -0.0014511604396045402,
+      -0.004489888680508564
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "0143753baea9f92badc28c25feef7b88c2344aa4977247c841cdda6c92afd64e",
+    "prompt": "Compute the requested result from the supplied data.\nCounter initially 65. Execute in order: multiply 4\nadd 5\nadd 21\nmultiply 2\nsubtract 6\nmultiply 2\nmultiply 2\nmultiply 3. Give the final integer.\nA. 6761\nB. 6789\nC. 6793\nD. 6792\nAnswer with only the correct option letter.",
+    "choices": [
+      "6761",
+      "6789",
+      "6793",
+      "6792"
+    ],
+    "gold_label": 3,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.499400280347519,
+      1.8135852357984081,
+      1.2358961764330303,
+      0.7866015876024477
+    ],
+    "C_by_depth": [
+      0.287401092182825,
+      0.2864408092915988,
+      0.3111719013185944,
+      0.2879445595763748
+    ],
+    "predicted_D_by_depth": [
+      0.006395226466328348,
+      0.004188976684382596,
+      0.002378556784888533
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "007c7fa1da061344497fc2e960e5fe9854f765d33e1cb85d5a12f5b4d515cd87",
+    "prompt": "Solve the following deterministic problem.\nStorage capacities: N4314_0: 225 KB; N3987_1: 26 KB; N5757_2: 222 MB; N1289_3: 2 MB. Here 1 MB=1024 KB and 1 GB=1024 MB. Which capacity is largest?\nA. N3987_1\nB. N1289_3\nC. N5757_2\nD. N4314_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N3987_1",
+      "N1289_3",
+      "N5757_2",
+      "N4314_0"
+    ],
+    "gold_label": 2,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.23571522849337967,
+      0.42993510065129925,
+      0.7610794560145564,
+      1.2446627572931348
+    ],
+    "C_by_depth": [
+      0.495623852971194,
+      0.3798635656639638,
+      0.2690636937373315,
+      0.22928405141966868
+    ],
+    "predicted_D_by_depth": [
+      -0.026015370309279192,
+      -0.06463548248437156,
+      -0.13613825899269505
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "00cd9c10b40b1d59bb976319b3bfea7811dc17fa55ee9d9b784c710b119fdd85",
+    "prompt": "Solve the following deterministic problem.\nMapping table: map 1: N6792_0 -> N1179_15, N4893_1 -> N1179_15, N4808_2 -> N1531_8, N1077_3 -> N5596_11, N1800_4 -> N6088_9, N4868_5 -> N6792_0, N1691_6 -> N4868_5, N2693_7 -> N4741_14, N1531_8 -> N4868_5, N6088_9 -> N1179_15, N2886_10 -> N5743_12, N5596_11 -> N6088_9, N5743_12 -> N4808_2, N3652_13 -> N2693_7, N4741_14 -> N6792_0, N1179_15 -> N4808_2. Begin at N1077_3; take exactly 8 steps. Use map 1 each step. Return the endpoint.\nA. N4808_2\nB. N4893_1\nC. N1179_15\nD. N1531_8\nAnswer with only the correct option letter.",
+    "choices": [
+      "N4808_2",
+      "N4893_1",
+      "N1179_15",
+      "N1531_8"
+    ],
+    "gold_label": 2,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      1.127630118865504,
+      1.1189670869086683,
+      1.2040242993615884,
+      1.3952624187931733
+    ],
+    "C_by_depth": [
+      0.2590799724008212,
+      0.2673664817616849,
+      0.32538191470591277,
+      0.3146147062772415
+    ],
+    "predicted_D_by_depth": [
+      -0.019558880935541506,
+      -0.03658504555319356,
+      -0.05963740929345604
+    ],
+    "actual_D_by_depth": [
+      0,
+      1,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "01a8b3b186d3783a6b5e34b8d7ee73e75bb8ac988b56f2c375c85653ab17213c",
+    "prompt": "Compute the requested result from the supplied data.\nRule: x >= 17 AND y < 7 AND flag = 1. Candidate records (x,y,flag): N1099_0: 30,1,0\nN4668_1: 7,16,1\nN6543_2: 3,2,1\nN3891_3: 26,2,1. Select the unique eligible record.\nA. N3891_3\nB. N6543_2\nC. N1099_0\nD. N4668_1\nAnswer with only the correct option letter.",
+    "choices": [
+      "N3891_3",
+      "N6543_2",
+      "N1099_0",
+      "N4668_1"
+    ],
+    "gold_label": 0,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      0,
+      0,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.11684301906321437,
+      0.2569913196914939,
+      0.5743400772976415,
+      1.1578800485332792
+    ],
+    "C_by_depth": [
+      0.3534158352544175,
+      0.3222931919194326,
+      0.28912577076373863,
+      0.25086182047061933
+    ],
+    "predicted_D_by_depth": [
+      -0.006552195037902308,
+      -0.015560723541579089,
+      -0.034670334816816376
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "00f8ffc362c2a9f45953ac7f510689cf761ba5603b0cf0b7a101f4079fde246b",
+    "prompt": "Compute the requested result from the supplied data.\nSynthetic tool registry: N4835_0 supports inspect,archive,read,search,write, capacity=15, write_allowed=False, priority=71\nN8698_1 supports inspect,write,search,compute,read,archive, capacity=24, write_allowed=False, priority=23\nN2702_2 supports inspect,read,search, capacity=8, write_allowed=True, priority=74\nN4964_3 supports read,archive,inspect, capacity=20, write_allowed=True, priority=75. Request: {\"jobs\":11,\"read_only\":false,\"verbs\":[\"inspect\",\"archive\",\"compute\"],\"write\":false}. All requested verbs and capacity and write permission must match. Select lowest numeric priority among compatible tools.\nA. N4835_0\nB. N4964_3\nC. N2702_2\nD. N8698_1\nAnswer with only the correct option letter.",
+    "choices": [
+      "N4835_0",
+      "N4964_3",
+      "N2702_2",
+      "N8698_1"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.415509698369675,
+      1.8413879369400803,
+      1.4085279047339725,
+      1.1089863220134362
+    ],
+    "C_by_depth": [
+      0.2996303537735732,
+      0.292001758245143,
+      0.30725618598750615,
+      0.27953581185907095
+    ],
+    "predicted_D_by_depth": [
+      -0.0003515865183763289,
+      -0.0014511604396045402,
+      -0.004489888680508564
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "00f8ffc362c2a9f45953ac7f510689cf761ba5603b0cf0b7a101f4079fde246b",
+    "prompt": "Compute the requested result from the supplied data.\nSynthetic tool registry: N4835_0 supports inspect,archive,read,search,write, capacity=15, write_allowed=False, priority=71\nN8698_1 supports inspect,write,search,compute,read,archive, capacity=24, write_allowed=False, priority=23\nN2702_2 supports inspect,read,search, capacity=8, write_allowed=True, priority=74\nN4964_3 supports read,archive,inspect, capacity=20, write_allowed=True, priority=75. Request: {\"jobs\":11,\"read_only\":false,\"verbs\":[\"inspect\",\"archive\",\"compute\"],\"write\":false}. All requested verbs and capacity and write permission must match. Select lowest numeric priority among compatible tools.\nA. N4835_0\nB. N4964_3\nC. N2702_2\nD. N8698_1\nAnswer with only the correct option letter.",
+    "choices": [
+      "N4835_0",
+      "N4964_3",
+      "N2702_2",
+      "N8698_1"
+    ],
+    "gold_label": 3,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.415509698369675,
+      1.8413879369400803,
+      1.4085279047339725,
+      1.1089863220134362
+    ],
+    "C_by_depth": [
+      0.2996303537735732,
+      0.292001758245143,
+      0.30725618598750615,
+      0.27953581185907095
+    ],
+    "predicted_D_by_depth": [
+      -0.0003515865183763289,
+      -0.0014511604396045402,
+      -0.004489888680508564
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "0143753baea9f92badc28c25feef7b88c2344aa4977247c841cdda6c92afd64e",
+    "prompt": "Compute the requested result from the supplied data.\nCounter initially 65. Execute in order: multiply 4\nadd 5\nadd 21\nmultiply 2\nsubtract 6\nmultiply 2\nmultiply 2\nmultiply 3. Give the final integer.\nA. 6761\nB. 6789\nC. 6793\nD. 6792\nAnswer with only the correct option letter.",
+    "choices": [
+      "6761",
+      "6789",
+      "6793",
+      "6792"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      2,
+      2,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.499400280347519,
+      1.8135852357984081,
+      1.2358961764330303,
+      0.7866015876024477
+    ],
+    "C_by_depth": [
+      0.287401092182825,
+      0.2864408092915988,
+      0.3111719013185944,
+      0.2879445595763748
+    ],
+    "predicted_D_by_depth": [
+      0.006395226466328348,
+      0.004188976684382596,
+      0.002378556784888533
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "007ff92d139feafe602d15ecbfa2934d1e3ba2e2e7a2ac5d5e42628827af5771",
+    "prompt": "Compute the requested result from the supplied data.\nCounter initially 60. Execute in order: subtract 23\nadd 12\nadd 14\nsubtract 27\nsubtract 9\nmultiply 2\nmultiply 3\nadd 8. Give the final integer.\nA. 201\nB. 170\nC. 159\nD. 167\nAnswer with only the correct option letter.",
+    "choices": [
+      "201",
+      "170",
+      "159",
+      "167"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.6824463386694504,
+      2.9691708428276335,
+      3.3032091113175053,
+      3.7086307251411554
+    ],
+    "C_by_depth": [
+      0.19547192450359535,
+      0.22695120970271,
+      0.3606109350935953,
+      0.38666019882676944
+    ],
+    "predicted_D_by_depth": [
+      -0.0020937799637886488,
+      -0.00313670228534404,
+      -0.005473669443732531
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "007ff92d139feafe602d15ecbfa2934d1e3ba2e2e7a2ac5d5e42628827af5771",
+    "prompt": "Compute the requested result from the supplied data.\nCounter initially 60. Execute in order: subtract 23\nadd 12\nadd 14\nsubtract 27\nsubtract 9\nmultiply 2\nmultiply 3\nadd 8. Give the final integer.\nA. 201\nB. 170\nC. 159\nD. 167\nAnswer with only the correct option letter.",
+    "choices": [
+      "201",
+      "170",
+      "159",
+      "167"
+    ],
+    "gold_label": 1,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.6824463386694504,
+      2.9691708428276335,
+      3.3032091113175053,
+      3.7086307251411554
+    ],
+    "C_by_depth": [
+      0.19547192450359535,
+      0.22695120970271,
+      0.3606109350935953,
+      0.38666019882676944
+    ],
+    "predicted_D_by_depth": [
+      -0.0020937799637886488,
+      -0.00313670228534404,
+      -0.005473669443732531
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "007ff92d139feafe602d15ecbfa2934d1e3ba2e2e7a2ac5d5e42628827af5771",
+    "prompt": "Compute the requested result from the supplied data.\nCounter initially 60. Execute in order: subtract 23\nadd 12\nadd 14\nsubtract 27\nsubtract 9\nmultiply 2\nmultiply 3\nadd 8. Give the final integer.\nA. 201\nB. 170\nC. 159\nD. 167\nAnswer with only the correct option letter.",
+    "choices": [
+      "201",
+      "170",
+      "159",
+      "167"
+    ],
+    "gold_label": 1,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      2.6824463386694504,
+      2.9691708428276335,
+      3.3032091113175053,
+      3.7086307251411554
+    ],
+    "C_by_depth": [
+      0.19547192450359535,
+      0.22695120970271,
+      0.3606109350935953,
+      0.38666019882676944
+    ],
+    "predicted_D_by_depth": [
+      -0.0020937799637886488,
+      -0.00313670228534404,
+      -0.005473669443732531
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "03ac3585d64cc5b11ae22552f7043c98a8cd3375be3595e688da6eb3c07c427e",
+    "prompt": "Solve the following deterministic problem.\nResource table (free memory MB, free CPU units): N1759_0: 90, 1; N8805_1: 150, 19; N4013_2: 103, 20; N1960_3: 24, 31. Keep only machines with at least 18 free CPU units. Among them select the largest free memory.\nA. N1759_0\nB. N1960_3\nC. N8805_1\nD. N4013_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N1759_0",
+      "N1960_3",
+      "N8805_1",
+      "N4013_2"
+    ],
+    "gold_label": 2,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.9711181162317679,
+      1.2010253602149348,
+      1.4912456115368649,
+      1.8285812173914948
+    ],
+    "C_by_depth": [
+      0.3382562411094604,
+      0.31568880873488175,
+      0.28922669983656607,
+      0.24811843222380833
+    ],
+    "predicted_D_by_depth": [
+      -0.005005055314844006,
+      -0.013647476251649915,
+      -0.018829422108841753
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "083c1279fa172f54703705250d9ada66b0ea82b83d9d0f3344d6de4d45f5a16a",
+    "prompt": "Solve the following deterministic problem.\nMapping table: map 1: N2958_0 -> N6420_6, N3922_1 -> N1574_15, N9638_2 -> N2928_10, N2704_3 -> N4550_8, N6986_4 -> N1574_15, N1166_5 -> N2704_3, N6420_6 -> N7241_7, N7241_7 -> N4914_9, N4550_8 -> N7241_7, N4914_9 -> N6875_13, N2928_10 -> N4914_9, N4797_11 -> N4550_8, N7926_12 -> N6875_13, N6875_13 -> N4914_9, N8857_14 -> N9638_2, N1574_15 -> N4797_11 | map 2: N2958_0 -> N7241_7, N3922_1 -> N4550_8, N9638_2 -> N7926_12, N2704_3 -> N6420_6, N6986_4 -> N2958_0, N1166_5 -> N2958_0, N6420_6 -> N6875_13, N7241_7 -> N4914_9, N4550_8 -> N7926_12, N4914_9 -> N7241_7, N2928_10 -> N4797_11, N4797_11 -> N7926_12, N7926_12 -> N2704_3, N6875_13 -> N4914_9, N8857_14 -> N9638_2, N1574_15 -> N2704_3. Begin at N7926_12; take exactly 8 steps. Alternate map 1 then map 2, repeating. Return the endpoint.\nA. N7241_7\nB. N3922_1\nC. N6420_6\nD. N4914_9\nAnswer with only the correct option letter.",
+    "choices": [
+      "N7241_7",
+      "N3922_1",
+      "N6420_6",
+      "N4914_9"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      3,
+      0,
+      0,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.6570041654665673,
+      0.833354897984357,
+      1.0304587982533917,
+      1.241076161365168
+    ],
+    "C_by_depth": [
+      0.2815216889322884,
+      0.28541380747201656,
+      0.3081348150449726,
+      0.27659553350248095
+    ],
+    "predicted_D_by_depth": [
+      -0.009423049283948961,
+      -0.01219478688124579,
+      -0.012542766651149933
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "0c9d5f2efb4c5ba9c9663ede995d8c706923fc675c95f223a830c498cee6423d",
+    "prompt": "Compute the requested result from the supplied data.\nMapping table: map 1: N6524_0 -> N9312_7, N6779_1 -> N7947_14, N7207_2 -> N7947_14, N2947_3 -> N6275_10, N8054_4 -> N6939_5, N6939_5 -> N8054_4, N9402_6 -> N9312_7, N9312_7 -> N6524_0, N1669_8 -> N6524_0, N5744_9 -> N7207_2, N6275_10 -> N8722_15, N9907_11 -> N7207_2, N8577_12 -> N6524_0, N5949_13 -> N5744_9, N7947_14 -> N5744_9, N8722_15 -> N7947_14 | map 2: N6524_0 -> N8722_15, N6779_1 -> N9907_11, N7207_2 -> N6524_0, N2947_3 -> N6779_1, N8054_4 -> N6779_1, N6939_5 -> N6779_1, N9402_6 -> N9402_6, N9312_7 -> N2947_3, N1669_8 -> N9402_6, N5744_9 -> N7207_2, N6275_10 -> N9907_11, N9907_11 -> N6939_5, N8577_12 -> N9312_7, N5949_13 -> N5744_9, N7947_14 -> N9402_6, N8722_15 -> N6275_10. Begin at N2947_3\ntake exactly 8 steps. Alternate map 1 then map 2, repeating. Return the endpoint.\nA. N5744_9\nB. N9907_11\nC. N5949_13\nD. N9402_6\nAnswer with only the correct option letter.",
+    "choices": [
+      "N5744_9",
+      "N9907_11",
+      "N5949_13",
+      "N9402_6"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.5925022067020045,
+      1.0497932101174712,
+      1.6709997138224324,
+      2.4180743836952523
+    ],
+    "C_by_depth": [
+      0.23485247979884488,
+      0.2533702924498347,
+      0.3321971431622392,
+      0.32352035107234606
+    ],
+    "predicted_D_by_depth": [
+      0.02437295056628984,
+      0.026275646250002227,
+      -0.00935205325620743
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "F",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "5d8b3be938bf3f561501307f3633aff8812c2ad9f680a165ef3abd8de956ad9a",
+    "prompt": "Compute the requested result from the supplied data.\nCounter initially 59. Execute in order: multiply 3\nmultiply 3\nadd 7\nmultiply 2\nadd 17\nsubtract 16\nmultiply 4\nsubtract 8. Give the final integer.\nA. 4299\nB. 4300\nC. 4331\nD. 4269\nAnswer with only the correct option letter.",
+    "choices": [
+      "4299",
+      "4300",
+      "4331",
+      "4269"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      0,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      1.0194828745247406,
+      1.45579845974288,
+      2.0346477258004203,
+      2.7666164344734963
+    ],
+    "C_by_depth": [
+      0.3786756451182431,
+      0.3397964998492256,
+      0.27370949218576973,
+      0.21911704199649282
+    ],
+    "predicted_D_by_depth": [
+      0.10930427634797252,
+      0.11022403450271165,
+      0.09544768430858233
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 3,
+    "decisions": [
+      "continue",
+      "continue",
+      "stop",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "G",
+    "seed": 22,
+    "split": "harder_depth",
+    "instance_id": "5d8b3be938bf3f561501307f3633aff8812c2ad9f680a165ef3abd8de956ad9a",
+    "prompt": "Compute the requested result from the supplied data.\nCounter initially 59. Execute in order: multiply 3\nmultiply 3\nadd 7\nmultiply 2\nadd 17\nsubtract 16\nmultiply 4\nsubtract 8. Give the final integer.\nA. 4299\nB. 4300\nC. 4331\nD. 4269\nAnswer with only the correct option letter.",
+    "choices": [
+      "4299",
+      "4300",
+      "4331",
+      "4269"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      0,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      1.0194828745247406,
+      1.45579845974288,
+      2.0346477258004203,
+      2.7666164344734963
+    ],
+    "C_by_depth": [
+      0.3786756451182431,
+      0.3397964998492256,
+      0.27370949218576973,
+      0.21911704199649282
+    ],
+    "predicted_D_by_depth": [
+      0.10930427634797252,
+      0.11022403450271165,
+      0.09544768430858233
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 3,
+    "decisions": [
+      "continue",
+      "continue",
+      "stop",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  }
+]

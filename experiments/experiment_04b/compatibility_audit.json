@@ -1,0 +1,54 @@
+{
+  "checked_utc": "2026-10-09T00:20:36.240494+00:00",
+  "compatible_development_caches": [
+    {
+      "split": "controller_train",
+      "seed": 11,
+      "trajectory_sha256": "47ae8adf479b85f7366c7204cda98f4916724a5a58ff8304af946d571f1240f2",
+      "hidden_sha256": "86c3b223229e0b0a5750fd920ff3e8abee42b581735d94db7ad3780fde6a2109",
+      "states": 16128
+    },
+    {
+      "split": "controller_val",
+      "seed": 11,
+      "trajectory_sha256": "9d8399ccfa7c80ba611b182cb8562132560f6b5e8d52082f4245400aff513aa2",
+      "hidden_sha256": "e51cdb768c8e464aa0d5ab9b6db0a5a4c2909cf806c431ba56856cbc552a3064",
+      "states": 4032
+    },
+    {
+      "split": "controller_train",
+      "seed": 22,
+      "trajectory_sha256": "58378d6c1abda0f92eac526b57e0255892b5e554475be174775049660e6d1a66",
+      "hidden_sha256": "cf45dc2a51c3cb6588ea0f9a8596b6c7cbc215a16e1422587433252a326fc660",
+      "states": 16128
+    },
+    {
+      "split": "controller_val",
+      "seed": 22,
+      "trajectory_sha256": "ff60e84012b09f71a480873f554c371a98a9632fce13e89e9ff6ee3689b3f08f",
+      "hidden_sha256": "e7d0c6316bd46860fa00e321bd7634f9adbcdce4e3f83a4336f9a9ded4c50c20",
+      "states": 4032
+    },
+    {
+      "split": "controller_train",
+      "seed": 33,
+      "trajectory_sha256": "e0ea530d6cae92e59333342bbca39d397db0377979abe86f681d9842e7479b19",
+      "hidden_sha256": "92936bc51e5a161236376a0c18884f989e5608ae3b788b1d057128dbb5fe01fe",
+      "states": 16128
+    },
+    {
+      "split": "controller_val",
+      "seed": 33,
+      "trajectory_sha256": "8d963720435cefdbc73e26d194c6fb62956a893d9221cd3c11c5c6cebb376092",
+      "hidden_sha256": "8554876eba6861dc96ceb40d37581e6c8a2aab2a1abf9120e9256ffd6fc539e2",
+      "states": 4032
+    }
+  ],
+  "schema": "latent-loop-trajectory-v1",
+  "preservation": {
+    "historical_files": 296,
+    "all_unchanged_except_readme_link": true,
+    "checked_utc": "2026-10-09T00:20:36.281863+00:00"
+  },
+  "final_4a_data_role": "Identity/structure exclusion only; no selection on their labels or scores"
+}

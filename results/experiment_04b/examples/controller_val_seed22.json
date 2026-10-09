@@ -1,0 +1,872 @@
+[
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "00e2679696d7399f6a78c5d01b0410fb656e4c2b2f9cc7be0c82111627679a25",
+    "prompt": "Compute the requested result from the supplied data.\nRegisters: N4346_0=6, N6599_1=34, N4689_2=9\nOrdered instructions:\nset N4689_2=5\nset N4689_2=11\nadd 14 to N6599_1\nset N4689_2=11\nadd 12 to N4346_0. Final value of N4689_2?\nA. 0\nB. 14\nC. 10\nD. 11\nAnswer with only the correct option letter.",
+    "choices": [
+      "0",
+      "14",
+      "10",
+      "11"
+    ],
+    "gold_label": 3,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "loss_by_depth": [
+      1.1431616719421278,
+      0.7153857166659279,
+      0.5334491632534437,
+      0.5841425010925683
+    ],
+    "C_by_depth": [
+      0.24782072628058952,
+      0.26016759884326895,
+      0.3294857709464712,
+      0.32371375188968143
+    ],
+    "predicted_D_by_depth": [
+      0.049638371267726925,
+      0.03298826456795938,
+      0.002427877195911629
+    ],
+    "actual_D_by_depth": [
+      1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "0130a21e7219146374984608c54be0caf6ce471e363e475fc48965fa913426ff",
+    "prompt": "Compute the requested result from the supplied data.\nInventory counts (negative means backorders): N4310_0=4, N4443_1=24, N2184_2=10\nOrdered instructions:\nmove 2 from N4443_1 to N2184_2. Final value of N2184_2?\nA. 12\nB. 15\nC. 13\nD. 9\nAnswer with only the correct option letter.",
+    "choices": [
+      "12",
+      "15",
+      "13",
+      "9"
+    ],
+    "gold_label": 0,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "loss_by_depth": [
+      3.625985604004722,
+      2.0507441446477728,
+      0.9879704328347074,
+      0.452807084216559
+    ],
+    "C_by_depth": [
+      0.2761635501874748,
+      0.27144872275810283,
+      0.324210043463949,
+      0.30759803572905875
+    ],
+    "predicted_D_by_depth": [
+      0.006886387242710221,
+      -0.0024651289843789503,
+      -0.03283612122655402
+    ],
+    "actual_D_by_depth": [
+      0,
+      1,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "A",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "015bbf1c233d39390d2ad6ec2cae05425f5489c0162e2f900d6f199ce25d146f",
+    "prompt": "Solve the following deterministic problem.\nRegisters: N9145_0=13, N7998_1=8, N1477_2=39. In order: add 9 to N1477_2; add 5 to N1477_2; add 2 to N9145_0; swap N1477_2 and N9145_0; set N9145_0=7. Final value of N9145_0?\nA. 7\nB. -24\nC. 38\nD. -4\nAnswer with only the correct option letter.",
+    "choices": [
+      "7",
+      "-24",
+      "38",
+      "-4"
+    ],
+    "gold_label": 0,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      1,
+      1,
+      3,
+      0
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      true
+    ],
+    "loss_by_depth": [
+      2.92727618552448,
+      2.014685137292769,
+      1.3459516530624427,
+      0.9069049146662707
+    ],
+    "C_by_depth": [
+      0.24030952187220214,
+      0.2560350484013382,
+      0.33365427250243596,
+      0.3279886487684428
+    ],
+    "predicted_D_by_depth": [
+      0.03665805705508669,
+      0.04673306807342209,
+      0.03637161391751943
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "0077959c3d05c2c3f4a311c0908953b9e1787a83a83c4abadce266b9e387d21e",
+    "prompt": "Solve the following deterministic problem.\nInventory counts (negative means backorders): N5424_0=2, N4520_1=-4, N5237_2=5. In order: move 6 from N5424_0 to N4520_1. Final value of N5237_2?\nA. 5\nB. 4\nC. -6\nD. 2\nAnswer with only the correct option letter.",
+    "choices": [
+      "5",
+      "4",
+      "-6",
+      "2"
+    ],
+    "gold_label": 0,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      0,
+      0,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.7969802958781358,
+      0.8087091191546065,
+      0.918076481362327,
+      1.1324417037304464
+    ],
+    "C_by_depth": [
+      0.2903369010851176,
+      0.28823294075169403,
+      0.31062833216061164,
+      0.28649328182566935
+    ],
+    "predicted_D_by_depth": [
+      0.021276795074066913,
+      0.012915436357552615,
+      0.015576465742845602
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "00ca06b0b0a3584d70ff7990bbb9be047bbc969e4f9dee38b78368a49fa5fb3f",
+    "prompt": "Compute the requested result from the supplied data.\nInventory counts (negative means backorders): N2486_0=29, N6230_1=6, N1915_2=24\nOrdered instructions:\nadd 9 to N1915_2\nmove 13 from N6230_1 to N1915_2\nmove 13 from N6230_1 to N1915_2\nadd 8 to N2486_0\nmove 8 from N1915_2 to N2486_0. Final value of N1915_2?\nA. 82\nB. 52\nC. 51\nD. 48\nAnswer with only the correct option letter.",
+    "choices": [
+      "82",
+      "52",
+      "51",
+      "48"
+    ],
+    "gold_label": 2,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      2,
+      2,
+      2,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.2858127428761925,
+      0.4552056343413078,
+      0.8895994402430176,
+      1.7006305439562084
+    ],
+    "C_by_depth": [
+      0.25884220714963807,
+      0.25931843842879954,
+      0.33887413775412245,
+      0.3434712376401128
+    ],
+    "predicted_D_by_depth": [
+      -0.007912259392851492,
+      -0.02598954491235389,
+      -0.06899467101005893
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "B",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "039ec233aab181eb7e10f87680827d1bf156ee6bb422bf6b422cb97ddb290747",
+    "prompt": "Solve the following deterministic problem.\nRule: x >= 18 AND y < 6 AND flag = 1. Candidate records (x,y,flag): N3794_0: 0,15,1; N9516_1: 29,12,1; N6500_2: 21,19,0; N7450_3: 22,3,1. Select the unique eligible record.\nA. N7450_3\nB. N3794_0\nC. N9516_1\nD. N6500_2\nAnswer with only the correct option letter.",
+    "choices": [
+      "N7450_3",
+      "N3794_0",
+      "N9516_1",
+      "N6500_2"
+    ],
+    "gold_label": 0,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      0,
+      0,
+      0,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "loss_by_depth": [
+      0.04386431671765223,
+      0.12189645231590163,
+      0.36027532242206917,
+      0.9412004144641379
+    ],
+    "C_by_depth": [
+      0.31959589225180135,
+      0.30543428465338535,
+      0.2957818933999503,
+      0.26174517918431395
+    ],
+    "predicted_D_by_depth": [
+      -0.011634895493112373,
+      -0.025087130920360655,
+      -0.08738941854619309
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      -1
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "012e15a13c4ee13efb28713c8009c185d626ddb1ddeaff0963fc5a016077243d",
+    "prompt": "Compute the requested result from the supplied data.\nMapping table: map 1: N7005_0 -> N3892_10, N8049_1 -> N4952_6, N5872_2 -> N7005_0, N1599_3 -> N5359_9, N4289_4 -> N8049_1, N5299_5 -> N7005_0, N4952_6 -> N5359_9, N6458_7 -> N4289_4, N5297_8 -> N3625_11, N5359_9 -> N4289_4, N3892_10 -> N5359_9, N3625_11 -> N4952_6. Begin at N5299_5\ntake exactly 5 steps. Use map 1 each step. Return the endpoint.\nA. N8049_1\nB. N5872_2\nC. N5299_5\nD. N7005_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N8049_1",
+      "N5872_2",
+      "N5299_5",
+      "N7005_0"
+    ],
+    "gold_label": 0,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.065382299944325,
+      2.5193087774802905,
+      2.0705357565827605,
+      1.6933465535257213
+    ],
+    "C_by_depth": [
+      0.25667800612074004,
+      0.27146967570219954,
+      0.3191413860978417,
+      0.29967033190792747
+    ],
+    "predicted_D_by_depth": [
+      0.014115749855800934,
+      0.0006695944666269896,
+      -0.006870992445207544
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "012e15a13c4ee13efb28713c8009c185d626ddb1ddeaff0963fc5a016077243d",
+    "prompt": "Compute the requested result from the supplied data.\nMapping table: map 1: N7005_0 -> N3892_10, N8049_1 -> N4952_6, N5872_2 -> N7005_0, N1599_3 -> N5359_9, N4289_4 -> N8049_1, N5299_5 -> N7005_0, N4952_6 -> N5359_9, N6458_7 -> N4289_4, N5297_8 -> N3625_11, N5359_9 -> N4289_4, N3892_10 -> N5359_9, N3625_11 -> N4952_6. Begin at N5299_5\ntake exactly 5 steps. Use map 1 each step. Return the endpoint.\nA. N8049_1\nB. N5872_2\nC. N5299_5\nD. N7005_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N8049_1",
+      "N5872_2",
+      "N5299_5",
+      "N7005_0"
+    ],
+    "gold_label": 0,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.065382299944325,
+      2.5193087774802905,
+      2.0705357565827605,
+      1.6933465535257213
+    ],
+    "C_by_depth": [
+      0.25667800612074004,
+      0.27146967570219954,
+      0.3191413860978417,
+      0.29967033190792747
+    ],
+    "predicted_D_by_depth": [
+      0.014115749855800934,
+      0.0006695944666269896,
+      -0.006870992445207544
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "C",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "012e15a13c4ee13efb28713c8009c185d626ddb1ddeaff0963fc5a016077243d",
+    "prompt": "Compute the requested result from the supplied data.\nMapping table: map 1: N7005_0 -> N3892_10, N8049_1 -> N4952_6, N5872_2 -> N7005_0, N1599_3 -> N5359_9, N4289_4 -> N8049_1, N5299_5 -> N7005_0, N4952_6 -> N5359_9, N6458_7 -> N4289_4, N5297_8 -> N3625_11, N5359_9 -> N4289_4, N3892_10 -> N5359_9, N3625_11 -> N4952_6. Begin at N5299_5\ntake exactly 5 steps. Use map 1 each step. Return the endpoint.\nA. N8049_1\nB. N5872_2\nC. N5299_5\nD. N7005_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N8049_1",
+      "N5872_2",
+      "N5299_5",
+      "N7005_0"
+    ],
+    "gold_label": 0,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      3.065382299944325,
+      2.5193087774802905,
+      2.0705357565827605,
+      1.6933465535257213
+    ],
+    "C_by_depth": [
+      0.25667800612074004,
+      0.27146967570219954,
+      0.3191413860978417,
+      0.29967033190792747
+    ],
+    "predicted_D_by_depth": [
+      0.014115749855800934,
+      0.0006695944666269896,
+      -0.006870992445207544
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "00d15274ce22c04c28c087509946bb5dc03418e97209c17eb023a1258739d818",
+    "prompt": "Solve the following deterministic problem.\nInventory counts (negative means backorders): N4795_0=38, N1473_1=37, N7669_2=1. In order: add 7 to N4795_0. Final value of N1473_1?\nA. 48\nB. 37\nC. 40\nD. 34\nAnswer with only the correct option letter.",
+    "choices": [
+      "48",
+      "37",
+      "40",
+      "34"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      1.9942028529963984,
+      2.156268233615016,
+      2.46702754165765,
+      2.925289805698295
+    ],
+    "C_by_depth": [
+      0.28125691796836894,
+      0.27714870701163585,
+      0.3203591121184625,
+      0.30359508515100797
+    ],
+    "predicted_D_by_depth": [
+      0.00820647085813813,
+      0.017407486524517138,
+      0.023442134462465472
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "00d15274ce22c04c28c087509946bb5dc03418e97209c17eb023a1258739d818",
+    "prompt": "Solve the following deterministic problem.\nInventory counts (negative means backorders): N4795_0=38, N1473_1=37, N7669_2=1. In order: add 7 to N4795_0. Final value of N1473_1?\nA. 48\nB. 37\nC. 40\nD. 34\nAnswer with only the correct option letter.",
+    "choices": [
+      "48",
+      "37",
+      "40",
+      "34"
+    ],
+    "gold_label": 1,
+    "event_depth": 2,
+    "predictions_by_depth": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      1.9942028529963984,
+      2.156268233615016,
+      2.46702754165765,
+      2.925289805698295
+    ],
+    "C_by_depth": [
+      0.28125691796836894,
+      0.27714870701163585,
+      0.3203591121184625,
+      0.30359508515100797
+    ],
+    "predicted_D_by_depth": [
+      0.00820647085813813,
+      0.017407486524517138,
+      0.023442134462465472
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "D",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "00d15274ce22c04c28c087509946bb5dc03418e97209c17eb023a1258739d818",
+    "prompt": "Solve the following deterministic problem.\nInventory counts (negative means backorders): N4795_0=38, N1473_1=37, N7669_2=1. In order: add 7 to N4795_0. Final value of N1473_1?\nA. 48\nB. 37\nC. 40\nD. 34\nAnswer with only the correct option letter.",
+    "choices": [
+      "48",
+      "37",
+      "40",
+      "34"
+    ],
+    "gold_label": 1,
+    "event_depth": 3,
+    "predictions_by_depth": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      1.9942028529963984,
+      2.156268233615016,
+      2.46702754165765,
+      2.925289805698295
+    ],
+    "C_by_depth": [
+      0.28125691796836894,
+      0.27714870701163585,
+      0.3203591121184625,
+      0.30359508515100797
+    ],
+    "predicted_D_by_depth": [
+      0.00820647085813813,
+      0.017407486524517138,
+      0.023442134462465472
+    ],
+    "actual_D_by_depth": [
+      0,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "06629c5e4dfad1dbe7264ab484136367e4345b58366712aaea2bef12f5cba62c",
+    "prompt": "Solve the following deterministic problem.\nMapping table: map 1: N3144_0 -> N8434_1, N8434_1 -> N8654_6, N2755_2 -> N8654_6, N4772_3 -> N8434_1, N7439_4 -> N8434_1, N9610_5 -> N3144_0, N8654_6 -> N3144_0, N6965_7 -> N2755_2, N1809_8 -> N8654_6, N1596_9 -> N2755_2. Begin at N6965_7; take exactly 3 steps. Use map 1 each step. Return the endpoint.\nA. N8654_6\nB. N3144_0\nC. N8434_1\nD. N4772_3\nAnswer with only the correct option letter.",
+    "choices": [
+      "N8654_6",
+      "N3144_0",
+      "N8434_1",
+      "N4772_3"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.6976042603691361,
+      1.0180707265017723,
+      1.4308963696570771,
+      1.9394521889794945
+    ],
+    "C_by_depth": [
+      0.277451885758841,
+      0.2782091662001813,
+      0.3152441819087508,
+      0.29482854727633506
+    ],
+    "predicted_D_by_depth": [
+      -0.02312392817436698,
+      -0.04393671550207601,
+      -0.059234571373427275
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "0aaa5ad784ec1d833cf6639a2efd2af9d57c24d506e1be0ade60a67ab0975c28",
+    "prompt": "Solve the following deterministic problem.\nCounter initially 0. Execute in order: subtract 13. Give the final integer.\nA. -2\nB. -12\nC. -13\nD. -24\nAnswer with only the correct option letter.",
+    "choices": [
+      "-2",
+      "-12",
+      "-13",
+      "-24"
+    ],
+    "gold_label": 2,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      2,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.7656975797237564,
+      1.1583518939912203,
+      1.6910235145692312,
+      2.3259910850210233
+    ],
+    "C_by_depth": [
+      0.34822348552641735,
+      0.31033735525458017,
+      0.2932608727481515,
+      0.2592536560223546
+    ],
+    "predicted_D_by_depth": [
+      -0.0076999750488775665,
+      -0.015420619941336783,
+      -0.016717440786274202
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  },
+  {
+    "category": "E",
+    "seed": 22,
+    "split": "controller_val",
+    "instance_id": "0c226e1ce400a0b76a24de17692f6ebf3c9229208bd172dc71bdd53bea79caf6",
+    "prompt": "Solve the following deterministic problem.\nSynthetic tool registry: N6843_0 supports write,compute, capacity=42, write_allowed=True, priority=19; N1858_1 supports read,search,compute,inspect,archive, capacity=15, write_allowed=True, priority=88; N9323_2 supports read,inspect,search,write, capacity=39, write_allowed=True, priority=55; N5700_3 supports inspect,read,archive,search,write, capacity=23, write_allowed=True, priority=75. Request: {\"jobs\":22,\"read_only\":false,\"verbs\":[\"search\",\"read\"],\"write\":true}. All requested verbs and capacity and write permission must match. Select lowest numeric priority among compatible tools.\nA. N5700_3\nB. N9323_2\nC. N1858_1\nD. N6843_0\nAnswer with only the correct option letter.",
+    "choices": [
+      "N5700_3",
+      "N9323_2",
+      "N1858_1",
+      "N6843_0"
+    ],
+    "gold_label": 1,
+    "event_depth": 1,
+    "predictions_by_depth": [
+      1,
+      3,
+      3,
+      3
+    ],
+    "correct_by_depth": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "loss_by_depth": [
+      0.6100056391988531,
+      0.8684573927294963,
+      1.2314643229195745,
+      1.7253118483225762
+    ],
+    "C_by_depth": [
+      0.30901546693245596,
+      0.3001628285893942,
+      0.29777855264916486,
+      0.25994070600794184
+    ],
+    "predicted_D_by_depth": [
+      0.011480413110857908,
+      0.011082616096406483,
+      -0.0050632187946158674
+    ],
+    "actual_D_by_depth": [
+      -1,
+      0,
+      0
+    ],
+    "selected_depth": 1,
+    "paid_loops": 1,
+    "decisions": [
+      "stop",
+      "unvisited",
+      "unvisited",
+      "unvisited"
+    ],
+    "selection_rule": "stable lexicographic instance ID; no performance-based example choice"
+  }
+]

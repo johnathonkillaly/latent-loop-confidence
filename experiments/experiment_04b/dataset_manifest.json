@@ -1,0 +1,136 @@
+{
+  "version": "decision-value-v1",
+  "development_source": "4A controller_train/val (unchanged)",
+  "split_seeds": {
+    "fresh_id": 450201,
+    "new_template": 450301,
+    "structural_shift": 450401,
+    "harder_depth": 450501,
+    "numeric_range": 450601
+  },
+  "splits": {
+    "fresh_id": {
+      "n": 1296,
+      "seed": 450201,
+      "sha256": "521fef9e06e887c25ca161183f9e211792cbc163cd24ba69b7200035a1f06417",
+      "content_sha256": "619b974b2f2cbe8ccdb253e75c50b31fd245cab6ee83986f998e912f03fac556",
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04b/datasets/sealed/fresh_id.jsonl.gz",
+      "sealed": true,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    },
+    "new_template": {
+      "n": 1296,
+      "seed": 450301,
+      "sha256": "d688e5dec74d9aced15ff3a07661cac4caaddc9c642f2ad56d95366fdc9cf435",
+      "content_sha256": "8b93c193d02c977cae9e06759b392e27ae6c7d655e8679b4510863d2b6cbf188",
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04b/datasets/sealed/new_template.jsonl.gz",
+      "sealed": true,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    },
+    "structural_shift": {
+      "n": 1296,
+      "seed": 450401,
+      "sha256": "736ec536ef8454911421cc85c9a2fd9c22c69129197bcbad2bd65b5180bdae07",
+      "content_sha256": "0a1568fc377eb1c74216adff41c433f3009e4449e74c6bb7644ba307f01444f0",
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04b/datasets/sealed/structural_shift.jsonl.gz",
+      "sealed": true,
+      "generator_ids": [
+        "boolean_program",
+        "ordered_rules",
+        "parallel_ledgers",
+        "symbolic_modular_walk",
+        "value_per_cost",
+        "weighted_conditions"
+      ]
+    },
+    "harder_depth": {
+      "n": 1296,
+      "seed": 450501,
+      "sha256": "54d7ade144aabf7ee5691868b93e4e6398751d1ba9d1656584738383dd785ff7",
+      "content_sha256": "6816c3905092fe5bb8d7b5a5d1388a5e70a15a610f0a71b1e44496cdaaf75d6a",
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04b/datasets/sealed/harder_depth.jsonl.gz",
+      "sealed": true,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    },
+    "numeric_range": {
+      "n": 1296,
+      "seed": 450601,
+      "sha256": "49af39eb01c61437578170a25c83c04aa69cb704ecfa9e178cad0ab1674a903e",
+      "content_sha256": "7a083949ee40c48366df1ca84554a078777421e63b8a41bca64d0af38330a055",
+      "balanced_task_count": 216,
+      "path": "artifacts/experiment_04b/datasets/sealed/numeric_range.jsonl.gz",
+      "sealed": true,
+      "generator_ids": [
+        "accumulator",
+        "alternating_maps",
+        "capability_constraints",
+        "disjunction_negation",
+        "expression_tree",
+        "functional_graph",
+        "incomplete_request",
+        "inventory_transfers",
+        "mixed_units",
+        "numeric_conjunction",
+        "register_program",
+        "resource_filter"
+      ]
+    }
+  },
+  "excluded_prior_instances": 10224,
+  "prior_manifest_sha256": "7174c697c724b709be5cbab11d8d7cc3d329e2245cd4bbc43355c8b51707b4bc",
+  "numeric_shift_definition": "Scale real arithmetic/state operands, numeric predicates, resource capacities/requests by 17; no scaling of entity/query indices. Pointer remains a fresh nominal-range control.",
+  "integrity": {
+    "new_unique_instances": 6480,
+    "overlap_with_prior_or_other_splits": 0,
+    "generation_rejections": {
+      "duplicate_instance_or_shape_or_prompt": 30,
+      "historical_compatible_shape": 0,
+      "invalid_or_nonunique": 2840
+    },
+    "independent_solvers_verified": true,
+    "abstract_algorithm_overlap": "Allowed within ID/lexical/range shifts; constants/query-preserving alpha duplicates rejected"
+  }
+}

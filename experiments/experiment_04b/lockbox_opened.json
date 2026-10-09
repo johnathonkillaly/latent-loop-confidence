@@ -1,0 +1,13 @@
+{
+  "opened_utc": "2026-10-09T00:30:58.895407+00:00",
+  "frozen_utc": "2026-10-09T00:30:58.385007+00:00",
+  "protocol_sha256": "05ca1b00757e913208ca02acee27026fc40a286f795b9a7845db7e0fd2d9904c",
+  "status": "4B fixed-protocol final evaluation opened; consumed for future selection",
+  "splits": [
+    "fresh_id",
+    "new_template",
+    "structural_shift",
+    "harder_depth",
+    "numeric_range"
+  ]
+}
