@@ -1,0 +1,14 @@
+{
+  "checked": "2026-10-09T14:32:42.371759+00:00",
+  "mlx": {
+    "passed": 53,
+    "skipped": 0,
+    "failed": 0
+  },
+  "cpu_only": {
+    "passed": 34,
+    "skipped": 14,
+    "failed": 0
+  },
+  "scope": "Full historical suite plus new conservative graph exclusion, independent structural solver, final access guard, exact executor parity, bounded32-loop states and finite gradients/global-context tests"
+}

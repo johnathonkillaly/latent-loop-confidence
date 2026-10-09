@@ -1,0 +1,83 @@
+{
+  "frozen": "2026-10-09T14:32:43.072625+00:00",
+  "primary": {
+    "model": "frozen_05b",
+    "population": "size9",
+    "depths": [
+      4,
+      8
+    ],
+    "metric": "optimal_first_action_accuracy",
+    "interval": "paired crossed maze-instance and historical-training-seed bootstrap; 4000 replicates"
+  },
+  "validation": {
+    "frozen_05b": {
+      "loss": 0.06930819112393592,
+      "accuracy": 0.9840277777777778
+    },
+    "rec_variable": {
+      "loss": 0.023960142376987886,
+      "accuracy": 0.9892361111111111
+    },
+    "rec_curriculum": {
+      "loss": 0.03642505169975468,
+      "accuracy": 0.9885416666666668
+    },
+    "ff4_params": {
+      "loss": 0.08811560091045167,
+      "accuracy": 0.9652777777777778
+    },
+    "ff8": {
+      "loss": 0.031152197430169004,
+      "accuracy": 0.9916666666666667
+    },
+    "global_cnn": {
+      "loss": 0.06068063092728456,
+      "accuracy": 0.9805555555555555
+    }
+  },
+  "selected_recurrent": "rec_variable",
+  "selected_feedforward": "ff8",
+  "deployment_depths": {
+    "frozen_05b": 8,
+    "rec_variable": 8,
+    "rec_curriculum": 8,
+    "ff4_params": 4,
+    "ff8": 8,
+    "global_cnn": 4
+  },
+  "checkpoints": {
+    "artifacts/experiment_05b/checkpoints/rec_simultaneous_seed11/best.safetensors": "1ab59e044b775b9edef493f497fca5070232f039321419b54c508193b5b27bd3",
+    "artifacts/experiment_05b/checkpoints/rec_simultaneous_seed22/best.safetensors": "6d309b43745d71777afd81fb9b9682019a239d3a9bd8e869746fb3dea7cb8eee",
+    "artifacts/experiment_05b/checkpoints/rec_simultaneous_seed33/best.safetensors": "6ebc9a6cbc55f458e8a5e065fe8235f55df43038c6d63cd223a760d6a299bb2f",
+    "artifacts/experiment_05c/checkpoints/rec_variable_seed101/best.safetensors": "2aed5d3c1fdaabfd179dab10874eb5f60873e15ed9d385ec640908cecbcc5009",
+    "artifacts/experiment_05c/checkpoints/rec_variable_seed202/best.safetensors": "54c366d435338c0d25c8829147582f94f1e081e41949f68340a0ca5fb9793be7",
+    "artifacts/experiment_05c/checkpoints/rec_variable_seed303/best.safetensors": "6c2c43234a8b44fd4a23585dde9e731fc0a652f819541825dc9327bd5d1e5948",
+    "artifacts/experiment_05c/checkpoints/rec_curriculum_seed101/best.safetensors": "4eddd2fd603a64772f9fbd19489c12f35570f5f5d8409fbb295582d282bc95d2",
+    "artifacts/experiment_05c/checkpoints/rec_curriculum_seed202/best.safetensors": "ce7cbdbbb2b40d4db89aafd76cf6317f122508dd562bb6fbd4869a6c82f189da",
+    "artifacts/experiment_05c/checkpoints/rec_curriculum_seed303/best.safetensors": "6a04b208e6d050f2b5690bf8995e23e54fddd5d7768ddcdcdf2ca996ca347852",
+    "artifacts/experiment_05c/checkpoints/ff4_params_seed101/best.safetensors": "960fe559baa6d81244a742c670d46d1cb6f494a52d6718679922d2ecbe7b666b",
+    "artifacts/experiment_05c/checkpoints/ff4_params_seed202/best.safetensors": "0914536fb7383a8fc8fe8da6de90d5c7d10169a459348faba222d9e0bd166e5b",
+    "artifacts/experiment_05c/checkpoints/ff4_params_seed303/best.safetensors": "9c328e9e274adca2a05b2ea6443d528edd7c3e64a60d11df94728549b33d53c4",
+    "artifacts/experiment_05c/checkpoints/ff8_seed101/best.safetensors": "a5bab73be28a98a56a42e7e4c7f7836beaf497ed680d143b3562b572b0642c64",
+    "artifacts/experiment_05c/checkpoints/ff8_seed202/best.safetensors": "13e644264267391ccfb1b494045909c30cfc144b7d710ec3aea236b6a342a31a",
+    "artifacts/experiment_05c/checkpoints/ff8_seed303/best.safetensors": "0f1a0abbc498cdd8b37a87bd79890f159e1517d62a69a28baee18751a0824edf",
+    "artifacts/experiment_05c/checkpoints/global_cnn_seed101/best.safetensors": "3a9e26b649eb696b0b4b51323e4749f59bdbcec05c1a26a370691bb28bd0c08f",
+    "artifacts/experiment_05c/checkpoints/global_cnn_seed202/best.safetensors": "d1b8363cf21a5beae957f4843b19309d52ecb3a2e95f0bd2e75c7301f05a56e0",
+    "artifacts/experiment_05c/checkpoints/global_cnn_seed303/best.safetensors": "0062a9d3119cd3ec99409e2070ef52342e1d58d03550ccc60464741f4654c36e"
+  },
+  "sources": {
+    "src/latent_loop/scaling/diagnostics.py": "061e99254deb1d4909be9cba1ced063281de0b3f3536df4ca7255bae985b46c9",
+    "src/latent_loop/scaling/__init__.py": "35cc58f1ab4490f4fa1a219c1786f168878e084330e599dc858e95002789b83c",
+    "src/latent_loop/scaling/model.py": "ce3a3ac8799bac27062c7d4d296bcd4afc4ba06a42a3d36c0c9c28320fce3e1d",
+    "src/latent_loop/scaling/validate.py": "efdc57cd21fbe563d426f3455d40814e2bb6b6fa546ef5d4e54f44a6e3722c12",
+    "src/latent_loop/scaling/train.py": "0a454e0da08f18b0f0af40699d1f8b819dd03e1cfcf68a8dd2e5d15bd19c869e",
+    "src/latent_loop/scaling/evaluate.py": "cb9d68630b94949aa3e2f7051e1f5b3ed4467767fd3baed956de91433c8d8caa",
+    "src/latent_loop/scaling/data.py": "474cb1c5e7acc9e6b7f29b5d6c00726541e235749b7106bffd9bd8495e24862d",
+    "src/latent_loop/scaling/extrapolation.py": "330ee3683e8a01d88594c7e748c8e28268eaa222bcabe8bdf6b77e823a778a32",
+    "experiments/experiment_05c/config.json": "9b18ae9c7e4959d4e69150a78e33419f7f32832d0035aebbc73bcf60c13099cc",
+    "experiments/experiment_05c/plan.md": "23949371ce0b6c17f192746b1d4f68f4743a9cde910492d5cfc154b8aebf9de9",
+    "experiments/experiment_05c/dataset_manifest.json": "dce2ff4db0f50eeb9469edde897ef312c1a4be5ec9280c901a7f73d31142c6ff"
+  },
+  "all_other_comparisons": "secondary/exploratory; no final-based model/depth selection"
+}

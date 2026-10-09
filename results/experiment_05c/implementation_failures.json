@@ -1,0 +1,11 @@
+{
+  "failures": [
+    {
+      "stage": "pretraining dataset serialization",
+      "error": "NumPy int64 in radius-junction metadata could not serialize to JSON",
+      "resolution": "Explicit native integer conversion; full deterministic generation rerun before fitting",
+      "scientific_results_invalidated": false,
+      "recorded": "2026-10-09T14:25:37.038733+00:00"
+    }
+  ]
+}

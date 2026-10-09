@@ -1,0 +1,35 @@
+{
+  "title": "Does Thinking Scale With Distance?",
+  "seeds": [101, 202, 303],
+  "baseline_seeds": [11, 22, 33],
+  "depths": [1, 2, 4, 8, 12, 16, 24, 32],
+  "memory_gib": 48,
+  "max_active_seconds": 21600,
+  "epochs": 30,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "clip_norm": 1,
+  "conditions": {
+    "rec_variable": {"width":32,"blocks":1,"shared":true,"objective":"variable","depth":8},
+    "rec_curriculum": {"width":32,"blocks":1,"shared":true,"objective":"curriculum","depth":8},
+    "ff4_params": {"width":16,"blocks":4,"shared":false,"objective":"fixed","depth":4},
+    "ff8": {"width":32,"blocks":8,"shared":false,"objective":"fixed","depth":8},
+    "global_cnn": {"width":32,"blocks":4,"shared":false,"objective":"fixed","depth":4,"global":true}
+  },
+  "datasets": {
+    "train": {"count":6000,"sizes":[5,7],"bins":[[2,4],[5,8],[9,12],[13,24]],"algorithm":"occupancy","seed":521010},
+    "validation": {"count":960,"sizes":[5,7],"bins":[[2,4],[5,8],[9,12],[13,24]],"algorithm":"occupancy","seed":521011},
+    "size5": {"count":400,"sizes":[5],"bins":[[2,4],[5,8],[9,12],[13,20]],"algorithm":"occupancy","seed":521020,"final":true},
+    "size7": {"count":500,"sizes":[7],"bins":[[2,4],[5,8],[9,12],[13,20],[21,32]],"algorithm":"occupancy","seed":521021,"final":true},
+    "size9": {"count":600,"sizes":[9],"bins":[[2,4],[5,8],[9,12],[13,20],[21,32]],"algorithm":"occupancy","seed":521022,"final":true},
+    "size11": {"count":600,"sizes":[11],"bins":[[2,4],[5,8],[9,12],[13,20],[21,32],[33,64]],"algorithm":"occupancy","seed":521023,"final":true},
+    "size15": {"count":600,"sizes":[15],"bins":[[2,4],[5,8],[9,12],[13,20],[21,32],[33,64]],"algorithm":"occupancy","seed":521024,"final":true},
+    "structure9": {"count":400,"sizes":[9],"bins":[[5,8],[9,12],[13,20],[21,32]],"algorithm":"dfs","seed":521025,"final":true},
+    "dense9": {"count":400,"sizes":[9],"bins":[[2,4],[5,8],[9,12],[13,20],[21,32]],"algorithm":"occupancy","density":0.48,"seed":521026,"final":true},
+    "long15": {"count":400,"sizes":[15],"bins":[[21,32],[33,48],[49,80],[81,126]],"algorithm":"dfs","seed":521027,"final":true}
+  },
+  "rollout": {"per_path_bin":6,"depths":[4,8,16,32],"max_steps":256,"cycles_terminal":true},
+  "primary": {"model":"frozen_05b","population":"size9","depths":[4,8],"metric":"optimal_first_action_accuracy","interval":"paired crossed maze-instance and historical-training-seed bootstrap; 4000 replicates"},
+  "thresholds": {"action_accuracy":0.9,"completion":0.8}
+}

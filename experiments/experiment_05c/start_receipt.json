@@ -1,0 +1,21 @@
+{
+  "started": "2026-10-09T14:21:13Z",
+  "created": "2026-10-09T14:29:18.297207+00:00",
+  "primary_fixed_before_final": {
+    "model": "frozen_05b",
+    "population": "size9",
+    "depths": [
+      4,
+      8
+    ],
+    "metric": "optimal_first_action_accuracy",
+    "interval": "paired crossed maze-instance and historical-training-seed bootstrap; 4000 replicates"
+  },
+  "config_sha256": "9b18ae9c7e4959d4e69150a78e33419f7f32832d0035aebbc73bcf60c13099cc",
+  "plan_sha256": "23949371ce0b6c17f192746b1d4f68f4743a9cde910492d5cfc154b8aebf9de9",
+  "backbone": "No transformer fitting in scaling study",
+  "memory_budget_gib": 48,
+  "active_budget_seconds": 21600,
+  "machine_memory_gib": 128,
+  "contention": "Only this task dataset/verification Python jobs; normal desktop and backup processes observed; no unrelated process terminated; no remote workstation accessed"
+}

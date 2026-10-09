@@ -1,0 +1,370 @@
+{
+  "created": "2026-10-09T14:25:38.128113+00:00",
+  "historical_layouts_excluded": 6840,
+  "historical_graph_fingerprints": 6371,
+  "method": "D4 wall-layout and conservative unrooted component WL8 fingerprint exclusion; equality is not proof of isomorphism",
+  "splits": {
+    "train": {
+      "count": 6000,
+      "sizes": [
+        5,
+        7
+      ],
+      "bins": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          24
+        ]
+      ],
+      "algorithm": "occupancy",
+      "seed": 521010,
+      "sha256": "fd55a733f351d858f667ba6f6cf62658bb113ce774bfc56baf7136cda3e32804",
+      "attempts": 1821511,
+      "rejections": {
+        "distance_or_branching": 1813124,
+        "graph_invariant": 1760,
+        "layout": 627
+      }
+    },
+    "validation": {
+      "count": 960,
+      "sizes": [
+        5,
+        7
+      ],
+      "bins": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          24
+        ]
+      ],
+      "algorithm": "occupancy",
+      "seed": 521011,
+      "sha256": "57a6bb057e4d1fd072c246984b6ef3bed24236a415b0a2cc706136346406a5d3",
+      "attempts": 631175,
+      "rejections": {
+        "graph_invariant": 505,
+        "distance_or_branching": 629428,
+        "layout": 282
+      }
+    },
+    "size5": {
+      "count": 400,
+      "sizes": [
+        5
+      ],
+      "bins": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          20
+        ]
+      ],
+      "algorithm": "occupancy",
+      "seed": 521020,
+      "final": true,
+      "sha256": "7ad9c4bc959b6297259e93cd2b0e25a1d88d7bac5829950c9da917f3928c9c3b",
+      "attempts": 585221,
+      "rejections": {
+        "distance_or_branching": 584136,
+        "layout": 261,
+        "graph_invariant": 424
+      }
+    },
+    "size7": {
+      "count": 500,
+      "sizes": [
+        7
+      ],
+      "bins": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          21,
+          32
+        ]
+      ],
+      "algorithm": "occupancy",
+      "seed": 521021,
+      "final": true,
+      "sha256": "ea99b6388da1ea2151bc5f1068468c3a5bca3a78efea9d294b90911f683bdfd1",
+      "attempts": 227056,
+      "rejections": {
+        "distance_or_branching": 226530,
+        "graph_invariant": 26
+      }
+    },
+    "size9": {
+      "count": 600,
+      "sizes": [
+        9
+      ],
+      "bins": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          21,
+          32
+        ]
+      ],
+      "algorithm": "occupancy",
+      "seed": 521022,
+      "final": true,
+      "sha256": "acd8225b134a95a91f60734458e131a232ca3573082934f85ae59e0eda0c55e4",
+      "attempts": 8140,
+      "rejections": {
+        "distance_or_branching": 7521,
+        "graph_invariant": 19
+      }
+    },
+    "size11": {
+      "count": 600,
+      "sizes": [
+        11
+      ],
+      "bins": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          21,
+          32
+        ],
+        [
+          33,
+          64
+        ]
+      ],
+      "algorithm": "occupancy",
+      "seed": 521023,
+      "final": true,
+      "sha256": "d982066a5b4eb46c53bca7bfc4a83b3c0692f053b0617af82569dc094b06b508",
+      "attempts": 56263,
+      "rejections": {
+        "distance_or_branching": 55646,
+        "graph_invariant": 17
+      }
+    },
+    "size15": {
+      "count": 600,
+      "sizes": [
+        15
+      ],
+      "bins": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          21,
+          32
+        ],
+        [
+          33,
+          64
+        ]
+      ],
+      "algorithm": "occupancy",
+      "seed": 521024,
+      "final": true,
+      "sha256": "54f8c5db1e18c8be1591c464a450e7fa926b731d2c74d1b1b3998489036aac19",
+      "attempts": 2466,
+      "rejections": {
+        "distance_or_branching": 1858,
+        "graph_invariant": 8
+      }
+    },
+    "structure9": {
+      "count": 400,
+      "sizes": [
+        9
+      ],
+      "bins": [
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          21,
+          32
+        ]
+      ],
+      "algorithm": "dfs",
+      "seed": 521025,
+      "final": true,
+      "sha256": "0229eea181c3a647bc41c6a7d5f88590c6278141883cfa67c37e0ff0212cb41e",
+      "attempts": 525,
+      "rejections": {
+        "graph_invariant": 111,
+        "distance_or_branching": 13,
+        "layout": 1
+      }
+    },
+    "dense9": {
+      "count": 400,
+      "sizes": [
+        9
+      ],
+      "bins": [
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          21,
+          32
+        ]
+      ],
+      "algorithm": "occupancy",
+      "density": 0.48,
+      "seed": 521026,
+      "final": true,
+      "sha256": "25e927ccda7aca3a42d78afc93424cfffd38639c66cc8e2d096a1a283fa92e7b",
+      "attempts": 28222,
+      "rejections": {
+        "distance_or_branching": 27784,
+        "graph_invariant": 38
+      }
+    },
+    "long15": {
+      "count": 400,
+      "sizes": [
+        15
+      ],
+      "bins": [
+        [
+          21,
+          32
+        ],
+        [
+          33,
+          48
+        ],
+        [
+          49,
+          80
+        ],
+        [
+          81,
+          126
+        ]
+      ],
+      "algorithm": "dfs",
+      "seed": 521027,
+      "final": true,
+      "sha256": "88e3302799fd4a6e710dc4e47bc82c4f26c54be51269e92d9299d478a6b6fada",
+      "attempts": 770,
+      "rejections": {
+        "distance_or_branching": 370
+      }
+    }
+  }
+}

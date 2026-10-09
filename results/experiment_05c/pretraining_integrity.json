@@ -1,0 +1,9 @@
+{
+  "checked": "2026-10-09T14:29:18.296747+00:00",
+  "unique_new_graph_invariants": 10860,
+  "unique_d4_layouts": 10860,
+  "examples": 10860,
+  "independent_Dijkstra_labels_verified_during_generation": true,
+  "final_outcomes_inspected": false,
+  "branching_only": true
+}

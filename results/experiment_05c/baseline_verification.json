@@ -1,0 +1,53 @@
+{
+  "verified": "2026-10-09T14:24:51.095734+00:00",
+  "archived": [
+    {
+      "seed": 11,
+      "parameters": 18884,
+      "archived_examples": 600,
+      "max_logit_error": 0.0,
+      "extended_executor_max_parity_error": 0.0
+    },
+    {
+      "seed": 22,
+      "parameters": 18884,
+      "archived_examples": 600,
+      "max_logit_error": 0.0,
+      "extended_executor_max_parity_error": 0.0
+    },
+    {
+      "seed": 33,
+      "parameters": 18884,
+      "archived_examples": 600,
+      "max_logit_error": 0.0,
+      "extended_executor_max_parity_error": 0.0
+    }
+  ],
+  "shape_feasibility": [
+    {
+      "size": 5,
+      "finite_bounded_to_depth": 32
+    },
+    {
+      "size": 7,
+      "finite_bounded_to_depth": 32
+    },
+    {
+      "size": 9,
+      "finite_bounded_to_depth": 32
+    },
+    {
+      "size": 11,
+      "finite_bounded_to_depth": 32
+    },
+    {
+      "size": 15,
+      "finite_bounded_to_depth": 32
+    }
+  ],
+  "raw_observation_channels": 4,
+  "environment_unchanged": true,
+  "architecture_changed": false,
+  "executor_change": "New executor extends old depth guard16 to32 without changing tensors/updates; exact parity through16",
+  "peak_mlx_gib": 0.18567103147506714
+}
