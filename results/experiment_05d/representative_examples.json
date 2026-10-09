@@ -1,0 +1,34 @@
+[
+  {
+    "base_correct": false,
+    "depth": 1,
+    "id": "7027437c8314798e225beb59",
+    "scored_correct": true,
+    "seed": 401,
+    "source": "id_recurrent_seed401.jsonl.gz"
+  },
+  {
+    "base_correct": true,
+    "depth": 1,
+    "id": "ef8de9a00ae71d6d7d941ae2",
+    "scored_correct": false,
+    "seed": 401,
+    "source": "id_recurrent_seed401.jsonl.gz"
+  },
+  {
+    "base_correct": false,
+    "depth": 2,
+    "id": "dc978b9c4bd9189c0943dfc3",
+    "scored_correct": true,
+    "seed": 502,
+    "source": "id_recurrent_seed502.jsonl.gz"
+  },
+  {
+    "base_correct": true,
+    "depth": 2,
+    "id": "ba8e10f222c7362e2564337c",
+    "scored_correct": false,
+    "seed": 502,
+    "source": "id_recurrent_seed502.jsonl.gz"
+  }
+]

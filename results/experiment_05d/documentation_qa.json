@@ -1,0 +1,45 @@
+{
+  "artifact_hashes": {
+    "reports/experiment_05d/decision_bridge.html": "3a29c3a560372c1d6c506fa49e7ee02c71854f149b2884c8fec2ce14fd0b2e4e",
+    "reports/experiment_05d/decision_bridge.md": "b23455e3dabec19d597de85fbef4181ee515ce663902322700b5955543a2eef5",
+    "reports/experiment_05d/figures/accuracy_by_distance.png": "1953b91dd85e0fc0dded3dcdc17604543d42cf3aae4d15ff6275d829964450fe",
+    "reports/experiment_05d/figures/accuracy_by_distance.svg": "05ab05baa03c0687d9108d0991e26dfd242a6eee3e363fd1dc45517abb1fac2e",
+    "reports/experiment_05d/figures/accuracy_by_graph_size.png": "51569827bb560e3692b0d8c1d9d9586a9ef0cb248a5d56e211440499a0527cc2",
+    "reports/experiment_05d/figures/accuracy_by_graph_size.svg": "4bb14b62dbb550ec4126c0633cfcf24cf5c2b00e92e74300677db97e49354a37",
+    "reports/experiment_05d/figures/accuracy_latency.png": "581ed2a7817872ca28af020c26a3b6a8abfda5428ffdad7d968c07e559861cfc",
+    "reports/experiment_05d/figures/accuracy_latency.svg": "c8cb8522bff6d7811cd3609038a317884894d705b5750e97bc67ee97652d457b",
+    "reports/experiment_05d/figures/base_vs_scored.png": "00207678bf41b7ba0feb7a2ccfddf393ab45f1fd25f086d654104be4a705975a",
+    "reports/experiment_05d/figures/base_vs_scored.svg": "3a7c464de1ad6ccae7de1e9957e5ae17648ff22e4b527aa759eabd80233346ee",
+    "reports/experiment_05d/figures/candidate_calibration.png": "cb9e8ec2658deaceea4f2fc48fa78912751d4838520423914148376ff58c88c3",
+    "reports/experiment_05d/figures/candidate_calibration.svg": "d19d0cdfca80834d416fdc506ba667e0dd807bcb10ce75aced11ad44353a0dfc",
+    "reports/experiment_05d/figures/changed_decisions.png": "a5025f340270ca8648164cef07dbe886f70f7231ae731d9e7009192631ec1c74",
+    "reports/experiment_05d/figures/changed_decisions.svg": "77246e77d97728fd1da8c3b4a21c4f306992e7dce25c13fd24a22639b864f045",
+    "reports/experiment_05d/figures/corrections_degradations.png": "227b2571650a43f3785ae67fe39117807bbe1f7e795f9e652b1dcb4f36c74b3d",
+    "reports/experiment_05d/figures/corrections_degradations.svg": "a20080c48c2dd739392e79ff84be466d34ff8bebc18ba480176ab89bb51f1c64",
+    "reports/experiment_05d/figures/counterfactual_pair_success.png": "4005dab22223aec98558bb6fc5fa98ca4befbfa0b5b853a802a840228dcd63d7",
+    "reports/experiment_05d/figures/counterfactual_pair_success.svg": "c36d7873eaf398e3353c37926245ee7a634176e5211a7de9bc650782ea619358",
+    "reports/experiment_05d/figures/navigation_completion.png": "77a766a2bd70371ba814af0e22219a662876ad3e10af70f1d586ef584cf8e14d",
+    "reports/experiment_05d/figures/navigation_completion.svg": "d080ae019fabd5885854d4241923f320c3805a4a26155d4db417943ad776256e",
+    "reports/experiment_05d/figures/recurrent_vs_feedforward.png": "536aae2a2da79fde816f75cdff08e6cf8d054da66485f3b4f9bf299970c4494b",
+    "reports/experiment_05d/figures/recurrent_vs_feedforward.svg": "f18e1edd9accc70c30b527bf9b55a3f0992892cbabf410bf414ef76057f5a9ee",
+    "reports/experiment_05d/figures/scoring_benefit_by_depth.png": "ba6f7a9e844ec77f2ef68b772a4a1f3164638b8f862c6482160ba0c8bc9b8d62",
+    "reports/experiment_05d/figures/scoring_benefit_by_depth.svg": "b5c85aaa4ddf5c68f9c257a8e5dd6e544ca795bb0a3d8601807003908949e488",
+    "reports/experiment_05d/figures/training_validation_loss.png": "8998f4355017b33e58b873bcc5e44ce4dfd3249d70301e00e1706172e588e038",
+    "reports/experiment_05d/figures/training_validation_loss.svg": "b2a1c73d9c8019f3abf13848b5d5357ba57ed749ef4bca6829519eda526d2ddd",
+    "reports/experiment_05d/rendezvous_handoff.html": "dd1bc845b79d7700ff928a02bdc84b972554deac665f7d284ffeec04da37c9d0",
+    "reports/experiment_05d/rendezvous_handoff.md": "cc1ab04bd1805e88b08dc8f8d528c8c3f82beb752dec81211f73b5295213b59f"
+  },
+  "broken_relative_markdown_links": [],
+  "cpu_report_regeneration_byte_identical": true,
+  "embedded_images": {
+    "decision_bridge.html": 12,
+    "rendezvous_handoff.html": 0
+  },
+  "figure_pngs": 12,
+  "figure_svgs": 12,
+  "visually_inspected": [
+    "base_vs_scored",
+    "changed_decisions",
+    "counterfactual_pair_success"
+  ]
+}

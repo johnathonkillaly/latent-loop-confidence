@@ -1,0 +1,423 @@
+{
+  "conditions": {
+    "ff8": {
+      "by_depth": {
+        "8": {
+          "accuracy": 1.0,
+          "lambda": 0
+        }
+      },
+      "calibration": {
+        "direct": {
+          "converged": true,
+          "offset": -1.6428260870037195,
+          "scale": 0.29692710928255994
+        }
+      },
+      "forced_nonzero": {
+        "accuracy": 1.0,
+        "lambda": 0.1
+      },
+      "lambda": 0,
+      "objective": "direct",
+      "objectives": {
+        "direct": {
+          "accuracy": 1.0,
+          "grid": [
+            {
+              "accuracy": 1.0,
+              "lambda": 0
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.1
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.25
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.5
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 1
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 2
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 4
+            }
+          ],
+          "lambda": 0
+        }
+      },
+      "temperature": 0.25,
+      "temperature_grid": [
+        {
+          "loss": 1.2980566806615931e-08,
+          "temperature": 0.25
+        },
+        {
+          "loss": 3.323389498414523e-06,
+          "temperature": 0.5
+        },
+        {
+          "loss": 0.00011708531383192167,
+          "temperature": 1
+        },
+        {
+          "loss": 0.003357518852377931,
+          "temperature": 2
+        },
+        {
+          "loss": 0.04199862480163574,
+          "temperature": 4
+        }
+      ],
+      "validation_accuracy": 1.0
+    },
+    "one_pass": {
+      "by_depth": {
+        "1": {
+          "accuracy": 0.8311111111111112,
+          "lambda": 0.1
+        }
+      },
+      "calibration": {
+        "correctness": {
+          "converged": true,
+          "offset": 0.05532799411004089,
+          "scale": 0.9640518508749981
+        },
+        "direct": {
+          "converged": true,
+          "offset": -0.31766967575580085,
+          "scale": 0.3951331910370917
+        },
+        "ranking": {
+          "converged": true,
+          "offset": -1.4977979420886285,
+          "scale": 0.5472844740801517
+        }
+      },
+      "forced_nonzero": {
+        "accuracy": 0.8311111111111112,
+        "lambda": 0.1
+      },
+      "lambda": 0.1,
+      "objective": "ranking",
+      "objectives": {
+        "correctness": {
+          "accuracy": 0.8294444444444444,
+          "grid": [
+            {
+              "accuracy": 0.8294444444444444,
+              "lambda": 0
+            },
+            {
+              "accuracy": 0.8294444444444444,
+              "lambda": 0.1
+            },
+            {
+              "accuracy": 0.8288888888888888,
+              "lambda": 0.25
+            },
+            {
+              "accuracy": 0.8250000000000001,
+              "lambda": 0.5
+            },
+            {
+              "accuracy": 0.8249999999999998,
+              "lambda": 1
+            },
+            {
+              "accuracy": 0.8244444444444445,
+              "lambda": 2
+            },
+            {
+              "accuracy": 0.8227777777777777,
+              "lambda": 4
+            }
+          ],
+          "lambda": 0
+        },
+        "direct": {
+          "accuracy": 0.8294444444444444,
+          "grid": [
+            {
+              "accuracy": 0.8294444444444444,
+              "lambda": 0
+            },
+            {
+              "accuracy": 0.8294444444444444,
+              "lambda": 0.1
+            },
+            {
+              "accuracy": 0.8288888888888889,
+              "lambda": 0.25
+            },
+            {
+              "accuracy": 0.8277777777777778,
+              "lambda": 0.5
+            },
+            {
+              "accuracy": 0.8283333333333333,
+              "lambda": 1
+            },
+            {
+              "accuracy": 0.8272222222222222,
+              "lambda": 2
+            },
+            {
+              "accuracy": 0.8244444444444444,
+              "lambda": 4
+            }
+          ],
+          "lambda": 0
+        },
+        "ranking": {
+          "accuracy": 0.8311111111111112,
+          "grid": [
+            {
+              "accuracy": 0.8294444444444444,
+              "lambda": 0
+            },
+            {
+              "accuracy": 0.8311111111111112,
+              "lambda": 0.1
+            },
+            {
+              "accuracy": 0.8288888888888889,
+              "lambda": 0.25
+            },
+            {
+              "accuracy": 0.8261111111111111,
+              "lambda": 0.5
+            },
+            {
+              "accuracy": 0.8238888888888889,
+              "lambda": 1
+            },
+            {
+              "accuracy": 0.8233333333333333,
+              "lambda": 2
+            },
+            {
+              "accuracy": 0.8227777777777777,
+              "lambda": 4
+            }
+          ],
+          "lambda": 0.1
+        }
+      },
+      "temperature": 1,
+      "temperature_grid": [
+        {
+          "loss": 0.7740546663602194,
+          "temperature": 0.25
+        },
+        {
+          "loss": 0.49174479643503827,
+          "temperature": 0.5
+        },
+        {
+          "loss": 0.4292633632818858,
+          "temperature": 1
+        },
+        {
+          "loss": 0.4807560046513875,
+          "temperature": 2
+        },
+        {
+          "loss": 0.5922054847081503,
+          "temperature": 4
+        }
+      ],
+      "validation_accuracy": 0.8311111111111112
+    },
+    "recurrent": {
+      "by_depth": {
+        "1": {
+          "accuracy": 0.818888888888889,
+          "lambda": 4
+        },
+        "2": {
+          "accuracy": 0.9066666666666667,
+          "lambda": 2
+        },
+        "4": {
+          "accuracy": 0.9927777777777776,
+          "lambda": 0.25
+        },
+        "8": {
+          "accuracy": 1.0,
+          "lambda": 0
+        }
+      },
+      "calibration": {
+        "correctness": {
+          "converged": true,
+          "offset": 0.2047815121737949,
+          "scale": 1.5530727731048997
+        },
+        "direct": {
+          "converged": true,
+          "offset": -1.2029161265335102,
+          "scale": 0.39834819412872446
+        },
+        "ranking": {
+          "converged": true,
+          "offset": -1.8437759965809466,
+          "scale": 0.35996166994680134
+        }
+      },
+      "forced_nonzero": {
+        "accuracy": 1.0,
+        "lambda": 0.1
+      },
+      "lambda": 0,
+      "objective": "correctness",
+      "objectives": {
+        "correctness": {
+          "accuracy": 1.0,
+          "grid": [
+            {
+              "accuracy": 1.0,
+              "lambda": 0
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.1
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.25
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.5
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 1
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 2
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 4
+            }
+          ],
+          "lambda": 0
+        },
+        "direct": {
+          "accuracy": 1.0,
+          "grid": [
+            {
+              "accuracy": 1.0,
+              "lambda": 0
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.1
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.25
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.5
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 1
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 2
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 4
+            }
+          ],
+          "lambda": 0
+        },
+        "ranking": {
+          "accuracy": 1.0,
+          "grid": [
+            {
+              "accuracy": 1.0,
+              "lambda": 0
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.1
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.25
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 0.5
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 1
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 2
+            },
+            {
+              "accuracy": 1.0,
+              "lambda": 4
+            }
+          ],
+          "lambda": 0
+        }
+      },
+      "temperature": 0.25,
+      "temperature_grid": [
+        {
+          "loss": 6.912362024043735e-05,
+          "temperature": 0.25
+        },
+        {
+          "loss": 0.0003125171230446237,
+          "temperature": 0.5
+        },
+        {
+          "loss": 0.0027332383518417678,
+          "temperature": 1
+        },
+        {
+          "loss": 0.029427727684378624,
+          "temperature": 2
+        },
+        {
+          "loss": 0.14271079997221628,
+          "temperature": 4
+        }
+      ],
+      "validation_accuracy": 1.0
+    }
+  },
+  "created": "2026-10-09T16:48:21.232417+00:00",
+  "primary": {
+    "condition": "recurrent",
+    "depth": 8,
+    "lambda": 0,
+    "objective": "correctness",
+    "split": "id"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "frozen_protocol_sha256": "244cae9f27008b3ce9c7850de6e176bf403219e96fc4321331ac2a8efb8911bf",
+  "opened": "2026-10-09T16:48:21.739940+00:00",
+  "primary": {
+    "condition": "recurrent",
+    "depth": 8,
+    "lambda": 0,
+    "objective": "correctness",
+    "split": "id"
+  }
+}

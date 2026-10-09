@@ -1,0 +1,57 @@
+{
+  "completed": "2026-10-09T16:53:54.250714+00:00",
+  "datasets": {
+    "base_train": {
+      "byte_identical": true,
+      "count": 3000,
+      "sha256": "a0188f21c7b6fd8bcf3ebdd085ea78f86915b67ab4bef327d5c8915d405d9c09"
+    },
+    "community": {
+      "byte_identical": true,
+      "count": 400,
+      "sha256": "43e9784be14658fd81df78c4e56b9bbf586f45b622a6c3ef8b8eeed0cfd5b7a3"
+    },
+    "counterfactual": {
+      "byte_identical": true,
+      "count": 480,
+      "sha256": "e51154e59b511ef9bb18f63d51ed6809333f262e55a6a27cfd7ef14ca6d5ec50"
+    },
+    "id": {
+      "byte_identical": true,
+      "count": 600,
+      "sha256": "520bd12aa543ec0ce3f91dbcce34a32e5928e7a8fa7b49b8a668f3046c61db1a"
+    },
+    "long": {
+      "byte_identical": true,
+      "count": 300,
+      "sha256": "dbe3a71519630040b323960370b0dd6a33222db30136aee65eb425b0d0c07ed1"
+    },
+    "scorer_train": {
+      "byte_identical": true,
+      "count": 3000,
+      "sha256": "680f9e058102f7671157e97f7118960d9a82543d4d057f50e2213ede26cdffef"
+    },
+    "size16": {
+      "byte_identical": true,
+      "count": 400,
+      "sha256": "3002003979904b14c0dd0449eaa376f6c5240ba6d61c06a33ddc2475e901933b"
+    },
+    "size32": {
+      "byte_identical": true,
+      "count": 300,
+      "sha256": "fb820f47796f016695d52acc4344ca10b2254912054108b8b77d7a26e11e8b8a"
+    },
+    "size64": {
+      "byte_identical": true,
+      "count": 240,
+      "sha256": "2e889f5bc4e0b8d49117bd62c0506d8f55b40cb44f5b197f29d23bdc986e8eb8"
+    },
+    "validation": {
+      "byte_identical": true,
+      "count": 600,
+      "sha256": "d6ded1a34242073796d44e6eebdbcdf5a70e33f10f27ef9ee936723f8ceefef1"
+    }
+  },
+  "environment": "CPU only; no MLX imported",
+  "labels_verified": 9320
+}

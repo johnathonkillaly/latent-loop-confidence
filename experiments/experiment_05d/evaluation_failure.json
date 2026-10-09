@@ -1,0 +1,8 @@
+{
+  "action": "Rerun all decision evaluation after transparent implementation correction; preserve original frozen source.",
+  "checkpoints_changed": false,
+  "failure": "Temperature-only control altered a near-tied decision due to absolute tie tolerance under score rescaling. Also normalize tie comparisons to float64 so lambda-zero fusion cannot change ties through dtype rounding.",
+  "partial_files_archived": 3,
+  "time": "2026-10-09T16:50:50.026354+00:00",
+  "training_or_selection_changed": false
+}

@@ -1,0 +1,50 @@
+{
+  "cli_smoke": [
+    "--help",
+    "example"
+  ],
+  "completed": "2026-10-09T17:08:06.021933+00:00",
+  "cpu_only": {
+    "passed": 41,
+    "reason": "MLX modules unavailable and historical opt-in tests disabled",
+    "skipped": 15
+  },
+  "default_mlx_initial": {
+    "passed": 51,
+    "skipped": 12
+  },
+  "dependency_check": "50 installed packages compatible; no upgrades",
+  "evaluation_failure": "experiments/experiment_05d/evaluation_failure.json",
+  "final_staged_security_guard": {
+    "all_compressed_traces_scanned": true,
+    "historical_files_modified": 0,
+    "max_file_bytes": 5242880,
+    "new_files": 366,
+    "sensitive_content_flags": 0,
+    "weights_or_caches": 0
+  },
+  "mlx_opt_in": {
+    "command": "LATENT_LOOP_MLX_TESTS=1 PYTHONPATH=src .venv/bin/python -m pytest -q",
+    "passed": 65,
+    "skipped": 0
+  },
+  "publication": "none; local review required",
+  "release_tags_unchanged": {
+    "v0.1.0": "0a637eb97d66eebbd740b612ab92e9095c496931",
+    "v0.2.0": "1ebd435b94448d45e42141b49808839218c2b7b2"
+  },
+  "reproducibility": {
+    "checkpoints_byte_identical": 2,
+    "datasets_byte_identical": 10,
+    "full_36_fit_independent_replication": false,
+    "labels_verified": 9320,
+    "seed401_independent_refits": 2
+  },
+  "security": {
+    "compressed_files_scanned": 215,
+    "issues": [],
+    "new_bytes_scanned": 27294338,
+    "new_files_scanned": 361,
+    "unnecessary_weights_or_caches_committed": false
+  }
+}

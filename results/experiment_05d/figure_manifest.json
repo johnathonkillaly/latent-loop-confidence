@@ -1,0 +1,65 @@
+{
+  "count": 12,
+  "figures": [
+    {
+      "name": "base_vs_scored",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Fresh-ID decisions; black dots are the three seeds"
+    },
+    {
+      "name": "corrections_degradations",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Real changes from frozen-base reranking"
+    },
+    {
+      "name": "scoring_benefit_by_depth",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Validation-frozen fusion; ID intervals crossed by seed and graph"
+    },
+    {
+      "name": "accuracy_by_graph_size",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Size generalization does not establish arbitrary-topology planning"
+    },
+    {
+      "name": "accuracy_by_distance",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Distance strata; ID and long-path generators reported separately"
+    },
+    {
+      "name": "counterfactual_pair_success",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "60 independent pairs per distance stratum, three shared seeds"
+    },
+    {
+      "name": "accuracy_latency",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Randomized interleaved timing; normal desktop load"
+    },
+    {
+      "name": "recurrent_vs_feedforward",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Ordinary feedforward depth remains a strong control"
+    },
+    {
+      "name": "candidate_calibration",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Candidate calibration is separate from deployed action improvement"
+    },
+    {
+      "name": "changed_decisions",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Demonstration cases, first match per category; circular layout is display only"
+    },
+    {
+      "name": "navigation_completion",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "30 initial graphs per split; repeated positions terminate deterministic cycles"
+    },
+    {
+      "name": "training_validation_loss",
+      "source": "analysis.json; latency_interleaved.json; archived raw decisions/training",
+      "title": "Seed range bands; sampled-depth training and fixed deployment validation"
+    }
+  ]
+}

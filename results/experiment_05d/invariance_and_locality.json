@@ -1,0 +1,550 @@
+{
+  "interpretation": "Floating-point permutation tolerance is measured; random node tie keys are mapped with identities and never neural inputs.",
+  "locality": [
+    {
+      "arm_distance": 3,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 3,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 5,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 5,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 5,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 9,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 9,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 9,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 9,
+      "depth": 8,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 13,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 13,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 13,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 13,
+      "depth": 8,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 401
+    },
+    {
+      "arm_distance": 3,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 3,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 5,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 5,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 5,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 9,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 9,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 9,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 9,
+      "depth": 8,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 13,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 13,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 13,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 13,
+      "depth": 8,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 502
+    },
+    {
+      "arm_distance": 3,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 3,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 5,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 5,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 5,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 9,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 9,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 9,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 9,
+      "depth": 8,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 13,
+      "depth": 1,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 13,
+      "depth": 2,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 13,
+      "depth": 4,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    },
+    {
+      "arm_distance": 13,
+      "depth": 8,
+      "max_pair_logit_difference": 0.0,
+      "pairs": 60,
+      "seed": 603
+    }
+  ],
+  "permutations": [
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 9.5367431640625e-07,
+      "max_score_error": 1.9073486328125e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "id"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 1.9073486328125e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "id"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 5.7220458984375e-06,
+      "max_score_error": 4.76837158203125e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "id"
+    },
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 1.9073486328125e-06,
+      "max_score_error": 1.9073486328125e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "id"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 6.198883056640625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "id"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 2.86102294921875e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "id"
+    },
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 1.9073486328125e-06,
+      "max_score_error": 1.9073486328125e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "id"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 4.76837158203125e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "id"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 7.62939453125e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "id"
+    },
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 1.9073486328125e-06,
+      "max_score_error": 1.9073486328125e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "size32"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 4.0531158447265625e-06,
+      "max_score_error": 5.245208740234375e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "size32"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "size32"
+    },
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 1.430511474609375e-06,
+      "max_score_error": 2.1457672119140625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "size32"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 5.7220458984375e-06,
+      "max_score_error": 6.258487701416016e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "size32"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 4.76837158203125e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "size32"
+    },
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 1.9073486328125e-06,
+      "max_score_error": 1.9073486328125e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "size32"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 8.58306884765625e-06,
+      "max_score_error": 1.621246337890625e-05,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "size32"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 7.62939453125e-06,
+      "max_score_error": 6.198883056640625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "size32"
+    },
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 0.0,
+      "max_score_error": 2.384185791015625e-07,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "counterfactual"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "counterfactual"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 401,
+      "split": "counterfactual"
+    },
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 0.0,
+      "max_score_error": 4.76837158203125e-07,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "counterfactual"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "counterfactual"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 502,
+      "split": "counterfactual"
+    },
+    {
+      "condition": "one_pass",
+      "count": 60,
+      "max_logit_error": 0.0,
+      "max_score_error": 2.384185791015625e-07,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "counterfactual"
+    },
+    {
+      "condition": "recurrent",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "counterfactual"
+    },
+    {
+      "condition": "ff8",
+      "count": 60,
+      "max_logit_error": 3.814697265625e-06,
+      "max_score_error": 3.814697265625e-06,
+      "same_base_action": 60,
+      "same_scored_action": 60,
+      "seed": 603,
+      "split": "counterfactual"
+    }
+  ]
+}

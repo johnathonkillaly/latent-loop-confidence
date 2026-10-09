@@ -1,0 +1,24 @@
+{
+  "completed": "2026-10-09T17:07:05.015708+00:00",
+  "decision_records": 106080,
+  "episodes": 8100,
+  "frozen_sources_and_amendment_verified": {
+    "experiments/experiment_05d/base_freeze.json": true,
+    "experiments/experiment_05d/config.json": true,
+    "experiments/experiment_05d/dataset_manifest.json": true,
+    "experiments/experiment_05d/protocol.md": true,
+    "experiments/experiment_05d/selection.json": true,
+    "src/latent_loop/decision_bridge/__init__.py": true,
+    "src/latent_loop/decision_bridge/__main__.py": true,
+    "src/latent_loop/decision_bridge/data.py": true,
+    "src/latent_loop/decision_bridge/diagnostics.py": true,
+    "src/latent_loop/decision_bridge/evaluate.py": true,
+    "src/latent_loop/decision_bridge/interface.py": true,
+    "src/latent_loop/decision_bridge/model.py": true,
+    "src/latent_loop/decision_bridge/train.py": true
+  },
+  "graph_labels_verified": 9320,
+  "limitation": "Validates recorded outcomes and provenance, not an independent neural refit or re-execution without ignored checkpoints.",
+  "policy_decisions": 750720,
+  "weights_needed": false
+}

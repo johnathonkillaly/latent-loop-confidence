@@ -1,0 +1,36 @@
+{
+  "active_study_minutes": 44.478195916666664,
+  "branch": "research/exp05d-decision-bridge",
+  "budget_minutes": 240,
+  "completed": "2026-10-09T17:15:41.691755+00:00",
+  "hardware": {
+    "architecture": "applegpu_g16s",
+    "device_name": "Apple M4 Max",
+    "max_buffer_length": 86586540032,
+    "max_recommended_working_set_size": 120259084288,
+    "memory_size": 137438953472,
+    "resource_limit": 499000
+  },
+  "idle_intervals": [],
+  "main_epoch_fit_seconds": 84.03727242733294,
+  "main_fits": 36,
+  "model_selection_unchanged_after_opening": true,
+  "no_experiment_05e_or_05_4_implementation": true,
+  "no_publication": true,
+  "parent_commit": "1f2e4947689984643bbadccb3327a8baec4cba81",
+  "pilot_epoch_fit_seconds": 83.83294021341135,
+  "pilot_fits": 36,
+  "preflight": "Initial process review observed normal desktop/index/backup activity; no unrelated local Python training identified. No process terminated or workstation contacted.",
+  "python": "3.12.15",
+  "started": "2026-10-09T16:31:13+00:00",
+  "total_neural_fits": 74,
+  "verification_fit_seconds": 3.8589182509604143,
+  "verification_fits": 2,
+  "versions": {
+    "matplotlib": "3.11.2",
+    "mlx": "0.32.3",
+    "numpy": "2.5.3",
+    "pytest": "9.1.1",
+    "scipy": "1.18.1"
+  }
+}

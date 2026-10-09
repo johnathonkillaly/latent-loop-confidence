@@ -1,0 +1,119 @@
+{
+  "labels_verified": 9320,
+  "solver": "BFS independently checked against Floyd\u2013Warshall",
+  "summary": {
+    "base_train": {
+      "count": 3000,
+      "families": {
+        "cyclic": 394,
+        "disconnected": 450,
+        "sparse": 1906,
+        "tree": 250
+      },
+      "mean_distance_reachable": 3.147843137254902,
+      "reachable": 2550,
+      "ties": 902
+    },
+    "community": {
+      "count": 400,
+      "families": {
+        "community": 400
+      },
+      "mean_distance_reachable": 3.01,
+      "reachable": 400,
+      "ties": 122
+    },
+    "counterfactual": {
+      "count": 480,
+      "families": {
+        "counterfactual": 480
+      },
+      "mean_distance_reachable": 8.5,
+      "reachable": 480,
+      "ties": 0
+    },
+    "id": {
+      "count": 600,
+      "families": {
+        "cyclic": 75,
+        "disconnected": 90,
+        "sparse": 422,
+        "tree": 13
+      },
+      "mean_distance_reachable": 3.1294117647058823,
+      "reachable": 510,
+      "ties": 204
+    },
+    "long": {
+      "count": 300,
+      "families": {
+        "long": 300
+      },
+      "mean_distance_reachable": 11.043333333333333,
+      "reachable": 300,
+      "ties": 70
+    },
+    "scorer_train": {
+      "count": 3000,
+      "families": {
+        "cyclic": 431,
+        "disconnected": 450,
+        "sparse": 2025,
+        "tree": 94
+      },
+      "mean_distance_reachable": 3.1231372549019607,
+      "reachable": 2550,
+      "ties": 953
+    },
+    "size16": {
+      "count": 400,
+      "families": {
+        "cyclic": 55,
+        "disconnected": 60,
+        "sparse": 244,
+        "tree": 41
+      },
+      "mean_distance_reachable": 3.164705882352941,
+      "reachable": 340,
+      "ties": 133
+    },
+    "size32": {
+      "count": 300,
+      "families": {
+        "cyclic": 35,
+        "disconnected": 45,
+        "sparse": 187,
+        "tree": 33
+      },
+      "mean_distance_reachable": 3.2666666666666666,
+      "reachable": 255,
+      "ties": 126
+    },
+    "size64": {
+      "count": 240,
+      "families": {
+        "cyclic": 21,
+        "disconnected": 36,
+        "sparse": 145,
+        "tree": 38
+      },
+      "mean_distance_reachable": 3.343137254901961,
+      "reachable": 204,
+      "ties": 128
+    },
+    "validation": {
+      "count": 600,
+      "families": {
+        "cyclic": 94,
+        "disconnected": 90,
+        "sparse": 405,
+        "tree": 11
+      },
+      "mean_distance_reachable": 3.1411764705882352,
+      "reachable": 510,
+      "ties": 207
+    }
+  },
+  "topology_groups": 9080,
+  "verified": "2026-10-09T17:06:58.406780+00:00"
+}

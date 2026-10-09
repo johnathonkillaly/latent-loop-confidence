@@ -1,0 +1,7 @@
+{
+  "reason": "Development-only distribution check: 77% of base training has distance <=2; replace with prespecified distance strata before any final model evaluation. All failed/unhelpful development results preserved.",
+  "neural_fits": 36,
+  "epoch_fit_seconds": 83.83294021341135,
+  "final_predictions_generated": false,
+  "artifact_directory": "artifacts/experiment_05d_pilot_easy"
+}

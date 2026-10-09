@@ -1,0 +1,16 @@
+{
+  "changes": {
+    "src/latent_loop/decision_bridge/data.py": {
+      "corrected_sha256": "2bf6eca875df7323e8cd455a21fa324c1bd4cde8dd3b00aa800b14953e5fb5bd",
+      "original_sha256": "57549ac93d947cd6f876db84cbc6b2fd86c0c73cf79f6285e6ba640699b7ac97",
+      "original_snapshot": "experiments/experiment_05d/evaluation_amendment_original/data.py"
+    },
+    "src/latent_loop/decision_bridge/evaluate.py": {
+      "corrected_sha256": "425f46da64d3cf4307d1ed88a60f640ee84e4f074ad6c974b4c823dce3881adc",
+      "original_sha256": "c7d4143d0ee2db347944e06f3eaacf46f44050c36ece2dc0e487d917cac89f4c",
+      "original_snapshot": "experiments/experiment_05d/evaluation_amendment_original/evaluate.py"
+    }
+  },
+  "reason": "Numerical tie/temperature calibration control correction, documented in evaluation_failure.json. No fitting, checkpoint, dataset, depth, lambda or objective change.",
+  "recorded": "2026-10-09T16:50:50.186626+00:00"
+}

@@ -1,0 +1,65 @@
+{
+  "created": "2026-10-09T16:39:14.985043+00:00",
+  "seed": 5302026,
+  "splits": {
+    "base_train": {
+      "count": 3000,
+      "proposals": 4426,
+      "sha256": "eb7fd97dc8b0c468b5d06898a7d8253e28a5ccb79c5cebb124e9f6e12437e042",
+      "topologies": 3000
+    },
+    "community": {
+      "count": 400,
+      "proposals": 423,
+      "sha256": "a71d998c8ea087ac9cd9319f892a1378f63269021d3e2ca6c6f56d04d43f51dc",
+      "topologies": 400
+    },
+    "counterfactual": {
+      "count": 480,
+      "pairs": 240,
+      "sha256": "a04de2bfe2773068ea27146ba279bf05534ab79035412d97b03d75ffbdcc9c96"
+    },
+    "id": {
+      "count": 600,
+      "proposals": 1367,
+      "sha256": "c491360140262925040ed40838a1d88e63bf915c25f3c2696c88e06beb2af834",
+      "topologies": 600
+    },
+    "long": {
+      "count": 300,
+      "proposals": 4164,
+      "sha256": "e418cfe0bcd01dfe510e17fe40a550a747d470845d58f73d4a520194c1d7870f",
+      "topologies": 300
+    },
+    "scorer_train": {
+      "count": 3000,
+      "proposals": 5434,
+      "sha256": "c001c1e2386530c9436dd491078b8591958d656a812fdbd981bb0aacd052c208",
+      "topologies": 3000
+    },
+    "size16": {
+      "count": 400,
+      "proposals": 453,
+      "sha256": "5450ed231c9dd17fd545233be5c63c3ad38d5b2d1e8aa3a52bacb0af88768b6e",
+      "topologies": 400
+    },
+    "size32": {
+      "count": 300,
+      "proposals": 320,
+      "sha256": "ab488c423c96d851a9ad39eb9e46e8eb7e829b0061429374e5f72af6716f0665",
+      "topologies": 300
+    },
+    "size64": {
+      "count": 240,
+      "proposals": 246,
+      "sha256": "fa5f7a4c86eddefe7793b0155d2f83d5e69dcf24a9bd2a213537ba629522d24f",
+      "topologies": 240
+    },
+    "validation": {
+      "count": 600,
+      "proposals": 1234,
+      "sha256": "2234d78423cba5969d6dbbcab613d63ce9d8f72fccd3c4c2142b1bbdc7bf1e46",
+      "topologies": 600
+    }
+  }
+}

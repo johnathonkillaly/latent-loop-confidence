@@ -1,0 +1,481 @@
+{
+  "checkpoint_hashes": {
+    "extra_budget_seed401": "b5edc85b741ace80c3ad12aede5328c9abe9c3b8edb1b7024a70201fc4175d67",
+    "extra_budget_seed502": "db485ebd24e05d647fec97d074b6e3ee0967d06f554a2a6711d29d48d3986dbf",
+    "extra_budget_seed603": "1a3f106638baed2d9869fff09801abc9ed09e8e7a1b57b171a88bce7e36c8b77",
+    "ff8_params_seed401": "ec67c57b2d2cf85dc11a5dc34f36c6a730d1749f240938196eeaaa19e9c797f3",
+    "ff8_params_seed502": "08cd3e551882e78b82ec551acd44bc32536bbcef3b73b8c6213af4e3583d0380",
+    "ff8_params_seed603": "4c28cfc48a28331a424560f5fd163dec7204ee826b379955de729167c0925c08",
+    "ff8_seed401": "f6690a21a9c8fb3082bdbf42d4b6dae1a53e0bb29663fb555311e62ac3194e47",
+    "ff8_seed502": "14d1a8231f0f24d1a94f59449511982b7725c99b2c26734bdb090c1f01481726",
+    "ff8_seed603": "9677f97643a0b65a99388fc87a4182130d689959a3371f71bb34db3907ae26ca",
+    "one_pass_seed401": "26a12e5232b05c35a8e70c565edbf6ac3e526c1a702010e1eae9008e6f016d82",
+    "one_pass_seed502": "80b17b9af9ca063d64de25989d5ee595f4b16d0e5d366ea38163f7ddf8383ced",
+    "one_pass_seed603": "2c2764683890f1a6dff38af04660f36773ea22f8fe79c94a7d1eda3055eb78a7",
+    "q_ff8_direct_seed401": "169805aa60dd3355108ebd49309285e087c09b57060b56454a1ec8add5fb1531",
+    "q_ff8_direct_seed502": "abaa1d68cbc0f966aeb76ebb2e6662bc067bb2c4d0317be9894dec3590b398b1",
+    "q_ff8_direct_seed603": "c78996a2339fa6b7d349baffcd9b81ce017307fb358b9e3a7c23dfd26eaee815",
+    "q_one_pass_correctness_seed401": "6163e194b5ac0a1a14bb528640ce7db24800d5839772966c016ba63acbe18529",
+    "q_one_pass_correctness_seed502": "7a35232c18f2cc799f08959b8fd6f2a094a84cdbda7a3a475b3d28dd8ca43e19",
+    "q_one_pass_correctness_seed603": "41b5d45a9de639350c8d72391604ad110b144091e8a29994f72f41a2b52701b0",
+    "q_one_pass_direct_seed401": "f103b502f252a892685cd29c05a3ccce3b4bb91624743ddb61bf23e11a5a0311",
+    "q_one_pass_direct_seed502": "68069b94126a59040678b0eec48cb19a669919f87651651297953c5284288697",
+    "q_one_pass_direct_seed603": "8454d81911fca6ad757d828f02c7d54f474824bb2b79f05d4611de98bb72b85d",
+    "q_one_pass_ranking_seed401": "d4b2075e08d698f6501b0811bb46e95fb1f9ef4d5348ee9c4049573aaec2ecaf",
+    "q_one_pass_ranking_seed502": "6670675c13d2d5fe6d9c2eadf1c810cad0dde183ebc8b933d9383c0a2b2c152b",
+    "q_one_pass_ranking_seed603": "32c2f69baece4bccd8b4546b9cfb5abd5b56074a7d342d6c983c2bc281a9b33f",
+    "q_recurrent_correctness_seed401": "9643f50e5ac3f45213b3ff3c6c34d2076f72ffee460ffb424d1c4f8627aa8230",
+    "q_recurrent_correctness_seed502": "d305be7919c1e292673d4ec7a84281d67f82850b2e524e66ae90edeb68d68b35",
+    "q_recurrent_correctness_seed603": "c4fe43aedfd64de1917b0639518cb22473d6b6df99c1cfd14291895f5ac69659",
+    "q_recurrent_direct_seed401": "def44ed19d25bb61cf8a77072cb91521faf361c6ec9b78f29cb8c22a6880ba3e",
+    "q_recurrent_direct_seed502": "7135f6c46ac40eab164a7748498ea641c10d963fb1cc68b72c08b9b0f411e3b4",
+    "q_recurrent_direct_seed603": "5c393c4ab668b9f8515214628e16d3de9a64021f8b508c5817ae4d76ce9efacc",
+    "q_recurrent_ranking_seed401": "bac8964006187f4620a0b65dc6893480afa291bd2233095fcb573e953a157d45",
+    "q_recurrent_ranking_seed502": "defcf8c21575114d200093ec63e2e8a72c7fa606237238f547cbe17bda015303",
+    "q_recurrent_ranking_seed603": "730194a63ceb61be60082ee17d12d34ddb6a40c1eab9a5cc1c52719e09299855",
+    "recurrent_seed401": "1e904855ac290e28d9262cb6dea233b24f510dab0b91d45c2874bc3d6f2ba31b",
+    "recurrent_seed502": "caf71aa74dcda2e9d8ab467c624ffa7ecce0d0a0b9f4eda78792bd3ae1f22fbb",
+    "recurrent_seed603": "470969fd928779f82f26ce03db20fc84833659de67d2fe808eee0d9ed4a34034"
+  },
+  "frozen": "2026-10-09T16:48:21.418276+00:00",
+  "neural_fits": 36,
+  "parent_commit": "1f2e4947689984643bbadccb3327a8baec4cba81",
+  "selection": {
+    "conditions": {
+      "ff8": {
+        "by_depth": {
+          "8": {
+            "accuracy": 1.0,
+            "lambda": 0
+          }
+        },
+        "calibration": {
+          "direct": {
+            "converged": true,
+            "offset": -1.6428260870037195,
+            "scale": 0.29692710928255994
+          }
+        },
+        "forced_nonzero": {
+          "accuracy": 1.0,
+          "lambda": 0.1
+        },
+        "lambda": 0,
+        "objective": "direct",
+        "objectives": {
+          "direct": {
+            "accuracy": 1.0,
+            "grid": [
+              {
+                "accuracy": 1.0,
+                "lambda": 0
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.1
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.25
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.5
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 1
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 2
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 4
+              }
+            ],
+            "lambda": 0
+          }
+        },
+        "temperature": 0.25,
+        "temperature_grid": [
+          {
+            "loss": 1.2980566806615931e-08,
+            "temperature": 0.25
+          },
+          {
+            "loss": 3.323389498414523e-06,
+            "temperature": 0.5
+          },
+          {
+            "loss": 0.00011708531383192167,
+            "temperature": 1
+          },
+          {
+            "loss": 0.003357518852377931,
+            "temperature": 2
+          },
+          {
+            "loss": 0.04199862480163574,
+            "temperature": 4
+          }
+        ],
+        "validation_accuracy": 1.0
+      },
+      "one_pass": {
+        "by_depth": {
+          "1": {
+            "accuracy": 0.8311111111111112,
+            "lambda": 0.1
+          }
+        },
+        "calibration": {
+          "correctness": {
+            "converged": true,
+            "offset": 0.05532799411004089,
+            "scale": 0.9640518508749981
+          },
+          "direct": {
+            "converged": true,
+            "offset": -0.31766967575580085,
+            "scale": 0.3951331910370917
+          },
+          "ranking": {
+            "converged": true,
+            "offset": -1.4977979420886285,
+            "scale": 0.5472844740801517
+          }
+        },
+        "forced_nonzero": {
+          "accuracy": 0.8311111111111112,
+          "lambda": 0.1
+        },
+        "lambda": 0.1,
+        "objective": "ranking",
+        "objectives": {
+          "correctness": {
+            "accuracy": 0.8294444444444444,
+            "grid": [
+              {
+                "accuracy": 0.8294444444444444,
+                "lambda": 0
+              },
+              {
+                "accuracy": 0.8294444444444444,
+                "lambda": 0.1
+              },
+              {
+                "accuracy": 0.8288888888888888,
+                "lambda": 0.25
+              },
+              {
+                "accuracy": 0.8250000000000001,
+                "lambda": 0.5
+              },
+              {
+                "accuracy": 0.8249999999999998,
+                "lambda": 1
+              },
+              {
+                "accuracy": 0.8244444444444445,
+                "lambda": 2
+              },
+              {
+                "accuracy": 0.8227777777777777,
+                "lambda": 4
+              }
+            ],
+            "lambda": 0
+          },
+          "direct": {
+            "accuracy": 0.8294444444444444,
+            "grid": [
+              {
+                "accuracy": 0.8294444444444444,
+                "lambda": 0
+              },
+              {
+                "accuracy": 0.8294444444444444,
+                "lambda": 0.1
+              },
+              {
+                "accuracy": 0.8288888888888889,
+                "lambda": 0.25
+              },
+              {
+                "accuracy": 0.8277777777777778,
+                "lambda": 0.5
+              },
+              {
+                "accuracy": 0.8283333333333333,
+                "lambda": 1
+              },
+              {
+                "accuracy": 0.8272222222222222,
+                "lambda": 2
+              },
+              {
+                "accuracy": 0.8244444444444444,
+                "lambda": 4
+              }
+            ],
+            "lambda": 0
+          },
+          "ranking": {
+            "accuracy": 0.8311111111111112,
+            "grid": [
+              {
+                "accuracy": 0.8294444444444444,
+                "lambda": 0
+              },
+              {
+                "accuracy": 0.8311111111111112,
+                "lambda": 0.1
+              },
+              {
+                "accuracy": 0.8288888888888889,
+                "lambda": 0.25
+              },
+              {
+                "accuracy": 0.8261111111111111,
+                "lambda": 0.5
+              },
+              {
+                "accuracy": 0.8238888888888889,
+                "lambda": 1
+              },
+              {
+                "accuracy": 0.8233333333333333,
+                "lambda": 2
+              },
+              {
+                "accuracy": 0.8227777777777777,
+                "lambda": 4
+              }
+            ],
+            "lambda": 0.1
+          }
+        },
+        "temperature": 1,
+        "temperature_grid": [
+          {
+            "loss": 0.7740546663602194,
+            "temperature": 0.25
+          },
+          {
+            "loss": 0.49174479643503827,
+            "temperature": 0.5
+          },
+          {
+            "loss": 0.4292633632818858,
+            "temperature": 1
+          },
+          {
+            "loss": 0.4807560046513875,
+            "temperature": 2
+          },
+          {
+            "loss": 0.5922054847081503,
+            "temperature": 4
+          }
+        ],
+        "validation_accuracy": 0.8311111111111112
+      },
+      "recurrent": {
+        "by_depth": {
+          "1": {
+            "accuracy": 0.818888888888889,
+            "lambda": 4
+          },
+          "2": {
+            "accuracy": 0.9066666666666667,
+            "lambda": 2
+          },
+          "4": {
+            "accuracy": 0.9927777777777776,
+            "lambda": 0.25
+          },
+          "8": {
+            "accuracy": 1.0,
+            "lambda": 0
+          }
+        },
+        "calibration": {
+          "correctness": {
+            "converged": true,
+            "offset": 0.2047815121737949,
+            "scale": 1.5530727731048997
+          },
+          "direct": {
+            "converged": true,
+            "offset": -1.2029161265335102,
+            "scale": 0.39834819412872446
+          },
+          "ranking": {
+            "converged": true,
+            "offset": -1.8437759965809466,
+            "scale": 0.35996166994680134
+          }
+        },
+        "forced_nonzero": {
+          "accuracy": 1.0,
+          "lambda": 0.1
+        },
+        "lambda": 0,
+        "objective": "correctness",
+        "objectives": {
+          "correctness": {
+            "accuracy": 1.0,
+            "grid": [
+              {
+                "accuracy": 1.0,
+                "lambda": 0
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.1
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.25
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.5
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 1
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 2
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 4
+              }
+            ],
+            "lambda": 0
+          },
+          "direct": {
+            "accuracy": 1.0,
+            "grid": [
+              {
+                "accuracy": 1.0,
+                "lambda": 0
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.1
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.25
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.5
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 1
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 2
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 4
+              }
+            ],
+            "lambda": 0
+          },
+          "ranking": {
+            "accuracy": 1.0,
+            "grid": [
+              {
+                "accuracy": 1.0,
+                "lambda": 0
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.1
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.25
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 0.5
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 1
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 2
+              },
+              {
+                "accuracy": 1.0,
+                "lambda": 4
+              }
+            ],
+            "lambda": 0
+          }
+        },
+        "temperature": 0.25,
+        "temperature_grid": [
+          {
+            "loss": 6.912362024043735e-05,
+            "temperature": 0.25
+          },
+          {
+            "loss": 0.0003125171230446237,
+            "temperature": 0.5
+          },
+          {
+            "loss": 0.0027332383518417678,
+            "temperature": 1
+          },
+          {
+            "loss": 0.029427727684378624,
+            "temperature": 2
+          },
+          {
+            "loss": 0.14271079997221628,
+            "temperature": 4
+          }
+        ],
+        "validation_accuracy": 1.0
+      }
+    },
+    "created": "2026-10-09T16:48:21.232417+00:00",
+    "primary": {
+      "condition": "recurrent",
+      "depth": 8,
+      "lambda": 0,
+      "objective": "correctness",
+      "split": "id"
+    }
+  },
+  "source_hashes": {
+    "experiments/experiment_05d/base_freeze.json": "7b729f2a2c64ac2b91c1148a3af86042a73217def6feb4888dae7a7291e3e217",
+    "experiments/experiment_05d/config.json": "31c649e45dc7a7e3b778910bf4bed4cf73e1fa88f767dd052417091ca5a5749e",
+    "experiments/experiment_05d/dataset_manifest.json": "5f0ba9517dacd4e1b5e23a291507f3cfd0ab6d4d104696bd9b4b4552156308ae",
+    "experiments/experiment_05d/protocol.md": "3354562930e73d634fc42404232a57a14c5fe0ba281147a025be6eb411c233a0",
+    "experiments/experiment_05d/selection.json": "90e33550563a4534c1adf7e2869770fd69433e9f35e0610631d471bb968a2d4e",
+    "src/latent_loop/decision_bridge/__init__.py": "4437ac6c8c8e7db16bea903bc8278e4e9964453b74fc1abf4b2c8846070d257b",
+    "src/latent_loop/decision_bridge/__main__.py": "65db75123d1e4c941fd5b435ff8075883ed5b43a233d29f471a182abf054a827",
+    "src/latent_loop/decision_bridge/data.py": "57549ac93d947cd6f876db84cbc6b2fd86c0c73cf79f6285e6ba640699b7ac97",
+    "src/latent_loop/decision_bridge/diagnostics.py": "4e690f54cb025a0eccd3a5030cebefff210200dc92b5a879e74f6487c3795fce",
+    "src/latent_loop/decision_bridge/evaluate.py": "c7d4143d0ee2db347944e06f3eaacf46f44050c36ece2dc0e487d917cac89f4c",
+    "src/latent_loop/decision_bridge/interface.py": "badb1a61d62b47067c010c41ae98b541df058739483090382d5b6c3abc1dc317",
+    "src/latent_loop/decision_bridge/model.py": "3e5ecc9c9c600dbb8a744debb58797cbfac94d5cee9dbd037ec528f891702084",
+    "src/latent_loop/decision_bridge/train.py": "41ffeb3c4d8d23ab982ecb1f6c5e40e267549a4febd0146be646f1a76c04926d"
+  }
+}

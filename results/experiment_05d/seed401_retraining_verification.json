@@ -1,0 +1,18 @@
+{
+  "checkpoints": {
+    "q_recurrent_correctness_seed401": {
+      "byte_identical": true,
+      "original_sha256": "9643f50e5ac3f45213b3ff3c6c34d2076f72ffee460ffb424d1c4f8627aa8230",
+      "reproduced_sha256": "9643f50e5ac3f45213b3ff3c6c34d2076f72ffee460ffb424d1c4f8627aa8230"
+    },
+    "recurrent_seed401": {
+      "byte_identical": true,
+      "original_sha256": "1e904855ac290e28d9262cb6dea233b24f510dab0b91d45c2874bc3d6f2ba31b",
+      "reproduced_sha256": "1e904855ac290e28d9262cb6dea233b24f510dab0b91d45c2874bc3d6f2ba31b"
+    }
+  },
+  "completed": "2026-10-09T16:58:07.032216+00:00",
+  "fit_seconds": 3.8589182509604143,
+  "full_study": false,
+  "verification_fits": 2
+}
