@@ -1,0 +1,523 @@
+{
+  "frozen_utc": "2026-10-09T11:30:25.278060+00:00",
+  "selected_recurrent_family": "recurrent",
+  "selected_one_pass_family": "one_pass",
+  "family_selection_rule": "Mean validation NLL at fixed primary inference depth across seeds; no final data used",
+  "primary_inference_depth": 4,
+  "validation_selection_scores": {
+    "one_pass": 1.328497330347697,
+    "recurrent": 1.3260894616444905,
+    "reinjection": 1.3441266616185505,
+    "multi_depth": 1.380284349123637,
+    "one_pass_compute": 1.328497330347697
+  },
+  "fits": {
+    "one_pass": {
+      "11": {
+        "checkpoint_sha256": "3a11e6aaa20786f8916eb223bdab4b68b3768c3b9377399dc59be4cb56d5e77b",
+        "training_record_sha256": "c98fec0e6a852fbebda52562256da3eda5cecb90588fd1ff5abb79f5fb206b15",
+        "best_epoch": 1,
+        "checkpoint_diagnostics": {
+          "update": null,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 7.155084538272048
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.3055555555555556,
+            "nll": 1.3746740818023682,
+            "ece": 0.02692974958982731,
+            "multiclass_brier": 0.7444735705097336
+          }
+        },
+        "selection_nll": 1.3746740818023682
+      },
+      "22": {
+        "checkpoint_sha256": "776ba2649a41dc02efcb4d6e26e4db0d36a6e03b6e63dddc4ddf49c3ca68c17a",
+        "training_record_sha256": "2f8eeac0f737ceb4b8b4c8411fc976b8b6fa050c4aad748d0fbb2ac28d60c1fb",
+        "best_epoch": 0,
+        "checkpoint_diagnostics": {
+          "update": null,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 6.845967874030666
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.5138888888888888,
+            "nll": 1.2284636497497559,
+            "ece": 0.12084483148323168,
+            "multiclass_brier": 0.6544617824642448
+          }
+        },
+        "selection_nll": 1.2284636497497559
+      },
+      "33": {
+        "checkpoint_sha256": "36266fa801d49e5dd51ccf45eb2bc5e11f882fc7c5d62ffeae6459b5eabdf00b",
+        "training_record_sha256": "48d3573d851c2ed8395e686344094aa0c57defffa061c35247d44aa2ed5c4103",
+        "best_epoch": 0,
+        "checkpoint_diagnostics": {
+          "update": null,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 6.961240056029915
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3823542594909668,
+            "ece": 0.028117306323515057,
+            "multiclass_brier": 0.747490490049516
+          }
+        },
+        "selection_nll": 1.3823542594909668
+      }
+    },
+    "recurrent": {
+      "11": {
+        "checkpoint_sha256": "7b5d689b9ef0fe14377af1984a4db449aec2f82d409e43913fc359df94286e80",
+        "training_record_sha256": "bb64b1878c5a45a7d5053a48b1d5568fc9ac90f8071d07c7e63134a1f409f0a0",
+        "best_epoch": 1,
+        "checkpoint_diagnostics": {
+          "update": 0.10116304457187653,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 7.385211228641993
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3759751319885254,
+            "ece": 0.02299922704696655,
+            "multiclass_brier": 0.744838126563168
+          },
+          "2": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3772337436676025,
+            "ece": 0.05667498045497471,
+            "multiclass_brier": 0.7454517355387258
+          },
+          "3": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3784558773040771,
+            "ece": 0.04296462486187618,
+            "multiclass_brier": 0.7460424353319147
+          },
+          "4": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3795878887176514,
+            "ece": 0.040210694902473004,
+            "multiclass_brier": 0.7465865211689814
+          }
+        },
+        "selection_nll": 1.3795878887176514
+      },
+      "22": {
+        "checkpoint_sha256": "4f650a5b3b4984de45f2e64506cf15f9c334c30bae7c2a09eba8370f113fa888",
+        "training_record_sha256": "03415a45d73efa51f741f83ea73e96e47b2452ff983a9a6334adf9a1b979d1ad",
+        "best_epoch": 2,
+        "checkpoint_diagnostics": {
+          "update": 0.10105625540018082,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 8.098883278577317
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.4791666666666667,
+            "nll": 1.22754967212677,
+            "ece": 0.13258778448734018,
+            "multiclass_brier": 0.6453843909479139
+          },
+          "2": {
+            "accuracy": 0.4652777777777778,
+            "nll": 1.2262240648269653,
+            "ece": 0.13870423701074389,
+            "multiclass_brier": 0.6392831142101123
+          },
+          "3": {
+            "accuracy": 0.4652777777777778,
+            "nll": 1.2220587730407715,
+            "ece": 0.1444022837612364,
+            "multiclass_brier": 0.6337009747690505
+          },
+          "4": {
+            "accuracy": 0.4791666666666667,
+            "nll": 1.2161492109298706,
+            "ece": 0.13605803209874365,
+            "multiclass_brier": 0.6291125469070855
+          }
+        },
+        "selection_nll": 1.2161492109298706
+      },
+      "33": {
+        "checkpoint_sha256": "b444f1d1124ba65e2f261b44b2d66a6919e868e1b96265425ee1097a4daca2ff",
+        "training_record_sha256": "0800bb7b1c08fc41484fa31ec5421d26f88ec38dd76cd58524ad5025b8604177",
+        "best_epoch": 0,
+        "checkpoint_diagnostics": {
+          "update": 0.10193514823913574,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 6.374811242413696
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.3125,
+            "nll": 1.384533405303955,
+            "ece": 0.047906056046485915,
+            "multiclass_brier": 0.7487208087588706
+          },
+          "2": {
+            "accuracy": 0.3194444444444444,
+            "nll": 1.3837850093841553,
+            "ece": 0.041102529813845975,
+            "multiclass_brier": 0.7483713580216185
+          },
+          "3": {
+            "accuracy": 0.3125,
+            "nll": 1.38311767578125,
+            "ece": 0.034172379722197846,
+            "multiclass_brier": 0.7480667011579974
+          },
+          "4": {
+            "accuracy": 0.3055555555555556,
+            "nll": 1.3825312852859497,
+            "ece": 0.027179456419414962,
+            "multiclass_brier": 0.7478048441859353
+          }
+        },
+        "selection_nll": 1.3825312852859497
+      }
+    },
+    "reinjection": {
+      "11": {
+        "checkpoint_sha256": "7d1de322ff8a0558e0301f7550f9559191ffbe44d222668eeedd7181d2e234dd",
+        "training_record_sha256": "864e545177d8bf882edd94c35502c282e1624acdb9efe96288aa58aa7d005faa",
+        "best_epoch": 1,
+        "checkpoint_diagnostics": {
+          "update": 0.101628378033638,
+          "reinjection": 0.051132041960954666,
+          "lora_b_frobenius_norm": 7.65584152928487
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3853695392608643,
+            "ece": 0.06504579923219153,
+            "multiclass_brier": 0.7498563578154855
+          },
+          "2": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.385994553565979,
+            "ece": 0.04698245972394945,
+            "multiclass_brier": 0.7501831108662338
+          },
+          "3": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3866547346115112,
+            "ece": 0.043801241450839565,
+            "multiclass_brier": 0.7505394359796775
+          },
+          "4": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3873417377471924,
+            "ece": 0.05336814642780358,
+            "multiclass_brier": 0.750921095868254
+          }
+        },
+        "selection_nll": 1.3873417377471924
+      },
+      "22": {
+        "checkpoint_sha256": "d63eb23c43e6e0ff1ce2eccd755a2323e1e6569826e719f3a6140a902f19b467",
+        "training_record_sha256": "50107f0fa07976a07729d9cca8b4cdf24222aee1aacdc578641e150a38bd8c29",
+        "best_epoch": 0,
+        "checkpoint_diagnostics": {
+          "update": 0.1006847470998764,
+          "reinjection": 0.051560673862695694,
+          "lora_b_frobenius_norm": 7.10715043385048
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.375,
+            "nll": 1.2676297426223755,
+            "ece": 0.09904756521185239,
+            "multiclass_brier": 0.6846451469707917
+          },
+          "2": {
+            "accuracy": 0.375,
+            "nll": 1.2639729976654053,
+            "ece": 0.07893641210264632,
+            "multiclass_brier": 0.6826830702872279
+          },
+          "3": {
+            "accuracy": 0.3958333333333333,
+            "nll": 1.2613110542297363,
+            "ece": 0.07151470954219498,
+            "multiclass_brier": 0.6811046099234704
+          },
+          "4": {
+            "accuracy": 0.4166666666666667,
+            "nll": 1.259393334388733,
+            "ece": 0.06641007504529423,
+            "multiclass_brier": 0.679835499849561
+          }
+        },
+        "selection_nll": 1.259393334388733
+      },
+      "33": {
+        "checkpoint_sha256": "56322a972f4438c160a7942a342fe9e669a00f077557d24f8ccccfa8aadd2727",
+        "training_record_sha256": "fcad5b35dc6caf3f2b536bb7b33336cd882535a40851ce0407bf8c40227d6680",
+        "best_epoch": 1,
+        "checkpoint_diagnostics": {
+          "update": 0.10409212857484818,
+          "reinjection": 0.049716610461473465,
+          "lora_b_frobenius_norm": 7.311414187232736
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3854928016662598,
+            "ece": 0.03426189161837099,
+            "multiclass_brier": 0.7498082573905344
+          },
+          "2": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3855578899383545,
+            "ece": 0.03415190821720492,
+            "multiclass_brier": 0.7498354450823048
+          },
+          "3": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3856089115142822,
+            "ece": 0.03390933407677543,
+            "multiclass_brier": 0.7498548549384053
+          },
+          "4": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3856449127197266,
+            "ece": 0.03359691633118522,
+            "multiclass_brier": 0.7498664724744386
+          }
+        },
+        "selection_nll": 1.3856449127197266
+      }
+    },
+    "multi_depth": {
+      "11": {
+        "checkpoint_sha256": "efbc325de7f25acc1691463715b7afc78de3d33c54cc1a88e6712aa0939fe37f",
+        "training_record_sha256": "f44fb021a6d30af3b8e3bbb0d48d81301f148e2279fd5c84c9476d850aa61355",
+        "best_epoch": 1,
+        "checkpoint_diagnostics": {
+          "update": 0.10102685540914536,
+          "reinjection": 0.05114952102303505,
+          "lora_b_frobenius_norm": 7.594898705832092
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3789780139923096,
+            "ece": 0.039965535824497564,
+            "multiclass_brier": 0.7464843764805571
+          },
+          "2": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3793284893035889,
+            "ece": 0.02415932156145574,
+            "multiclass_brier": 0.7466398329279326
+          },
+          "3": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3795380592346191,
+            "ece": 0.03060737459195986,
+            "multiclass_brier": 0.7467262096320791
+          },
+          "4": {
+            "accuracy": 0.2708333333333333,
+            "nll": 1.3796191215515137,
+            "ece": 0.018299118512206614,
+            "multiclass_brier": 0.7467498671158432
+          }
+        },
+        "selection_nll": 1.3796191215515137
+      },
+      "22": {
+        "checkpoint_sha256": "7e45a2d8c151761761c006c72cf2e824043498953852c643e96aeda9fd473d1c",
+        "training_record_sha256": "4ae44ff1d85ad13986b1b1e379875aa8aa4d394017bd3491d91356c77574989f",
+        "best_epoch": 1,
+        "checkpoint_diagnostics": {
+          "update": 0.10063653439283371,
+          "reinjection": 0.051107507199048996,
+          "lora_b_frobenius_norm": 6.911404800946858
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.3125,
+            "nll": 1.3775370121002197,
+            "ece": 0.01428051003151468,
+            "multiclass_brier": 0.7451365242045114
+          },
+          "2": {
+            "accuracy": 0.3125,
+            "nll": 1.3771092891693115,
+            "ece": 0.01637921047707397,
+            "multiclass_brier": 0.7449561898041241
+          },
+          "3": {
+            "accuracy": 0.3333333333333333,
+            "nll": 1.3768141269683838,
+            "ece": 0.03919329514933959,
+            "multiclass_brier": 0.7448403714502726
+          },
+          "4": {
+            "accuracy": 0.3263888888888889,
+            "nll": 1.3766428232192993,
+            "ece": 0.03414265397522185,
+            "multiclass_brier": 0.7447851040148797
+          }
+        },
+        "selection_nll": 1.3766428232192993
+      },
+      "33": {
+        "checkpoint_sha256": "9cd11e843b3f4d39c0937eaea310de6621f0f73df6b60554848a93e3652dc57b",
+        "training_record_sha256": "9941ec60d2be0009f58a8d98723642231805d3977cd381b1e70cd2c335fec495",
+        "best_epoch": 0,
+        "checkpoint_diagnostics": {
+          "update": 0.10378002375364304,
+          "reinjection": 0.050495732575654984,
+          "lora_b_frobenius_norm": 6.575800396927383
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3825002908706665,
+            "ece": 0.0425170777986447,
+            "multiclass_brier": 0.7484202097058369
+          },
+          "2": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3832794427871704,
+            "ece": 0.044276634852091476,
+            "multiclass_brier": 0.7487531947563117
+          },
+          "3": {
+            "accuracy": 0.2847222222222222,
+            "nll": 1.3839730024337769,
+            "ece": 0.04575865260428854,
+            "multiclass_brier": 0.7490442860403913
+          },
+          "4": {
+            "accuracy": 0.2916666666666667,
+            "nll": 1.3845911026000977,
+            "ece": 0.027730362282858953,
+            "multiclass_brier": 0.7493022594777287
+          }
+        },
+        "selection_nll": 1.3845911026000977
+      }
+    },
+    "one_pass_compute": {
+      "11": {
+        "checkpoint_sha256": "3a11e6aaa20786f8916eb223bdab4b68b3768c3b9377399dc59be4cb56d5e77b",
+        "training_record_sha256": "74e1deba06798115a66684fad8ea0a1bfd50826d86662d73227a60f47e3738ce",
+        "best_epoch": 1,
+        "checkpoint_diagnostics": {
+          "update": null,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 7.155084538272048
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.3055555555555556,
+            "nll": 1.3746740818023682,
+            "ece": 0.02692974958982731,
+            "multiclass_brier": 0.7444735705097336
+          }
+        },
+        "selection_nll": 1.3746740818023682
+      },
+      "22": {
+        "checkpoint_sha256": "776ba2649a41dc02efcb4d6e26e4db0d36a6e03b6e63dddc4ddf49c3ca68c17a",
+        "training_record_sha256": "1f9f3f3db28286b0bd5da37a15c269a841c36e77f10a52282f44ff1a27742ca0",
+        "best_epoch": 0,
+        "checkpoint_diagnostics": {
+          "update": null,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 6.845967874030666
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.5138888888888888,
+            "nll": 1.2284636497497559,
+            "ece": 0.12084483148323168,
+            "multiclass_brier": 0.6544617824642448
+          }
+        },
+        "selection_nll": 1.2284636497497559
+      },
+      "33": {
+        "checkpoint_sha256": "36266fa801d49e5dd51ccf45eb2bc5e11f882fc7c5d62ffeae6459b5eabdf00b",
+        "training_record_sha256": "59ff7568ef426a50e466d137676cce78a6935a17b3892e0ce4ae571765afafc0",
+        "best_epoch": 0,
+        "checkpoint_diagnostics": {
+          "update": null,
+          "reinjection": null,
+          "lora_b_frobenius_norm": 6.961240056029915
+        },
+        "validation": {
+          "1": {
+            "accuracy": 0.2777777777777778,
+            "nll": 1.3823542594909668,
+            "ece": 0.028117306323515057,
+            "multiclass_brier": 0.747490490049516
+          }
+        },
+        "selection_nll": 1.3823542594909668
+      }
+    }
+  },
+  "source_hashes": {
+    "experiments/experiment_05/config.json": "3b810ff0d001622a5012958316fb6454861842f4977ff2db18d5371972cf3e54",
+    "experiments/experiment_05/dataset_manifest.json": "695995c987ceba04c233590c7dbe056ed178b95cae4ed0b700ad78d1bf373f07",
+    "experiments/experiment_05/plan.md": "162a3cc707774bcfe9eeea19e3c6ab04ba33444e2765b51c8cc26d48fcf6cbd6",
+    "experiments/experiment_05/class_prior_diagnostic.json": "473dcda21d41c315789f6b433e7f5b09c3de78abdb185beddf36021df453ce5e",
+    "experiments/experiment_05/resume_budget.json": "65891fadb848e41f6dd688abb69e0d6da0fafebb0a39f2280e56df1fc2e889ec",
+    "src/latent_loop/benchmark.py": "bb72b5dd10c0b98e928c4d83d088803952d9b8fa3d2cbb721cb3aaa121fde74f",
+    "src/latent_loop/models.py": "dd1b5a70e035e40db8a244f0f0d70bfd71d2cfbc514f1b96b2719a051fcbe3ce",
+    "src/latent_loop/backbone.py": "c98d509bad381f1a2a0298ac41576e480243899f7325040ce42616459cac6724",
+    "src/latent_loop/evaluation.py": "cb4eb087ad0e236752bcfeb26eaea46fecf741375e00f1f3bda643ca567e71ef",
+    "src/latent_loop/datasets.py": "08cb0948a15ce103d525622a8d73249ed1eafda302ab4d52bf075aeea0cc1cb9",
+    "src/latent_loop/__init__.py": "e8e792065ec21d16c717a4240befcf2026398bf7f1360f78048ee7b1b93066fc",
+    "src/latent_loop/cli.py": "95982d355ceee498f1afb63037a8615436ca63c08283b9f42250da4d299cf698",
+    "src/latent_loop/training.py": "6fce328e683514c8ee18d25a5df409115a57f1b7f1f0d02579d90c3f7d23a072",
+    "src/latent_loop/reporting.py": "5fad3fc9b0e7259cb9141a9eeac07256cbaf44b846d9eb2312a85395dfa465ec",
+    "src/latent_loop/experiment03/run.py": "bb5e5230f2a0181288a977338bc8f393a53e5907d961f1c7f0b4ebedf52c2252",
+    "src/latent_loop/experiment03/__init__.py": "82072094f584391929313fd43635bbe84cfade569beca0174da68fc7b45f5b54",
+    "src/latent_loop/experiment03/timing.py": "dd9b6bb797d262ada689324d4412f09f37a471bc99ffd1286bd554628b30282e",
+    "src/latent_loop/experiment03/science.py": "50fa5e8a200f9c484cf0df74016691a383aab1c29a243414c42559eacb1b56f9",
+    "src/latent_loop/experiment03/report.py": "7387c8bfb58d030f3109c10f583695252823fb85a8b64a8589feb7564cf65f46",
+    "src/latent_loop/experiment03/data.py": "32ab892da0dc71224b5475b82d9ef3b8268fc044ca3e1d732cb710399676b7b5",
+    "src/latent_loop/experiment03/heads.py": "cbb68cf6b84d7a2489f127af5bb607cdecd98089e08148205d85eda99ab135da",
+    "src/latent_loop/experiment05/__init__.py": "00e195518d95662cd0bc54dfe2758fdfdb96b4ef813fe77cf8e9ab39943d7a04",
+    "src/latent_loop/experiment05/model.py": "02fbfed66b1336d5fc3b8f30e02f6ceb97e450d9be3b95afc8ef9fb1479572d2",
+    "src/latent_loop/experiment05/validate.py": "1f877e1cd681545fdb79af64d140421140ca292b73514fd1ac20825161b4e1fd",
+    "src/latent_loop/experiment05/train.py": "f4a61639d0784f149fa1838a806be5f9a64df8a325c2c391088af126e95513ea",
+    "src/latent_loop/experiment05/evaluate.py": "278291a5d050d6f650e28190b1bc8a93ee38cda6ea02b8e6407e772eb791ef64",
+    "src/latent_loop/experiment05/data.py": "f5121dae86a40c385c5d8b90d1fa47bcdd674f9d57c1c90b08b02aaed0cadb82",
+    "src/latent_loop/experiment04b/models.py": "e8d904d80da2e2d3cab8c6a3bcdf56fa62f76517c730e50ff238ab8d99b1b044",
+    "src/latent_loop/experiment04b/__init__.py": "c29bad2183b07c165a9efd04fc38c676a82813abef7f3f601f099dd2b551fb16",
+    "src/latent_loop/experiment04b/runtime.py": "15a32ac7145e7824190c20d23305eeb0d80504214e659fe9440b709738f972ed",
+    "src/latent_loop/experiment04b/timing.py": "a44eb08e1d22722d0222597cda0cdac126951ac974fd7af86daf2eb6b0377857",
+    "src/latent_loop/experiment04b/common.py": "d873d72039ffe837c8fbc734464a516e9ed9354252258c40d0671217b6fc156e",
+    "src/latent_loop/experiment04b/pipeline.py": "4de67ea8b335f06300478286af9e3a7ce6c0031564e61e6619a5f5438a91e890",
+    "src/latent_loop/experiment04b/train.py": "842c869851b9158532b6b495b2ca60c3658797d2c7b521fba64171169f87ccdd",
+    "src/latent_loop/experiment04b/science.py": "2d2367da6d3b71c57c1ac69c1aa2e6c62af6edfe0b3b5ba0b4e5243c62eed36f",
+    "src/latent_loop/experiment04b/evaluate.py": "c0f1fa656108708dfb6335b1d6f96a81ebe643b64c8dd5cc1961fbfd6571a32c",
+    "src/latent_loop/experiment04b/report.py": "3b056b9be176e86a64f49d141cdee86e49f7a2d976bfc9ace83e4c57c083379c",
+    "src/latent_loop/experiment04b/data.py": "0a2595e1c86fb0d0d23b4751997d2a17f8f2f18be8a8218e6c7086924b604661",
+    "src/latent_loop/experiment04a/__init__.py": "2eed5576ec66129f22ff880fdfb9b50e8b99b1ce59372eb5341ea06c4e305ae8",
+    "src/latent_loop/experiment04a/trajectory.py": "a2b8be456738fed8cccf61b1be4a505f89b4b910cba329ae39f57b5b360e3b33",
+    "src/latent_loop/experiment04a/timing.py": "8dfe2d517cbf4563dfa44d6980024991d48b3585fc26ebafdf8fc226d714a664",
+    "src/latent_loop/experiment04a/common.py": "514e2564bd6ae02eb449fdd71d5a36b61dfe7f11cf68a36bdadde704decf04ff",
+    "src/latent_loop/experiment04a/pipeline.py": "27ffe91b20c8e06d268e4242e66948b4e22b63939b0d84b034e235402f80622c",
+    "src/latent_loop/experiment04a/science.py": "1691c4f20ab9b28dfc7fd770c021b8ea46ccdaaa7c1250f3cb58ca71861c75c2",
+    "src/latent_loop/experiment04a/report.py": "6b5362bdda7f6d7ab7eed5e060d26e8254e4b050d0797afff48de4075eee862e",
+    "src/latent_loop/experiment04a/data.py": "65b057abaf3e746161218c6538b0926bcb28c8b18468de6b54fdfec098fa1b68"
+  },
+  "stress_rule": "24 fresh-ID problems, four per task, lexicographic instance IDs; depths 1..8 diagnostic only",
+  "reinjection_ablation_rule": "Fixed/no gate at inference on all F/G final trajectories; same trained weights, no refitting"
+}
