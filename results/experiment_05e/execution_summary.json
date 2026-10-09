@@ -1,0 +1,24 @@
+{
+  "started_utc": "2026-10-09T19:46:18Z",
+  "measurement_handoff_utc": "2026-10-09T20:41:19Z",
+  "main_auxiliary_fits": 24,
+  "independent_verification_refits": 24,
+  "total_optimizer_fits": 48,
+  "training_seeds": [
+    511,
+    622,
+    733
+  ],
+  "main_timed_fit_seconds": 15.175360167981125,
+  "verification_timed_fit_seconds": 54.15696799797297,
+  "main_feature_extraction_seconds": 352.0568510830053,
+  "peak_main_mlx_gib": 3.817454744130373,
+  "total_calendar_time_is_not_training_time": true,
+  "interruption": "Codex server restart after completed model fitting/evaluation; saved artifacts verified, no refitting or protocol change.",
+  "supplemental_io": "Atomic tensor writes and complete epoch journal added outside the frozen scientific source; interrupted-state recovery verified. Native smoke found and fixed a relative-path cleanup bug. No additional scientific fits.",
+  "publication": "No push, v0.3.0 tag or release created.",
+  "supplementary_description_observations": 1200,
+  "supplementary_description_independent_instances": 600,
+  "supplementary_extraction_seconds": 25.021271665988024,
+  "supplementary_description_stage": "Exploratory post-primary protocol, fixed original weights and lambda, no additional fitting."
+}

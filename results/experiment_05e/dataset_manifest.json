@@ -1,0 +1,138 @@
+{
+  "seed": 541731,
+  "splits": {
+    "train": {
+      "count": 6000,
+      "attempts": 6405,
+      "sha256": "eb33265d835c36681efa4ced524045287af58632d26eae1b19d778897d827b3b",
+      "family_counts": {
+        "routing": 2000,
+        "state": 2000,
+        "graph": 2000
+      },
+      "optimal_label_prevalence": {
+        "A": 0.2773333333333333,
+        "B": 0.2805,
+        "C": 0.2818333333333333,
+        "D": 0.27166666666666667
+      },
+      "multiple_optimal": 595,
+      "abstain": 1239
+    },
+    "validation": {
+      "count": 1200,
+      "attempts": 1342,
+      "sha256": "81f3fd95605a2fe797a5d3451e262b25a459e993a7e97a79fd3a7fce7b34a154",
+      "family_counts": {
+        "routing": 400,
+        "state": 400,
+        "graph": 400
+      },
+      "optimal_label_prevalence": {
+        "A": 0.26666666666666666,
+        "B": 0.2833333333333333,
+        "C": 0.2775,
+        "D": 0.285
+      },
+      "multiple_optimal": 122,
+      "abstain": 280
+    },
+    "id": {
+      "count": 1200,
+      "attempts": 1350,
+      "sha256": "5a775f2ffb16ec9291a423f4a4543ccc75d4ea8334f154e80ab79658dbc1be24",
+      "family_counts": {
+        "routing": 400,
+        "state": 400,
+        "graph": 400
+      },
+      "optimal_label_prevalence": {
+        "A": 0.2633333333333333,
+        "B": 0.2991666666666667,
+        "C": 0.2758333333333333,
+        "D": 0.2916666666666667
+      },
+      "multiple_optimal": 132,
+      "abstain": 232
+    },
+    "wording": {
+      "count": 1200,
+      "attempts": 1372,
+      "sha256": "9d9748bac9652bdb0f7699d1d8baa022da1c42b54e1c31f9352bea96ce2948ef",
+      "family_counts": {
+        "routing": 400,
+        "state": 400,
+        "graph": 400
+      },
+      "optimal_label_prevalence": {
+        "A": 0.2891666666666667,
+        "B": 0.2783333333333333,
+        "C": 0.2775,
+        "D": 0.2808333333333333
+      },
+      "multiple_optimal": 128,
+      "abstain": 232
+    },
+    "format": {
+      "count": 1200,
+      "attempts": 1395,
+      "sha256": "d323d1d2ea07aaa969a5b83b80913dc05956d0838768114aa904af4b29c2b25a",
+      "family_counts": {
+        "routing": 400,
+        "state": 400,
+        "graph": 400
+      },
+      "optimal_label_prevalence": {
+        "A": 0.2775,
+        "B": 0.2866666666666667,
+        "C": 0.2708333333333333,
+        "D": 0.2783333333333333
+      },
+      "multiple_optimal": 117,
+      "abstain": 232
+    },
+    "structure": {
+      "count": 1200,
+      "attempts": 1229,
+      "sha256": "fee330a31bfd2eeb41dde153b5594cb75e99292ad0337a8e292c519ece44dbd6",
+      "family_counts": {
+        "routing": 400,
+        "state": 400,
+        "graph": 400
+      },
+      "optimal_label_prevalence": {
+        "A": 0.26666666666666666,
+        "B": 0.25666666666666665,
+        "C": 0.2791666666666667,
+        "D": 0.24666666666666667
+      },
+      "multiple_optimal": 54,
+      "abstain": 440
+    },
+    "harder": {
+      "count": 1200,
+      "attempts": 8799,
+      "sha256": "39acda826e71610c836f3857b24bcd3b50b0e535f69d0cf607ddd6b6920bcd61",
+      "family_counts": {
+        "routing": 400,
+        "state": 400,
+        "graph": 400
+      },
+      "optimal_label_prevalence": {
+        "A": 0.30333333333333334,
+        "B": 0.2841666666666667,
+        "C": 0.2925,
+        "D": 0.28833333333333333
+      },
+      "multiple_optimal": 174,
+      "abstain": 220
+    },
+    "permutations": {
+      "count": 480,
+      "independent_parents": 240,
+      "sha256": "c51452c3243472881b0a845023ce2a78941fcb9317e4ed30f7770f2e0f32e101",
+      "intentional_duplicates": "paired presentation views of ID/structural examples, never training data"
+    }
+  },
+  "deduplication": "routing: tool permutation; state: register alpha-renaming; graph: conservative unrooted WL invariant. Not complete program equivalence or graph isomorphism."
+}

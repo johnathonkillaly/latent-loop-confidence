@@ -1,0 +1,20 @@
+{
+  "mlx": {
+    "passed": 72,
+    "skipped": 0,
+    "command": "LATENT_LOOP_MLX_TESTS=1 RUN_MLX_TESTS=1 python -m pytest -q"
+  },
+  "cpu": {
+    "passed": 46,
+    "skipped": 17,
+    "reason": "MLX unavailable or explicit accelerator opt-in",
+    "command": "PYTHONPATH=src CPU_ENV/python -m pytest -q"
+  },
+  "new_experiment": {
+    "passed": 7,
+    "skipped": 0,
+    "includes": "solver independence, split integrity, no-label renderer, feature/scorer permutation, gradient flow, parameter count, checkpoint and exact optimizer restoration; interrupted epoch-transaction recovery"
+  },
+  "package_installation": "Editable install verified in CPU-only isolated environment; installed CLI help succeeds; uv pip check passes; no upgrades",
+  "failures": "No final unit/integration test failures. An unrestricted offline Hub cache inspection initially rejected unused missing metadata; explicit loader allow-patterns verified required files. An initial helper invocation targeted its not-yet-created temporary directory; corrected before execution. Neither affected data, weights or final selection. Supplementary durable-I/O smoke initially exposed a relative/absolute journal-cleanup bug. Corrected before handoff, tested with a relative-root regression, and reverified with native MLX/NumPy serialization; no scientific model or frozen pipeline changed."
+}

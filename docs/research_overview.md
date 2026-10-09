@@ -8,9 +8,11 @@ Can auxiliary networks recognize when another latent computation will improve a 
 | Experiment 3 | Does next-loop loss value differ from confidence? | Frozen parent refiners; C and immediate-gain probes; stopping controls | Correctness AUROC 0.798; gain AUROC 0.762 versus confidence-only gain 0.695 | Gain stopping 49.06% versus one pass 51.28%; weaker template transfer | [Detailed report](../reports/experiment_03/learning_when_to_think.md) |
 | Experiment 4A | Do signals survive stronger tasks and structural shifts? | Historical frozen heads; fresh scalar controls/calibrators; causal trajectory exports | Fresh-ID historical C/V AUROC 0.530/0.534; scalar gain 0.580 | Weak transfer; poor task competence; no newly trained neural heads | [Detailed report](../reports/experiment_04a/foundation_report.md) |
 | Experiment 4B | Can decision transitions guide paid stopping and state selection? | Fresh four-event D head, grouped OOF rankers, frozen parent trajectories | WR AUROC/AP 0.779/0.147; RW 0.794/0.229; D 34.85% | D-versus-one-pass and selection-versus-final paired intervals include zero | [Detailed report](../reports/experiment_04b/decision_value_and_trajectory_selection.md) |
-
 | Experiment 5 | Can trained middle-layer recurrence improve Qwen decisions? | Frozen Qwen; shared layers 12–14, rank-8 LoRA and bounded gates | Rec4 36.00% versus one-pass 32.87%; interval includes zero | Depth4 versus depth1 −0.46 pp [−3.13, +1.50]; weak transfer | [Detailed report](../reports/experiment_05/train_the_thinker.md) |
 | Experiment 5.1 / 5B | Can repeated unchanged-input computation help navigation? | Tiny shared local gated grid network; separate Qwen and Snake controls | Grid4 98.28%, grid8 99.56%; four-versus-one +36.44 pp [32.55, 40.50] | Feedforward controls tie; long-path completion 54.44%; negative Qwen transfer | [Detailed report](../reports/experiment_05b/learning_to_navigate.md) |
+| Experiment 5.2 / 5C | Does repeated local planning scale? | Frozen/retrained grid recurrence, deep untied/global controls, interventions | 9×9 eight-vs-four +5.67 pp [3.56, 8.00] | Long-path episodes essentially fail; stronger first moves are not full navigation | [Report](../reports/experiment_05c/scaling_and_failure_frontier.md) |
+| Experiment 5.3 / 5D | Can candidate Q improve frozen graph decisions? | Arbitrary-graph recurrent policy, frozen-base shared candidate Q, direct controls | One-loop 79.39% → 84.89%; eight-loop base 100% | One-loop gain seed-dominated, classifier comparable; primary lambda zero | [Report](../reports/experiment_05d/decision_bridge.md) |
+| Experiment 5.4 / 5E | Can Q change frozen LM outputs for the better? | Pinned frozen Qwen, shared 197,057-parameter candidate heads, matched C1/C2 | Structural 27.50% → 33.11%, +5.61 pp [2.89, 8.31] | C2 42.58%, prior 44.75%; graph damage, severe permutation sensitivity | [Report](../reports/experiment_05e/the_rendezvous.md) |
 
 Historical naming is retained. The original pilots share one report; no separate Experiment 2 report is present. Data distributions change between studies, so the aggregate accuracies cannot be compared as successive model improvements.
 
@@ -33,16 +35,31 @@ The diagram describes the primary historical architecture. The separate middle-l
 
 The initial pilots and most secondary comparisons are exploratory. Experiment 4B prospectively identifies three primary comparisons: D versus one pass, selection versus the same visited final state, and event AP versus scalar C+V. The first two are inconclusive; the event-prediction comparison supports useful discrimination within this benchmark. Label-informed oracles are privileged opportunity bounds. Negative transfer and deeper-loop harm are retained.
 
-## Roadmap
+## Closing frozen-LM decision interface
 
-**Experiment 5 — Training Recurrent Computation (planned):** train the thinker itself using frozen-backbone middle-layer LoRA, bounded reinjection, and multi-depth supervision. Use fresh training/validation and a prospective final lockbox. Compare recurrence to trained one-pass adaptation at equal parameter counts and measured compute. Assess fixed depths before attempting C/V/D transfer or a new controller.
+```mermaid
+flowchart LR
+    X[Raw task text and candidates] --> LM[Frozen Qwen3 one-pass forward]
+    LM --> H[Final prompt representation]
+    LM --> Z[Permitted label logits]
+    X --> E[Frozen candidate-description embeddings]
+    H --> Q[Shared candidate MLP]
+    E --> Q
+    Z --> Q
+    Q --> F[Validation-frozen fusion or score-only]
+    Z --> F
+    F --> A[Actual selected semantic action]
+    H --> C[Matched direct candidate classifier control]
+    E --> C
+    Z --> C
+```
 
-See [reproduction guidance](reproduction.md), [publication audit](publication_audit.md), [limitations](limitations.md), and [research references](literature_review.md).
+The shared head is an ordinary supervised candidate model. The measured distinction is its objective and selected deployment rule; its name does not establish architectural novelty.
 
-## Completed v0.2.0 and next planned study
+## Closing synthesis and release status
 
-A tiny recurrent network learned to improve decisions across repeated hidden-state updates, but recurrence superiority and scalable planning were not established. Snake's 96.61% horizon-six agreement is matched by feedforward computation; ties and unavoidable-collision states limit interpretation. Qwen maze recurrence (28.33%) underperforms one-pass adaptation (47.78%). Full episodes expose failures hidden by first-action accuracy.
+The original question distinguishes predicting useful computation from creating it. Local grid/graph recurrence can propagate information and improve a fixed model with more iterations; feedforward alternatives and long-horizon failures constrain the planning claim. Candidate scoring can change frozen LM choices for the better, but does not establish an advantage over an ordinary supervised classifier. Calibration, candidate utility, output intervention, and reasoning remain different quantities.
 
-Experiment 5 is now completed; any earlier planned wording above describes the v0.1.0 roadmap. Planned Experiment 5.2, **Does Thinking Scale With Distance?**, will test larger boards, longer graph distances, extra loops and untied/global controls. New experimental results are excluded from this release.
+**PIVOT:** favor ordinary constrained task adaptation and exact external solvers. The [research conclusion](../reports/research_conclusion.md) synthesizes Experiments 1–5.4 and identifies one narrowly justified optional replication; none is started here.
 
-[Release notes](release_notes_v0.2.0.md) · [Audit](publication_audit_v0.2.0.md) · [Reproduction](reproduction_v0.2.0.md)
+Public releases are still **v0.1.0 and v0.2.0**. Experiments 5C/5D/5E are completed local work proposed for **v0.3.0**, not published. Previous release tags are unchanged. See the [draft release notes](release_notes_v0.3.0.md), [publication audit](publication_audit_v0.3.0.md), [reproduction guide](reproduction_v0.3.0.md), [limitations](limitations.md), and [references](literature_review.md).

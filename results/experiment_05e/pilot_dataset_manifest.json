@@ -1,0 +1,24 @@
+{
+  "seed": 541731,
+  "splits": {
+    "pilot": {
+      "count": 180,
+      "attempts": 180,
+      "sha256": "cdf44b785f09ce956aee42f2871eef88b4ce171d5623c082faa6f0763fd521ae",
+      "family_counts": {
+        "routing": 60,
+        "state": 60,
+        "graph": 60
+      },
+      "optimal_label_prevalence": {
+        "A": 0.35,
+        "B": 0.23333333333333334,
+        "C": 0.2833333333333333,
+        "D": 0.2388888888888889
+      },
+      "multiple_optimal": 17,
+      "abstain": 36
+    }
+  },
+  "deduplication": "routing: tool permutation; state: register alpha-renaming; graph: conservative unrooted WL invariant. Not complete program equivalence or graph isomorphism."
+}

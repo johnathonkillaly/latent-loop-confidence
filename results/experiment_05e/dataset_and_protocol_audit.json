@@ -1,0 +1,27 @@
+{
+  "cross_split_duplicate_hashes": 0,
+  "datasets_byte_identical_regeneration": true,
+  "deduplication_limitations": "routing: tool permutation; state: register alpha-renaming; graph: conservative unrooted WL invariant. Not complete program equivalence or graph isomorphism.",
+  "family_counts": {
+    "graph": 4560,
+    "routing": 4560,
+    "state": 4560
+  },
+  "frozen_checkpoints_unchanged": true,
+  "frozen_scientific_sources_unchanged": {
+    "src/latent_loop/rendezvous/__init__.py": true,
+    "src/latent_loop/rendezvous/__main__.py": true,
+    "src/latent_loop/rendezvous/audit.py": true,
+    "src/latent_loop/rendezvous/data.py": true,
+    "src/latent_loop/rendezvous/features.py": true,
+    "src/latent_loop/rendezvous/models.py": true,
+    "src/latent_loop/rendezvous/report.py": true,
+    "src/latent_loop/rendezvous/study.py": true,
+    "src/latent_loop/rendezvous/timing.py": true
+  },
+  "historical_data": "New generation seeds and textual tasks; old graph model states/weights and historical LM feature caches are never used. Full graph-isomorphism/program-equivalence certification is not claimed.",
+  "independent_solver_verified_observations": 13680,
+  "ordinary_semantic_hashes": 13200,
+  "seed_instance_decision_records": 19440,
+  "temperature_changed_decisions": 0
+}

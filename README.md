@@ -6,6 +6,10 @@ Can a small neural network predict whether additional latent computation will im
 
 **A tiny recurrent network learned to improve decisions across repeated hidden-state updates, but recurrence superiority and scalable planning were not established.** Earlier Qwen studies found useful prediction signals without a reliable recurrent decision advantage. Grid planning and language-model reasoning are separate experimental systems.
 
+**Local v0.3.0 draft:** Experiments 5C–5E are completed locally and prepared for review. Public releases remain v0.1.0 and v0.2.0. Nothing from this draft has been pushed or published.
+
+The closing frozen-Qwen study improves constrained structural-choice accuracy **27.50% → 33.11%, +5.61 pp [2.89, 8.31]**, but a matched direct classifier reaches **42.58%** and a simple abstain prior **44.75%**. Novel option wording also collapses the learned heads. The recommendation is **PIVOT** toward carefully validated task adaptation and exact solvers. See the [Rendezvous report](reports/experiment_05e/the_rendezvous.md) and [research conclusion](reports/research_conclusion.md).
+
 Three predictions have different targets:
 
 | Signal | Target | Distinction |
@@ -13,6 +17,8 @@ Three predictions have different targets:
 | C — confidence | Current decision correctness | Discrimination and calibration are separate from changing decisions. |
 | V — value of computation | Expected next-loop supervised loss improvement | Lower loss can occur without correcting an answer. |
 | D — decision value | Beneficial and harmful decision transitions | Wrong→right correction and right→wrong degradation are measured separately. |
+
+Later experiments add **Q**, a shared candidate-quality head that evaluates alternatives and can directly change the selected action. Historical C estimates correctness of the already selected answer. Q is compared with ordinary supervised candidate classification using matched features and parameters.
 
 ## Research record
 
@@ -24,9 +30,11 @@ The [research overview](docs/research_overview.md) links the questions, architec
 | Experiment 3 — Learning When to Think | Fresh-ID correctness AUROC 0.798; immediate-gain AUROC 0.762, AP 0.641 versus prevalence 0.381. Gain stopping 49.06% versus one pass 51.28%. | [Report](reports/experiment_03/learning_when_to_think.md), [HTML](reports/experiment_03/learning_when_to_think.html) |
 | Experiment 4A — Foundation and Generalization | On the stronger generator mixture, historical correctness/gain AUROC falls to 0.530/0.534. Gain stopping 33.74% versus one pass 33.10%; paired interval includes zero. | [Report](reports/experiment_04a/foundation_report.md), [HTML](reports/experiment_04a/foundation_report.html), [Handoff](reports/experiment_04a/experiment_04b_handoff.md) |
 | Experiment 4B — Decision Value and Trajectory Selection | Fresh-ID WR AUROC/AP 0.779/0.147; RW 0.794/0.229. D stopping 34.85%; D + selection 34.88%. No established primary decision or selector advantage. | [Report](reports/experiment_04b/decision_value_and_trajectory_selection.md), [HTML](reports/experiment_04b/decision_value_and_trajectory_selection.html) |
-
 | Experiment 5 — Train the Thinker | Qwen recurrent 36.00% versus one-pass 32.87%; paired +3.13 pp [−2.90, +8.91]. No established depth gain. | [Report](reports/experiment_05/train_the_thinker.md), [HTML](reports/experiment_05/train_the_thinker.html) |
 | Experiment 5.1 / 5B — Think Again | 18,884-parameter grid planner: 61.83/86.00/98.28/99.56% at 1/2/4/8 loops; four-versus-one +36.44 pp [32.55, 40.50]. Comparable four-block feedforward controls reach 97.72/98.33%. Qwen recurrence underperforms one-pass. | [Report](reports/experiment_05b/learning_to_navigate.md), [HTML](reports/experiment_05b/learning_to_navigate.html) |
+| Experiment 5.2 / 5C — Break the Thinker | Frozen 9×9 eight-versus-four-loop gain +5.67 pp [3.56, 8.00]; useful propagation, failed long-path completion. | [Report](reports/experiment_05c/scaling_and_failure_frontier.md), [HTML](reports/experiment_05c/scaling_and_failure_frontier.html) |
+| Experiment 5.3 / 5D — Decision Bridge | One-loop graph rescoring 79.39% → 84.89%, seed-dominated and matched by a classifier; eight-loop validation disables Q. | [Report](reports/experiment_05d/decision_bridge.md), [HTML](reports/experiment_05d/decision_bridge.html), [Handoff](reports/experiment_05d/rendezvous_handoff.md) |
+| Experiment 5.4 / 5E — Rendezvous | Frozen Qwen structural fusion +5.61 pp [2.89, 8.31]; matched C2 beats fusion by 9.47 pp [6.64, 12.25]. | [Report](reports/experiment_05e/the_rendezvous.md), [HTML](reports/experiment_05e/the_rendezvous.html) |
 
 These rows use different datasets and are not a longitudinal accuracy leaderboard. Three seeds share each experiment's held-out problems. Reports distinguish prospective primary comparisons, exploratory findings, negative results, inconclusive comparisons, and privileged label-informed oracle bounds.
 
@@ -82,7 +90,9 @@ Six synthetic task families, conditional four-choice predictions, one small froz
 
 Experiment 5 trains Qwen middle-layer LoRA adapters; its paired gains remain inconclusive. Experiment 5B shows useful repeated local grid computation, while eight-loop completion is 95% on 7×7 and only 54.44% on the long-path subset. Snake horizon-six agreement is 96.61% at four loops, equaled by its four-block feedforward control. Qwen maze recurrence scores 28.33% versus one-pass 47.78%; no transfer of the grid benefit was established.
 
-**Next, planned: Experiment 5.2 — Break the Thinker.** Test scale, graph distance, depth extrapolation and stronger feedforward controls on new prospective splits. It is not included in v0.2.0. See the [release notes](docs/release_notes_v0.2.0.md), [audit](docs/publication_audit_v0.2.0.md) and [reproduction guide](docs/reproduction_v0.2.0.md).
+Experiments 5C, 5D and 5E are completed in this local draft. 5C exposes a failure frontier; 5D connects recurrence to candidate scoring; 5E returns to frozen language-model output intervention. Scoring improves some constrained decisions, but structural graph harm, label sensitivity and competitive ordinary classifiers rule out broad reasoning or architectural claims. No further experiment starts automatically.
+
+See the **unpublished** [v0.3.0 draft notes](docs/release_notes_v0.3.0.md), [audit](docs/publication_audit_v0.3.0.md), [reproduction guide](docs/reproduction_v0.3.0.md), and [conclusion](reports/research_conclusion.md). The [v0.2.0 notes](docs/release_notes_v0.2.0.md), [audit](docs/publication_audit_v0.2.0.md) and [reproduction guide](docs/reproduction_v0.2.0.md) remain historical release records.
 
 ## Attribution and license
 

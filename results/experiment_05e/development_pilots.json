@@ -1,0 +1,35 @@
+{
+  "pilots": [
+    {
+      "variant": "unordered_longer",
+      "count": 180,
+      "accuracy": 0.3,
+      "family_accuracy": {
+        "routing": 0.35,
+        "state": 0.16666666666666666,
+        "graph": 0.38333333333333336
+      }
+    },
+    {
+      "variant": "standard_shorter",
+      "count": 180,
+      "accuracy": 0.3333333333333333,
+      "family_accuracy": {
+        "routing": 0.35,
+        "state": 0.23333333333333334,
+        "graph": 0.4166666666666667
+      }
+    },
+    {
+      "variant": "plain_prefix_shorter",
+      "count": 180,
+      "accuracy": 0.3333333333333333,
+      "family_accuracy": {
+        "routing": 0.2833333333333333,
+        "state": 0.26666666666666666,
+        "graph": 0.45
+      }
+    }
+  ],
+  "decision": "Conventional alphabetical label display, 1-3 state instructions, original Answer: ( prefix retained. Weak frozen competence disclosed. No final outcomes used."
+}

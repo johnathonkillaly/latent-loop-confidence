@@ -1,0 +1,72 @@
+[
+  {
+    "opened_utc": "2026-10-09T20:04:54Z",
+    "purpose": "frozen-backbone final feature extraction",
+    "split": "id"
+  },
+  {
+    "opened_utc": "2026-10-09T20:04:54Z",
+    "purpose": "frozen-backbone final feature extraction",
+    "split": "wording"
+  },
+  {
+    "opened_utc": "2026-10-09T20:04:54Z",
+    "purpose": "frozen-backbone final feature extraction",
+    "split": "format"
+  },
+  {
+    "opened_utc": "2026-10-09T20:04:54Z",
+    "purpose": "frozen-backbone final feature extraction",
+    "split": "structure"
+  },
+  {
+    "opened_utc": "2026-10-09T20:04:54Z",
+    "purpose": "frozen-backbone final feature extraction",
+    "split": "harder"
+  },
+  {
+    "opened_utc": "2026-10-09T20:04:54Z",
+    "purpose": "frozen-backbone final feature extraction",
+    "split": "permutations"
+  },
+  {
+    "opened_utc": "2026-10-09T20:08:22Z",
+    "purpose": "fixed final evaluation",
+    "split": "id"
+  },
+  {
+    "opened_utc": "2026-10-09T20:08:23Z",
+    "purpose": "fixed final evaluation",
+    "split": "wording"
+  },
+  {
+    "opened_utc": "2026-10-09T20:08:25Z",
+    "purpose": "fixed final evaluation",
+    "split": "format"
+  },
+  {
+    "opened_utc": "2026-10-09T20:08:25Z",
+    "purpose": "fixed final evaluation",
+    "split": "structure"
+  },
+  {
+    "opened_utc": "2026-10-09T20:08:26Z",
+    "purpose": "fixed final evaluation",
+    "split": "harder"
+  },
+  {
+    "opened_utc": "2026-10-09T20:08:27Z",
+    "purpose": "fixed final evaluation",
+    "split": "permutations"
+  },
+  {
+    "split": "description_natural",
+    "opened_utc": "2026-10-09T20:34:20Z",
+    "purpose": "frozen-backbone final feature extraction"
+  },
+  {
+    "split": "description_novel",
+    "opened_utc": "2026-10-09T20:34:20Z",
+    "purpose": "frozen-backbone final feature extraction"
+  }
+]

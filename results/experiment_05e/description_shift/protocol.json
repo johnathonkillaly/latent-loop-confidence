@@ -1,0 +1,53 @@
+{
+  "comparison": "identical raw tasks, labels and candidate order; only option descriptions change",
+  "created_utc": "2026-10-09T20:34:20Z",
+  "dataset_sha256": {
+    "results/experiment_05e/datasets/description_natural.jsonl.gz": "a1b9d400048eaa8075ad773f07185c9075a1224f6e1e476db4db4b1ee428e56e",
+    "results/experiment_05e/datasets/description_novel.jsonl.gz": "8e127c31f12209317c0508974670c76cc377254dda3121f5d0fe09d1ccf17ba3"
+  },
+  "family_counts": {
+    "graph": 200,
+    "routing": 200,
+    "state": 200
+  },
+  "instances": 600,
+  "no_reselection": true,
+  "original_checkpoint_sha256": {
+    "artifacts/experiment_05e/checkpoints/c1_511.safetensors": "f0e53ca01fe02ec9051b43f2b1029ca96c9749dbffd87d854240a5e3ba0b5ce6",
+    "artifacts/experiment_05e/checkpoints/c1_622.safetensors": "921eb4d41e9f9d43d6f6dbe7010465141bd0b63834fe590398ce3f099c30c14f",
+    "artifacts/experiment_05e/checkpoints/c1_733.safetensors": "8c0bbe1add6b0ac461e5f2ddee920d00f0a765cc8e97855baff437f2a9d4475b",
+    "artifacts/experiment_05e/checkpoints/c2_511.safetensors": "138d53e11c1fed998b9ab531d5a365db2dd77f78d13163e672772d420791c2d4",
+    "artifacts/experiment_05e/checkpoints/c2_622.safetensors": "84309216704988364f422c5680f4eb3860e2a81ee7622763b0f72bf7628b3ae1",
+    "artifacts/experiment_05e/checkpoints/c2_733.safetensors": "b314765e5451e09f5746376894c9a57fb8ef2ec26f9ba44d7acf3c0b03196e85",
+    "artifacts/experiment_05e/checkpoints/correctness_511.safetensors": "1d91250dbeb5db63e15dbff2ae2564a451d3b3e85ca5120d59c5807f647dafd8",
+    "artifacts/experiment_05e/checkpoints/correctness_622.safetensors": "cff4535a4e693f6169192371d69223b4adf6e697020db1a88d4e32445700f732",
+    "artifacts/experiment_05e/checkpoints/correctness_733.safetensors": "741127ccf2bf38a361c0431e170bb2f9a38617dff10ae9995cb5ecf71624c71f",
+    "artifacts/experiment_05e/checkpoints/description_only_511.safetensors": "3c80232f63d5ae1bbbd6646c226305934452601e437e7f44b504ee46bd5b6e10",
+    "artifacts/experiment_05e/checkpoints/description_only_622.safetensors": "980398d249cfe18e8dff742cd8690d5fdafe1db2f2871a867ef4f0c6db9a1b9a",
+    "artifacts/experiment_05e/checkpoints/description_only_733.safetensors": "fb16d3cc44ecf67bc25d71e79d47af9e25360de849eea402a44e90e77bf0ae5a",
+    "artifacts/experiment_05e/checkpoints/logits_only_511.safetensors": "612a577414f3ad20af0ae963a6fb47c9eb9882060e4873e51bc536846a733376",
+    "artifacts/experiment_05e/checkpoints/logits_only_622.safetensors": "465881b8e9e4c0f4dfe6a63569ccaddf4e83bc4ce621905ff067fd22f89d92ce",
+    "artifacts/experiment_05e/checkpoints/logits_only_733.safetensors": "9c8c8430ad1986945cab586a279ccdac224eb5c9a5ac2aac081a8e8fedf9cf54",
+    "artifacts/experiment_05e/checkpoints/no_logits_511.safetensors": "613fbbf41c372c2857f161966699f9ce491c5f34bd48e162194b1edacf420021",
+    "artifacts/experiment_05e/checkpoints/no_logits_622.safetensors": "7101bb97f5ac599dc7217ea1a4bd18fa9ca991ca792bfd4955587f54ebb61a4a",
+    "artifacts/experiment_05e/checkpoints/no_logits_733.safetensors": "631ea97dc18f2800b6991b6d2cd340e7e2e16fee187998906fb8bb051979e76e",
+    "artifacts/experiment_05e/checkpoints/ranking_511.safetensors": "39edcbf01615a9be9a0a1e4eb259f99d4e9f2cb996e9301b458b9897441bf328",
+    "artifacts/experiment_05e/checkpoints/ranking_622.safetensors": "930edab0f4155150e6bcce52234970998c05ea6bcae5db7196f0d8e1ac2e4f6c",
+    "artifacts/experiment_05e/checkpoints/ranking_733.safetensors": "a5d859d78913b33d7d632e20ffa628c21e42f34fb97a11e48863a5428502eae4",
+    "artifacts/experiment_05e/checkpoints/residual_511.safetensors": "58d4318061dbca8fd2b43a1fff51407361014255f3a4dd8f586e4985746a7762",
+    "artifacts/experiment_05e/checkpoints/residual_622.safetensors": "333025a5d0a6e4a29b58da705c2e2980b8b4283cfc658e8218999840fd0e7c03",
+    "artifacts/experiment_05e/checkpoints/residual_733.safetensors": "e6ef209505b35f42080d28e3d7744703b9cce737c3cbb204977a8160e730a93d"
+  },
+  "seed": 641722,
+  "selected_original_fusion": {
+    "accuracy": 0.42055556178092957,
+    "lambda": 4,
+    "objective": "correctness",
+    "seed_accuracies": [
+      0.42500001192092896,
+      0.40666666626930237,
+      0.4300000071525574
+    ]
+  },
+  "stage": "after primary opening; supplementary exploratory evaluation only"
+}

@@ -1,0 +1,244 @@
+{
+  "all_validation_fusions": [
+    {
+      "accuracy": 0.3283333480358124,
+      "lambda": 0,
+      "objective": "correctness",
+      "seed_accuracies": [
+        0.3283333480358124,
+        0.3283333480358124,
+        0.3283333480358124
+      ]
+    },
+    {
+      "accuracy": 0.33000001311302185,
+      "lambda": 0.1,
+      "objective": "correctness",
+      "seed_accuracies": [
+        0.3283333480358124,
+        0.33000001311302185,
+        0.3316666781902313
+      ]
+    },
+    {
+      "accuracy": 0.33500000834465027,
+      "lambda": 0.25,
+      "objective": "correctness",
+      "seed_accuracies": [
+        0.34166666865348816,
+        0.3283333480358124,
+        0.33500000834465027
+      ]
+    },
+    {
+      "accuracy": 0.34166666865348816,
+      "lambda": 0.5,
+      "objective": "correctness",
+      "seed_accuracies": [
+        0.34333333373069763,
+        0.3383333384990692,
+        0.34333333373069763
+      ]
+    },
+    {
+      "accuracy": 0.349444439013799,
+      "lambda": 1,
+      "objective": "correctness",
+      "seed_accuracies": [
+        0.351666659116745,
+        0.34833332896232605,
+        0.34833332896232605
+      ]
+    },
+    {
+      "accuracy": 0.3766666650772095,
+      "lambda": 2,
+      "objective": "correctness",
+      "seed_accuracies": [
+        0.38499999046325684,
+        0.3633333444595337,
+        0.3816666603088379
+      ]
+    },
+    {
+      "accuracy": 0.42055556178092957,
+      "lambda": 4,
+      "objective": "correctness",
+      "seed_accuracies": [
+        0.42500001192092896,
+        0.40666666626930237,
+        0.4300000071525574
+      ]
+    },
+    {
+      "accuracy": 0.3283333480358124,
+      "lambda": 0,
+      "objective": "ranking",
+      "seed_accuracies": [
+        0.3283333480358124,
+        0.3283333480358124,
+        0.3283333480358124
+      ]
+    },
+    {
+      "accuracy": 0.33666667342185974,
+      "lambda": 0.1,
+      "objective": "ranking",
+      "seed_accuracies": [
+        0.3333333432674408,
+        0.33666667342185974,
+        0.3400000035762787
+      ]
+    },
+    {
+      "accuracy": 0.3405555586020152,
+      "lambda": 0.25,
+      "objective": "ranking",
+      "seed_accuracies": [
+        0.33666667342185974,
+        0.33666667342185974,
+        0.34833332896232605
+      ]
+    },
+    {
+      "accuracy": 0.3561111092567444,
+      "lambda": 0.5,
+      "objective": "ranking",
+      "seed_accuracies": [
+        0.34833332896232605,
+        0.3633333444595337,
+        0.3566666543483734
+      ]
+    },
+    {
+      "accuracy": 0.3638888895511627,
+      "lambda": 1,
+      "objective": "ranking",
+      "seed_accuracies": [
+        0.3499999940395355,
+        0.36666667461395264,
+        0.375
+      ]
+    },
+    {
+      "accuracy": 0.38722222050031024,
+      "lambda": 2,
+      "objective": "ranking",
+      "seed_accuracies": [
+        0.36500000953674316,
+        0.3799999952316284,
+        0.4166666567325592
+      ]
+    },
+    {
+      "accuracy": 0.40222222606341046,
+      "lambda": 4,
+      "objective": "ranking",
+      "seed_accuracies": [
+        0.38333332538604736,
+        0.39500001072883606,
+        0.4283333420753479
+      ]
+    }
+  ],
+  "checkpoint_sha256": {
+    "artifacts/experiment_05e/checkpoints/c1_511.safetensors": "f0e53ca01fe02ec9051b43f2b1029ca96c9749dbffd87d854240a5e3ba0b5ce6",
+    "artifacts/experiment_05e/checkpoints/c1_622.safetensors": "921eb4d41e9f9d43d6f6dbe7010465141bd0b63834fe590398ce3f099c30c14f",
+    "artifacts/experiment_05e/checkpoints/c1_733.safetensors": "8c0bbe1add6b0ac461e5f2ddee920d00f0a765cc8e97855baff437f2a9d4475b",
+    "artifacts/experiment_05e/checkpoints/c2_511.safetensors": "138d53e11c1fed998b9ab531d5a365db2dd77f78d13163e672772d420791c2d4",
+    "artifacts/experiment_05e/checkpoints/c2_622.safetensors": "84309216704988364f422c5680f4eb3860e2a81ee7622763b0f72bf7628b3ae1",
+    "artifacts/experiment_05e/checkpoints/c2_733.safetensors": "b314765e5451e09f5746376894c9a57fb8ef2ec26f9ba44d7acf3c0b03196e85",
+    "artifacts/experiment_05e/checkpoints/correctness_511.safetensors": "1d91250dbeb5db63e15dbff2ae2564a451d3b3e85ca5120d59c5807f647dafd8",
+    "artifacts/experiment_05e/checkpoints/correctness_622.safetensors": "cff4535a4e693f6169192371d69223b4adf6e697020db1a88d4e32445700f732",
+    "artifacts/experiment_05e/checkpoints/correctness_733.safetensors": "741127ccf2bf38a361c0431e170bb2f9a38617dff10ae9995cb5ecf71624c71f",
+    "artifacts/experiment_05e/checkpoints/description_only_511.safetensors": "3c80232f63d5ae1bbbd6646c226305934452601e437e7f44b504ee46bd5b6e10",
+    "artifacts/experiment_05e/checkpoints/description_only_622.safetensors": "980398d249cfe18e8dff742cd8690d5fdafe1db2f2871a867ef4f0c6db9a1b9a",
+    "artifacts/experiment_05e/checkpoints/description_only_733.safetensors": "fb16d3cc44ecf67bc25d71e79d47af9e25360de849eea402a44e90e77bf0ae5a",
+    "artifacts/experiment_05e/checkpoints/logits_only_511.safetensors": "612a577414f3ad20af0ae963a6fb47c9eb9882060e4873e51bc536846a733376",
+    "artifacts/experiment_05e/checkpoints/logits_only_622.safetensors": "465881b8e9e4c0f4dfe6a63569ccaddf4e83bc4ce621905ff067fd22f89d92ce",
+    "artifacts/experiment_05e/checkpoints/logits_only_733.safetensors": "9c8c8430ad1986945cab586a279ccdac224eb5c9a5ac2aac081a8e8fedf9cf54",
+    "artifacts/experiment_05e/checkpoints/no_logits_511.safetensors": "613fbbf41c372c2857f161966699f9ce491c5f34bd48e162194b1edacf420021",
+    "artifacts/experiment_05e/checkpoints/no_logits_622.safetensors": "7101bb97f5ac599dc7217ea1a4bd18fa9ca991ca792bfd4955587f54ebb61a4a",
+    "artifacts/experiment_05e/checkpoints/no_logits_733.safetensors": "631ea97dc18f2800b6991b6d2cd340e7e2e16fee187998906fb8bb051979e76e",
+    "artifacts/experiment_05e/checkpoints/ranking_511.safetensors": "39edcbf01615a9be9a0a1e4eb259f99d4e9f2cb996e9301b458b9897441bf328",
+    "artifacts/experiment_05e/checkpoints/ranking_622.safetensors": "930edab0f4155150e6bcce52234970998c05ea6bcae5db7196f0d8e1ac2e4f6c",
+    "artifacts/experiment_05e/checkpoints/ranking_733.safetensors": "a5d859d78913b33d7d632e20ffa628c21e42f34fb97a11e48863a5428502eae4",
+    "artifacts/experiment_05e/checkpoints/residual_511.safetensors": "58d4318061dbca8fd2b43a1fff51407361014255f3a4dd8f586e4985746a7762",
+    "artifacts/experiment_05e/checkpoints/residual_622.safetensors": "333025a5d0a6e4a29b58da705c2e2980b8b4283cfc658e8218999840fd0e7c03",
+    "artifacts/experiment_05e/checkpoints/residual_733.safetensors": "e6ef209505b35f42080d28e3d7744703b9cce737c3cbb204977a8160e730a93d"
+  },
+  "config": {
+    "active_budget_seconds": 14400,
+    "assistant_prefix": "Answer: (",
+    "batch_size": 128,
+    "dataset_seed": 541731,
+    "epochs": 24,
+    "extract_batch": 8,
+    "hidden_width": 64,
+    "lambda_grid": [
+      0,
+      0.1,
+      0.25,
+      0.5,
+      1,
+      2,
+      4
+    ],
+    "learning_rate": 0.001,
+    "memory_gb": 48,
+    "pilot_size": 180,
+    "primary_objective_candidates": [
+      "correctness",
+      "ranking"
+    ],
+    "primary_population": "structure",
+    "sizes": {
+      "format": 1200,
+      "harder": 1200,
+      "id": 1200,
+      "structure": 1200,
+      "train": 6000,
+      "validation": 1200,
+      "wording": 1200
+    },
+    "training_seeds": [
+      511,
+      622,
+      733
+    ],
+    "weight_decay": 0.0001
+  },
+  "dataset_manifest_sha256": "e785a9ec016d5ab39b65d10f980ed4f3198b527798c020fde863300730811eba",
+  "latency_rule": "validation prompts only; interleaved base/Q/C2, synchronized full prefix, tokenization and final selection included; conditional four-label projection",
+  "other_tests": "secondary/exploratory; no final selection",
+  "permutation_rule": "first 120 ID and first 120 structural instances; two independent presentation/identifier permutations each; cluster by original instance",
+  "primary_comparison": "same frozen BaseLM versus BaseLM + selected candidate Q; three seeds averaged; paired graph/task-instance and seed bootstrap 95% interval",
+  "primary_population": "structure: 400 routing deny-override, 400 copy/multiply register programs, 400 directed DAG routes",
+  "prospective_threshold": "primary 95% paired interval lower bound > 0; classifier superiority assessed separately",
+  "selected": {
+    "accuracy": 0.42055556178092957,
+    "lambda": 4,
+    "objective": "correctness",
+    "seed_accuracies": [
+      0.42500001192092896,
+      0.40666666626930237,
+      0.4300000071525574
+    ]
+  },
+  "source_sha256": {
+    "src/latent_loop/rendezvous/__init__.py": "8a78ded863315b1defa70f7b75d45f73899cc6fefb81e37729150ff4df2d092e",
+    "src/latent_loop/rendezvous/__main__.py": "963c01d2755459d8b7069c1b3f88d965f534fec3bb1ff58d452736f12f1ed492",
+    "src/latent_loop/rendezvous/audit.py": "491821f1f546845bc855248b246c94a1a1af2452e6cdb349d7eaab1b2528b885",
+    "src/latent_loop/rendezvous/data.py": "f574c35ac5cdb1bc23c08f98fea4e46733d2ef3386d247c88e6aa037cbd49370",
+    "src/latent_loop/rendezvous/features.py": "d2e18da49a2cf8626477cdc31e220fbac48c3ed48c004257531e1fdeca87bb33",
+    "src/latent_loop/rendezvous/models.py": "aa986573e38c13113e154f16b4386b88309677cdbd276df5ac132e040798f38e",
+    "src/latent_loop/rendezvous/report.py": "b53e6e0fb8f912f422a6af755502620e3d28cc4a2352de34f5616cba9c41e354",
+    "src/latent_loop/rendezvous/study.py": "d65192426b71aa011829efce7172a5c462c4dd1915d863823824e70cff47756e",
+    "src/latent_loop/rendezvous/timing.py": "60b538b58d65291cff35583f7542dda3b4b8b7bb0eb83a4852408bae6301eb85"
+  },
+  "strength_check": "selected fusion versus same-feature, same-parameter C2 set-aware direct classifier",
+  "temperature": {
+    "nll": 1.389126844131192,
+    "temperature": 4.0
+  }
+}

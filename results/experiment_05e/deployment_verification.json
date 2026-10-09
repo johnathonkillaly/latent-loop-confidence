@@ -1,0 +1,20 @@
+{
+  "candidate_head_row_permutation_max_error": 0.0,
+  "incremental_head_active_metal_bytes": 803332,
+  "live_vs_cached_base_max_error": 3.814697265625e-05,
+  "live_vs_cached_decisions_identical": true,
+  "live_vs_cached_fusion_max_error": 4.4211745262145996e-05,
+  "memory_scope": "Active Metal allocation increase after loading one frozen selected head; measured separately from full-policy peak and excludes backbone residency.",
+  "model_trainable_parameters": 0,
+  "parameter_counts": {
+    "c1": 197057,
+    "c2": 197057,
+    "correctness": 197057,
+    "description_only": 197057,
+    "logits_only": 197057,
+    "no_logits": 197057,
+    "ranking": 197057,
+    "residual": 197057
+  },
+  "validation_prompts_checked": 16
+}

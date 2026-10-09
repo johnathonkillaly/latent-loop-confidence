@@ -1,0 +1,18 @@
+{
+  "dataset_seed": 541731,
+  "pilot_size": 180,
+  "sizes": {"train": 6000, "validation": 1200, "id": 1200, "wording": 1200, "format": 1200, "structure": 1200, "harder": 1200},
+  "training_seeds": [511, 622, 733],
+  "extract_batch": 8,
+  "memory_gb": 48,
+  "active_budget_seconds": 14400,
+  "hidden_width": 64,
+  "epochs": 24,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "lambda_grid": [0, 0.1, 0.25, 0.5, 1, 2, 4],
+  "primary_population": "structure",
+  "primary_objective_candidates": ["correctness", "ranking"],
+  "assistant_prefix": "Answer: ("
+}

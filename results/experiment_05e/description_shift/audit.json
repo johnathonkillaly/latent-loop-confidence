@@ -1,0 +1,9 @@
+{
+  "interpretation": "Exploratory supplement frozen after the original primary results; no original protocol reselection.",
+  "labels_verified_by_both_solvers": true,
+  "no_new_fits": true,
+  "observations": 1200,
+  "paired_independent_instances": 600,
+  "semantic_identity_and_label_mapping_preserved": true,
+  "status": "passed"
+}

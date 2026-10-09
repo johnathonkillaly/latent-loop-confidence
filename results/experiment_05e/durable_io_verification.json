@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "scope": "Temporary native MLX model/optimizer serialization and journal recovery after a simulated torn checkpoint set; atomic NumPy feature serialization. No optimizer updates or scientific model fits.",
+  "new_model_fits": 0,
+  "frozen_scientific_source_modified": false,
+  "initial_failure": "Relative versus absolute journal directory comparison removed the new transaction. Corrected by normalizing the journal root before cleanup; regression now exercises a relative root. Scientific pipeline and fitted models were unaffected."
+}

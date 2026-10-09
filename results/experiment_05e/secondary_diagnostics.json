@@ -1,0 +1,635 @@
+{
+  "splits": {
+    "format": {
+      "families": {
+        "graph": {
+          "abstain_prevalence": 0.1375,
+          "difficulty_min_max": [
+            -1,
+            6
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              -0.02,
+              0.03833333333333333
+            ],
+            "difference": 0.009166666666666667,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.0,
+              0.0175,
+              0.01
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.29125
+        },
+        "routing": {
+          "abstain_prevalence": 0.4425,
+          "difficulty_min_max": [
+            1,
+            3
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.041666666666666664,
+              0.19
+            ],
+            "difference": 0.11583333333333333,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.1125,
+              0.11,
+              0.125
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.29375
+        },
+        "state": {
+          "abstain_prevalence": null,
+          "difficulty_min_max": [
+            1,
+            3
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.025833333333333333,
+              0.13
+            ],
+            "difference": 0.0775,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.1025,
+              0.0575,
+              0.0725
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.25
+        }
+      },
+      "full_q_only_minus_logits_only": {
+        "ci95": [
+          0.04694444444444444,
+          0.12861111111111112
+        ],
+        "difference": 0.08833333333333333,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.0975,
+          0.06416666666666666,
+          0.10333333333333333
+        ],
+        "training_seeds": 3
+      },
+      "fusion_minus_description_only": {
+        "ci95": [
+          -0.02195138888888888,
+          0.029166666666666667
+        ],
+        "difference": 0.004166666666666667,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.013333333333333334,
+          -0.0008333333333333334,
+          0.0
+        ],
+        "training_seeds": 3
+      },
+      "no_logits_minus_description_only": {
+        "ci95": [
+          -0.011944444444444445,
+          0.01638888888888889
+        ],
+        "difference": 0.0016666666666666668,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.008333333333333333,
+          0.004166666666666667,
+          -0.0075
+        ],
+        "training_seeds": 3
+      },
+      "q_only_minus_c2": {
+        "ci95": [
+          -0.024166666666666666,
+          0.024729166666666566
+        ],
+        "difference": 0.0005555555555555556,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.0016666666666666668,
+          -0.015833333333333335,
+          0.015833333333333335
+        ],
+        "training_seeds": 3
+      }
+    },
+    "harder": {
+      "families": {
+        "graph": {
+          "abstain_prevalence": 0.0,
+          "difficulty_min_max": [
+            5,
+            9
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.07916666666666666,
+              0.1625
+            ],
+            "difference": 0.12,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.125,
+              0.1075,
+              0.1275
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.353125
+        },
+        "routing": {
+          "abstain_prevalence": 0.55,
+          "difficulty_min_max": [
+            2,
+            4
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.13083333333333333,
+              0.24583333333333332
+            ],
+            "difference": 0.18833333333333332,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.19,
+              0.1825,
+              0.1925
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.273125
+        },
+        "state": {
+          "abstain_prevalence": null,
+          "difficulty_min_max": [
+            8,
+            12
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.015833333333333335,
+              0.11416666666666667
+            ],
+            "difference": 0.06583333333333333,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.0675,
+              0.0425,
+              0.0875
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.25
+        }
+      },
+      "full_q_only_minus_logits_only": {
+        "ci95": [
+          0.1258263888888889,
+          0.21083333333333334
+        ],
+        "difference": 0.1686111111111111,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.17416666666666666,
+          0.1425,
+          0.18916666666666668
+        ],
+        "training_seeds": 3
+      },
+      "fusion_minus_description_only": {
+        "ci95": [
+          -0.0325,
+          0.03361111111111111
+        ],
+        "difference": 0.0011111111111111111,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.0008333333333333334,
+          -0.011666666666666667,
+          0.014166666666666666
+        ],
+        "training_seeds": 3
+      },
+      "no_logits_minus_description_only": {
+        "ci95": [
+          -0.016944444444444446,
+          0.01
+        ],
+        "difference": -0.0033333333333333335,
+        "independent_instances": 1200,
+        "seed_differences": [
+          -0.0008333333333333334,
+          -0.011666666666666667,
+          0.0025
+        ],
+        "training_seeds": 3
+      },
+      "q_only_minus_c2": {
+        "ci95": [
+          -0.0475,
+          0.0002777777777777778
+        ],
+        "difference": -0.02277777777777778,
+        "independent_instances": 1200,
+        "seed_differences": [
+          -0.005833333333333334,
+          -0.041666666666666664,
+          -0.020833333333333332
+        ],
+        "training_seeds": 3
+      }
+    },
+    "id": {
+      "families": {
+        "graph": {
+          "abstain_prevalence": 0.135,
+          "difficulty_min_max": [
+            -1,
+            5
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.0075,
+              0.08002083333333303
+            ],
+            "difference": 0.043333333333333335,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.0425,
+              0.0575,
+              0.03
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.29
+        },
+        "routing": {
+          "abstain_prevalence": 0.445,
+          "difficulty_min_max": [
+            1,
+            3
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.0725,
+              0.165
+            ],
+            "difference": 0.11833333333333333,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.1125,
+              0.125,
+              0.1175
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.3075
+        },
+        "state": {
+          "abstain_prevalence": null,
+          "difficulty_min_max": [
+            1,
+            3
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.0625,
+              0.15083333333333335
+            ],
+            "difference": 0.10666666666666667,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.0925,
+              0.105,
+              0.1225
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.25
+        }
+      },
+      "full_q_only_minus_logits_only": {
+        "ci95": [
+          0.06277777777777778,
+          0.13666666666666666
+        ],
+        "difference": 0.09972222222222223,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.09333333333333334,
+          0.10583333333333333,
+          0.1
+        ],
+        "training_seeds": 3
+      },
+      "fusion_minus_description_only": {
+        "ci95": [
+          -0.009166666666666667,
+          0.06194444444444445
+        ],
+        "difference": 0.026944444444444444,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.0125,
+          0.0375,
+          0.030833333333333334
+        ],
+        "training_seeds": 3
+      },
+      "no_logits_minus_description_only": {
+        "ci95": [
+          -0.015,
+          0.01611111111111111
+        ],
+        "difference": 0.0008333333333333334,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.005,
+          -0.009166666666666667,
+          0.006666666666666667
+        ],
+        "training_seeds": 3
+      },
+      "q_only_minus_c2": {
+        "ci95": [
+          -0.0125,
+          0.024166666666666666
+        ],
+        "difference": 0.005555555555555556,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.005833333333333334,
+          -0.0033333333333333335,
+          0.014166666666666666
+        ],
+        "training_seeds": 3
+      }
+    },
+    "structure": {
+      "families": {
+        "graph": {
+          "abstain_prevalence": 0.4925,
+          "difficulty_min_max": [
+            -1,
+            3
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              -0.12333333333333334,
+              -0.043333333333333335
+            ],
+            "difference": -0.0825,
+            "independent_instances": 400,
+            "seed_differences": [
+              -0.0825,
+              -0.0825,
+              -0.0825
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.260625
+        },
+        "routing": {
+          "abstain_prevalence": 0.6075,
+          "difficulty_min_max": [
+            2,
+            4
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.10997916666666668,
+              0.22916666666666666
+            ],
+            "difference": 0.16916666666666666,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.205,
+              0.14,
+              0.1625
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.27625
+        },
+        "state": {
+          "abstain_prevalence": null,
+          "difficulty_min_max": [
+            1,
+            3
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.04,
+              0.12416666666666666
+            ],
+            "difference": 0.08166666666666667,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.0725,
+              0.0825,
+              0.09
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.25
+        }
+      },
+      "full_q_only_minus_logits_only": {
+        "ci95": [
+          0.095,
+          0.16805555555555557
+        ],
+        "difference": 0.1322222222222222,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.1275,
+          0.13333333333333333,
+          0.13583333333333333
+        ],
+        "training_seeds": 3
+      },
+      "fusion_minus_description_only": {
+        "ci95": [
+          -0.08583333333333333,
+          -0.022222222222222223
+        ],
+        "difference": -0.05416666666666667,
+        "independent_instances": 1200,
+        "seed_differences": [
+          -0.04583333333333333,
+          -0.060833333333333336,
+          -0.05583333333333333
+        ],
+        "training_seeds": 3
+      },
+      "no_logits_minus_description_only": {
+        "ci95": [
+          -0.008895833333333327,
+          0.024722222222222222
+        ],
+        "difference": 0.006944444444444444,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.020833333333333332,
+          0.004166666666666667,
+          -0.004166666666666667
+        ],
+        "training_seeds": 3
+      },
+      "q_only_minus_c2": {
+        "ci95": [
+          -0.020833333333333332,
+          0.015277777777777777
+        ],
+        "difference": -0.0033333333333333335,
+        "independent_instances": 1200,
+        "seed_differences": [
+          -0.005833333333333334,
+          -0.011666666666666667,
+          0.0075
+        ],
+        "training_seeds": 3
+      }
+    },
+    "wording": {
+      "families": {
+        "graph": {
+          "abstain_prevalence": 0.145,
+          "difficulty_min_max": [
+            -1,
+            5
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.010833333333333334,
+              0.105
+            ],
+            "difference": 0.05583333333333333,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.04,
+              0.035,
+              0.0925
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.29125
+        },
+        "routing": {
+          "abstain_prevalence": 0.435,
+          "difficulty_min_max": [
+            1,
+            3
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.0175,
+              0.0925
+            ],
+            "difference": 0.05333333333333334,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.0625,
+              0.065,
+              0.0325
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.303125
+        },
+        "state": {
+          "abstain_prevalence": null,
+          "difficulty_min_max": [
+            1,
+            3
+          ],
+          "fusion_minus_base": {
+            "ci95": [
+              0.043333333333333335,
+              0.1225
+            ],
+            "difference": 0.0825,
+            "independent_instances": 400,
+            "seed_differences": [
+              0.075,
+              0.08,
+              0.0925
+            ],
+            "training_seeds": 3
+          },
+          "uniform_random_accuracy": 0.25
+        }
+      },
+      "full_q_only_minus_logits_only": {
+        "ci95": [
+          0.06138888888888889,
+          0.14416666666666667
+        ],
+        "difference": 0.10277777777777777,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.08083333333333333,
+          0.10083333333333333,
+          0.12666666666666668
+        ],
+        "training_seeds": 3
+      },
+      "fusion_minus_description_only": {
+        "ci95": [
+          -0.008333333333333333,
+          0.06666666666666667
+        ],
+        "difference": 0.028888888888888888,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.03333333333333333,
+          0.029166666666666667,
+          0.024166666666666666
+        ],
+        "training_seeds": 3
+      },
+      "no_logits_minus_description_only": {
+        "ci95": [
+          -0.018062499999999992,
+          0.035833333333333335
+        ],
+        "difference": 0.008333333333333333,
+        "independent_instances": 1200,
+        "seed_differences": [
+          0.0325,
+          0.011666666666666667,
+          -0.019166666666666665
+        ],
+        "training_seeds": 3
+      },
+      "q_only_minus_c2": {
+        "ci95": [
+          -0.029722222222222223,
+          0.024722222222222222
+        ],
+        "difference": -0.005,
+        "independent_instances": 1200,
+        "seed_differences": [
+          -0.02,
+          -0.015,
+          0.02
+        ],
+        "training_seeds": 3
+      }
+    }
+  },
+  "status": "Post-freeze descriptive diagnostics; no new model selection or fits"
+}

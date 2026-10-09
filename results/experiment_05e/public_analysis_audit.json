@@ -1,0 +1,23 @@
+{
+  "byte_identical_main_datasets": true,
+  "checkpoint_refitting_scope": "Independent cached-feature verification receipt, not independently repeated by this CPU public audit.",
+  "cpu_only": true,
+  "frozen_source_hashes": {
+    "src/latent_loop/rendezvous/__init__.py": true,
+    "src/latent_loop/rendezvous/__main__.py": true,
+    "src/latent_loop/rendezvous/audit.py": true,
+    "src/latent_loop/rendezvous/data.py": true,
+    "src/latent_loop/rendezvous/features.py": true,
+    "src/latent_loop/rendezvous/models.py": true,
+    "src/latent_loop/rendezvous/report.py": true,
+    "src/latent_loop/rendezvous/study.py": true,
+    "src/latent_loop/rendezvous/timing.py": true
+  },
+  "main_observations_verified": 13680,
+  "ordinary_unique_semantic_hashes": 13200,
+  "pilot_observations_verified": 360,
+  "primary_paired_estimates_recomputed": true,
+  "private_checkpoints_required": false,
+  "scalar_method_choices_checked": 369360,
+  "status": "passed"
+}

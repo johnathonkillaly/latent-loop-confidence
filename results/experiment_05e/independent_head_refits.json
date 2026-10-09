@@ -1,0 +1,128 @@
+{
+  "scope": "All 24 auxiliary fits from fresh initialization in an isolated directory, using the same verified cached frozen Qwen features. Backbone feature extraction was not independently repeated end to end.",
+  "fits": 24,
+  "all_checkpoint_files_identical": true,
+  "total_fit_seconds": 54.15696799797297,
+  "checkpoints": {
+    "logits_only_511.safetensors": {
+      "original_sha256": "612a577414f3ad20af0ae963a6fb47c9eb9882060e4873e51bc536846a733376",
+      "independent_sha256": "612a577414f3ad20af0ae963a6fb47c9eb9882060e4873e51bc536846a733376",
+      "identical": true
+    },
+    "residual_511.safetensors": {
+      "original_sha256": "58d4318061dbca8fd2b43a1fff51407361014255f3a4dd8f586e4985746a7762",
+      "independent_sha256": "58d4318061dbca8fd2b43a1fff51407361014255f3a4dd8f586e4985746a7762",
+      "identical": true
+    },
+    "no_logits_733.safetensors": {
+      "original_sha256": "631ea97dc18f2800b6991b6d2cd340e7e2e16fee187998906fb8bb051979e76e",
+      "independent_sha256": "631ea97dc18f2800b6991b6d2cd340e7e2e16fee187998906fb8bb051979e76e",
+      "identical": true
+    },
+    "correctness_733.safetensors": {
+      "original_sha256": "741127ccf2bf38a361c0431e170bb2f9a38617dff10ae9995cb5ecf71624c71f",
+      "independent_sha256": "741127ccf2bf38a361c0431e170bb2f9a38617dff10ae9995cb5ecf71624c71f",
+      "identical": true
+    },
+    "c2_733.safetensors": {
+      "original_sha256": "b314765e5451e09f5746376894c9a57fb8ef2ec26f9ba44d7acf3c0b03196e85",
+      "independent_sha256": "b314765e5451e09f5746376894c9a57fb8ef2ec26f9ba44d7acf3c0b03196e85",
+      "identical": true
+    },
+    "ranking_733.safetensors": {
+      "original_sha256": "a5d859d78913b33d7d632e20ffa628c21e42f34fb97a11e48863a5428502eae4",
+      "independent_sha256": "a5d859d78913b33d7d632e20ffa628c21e42f34fb97a11e48863a5428502eae4",
+      "identical": true
+    },
+    "description_only_622.safetensors": {
+      "original_sha256": "980398d249cfe18e8dff742cd8690d5fdafe1db2f2871a867ef4f0c6db9a1b9a",
+      "independent_sha256": "980398d249cfe18e8dff742cd8690d5fdafe1db2f2871a867ef4f0c6db9a1b9a",
+      "identical": true
+    },
+    "description_only_733.safetensors": {
+      "original_sha256": "fb16d3cc44ecf67bc25d71e79d47af9e25360de849eea402a44e90e77bf0ae5a",
+      "independent_sha256": "fb16d3cc44ecf67bc25d71e79d47af9e25360de849eea402a44e90e77bf0ae5a",
+      "identical": true
+    },
+    "c2_622.safetensors": {
+      "original_sha256": "84309216704988364f422c5680f4eb3860e2a81ee7622763b0f72bf7628b3ae1",
+      "independent_sha256": "84309216704988364f422c5680f4eb3860e2a81ee7622763b0f72bf7628b3ae1",
+      "identical": true
+    },
+    "ranking_622.safetensors": {
+      "original_sha256": "930edab0f4155150e6bcce52234970998c05ea6bcae5db7196f0d8e1ac2e4f6c",
+      "independent_sha256": "930edab0f4155150e6bcce52234970998c05ea6bcae5db7196f0d8e1ac2e4f6c",
+      "identical": true
+    },
+    "correctness_622.safetensors": {
+      "original_sha256": "cff4535a4e693f6169192371d69223b4adf6e697020db1a88d4e32445700f732",
+      "independent_sha256": "cff4535a4e693f6169192371d69223b4adf6e697020db1a88d4e32445700f732",
+      "identical": true
+    },
+    "no_logits_622.safetensors": {
+      "original_sha256": "7101bb97f5ac599dc7217ea1a4bd18fa9ca991ca792bfd4955587f54ebb61a4a",
+      "independent_sha256": "7101bb97f5ac599dc7217ea1a4bd18fa9ca991ca792bfd4955587f54ebb61a4a",
+      "identical": true
+    },
+    "c1_511.safetensors": {
+      "original_sha256": "f0e53ca01fe02ec9051b43f2b1029ca96c9749dbffd87d854240a5e3ba0b5ce6",
+      "independent_sha256": "f0e53ca01fe02ec9051b43f2b1029ca96c9749dbffd87d854240a5e3ba0b5ce6",
+      "identical": true
+    },
+    "logits_only_622.safetensors": {
+      "original_sha256": "465881b8e9e4c0f4dfe6a63569ccaddf4e83bc4ce621905ff067fd22f89d92ce",
+      "independent_sha256": "465881b8e9e4c0f4dfe6a63569ccaddf4e83bc4ce621905ff067fd22f89d92ce",
+      "identical": true
+    },
+    "c1_733.safetensors": {
+      "original_sha256": "8c0bbe1add6b0ac461e5f2ddee920d00f0a765cc8e97855baff437f2a9d4475b",
+      "independent_sha256": "8c0bbe1add6b0ac461e5f2ddee920d00f0a765cc8e97855baff437f2a9d4475b",
+      "identical": true
+    },
+    "residual_622.safetensors": {
+      "original_sha256": "333025a5d0a6e4a29b58da705c2e2980b8b4283cfc658e8218999840fd0e7c03",
+      "independent_sha256": "333025a5d0a6e4a29b58da705c2e2980b8b4283cfc658e8218999840fd0e7c03",
+      "identical": true
+    },
+    "description_only_511.safetensors": {
+      "original_sha256": "3c80232f63d5ae1bbbd6646c226305934452601e437e7f44b504ee46bd5b6e10",
+      "independent_sha256": "3c80232f63d5ae1bbbd6646c226305934452601e437e7f44b504ee46bd5b6e10",
+      "identical": true
+    },
+    "c2_511.safetensors": {
+      "original_sha256": "138d53e11c1fed998b9ab531d5a365db2dd77f78d13163e672772d420791c2d4",
+      "independent_sha256": "138d53e11c1fed998b9ab531d5a365db2dd77f78d13163e672772d420791c2d4",
+      "identical": true
+    },
+    "ranking_511.safetensors": {
+      "original_sha256": "39edcbf01615a9be9a0a1e4eb259f99d4e9f2cb996e9301b458b9897441bf328",
+      "independent_sha256": "39edcbf01615a9be9a0a1e4eb259f99d4e9f2cb996e9301b458b9897441bf328",
+      "identical": true
+    },
+    "correctness_511.safetensors": {
+      "original_sha256": "1d91250dbeb5db63e15dbff2ae2564a451d3b3e85ca5120d59c5807f647dafd8",
+      "independent_sha256": "1d91250dbeb5db63e15dbff2ae2564a451d3b3e85ca5120d59c5807f647dafd8",
+      "identical": true
+    },
+    "residual_733.safetensors": {
+      "original_sha256": "e6ef209505b35f42080d28e3d7744703b9cce737c3cbb204977a8160e730a93d",
+      "independent_sha256": "e6ef209505b35f42080d28e3d7744703b9cce737c3cbb204977a8160e730a93d",
+      "identical": true
+    },
+    "no_logits_511.safetensors": {
+      "original_sha256": "613fbbf41c372c2857f161966699f9ce491c5f34bd48e162194b1edacf420021",
+      "independent_sha256": "613fbbf41c372c2857f161966699f9ce491c5f34bd48e162194b1edacf420021",
+      "identical": true
+    },
+    "c1_622.safetensors": {
+      "original_sha256": "921eb4d41e9f9d43d6f6dbe7010465141bd0b63834fe590398ce3f099c30c14f",
+      "independent_sha256": "921eb4d41e9f9d43d6f6dbe7010465141bd0b63834fe590398ce3f099c30c14f",
+      "identical": true
+    },
+    "logits_only_733.safetensors": {
+      "original_sha256": "9c8c8430ad1986945cab586a279ccdac224eb5c9a5ac2aac081a8e8fedf9cf54",
+      "independent_sha256": "9c8c8430ad1986945cab586a279ccdac224eb5c9a5ac2aac081a8e8fedf9cf54",
+      "identical": true
+    }
+  }
+}
