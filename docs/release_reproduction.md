@@ -1,0 +1,7 @@
+# v0.1.0 reproduction verification
+
+Use `python scripts/verify_public_reports.py` in an environment installed with `.[test]` to regenerate all four public analyses. It creates a separate clean checkout for each stage. Historical integrity manifests include earlier derived report timestamps, so running all stages sequentially in one writable checkout can correctly trigger preservation failures. The helper never replaces published historical artifacts.
+
+Release verification covered fresh core installation, 21 CPU tests, all 29 tests with MLX integration enabled, configuration/dataset generation, explicit pinned-model download, a fresh tiny real-model pipeline, and all public analyses. It did not rerun full historical training. See the [publication audit](publication_audit.md) for scope and limitations.
+
+Experiment 3 requires regenerated pilot checkpoints; 4A requires pilot and E3 checkpoints; 4B additionally requires 4A development hidden caches. Use the original [reproduction guidance](reproduction.md), [E3 report](../reports/experiment_03/learning_when_to_think.md), and [4A handoff](../reports/experiment_04a/experiment_04b_handoff.md) in dependency order. Those intermediates are regenerable from public code, but exact independently refit checkpoint hashes and complete model-run reproduction have not been verified for this release. Use isolated namespaces, fresh runtime clocks and new final split/protocol manifests. Consumed historical tests remain audit-only.

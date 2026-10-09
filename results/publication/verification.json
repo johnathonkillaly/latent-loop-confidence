@@ -1,0 +1,151 @@
+{
+  "checked_utc": "2026-10-09T01:30:40.244574+00:00",
+  "scientific_commit": "66b530b7f1fe4f3f2f0b173b8e63a3dba008de00",
+  "historical_history_scan": {
+    "reachable_blobs": 480,
+    "gzip_blobs_decompressed": 109,
+    "commits": 7,
+    "issues": [],
+    "files_over_10_mib": [],
+    "author_email_domains": [
+      "invalid.example"
+    ],
+    "working_tree_clean": false,
+    "limitations": "Heuristic scan; manual provenance, names, logs and licensing review is also required."
+  },
+  "core_tests": {
+    "passed": 21,
+    "skipped": 8
+  },
+  "mlx_integration_tests": {
+    "passed": 29,
+    "failed": 0
+  },
+  "fresh_install": true,
+  "core_environment_has_mlx": false,
+  "cli_and_dataset_generation": true,
+  "model_download": true,
+  "isolated_model_smoke": true,
+  "full_historical_retraining": false,
+  "reports": {
+    "original": {
+      "public_report_regenerated": true,
+      "mlx_installed": false
+    },
+    "experiment_03": {
+      "public_report_regenerated": true,
+      "mlx_installed": false
+    },
+    "experiment_04a": {
+      "public_report_regenerated": true,
+      "mlx_installed": false,
+      "audit": {
+        "completed_utc": "2026-10-09T01:27:47.937848+00:00",
+        "independent_reference_labels": 10224,
+        "unique_problem_and_alpha_structure_count": 10224,
+        "trajectory_state_rows": 122688,
+        "adjacent_supervised_transitions": 92016,
+        "public_metric_recomputation_checks": 1242,
+        "all_passed": true,
+        "hidden_tensors_needed": false,
+        "preservation": {
+          "historical_files": 177,
+          "all_unchanged_except_readme_link": true,
+          "checked_utc": "2026-10-09T01:27:47.957674+00:00"
+        }
+      }
+    },
+    "experiment_04b": {
+      "public_report_regenerated": true,
+      "mlx_installed": false,
+      "audit": {
+        "checked_utc": "2026-10-09T01:27:49.306353+00:00",
+        "verified_unique_final_problems": 6480,
+        "new_state_rows": 77760,
+        "new_adjacent_transitions": 58320,
+        "public_metric_checks": 5280,
+        "neural_fits": 36,
+        "all_selectors_within_paid_prefix": true,
+        "all_stop_continue_logs_recomputed": true,
+        "all_final_labels_rechecked_by_independent_solvers": true,
+        "frozen_public_source_and_metadata_hashes_verified": true,
+        "OOF_problem_group_integrity_verified": true,
+        "historical_preservation": {
+          "historical_files": 296,
+          "all_unchanged_except_readme_link": true,
+          "checked_utc": "2026-10-09T01:27:49.347712+00:00"
+        },
+        "weights_required_for_public_audit": false
+      }
+    }
+  },
+  "4b_fresh_id_summary_exactly_recomputed": true,
+  "4b_png_regeneration": [
+    {
+      "path": "reports/experiment_04b/figures/03_calibration.png",
+      "recorded_sha256": "46a49dbebf6a1b158b666d8963d5f835eb2658829bbe9a133bd10d461339433e",
+      "regenerated_sha256": "46a49dbebf6a1b158b666d8963d5f835eb2658829bbe9a133bd10d461339433e",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/04_decision_value.png",
+      "recorded_sha256": "85e52b6eb37431fd58c0d750c05dc5afccf3397d9f9b729541257e623ad88973",
+      "regenerated_sha256": "85e52b6eb37431fd58c0d750c05dc5afccf3397d9f9b729541257e623ad88973",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/02_degradation.png",
+      "recorded_sha256": "16a5383f0029b9a25fc83675615d86403badf7a20ecd1702232710df805861b2",
+      "regenerated_sha256": "16a5383f0029b9a25fc83675615d86403badf7a20ecd1702232710df805861b2",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/11_event_generalization.png",
+      "recorded_sha256": "6de323bc7e6ff0426184c956df4a8c429dc1cecbff1e113de2799454664cffcf",
+      "regenerated_sha256": "6de323bc7e6ff0426184c956df4a8c429dc1cecbff1e113de2799454664cffcf",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/08_recovery_examples.png",
+      "recorded_sha256": "db5529ebe32366dead295146b651b7d28cd06eea4f2d4f0bf6e9fb8f9d91115e",
+      "regenerated_sha256": "db5529ebe32366dead295146b651b7d28cd06eea4f2d4f0bf6e9fb8f9d91115e",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/10_errors_uncertainty.png",
+      "recorded_sha256": "8d45c9df0b0be8784e53fb2dee74eccbb7e9e630ea18ab2a5b5df5a9de13b157",
+      "regenerated_sha256": "8d45c9df0b0be8784e53fb2dee74eccbb7e9e630ea18ab2a5b5df5a9de13b157",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/01_correction.png",
+      "recorded_sha256": "2da23154b640036d61d40d536d6a783248b9e0dcedada12a0b089e6a2f995243",
+      "regenerated_sha256": "2da23154b640036d61d40d536d6a783248b9e0dcedada12a0b089e6a2f995243",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/05_paid_loops.png",
+      "recorded_sha256": "7f98c167a7d503cd7ba10fa66cd916407c8f212bc67712434295fdb5a1254325",
+      "regenerated_sha256": "7f98c167a7d503cd7ba10fa66cd916407c8f212bc67712434295fdb5a1254325",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/06_full_latency.png",
+      "recorded_sha256": "f69891d049dd36448122714c486c7a8486c6ff4123a1e9cc0a3991e874254910",
+      "regenerated_sha256": "f69891d049dd36448122714c486c7a8486c6ff4123a1e9cc0a3991e874254910",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/07_selectors.png",
+      "recorded_sha256": "a163c0578971914400b00fb82aec46796a4b7ecea6e1cebb6b8eb9d85c09429f",
+      "regenerated_sha256": "a163c0578971914400b00fb82aec46796a4b7ecea6e1cebb6b8eb9d85c09429f",
+      "byte_identical": true
+    },
+    {
+      "path": "reports/experiment_04b/figures/09_task_generalization.png",
+      "recorded_sha256": "92f975b008efa4f7a0170a7a0047b655a9b3470c854a4d9b4d53e859d1af2f0a",
+      "regenerated_sha256": "92f975b008efa4f7a0170a7a0047b655a9b3470c854a4d9b4d53e859d1af2f0a",
+      "byte_identical": true
+    }
+  ]
+}

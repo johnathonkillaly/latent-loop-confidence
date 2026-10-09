@@ -1,62 +1,86 @@
-# latent-loop-confidence
+# Latent Loop Confidence
 
-A public research pilot asking whether confidence and decision-value heads can guide latent recurrence around a frozen language model, improving decisions without generated reasoning tokens.
+*Confidence, Value of Computation, and Recurrent Decision-Making in Small Language Models*
 
-**Main finding:** a small **one-pass head** was as effective as recurrence at lower additional compute. On 600 held-out synthetic decisions, its mean accuracy was **50.28%**, versus **44.83%** for frozen Qwen3-0.6B. The improvement was **5.44 percentage points**, with an item-paired bootstrap 95% interval of **[2.11, 8.89]** points. Recurrence versus the one-pass head was **−0.33 points**, interval **[−2.33, 1.67]**; a recurrence advantage was not established.
+Can a small neural network predict whether additional latent computation will improve a transformer's decision? This independent research project studies that question with frozen **Qwen3-0.6B**, small auxiliary heads, recurrent refinement, bounded loop memory, learned stopping, and selection among already visited recurrent states.
 
-| Variant | Test accuracy, mean ± seed SD | OOD accuracy |
-|---|---:|---:|
-| Frozen conditional model | 44.83 ± 0.00% | 45.67% |
-| Confidence-only selection | 49.11 ± 1.77% | 50.00% |
-| One-pass head, width 64 | **50.28 ± 0.51%** | **51.67%** |
-| One-pass head, width 256 | 49.61 ± 0.84% | 50.22% |
-| Fixed recurrence, validation depth | 49.94 ± 1.00% | 50.78% |
-| Recurrence with memory | 49.00 ± 1.61% | 49.11% |
-| Recurrence with learned stopping | 50.06 ± 0.98% | 49.56% |
+**The evidence supports useful prediction signals. It does not establish general reasoning improvement or a reliable decision advantage from recurrence.** A model can recognize potentially useful computation while lacking a sufficiently effective computation mechanism to exploit it.
 
-See the [full research report](reports/research_summary.md), [self-contained HTML report](reports/research_summary.html), and [recorded measurements](results/metrics/). All plotted values come from actual runs. Prior paper results are excluded from these tables and figures.
+Three predictions have different targets:
 
-**Experiment 3 — Learning When to Think:** [research report](reports/experiment_03/learning_when_to_think.md), [HTML report](reports/experiment_03/learning_when_to_think.html), [configuration and audit](experiments/experiment_03/), and [recorded results](results/experiment_03/). Fifteen new neural fits across three seeds distinguish current correctness (fresh-ID AUROC 0.798) from immediate next-loop gain (0.762; confidence-only gain prediction 0.695). Gain stopping scores 49.06% at 1.894 loops versus the one-pass head's 51.28%; matched-compute accuracy intervals include zero. Full live inference measures 19.70 ms versus 19.35 ms for one pass on the same timed validation subset. Template transfer weakens the signal. Historical findings above remain unchanged.
+| Signal | Target | Distinction |
+|---|---|---|
+| C — confidence | Current decision correctness | Discrimination and calibration are separate from changing decisions. |
+| V — value of computation | Expected next-loop supervised loss improvement | Lower loss can occur without correcting an answer. |
+| D — decision value | Beneficial and harmful decision transitions | Wrong→right correction and right→wrong degradation are measured separately. |
 
-**Experiment 4A — Foundation and Generalization:** [foundation report](reports/experiment_04a/foundation_report.md), [Experiment 4B handoff](reports/experiment_04a/experiment_04b_handoff.md), [frozen protocol and dataset manifests](experiments/experiment_04a/), and [public measurements](results/experiment_04a/). On 10,224 independently verified new problems, the frozen historical heads transfer weakly: fresh-ID confidence/gain AUROC is 0.530/0.534, versus 0.580 for a fresh scalar gain control. Gain stopping scores 33.74% versus one pass at 33.10%; the paired difference interval includes zero. All 122,688 trajectory states and 92,016 adjacent correction/degradation labels are exported, with hidden tensors excluded from Git. Three halting mechanisms are measured with actual executed-work accounting. No new neural models or 4B selector were trained; 4B needs a fresh prospective final lockbox. Historical findings remain unchanged.
+## Research record
 
-**Experiment 4B — Decision Value and Trajectory Selection:** [executive summary](reports/experiment_04b/executive_summary.md), [research report](reports/experiment_04b/decision_value_and_trajectory_selection.md), [HTML report](reports/experiment_04b/decision_value_and_trajectory_selection.html), [prospective protocol](experiments/experiment_04b/), and [public measurements](results/experiment_04b/). Thirty-six neural fits across three parent seeds evaluate 6,480 new locked problems. Fresh-ID correction/damage AUROC is 0.779/0.794 and AP 0.147/0.229. D stopping scores 34.85% at 1.673 paid loops versus one pass at 33.31%; the paired difference is +1.54 points [−0.95, +3.88], so an accuracy advantage is not established. The prespecified selector scores 34.88%, adding no established benefit on D-visited states. After four paid loops, selection recovers accuracy from 28.78% to 35.11%, with simple maximum-C competitive. Full live D inference is 25.27 ms/item versus 24.91 ms for one pass. Event prediction improves, while a general decision or compute advantage remains unproven. Historical findings remain unchanged.
+The [research overview](docs/research_overview.md) links the questions, architectures, results, and limitations. Historical naming is preserved: the initial format pilot, primary pilot, and small middle-layer probe share the original report. There is no separately numbered Experiment 2 report; none has been invented.
 
-The hypothesis is interesting because a pretrained representation may contain useful decision information that its original readout does not recover. Confidence can estimate correctness; continuation can estimate whether another loop is worthwhile. Those are distinct learning targets. A useful uncertainty probe does not automatically improve decisions or justify extra computation.
+| Milestone | Recorded finding | Detailed report |
+|---|---|---|
+| Initial confidence/refinement pilots | One-pass accuracy 50.28% versus frozen 44.83%; paired gain +5.44 points [2.11, 8.89]. Recurrence versus one pass −0.33 points [−2.33, 1.67]. | [Original report](reports/research_summary.md), [HTML](reports/research_summary.html) |
+| Experiment 3 — Learning When to Think | Fresh-ID correctness AUROC 0.798; immediate-gain AUROC 0.762, AP 0.641 versus prevalence 0.381. Gain stopping 49.06% versus one pass 51.28%. | [Report](reports/experiment_03/learning_when_to_think.md), [HTML](reports/experiment_03/learning_when_to_think.html) |
+| Experiment 4A — Foundation and Generalization | On the stronger generator mixture, historical correctness/gain AUROC falls to 0.530/0.534. Gain stopping 33.74% versus one pass 33.10%; paired interval includes zero. | [Report](reports/experiment_04a/foundation_report.md), [HTML](reports/experiment_04a/foundation_report.html), [Handoff](reports/experiment_04a/experiment_04b_handoff.md) |
+| Experiment 4B — Decision Value and Trajectory Selection | Fresh-ID WR AUROC/AP 0.779/0.147; RW 0.794/0.229. D stopping 34.85%; D + selection 34.88%. No established primary decision or selector advantage. | [Report](reports/experiment_04b/decision_value_and_trajectory_selection.md), [HTML](reports/experiment_04b/decision_value_and_trajectory_selection.html) |
 
-We trained confidence, candidate reranking, tied residual refinement, three-state loop memory, learned continuation, and one-pass controls around a frozen backbone. Seven auxiliary fits per seed were completed across three seeds in the primary pilot. An initial format-failure pilot completed another 21 fits and is retained. A separate middle-layer experiment trained three injection scalars around a repeated frozen block. The total is **43 research fits**, plus isolated smoke verification.
+These rows use different datasets and are not a longitudinal accuracy leaderboard. Three seeds share each experiment's held-out problems. Reports distinguish prospective primary comparisons, exploratory findings, negative results, inconclusive comparisons, and privileged label-informed oracle bounds.
 
-What worked: supervised readouts recovered a modest decision gain; the confidence head improved correctness ranking from AUROC 0.761 to 0.808; learned stopping reduced average loop count. Temperature scaling improved calibration without changing answers.
+## Experiment 4B in detail
 
-What failed: eight refinement loops reduced accuracy to **25.67%** without memory and **31.22%** with memory. Confidence/probability fusion worsened NLL. The initial prompt suffered answer-letter bias, and BF16 failed strict numerical parity. Both failures are preserved. Memory and adaptive halting did not convincingly improve accuracy over the relevant trained controls. The minimal middle-layer injection fit did not beat simply repeating the frozen block twice.
+| Fresh-ID decision system | Accuracy |
+|---|---:|
+| Frozen backbone | 33.80% |
+| Historical one-pass head | 33.31% |
+| Single recurrent step | 34.70% |
+| D stopping | 34.85% |
+| D + trajectory selection | 34.88% |
 
-What remains unknown: whether a stronger trained middle-layer module, more data, unseen formats, natural benchmarks, or a larger backbone provides a recurrence advantage. Multi-step task performance remained weak. We found readout improvements, not evidence of a new internal reasoning algorithm.
+WR event prevalence is **0.060**, versus AUROC **0.779** and AP **0.147**; RW prevalence is **0.080**, versus AUROC **0.794** and AP **0.229**. These are rounded recorded values, with full precision in the [saved summary](results/experiment_04b/summary.json).
 
-## Scope and research disclaimer
+The prospective primary D-versus-one-pass comparison is **+1.54 percentage points [−0.95, +3.88]**. Selection versus the final visited state is **+0.03 points [−1.13, +1.47]**. Both are inconclusive. Event AP improves over the prespecified scalar C+V control; a stronger scalar control and a plain parameter-matched classifier constrain architectural interpretations. Selection after four paid loops recovers damaged answers, but does not establish an advantage over simple maximum-C selection. Oracles use labels/future states and are unavailable at inference.
 
-This is an **independent adaptation**, not an official [RecurTrace](https://arxiv.org/html/2609.03379v2) reproduction. The primary recurrence acts on the final hidden vector. The middle-layer probe is a separate, much smaller experiment. The [literature review](docs/literature_review.md) cites RecurTrace, Universal Transformers, ACT, PonderNet, Encode-Think-Decode, Think-at-Hard, Semantic Entropy Probes, and process supervision.
+Most historical recurrence updates operate on the final decision vector; the original middle-layer experiment is a separate three-scalar feasibility probe. Useful correctness, loss-gain, and transition discrimination do not demonstrate better underlying reasoning. Eight-loop final-vector refinement damaged accuracy; template and structural transfer exposed substantial limitations. Full-path timing does not establish a deployment speedup.
 
-We used six deterministic task families, 1,200 training examples, 300 validation examples, 600 test examples, and 300 OOD examples. Three training seeds share the same held-out examples. Templates are shared; OOD combines unseen symbols/numbers with extra sequential depth. These exploratory comparisons have no multiple-comparison correction. Hyperparameter selection used validation; the answer prefix was selected on 60 training examples. Initial negative results remain visible.
+## Reproduce and audit
 
-Accuracy and NLL condition on the same four verified single-token option letters for every variant. Unconstrained next-token accuracy is a separate diagnostic: **44.17%** on test prompts. The model emits no reasoning tokens in these experiments. Latency measurements distinguish prompt inference from cached-head inference, and analytical matrix FLOPs are estimates.
-
-The actual machine was an Apple M4 Max with 128 GiB unified memory, using MLX Metal and FP32. Peak recorded MLX allocation was **4.21 GiB**, under the configured 48 GiB budget. The primary command took about 62 seconds through evaluation; the middle-layer probe and timing took about 196 seconds. Literature, implementation, verification, and documentation took longer; execution manifests distinguish these times. No other workstation or training service was accessed or changed.
-
-## Reproduce
+Python **3.12** was used; package metadata permits Python ≥3.11. Model-scale runs require Apple Silicon, MLX/Metal, and the pinned public checkpoint. CPU tests, public metric audits, and report regeneration need no model or accelerator:
 
 ```sh
 python3.12 -m venv .venv
-.venv/bin/python -m pip install -r requirements-lock.txt
-.venv/bin/python -m pip install -e '.[apple,test]'
+.venv/bin/python -m pip install -e '.[test]'
 .venv/bin/python -m pytest -q
-.venv/bin/python -m latent_loop.cli download --config configs/pilot.yaml
-.venv/bin/python -m latent_loop.cli run --config configs/pilot.yaml --run-dir artifacts/reproduction
-.venv/bin/python -m latent_loop.cli middle --config configs/pilot.yaml --run-dir artifacts/reproduction
-.venv/bin/python -m latent_loop.cli report --config configs/pilot.yaml --run-dir artifacts/reproduction
+.venv/bin/latent-loop --help
+.venv/bin/python -m latent_loop.cli report --config configs/pilot.yaml
+.venv/bin/python -m latent_loop.experiment03.run report
+.venv/bin/python -m latent_loop.experiment04a.pipeline report
+.venv/bin/python -m latent_loop.experiment04b.pipeline report
+.venv/bin/python -m latent_loop.experiment04b.pipeline verify
 ```
 
-Basic CI uses `pip install -e '.[test]'` and CPU-only tests, with no model or GPU. `make smoke` runs a separate tiny real-model pipeline; `make mlx-test` verifies head parity, gradients, isolation, stopping, and checkpoint resume on MLX CPU. `make report` regenerates the public report without a model or accelerator. Stage commands are `data`, `extract`, `train`, and `evaluate`; `train --seed 11` selects one seed. See [reproduction instructions](docs/reproduction.md), [architecture](docs/architecture.md), [methodology](docs/methodology.md), and [limitations](docs/limitations.md).
+Run report commands in an isolated checkout: regeneration updates derived reports/audit timestamps. For Apple model runs:
 
-Auxiliary training resumes from epoch checkpoints after safe interruption. Feature extraction resumes from batch shards. Changed fitting configurations need a fresh run directory. The tiny middle-layer training stage restarts on interruption. The command budget defaults to six hours; model-scale work requires Metal and never silently uses CPU.
+```sh
+.venv/bin/python -m pip install -r requirements-lock.txt
+.venv/bin/python -m pip install -e '.[apple,test]'
+LATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q
+.venv/bin/python -m latent_loop.cli download --config configs/pilot.yaml
+.venv/bin/python -m latent_loop.cli run --config configs/pilot.yaml --run-dir artifacts/reproduction
+```
 
-The pinned checkpoint is `Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca`, under Apache-2.0. Original code and generated data/results use MIT. Model weights and checkpoints are excluded from git; [third-party provenance](docs/third_party_licenses.md) records licenses and tokenizer details. Git history is local only, with no remote repository or publication created.
+The model is `Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca`, in FP32 after a recorded BF16 parity failure. Training seeds are **11, 22, 33**; manifests record dataset seeds, independent solvers, configurations, and protocol hashes. See [complete reproduction guidance](docs/reproduction.md) and the [release audit](docs/publication_audit.md).
+
+**Verified reproduction scope:** package installation, CPU and MLX integration tests, fresh tiny real-model execution, dataset/configuration loading, and public report/metric regeneration. Full historical training was not rerun for this release. Weights and large hidden tensors are excluded. Their regeneration requires the pilot → Experiment 3 → 4A → 4B dependency chain; independent refits can change checkpoint hashes and need a fresh protocol. Consumed lockboxes deliberately reject reselection. Exact initial adaptive rows also retain an older stopping fallback. Analysis reproducibility is stronger than verified end-to-end retraining reproducibility.
+
+## Limitations and roadmap
+
+Six synthetic task families, conditional four-choice predictions, one small frozen model, few seeds, shared algorithm families, scarce transition events, and small hardware timing samples limit interpretation. Several tasks remain near chance. Generalization across arbitrary task structures, reliable recurrence accuracy gains, useful trajectory selection, and broad reasoning improvement remain unestablished. Calibration, loss improvement, decision changes, and recurrent reasoning capability are distinct claims.
+
+**Planned Experiment 5 — Training Recurrent Computation:** train shared middle-layer adapters and bounded input reinjection, compare against a parameter-matched one-pass adapter, and supervise multiple depths on fresh splits. Fixed-depth competence comes before adaptive controllers. Experiment 5 is not part of this initial historical release.
+
+## Attribution and license
+
+Original project code and generated synthetic artifacts use [MIT](LICENSE). The separately downloaded Qwen3 model uses Apache-2.0; its weights/tokenizer are not distributed here. Installed dependencies retain their own licenses. See [third-party provenance](docs/third_party_licenses.md).
+
+This work is inspired by [Qwen3](https://arxiv.org/abs/2505.09388), [RecurTrace](https://arxiv.org/html/2609.03379v2), [Universal Transformers](https://arxiv.org/abs/1807.03819), [Adaptive Computation Time](https://arxiv.org/abs/1603.08983), [PonderNet](https://arxiv.org/abs/2107.05407), and [Encode-Think-Decode](https://arxiv.org/abs/2510.07358). The [literature review](docs/literature_review.md) explains the differences and additional references. No RecurTrace implementation was copied. This is an independent adaptation, with no claim of official reproduction or architectural novelty.
