@@ -4,7 +4,7 @@
 
 Can a small neural network predict whether additional latent computation will improve a transformer's decision? This independent research project studies that question with frozen **Qwen3-0.6B**, small auxiliary heads, recurrent refinement, bounded loop memory, learned stopping, and selection among already visited recurrent states.
 
-**The evidence supports useful prediction signals. It does not establish general reasoning improvement or a reliable decision advantage from recurrence.** A model can recognize potentially useful computation while lacking a sufficiently effective computation mechanism to exploit it.
+**A tiny recurrent network learned to improve decisions across repeated hidden-state updates, but recurrence superiority and scalable planning were not established.** Earlier Qwen studies found useful prediction signals without a reliable recurrent decision advantage. Grid planning and language-model reasoning are separate experimental systems.
 
 Three predictions have different targets:
 
@@ -24,6 +24,9 @@ The [research overview](docs/research_overview.md) links the questions, architec
 | Experiment 3 — Learning When to Think | Fresh-ID correctness AUROC 0.798; immediate-gain AUROC 0.762, AP 0.641 versus prevalence 0.381. Gain stopping 49.06% versus one pass 51.28%. | [Report](reports/experiment_03/learning_when_to_think.md), [HTML](reports/experiment_03/learning_when_to_think.html) |
 | Experiment 4A — Foundation and Generalization | On the stronger generator mixture, historical correctness/gain AUROC falls to 0.530/0.534. Gain stopping 33.74% versus one pass 33.10%; paired interval includes zero. | [Report](reports/experiment_04a/foundation_report.md), [HTML](reports/experiment_04a/foundation_report.html), [Handoff](reports/experiment_04a/experiment_04b_handoff.md) |
 | Experiment 4B — Decision Value and Trajectory Selection | Fresh-ID WR AUROC/AP 0.779/0.147; RW 0.794/0.229. D stopping 34.85%; D + selection 34.88%. No established primary decision or selector advantage. | [Report](reports/experiment_04b/decision_value_and_trajectory_selection.md), [HTML](reports/experiment_04b/decision_value_and_trajectory_selection.html) |
+
+| Experiment 5 — Train the Thinker | Qwen recurrent 36.00% versus one-pass 32.87%; paired +3.13 pp [−2.90, +8.91]. No established depth gain. | [Report](reports/experiment_05/train_the_thinker.md), [HTML](reports/experiment_05/train_the_thinker.html) |
+| Experiment 5.1 / 5B — Think Again | 18,884-parameter grid planner: 61.83/86.00/98.28/99.56% at 1/2/4/8 loops; four-versus-one +36.44 pp [32.55, 40.50]. Comparable four-block feedforward controls reach 97.72/98.33%. Qwen recurrence underperforms one-pass. | [Report](reports/experiment_05b/learning_to_navigate.md), [HTML](reports/experiment_05b/learning_to_navigate.html) |
 
 These rows use different datasets and are not a longitudinal accuracy leaderboard. Three seeds share each experiment's held-out problems. Reports distinguish prospective primary comparisons, exploratory findings, negative results, inconclusive comparisons, and privileged label-informed oracle bounds.
 
@@ -77,7 +80,9 @@ The model is `Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca`, in FP32
 
 Six synthetic task families, conditional four-choice predictions, one small frozen model, few seeds, shared algorithm families, scarce transition events, and small hardware timing samples limit interpretation. Several tasks remain near chance. Generalization across arbitrary task structures, reliable recurrence accuracy gains, useful trajectory selection, and broad reasoning improvement remain unestablished. Calibration, loss improvement, decision changes, and recurrent reasoning capability are distinct claims.
 
-**Planned Experiment 5 — Training Recurrent Computation:** train shared middle-layer adapters and bounded input reinjection, compare against a parameter-matched one-pass adapter, and supervise multiple depths on fresh splits. Fixed-depth competence comes before adaptive controllers. Experiment 5 is not part of this initial historical release.
+Experiment 5 trains Qwen middle-layer LoRA adapters; its paired gains remain inconclusive. Experiment 5B shows useful repeated local grid computation, while eight-loop completion is 95% on 7×7 and only 54.44% on the long-path subset. Snake horizon-six agreement is 96.61% at four loops, equaled by its four-block feedforward control. Qwen maze recurrence scores 28.33% versus one-pass 47.78%; no transfer of the grid benefit was established.
+
+**Next, planned: Experiment 5.2 — Break the Thinker.** Test scale, graph distance, depth extrapolation and stronger feedforward controls on new prospective splits. It is not included in v0.2.0. See the [release notes](docs/release_notes_v0.2.0.md), [audit](docs/publication_audit_v0.2.0.md) and [reproduction guide](docs/reproduction_v0.2.0.md).
 
 ## Attribution and license
 

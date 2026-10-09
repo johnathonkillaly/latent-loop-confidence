@@ -9,6 +9,9 @@ Can auxiliary networks recognize when another latent computation will improve a 
 | Experiment 4A | Do signals survive stronger tasks and structural shifts? | Historical frozen heads; fresh scalar controls/calibrators; causal trajectory exports | Fresh-ID historical C/V AUROC 0.530/0.534; scalar gain 0.580 | Weak transfer; poor task competence; no newly trained neural heads | [Detailed report](../reports/experiment_04a/foundation_report.md) |
 | Experiment 4B | Can decision transitions guide paid stopping and state selection? | Fresh four-event D head, grouped OOF rankers, frozen parent trajectories | WR AUROC/AP 0.779/0.147; RW 0.794/0.229; D 34.85% | D-versus-one-pass and selection-versus-final paired intervals include zero | [Detailed report](../reports/experiment_04b/decision_value_and_trajectory_selection.md) |
 
+| Experiment 5 | Can trained middle-layer recurrence improve Qwen decisions? | Frozen Qwen; shared layers 12–14, rank-8 LoRA and bounded gates | Rec4 36.00% versus one-pass 32.87%; interval includes zero | Depth4 versus depth1 −0.46 pp [−3.13, +1.50]; weak transfer | [Detailed report](../reports/experiment_05/train_the_thinker.md) |
+| Experiment 5.1 / 5B | Can repeated unchanged-input computation help navigation? | Tiny shared local gated grid network; separate Qwen and Snake controls | Grid4 98.28%, grid8 99.56%; four-versus-one +36.44 pp [32.55, 40.50] | Feedforward controls tie; long-path completion 54.44%; negative Qwen transfer | [Detailed report](../reports/experiment_05b/learning_to_navigate.md) |
+
 Historical naming is retained. The original pilots share one report; no separate Experiment 2 report is present. Data distributions change between studies, so the aggregate accuracies cannot be compared as successive model improvements.
 
 ```mermaid
@@ -35,3 +38,11 @@ The initial pilots and most secondary comparisons are exploratory. Experiment 4B
 **Experiment 5 — Training Recurrent Computation (planned):** train the thinker itself using frozen-backbone middle-layer LoRA, bounded reinjection, and multi-depth supervision. Use fresh training/validation and a prospective final lockbox. Compare recurrence to trained one-pass adaptation at equal parameter counts and measured compute. Assess fixed depths before attempting C/V/D transfer or a new controller.
 
 See [reproduction guidance](reproduction.md), [publication audit](publication_audit.md), [limitations](limitations.md), and [research references](literature_review.md).
+
+## Completed v0.2.0 and next planned study
+
+A tiny recurrent network learned to improve decisions across repeated hidden-state updates, but recurrence superiority and scalable planning were not established. Snake's 96.61% horizon-six agreement is matched by feedforward computation; ties and unavoidable-collision states limit interpretation. Qwen maze recurrence (28.33%) underperforms one-pass adaptation (47.78%). Full episodes expose failures hidden by first-action accuracy.
+
+Experiment 5 is now completed; any earlier planned wording above describes the v0.1.0 roadmap. Planned Experiment 5.2, **Does Thinking Scale With Distance?**, will test larger boards, longer graph distances, extra loops and untied/global controls. New experimental results are excluded from this release.
+
+[Release notes](release_notes_v0.2.0.md) · [Audit](publication_audit_v0.2.0.md) · [Reproduction](reproduction_v0.2.0.md)
