@@ -3,5 +3,8 @@
   "load_average": "{ 3.43 2.99 2.37 }",
   "physical_bytes": 137438953472,
   "cpu_heavy_processes": [],
-  "action": "Read-only contention check; no unrelated processes changed or terminated; evaluation remains local."
+  "action": "Read-only contention check; no unrelated processes changed or terminated; evaluation remains local.",
+  "memory_checked_utc": "2026-10-09T11:32:50.582875+00:00",
+  "system_memory_free_percent": 92,
+  "large_resident_processes": []
 }

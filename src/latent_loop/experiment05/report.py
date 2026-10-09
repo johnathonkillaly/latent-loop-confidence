@@ -5,6 +5,7 @@ import datetime
 import gzip
 import json
 import re
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 import matplotlib
@@ -192,6 +193,7 @@ def summarize(config, frozen):
                 systems[condition]["depths"][str(k + 1)] = {**{name: float(np.mean([s[name] for s in stats])) for name in stats[0]},
                                                            "accuracy_interval": bootstrap(correct[:, k], config["bootstrap_repeats"], 550201 + k),
                                                            "accuracy_seed_sd": float(correct[:, k].mean(-1).std(ddof=1)),
+                                                           "accuracy_by_seed": {str(seed): float(correct[j, k].mean()) for j, seed in enumerate(config["seeds"])},
                                                            "prediction_class_frequencies": (np.bincount(logits[:, k].argmax(-1).ravel(), minlength=4).astype(float) / (logits.shape[0] * logits.shape[2])).tolist(),
                                                            "mean_option_entropy": float(np.mean([-np.sum(softmax(v[k],axis=-1)*np.log(np.maximum(softmax(v[k],axis=-1),1e-12)),axis=-1).mean() for v in logits])),
                                                            "state_norm": float(np.mean([cube(rr, "state_norm")[k].mean() for rr in allrows])),
@@ -264,6 +266,8 @@ def figures(config, summary, timed, fits, frozen, ablations, stress):
     for condition in CONDITIONS:
         keys = [f"{condition}:d{k}:b1" for k in ((1,) if condition.startswith("one_pass") else (1, 2, 3, 4))]
         plt.plot([timed[k]["ms_per_item"] for k in keys], [100 * timed[k]["timed_accuracy"] for k in keys], "o-", label=condition, color=colors[condition])
+    baseline = timed["frozen:d1:b1"]
+    plt.scatter(baseline["ms_per_item"], 100 * baseline["timed_accuracy"], marker="D", color="black", label="frozen")
     plt.xlabel("Synchronized full inference ms/item, batch 1");plt.ylabel("Accuracy on the SAME 24 validation items (%)");plt.title("Timing subset; not a locked-test frontier");plt.legend(fontsize=8);save("accuracy_latency")
     plt.figure(figsize=(8, 5))
     for i, condition in enumerate(CONDITIONS):
@@ -271,20 +275,26 @@ def figures(config, summary, timed, fits, frozen, ablations, stress):
         depth = "1" if condition.startswith("one_pass") else "4"
         acc = 100 * fid["systems"][condition]["depths"][depth]["accuracy"]
         plt.scatter(count / 1000, acc, color=colors[condition]);plt.annotate(condition, (count / 1000, acc), xytext=(10, i * 8 - 15), textcoords="offset points", fontsize=8)
-    plt.xlim(122.86, 122.94);plt.ticklabel_format(axis="x", style="plain", useOffset=False)
+    counts = [fits[c][0]["trainable_parameters"]["trainable"] / 1000 for c in CONDITIONS]
+    span = max(max(counts) - min(counts), min(counts) * .0006)
+    plt.xlim(min(counts) - span * .3, max(counts) + span * .9);plt.ticklabel_format(axis="x", style="plain", useOffset=False)
     plt.xlabel("Trainable parameters (thousands; almost identical)");plt.ylabel("Fresh-ID accuracy at prespecified depth (%)");save("parameters_accuracy")
-    plt.figure(figsize=(8, 5))
-    for condition in ("recurrent", "reinjection", "multi_depth"):
-        plt.plot([1, 2, 3, 4], [fid["systems"][condition]["depths"][str(k)]["state_drift"] for k in range(1, 5)], "o-", label=condition)
-    for condition in ("untrained_plain", "untrained_bounded"):
-        plt.plot([1, 2, 3, 4], [fid["untrained"][condition][str(k)]["state_drift"] for k in range(1, 5)], "--", label=condition)
-    plt.xlabel("Depth");plt.ylabel("Middle state distance / depth-1 norm");plt.legend(fontsize=8);save("state_drift")
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4))
+    for ax in axes:
+        for condition in ("recurrent", "reinjection", "multi_depth"):
+            ax.plot([1, 2, 3, 4], [fid["systems"][condition]["depths"][str(k)]["state_drift"] for k in range(1, 5)], "o-", label=condition)
+        ax.plot([1, 2, 3, 4], [fid["untrained"]["untrained_bounded"][str(k)]["state_drift"] for k in range(1, 5)], "--", label="untrained_bounded")
+        ax.set_xlabel("Depth");ax.set_ylabel("State distance / depth-1 norm");ax.set_xticks([1, 2, 3, 4]);ax.legend(fontsize=7)
+    axes[0].plot([1, 2, 3, 4], [fid["untrained"]["untrained_plain"][str(k)]["state_drift"] for k in range(1, 5)], "--", color="gray", label="untrained_plain")
+    axes[0].legend(fontsize=7);axes[0].set_title("Including plain frozen recurrence")
+    axes[1].set_title("Bounded architectures only")
+    save("state_drift")
     plt.figure(figsize=(8, 5))
     conditions = ["recurrent", "reinjection", "multi_depth"]
     x = np.arange(3)
     plt.bar(x - .18, [100 * fid["systems"][c]["transitions"]["WR"]["estimate"] for c in conditions], .36, label="Wrong→right")
     plt.bar(x + .18, [100 * fid["systems"][c]["transitions"]["RW"]["estimate"] for c in conditions], .36, label="Right→wrong")
-    plt.xticks(x, conditions);plt.ylabel("Rate per eligible adjacent transition (%)");plt.legend();save("transitions")
+    plt.xticks(x, conditions);plt.ylabel("Fraction of all adjacent transitions (%)");plt.legend();save("transitions")
     plt.figure(figsize=(9, 5))
     for condition in CONDITIONS:
         length = min(len(f["epochs"]) for f in fits[condition])
@@ -306,7 +316,9 @@ def figures(config, summary, timed, fits, frozen, ablations, stress):
 
 def interval(value):
     low, high = value["cluster_seed_bootstrap95"]
-    return f"{100*value['estimate']:+.2f} [{100*low:+.2f}, {100*high:+.2f}]"
+    def fmt(number):
+        return f"{Decimal(str(number * 100)).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP):+}"
+    return f"{fmt(value['estimate'])} [{fmt(low)}, {fmt(high)}]"
 
 
 def main():
@@ -391,24 +403,29 @@ def main():
               "| Family | Mean validation NLL at prespecified depth | Best epoch per seed (one-based) |", "|---|---:|---|"]
     for condition in CONDITIONS:
         lines.append(f"| {condition} | {frozen['validation_selection_scores'][condition]:.6f} | {', '.join(str(f['best_epoch'] + 1) for f in fits[condition])} |")
-    lines += ["", "These validation scores, recorded before opening final data, select the reported families. Epoch selection is by NLL, so a later epoch with higher accuracy can remain unselected.", "", "## Accuracy results", "", "| Split | Frozen | Historical one pass | Trained one pass | Extra-budget one pass | Selected recurrence, depth 4 | Difference vs selected one pass [95%], pp |", "|---|---:|---:|---:|---:|---:|---:|"]
+    lines += ["", "These validation scores, recorded before opening final data, select the reported families. Epoch selection is by NLL, so a later epoch with higher accuracy can remain unselected.", "", "## Accuracy results", "", "Every value below is measured on the new Experiment 5 problems. The old one-pass head is a transferred frozen historical checkpoint, not a reused historical test score.", "", "| Split | Frozen | Old one-pass head (transfer) | Trained one pass | Extra-budget one pass | Selected recurrence, depth 4 | Difference vs selected one pass [95%], pp |", "|---|---:|---:|---:|---:|---:|---:|"]
     for split in FINAL:
         s = summary[split]
         lines.append(f"| {split} | {100*s['frozen']['accuracy']:.2f}% | {100*s['historical_one_pass']['accuracy']:.2f}% | {100*s['systems']['one_pass']['depths']['1']['accuracy']:.2f}% | {100*s['systems']['one_pass_compute']['depths']['1']['accuracy']:.2f}% | {100*s['systems'][selected]['depths']['4']['accuracy']:.2f}% | {interval(s['paired_comparisons']['selected_minus_'+onepass])} |")
-    lines += ["", "| Fresh-ID paired comparison | Difference [95% interval], pp |", "|---|---:|"]
+    lines += ["", "The old head was trained on a different distribution, so it provides a transfer reference and cannot isolate where adaptation belongs.", "", "| Fresh-ID paired comparison | Difference [95% interval], pp |", "|---|---:|"]
     lines += [f"| {name} | {interval(value)} |" for name, value in paired.items()]
-    lines += ["", "Intervals jointly resample three training seeds and the same unique problem indices across all conditions/depths; repeated depths stay clustered. The 288 fresh-ID problems are not 864 independent seed examples. Three seeds and small task strata limit power; multiple comparisons have no multiplicity adjustment. Shift results are secondary. Depth-one comparisons match the forward architecture and parameter budget, testing variable-depth training effects without additional inference recurrence; they are secondary descriptive controls, not the primary hypothesis. Conditional option NLL is not language-model perplexity or free generation accuracy.", "", "| Fresh-ID system / depth | Accuracy | NLL | ECE | Brier |", "|---|---:|---:|---:|---:|"]
+    lines += ["", "| Training seed | One pass | Selected recurrence, depth 1 | Selected recurrence, depth 4 |", "|---|---:|---:|---:|"]
+    for seed in config["seeds"]:
+        lines.append(f"| {seed} | {100*fid['systems'][onepass]['depths']['1']['accuracy_by_seed'][str(seed)]:.2f}% | {100*fid['systems'][selected]['depths']['1']['accuracy_by_seed'][str(seed)]:.2f}% | {100*fid['systems'][selected]['depths']['4']['accuracy_by_seed'][str(seed)]:.2f}% |")
+    lines += ["", "Intervals jointly resample three training seeds and the same unique problem indices across all conditions/depths; repeated depths stay clustered. The 288 fresh-ID problems are not 864 independent seed examples. Intervals condition on this training/validation set and the frozen selection. Three seeds and small task strata limit power; multiple comparisons have no multiplicity adjustment. Shift results are secondary. Depth-one comparisons match the forward architecture and parameter budget, testing variable-depth training effects without additional inference recurrence; they are secondary descriptive controls, not the primary hypothesis. Conditional option NLL is not language-model perplexity or free generation accuracy.", "", "| Fresh-ID system / depth | Accuracy | NLL | ECE | Brier |", "|---|---:|---:|---:|---:|"]
     for condition in CONDITIONS:
         for k, r in fid["systems"][condition]["depths"].items():
             lines.append(f"| {condition} / {k} | {100*r['accuracy']:.2f}% | {r['nll']:.4f} | {r['ece']:.4f} | {r['brier']:.4f} |")
     lines += ["", "## Recurrence depth results", "", "![Accuracy versus depth](figures/accuracy_depth.png)", "", "The selected depth is fixed at four before final opening. Every trained depth is reported; the highest final point is not a newly selected inference policy. Adjacent paired differences are stored for each family. Eight-loop results below use only 24 prespecified balanced items and are extrapolation diagnostics, never selection data.", "", "![Eight-loop diagnostic](figures/stress_depth.png)", "", "## Compute comparisons", "", latency["scope"], "", "| System | Depth | Batch-1 ms/item | Batch-8 amortized ms/item |", "|---|---:|---:|---:|"]
     for condition in ("frozen", *CONDITIONS):
-        k = 1 if condition.startswith("one_pass") or condition == "frozen" else 4
-        lines.append(f"| {condition} | {k} | {timed[f'{condition}:d{k}:b1']['ms_per_item']:.2f} | {timed[f'{condition}:d{k}:b8']['ms_per_item']:.2f} |")
+        for k in ((1,) if condition.startswith("one_pass") or condition == "frozen" else (1, 2, 3, 4)):
+            lines.append(f"| {condition} | {k} | {timed[f'{condition}:d{k}:b1']['ms_per_item']:.2f} | {timed[f'{condition}:d{k}:b8']['ms_per_item']:.2f} |")
+    d1, d4 = timed[f'{selected}:d1:b1']["ms_per_item"], timed[f'{selected}:d4:b1']["ms_per_item"]
+    lines += ["", f"For the selected recurrent family, depth four adds {d4-d1:.2f} ms per batch-one request over depth one ({d4/d1:.2f}× latency). Only the requested depth is decoded during timing; recording all four analysis outputs is excluded. Every timing group also has one untimed reference call for exact repetition checks."]
     lines += ["", f"Timing uses 24 validation prompts, batches 1/8, {config['timing_warmups']} warmups and {config['timing_repeats']} synchronized repeats, three seeds, and randomized condition order. Condition runs remain sequential, so between-run thermals/load are not fully controlled. Batch-8 amortization measures throughput; variable prompt lengths add padding work. Model load is excluded. This is full four-candidate decision inference, not open-ended generation with a full-vocabulary output projection. The latency figure uses accuracy on the **same timed validation items**, not final accuracy from different prompts. Matrix FLOPs are not used to claim speedups.", "", "![Accuracy versus end-to-end latency](figures/accuracy_latency.png)", "", "![Parameters versus accuracy](figures/parameters_accuracy.png)", "", "## Generalization", "", "![Generalization by task family](figures/generalization_tasks.png)", "", "All families, nominal strata, withheld structural approaches and numeric shifts remain in the public summary. Cells contain few examples and are descriptive. Added compute, calibrated answer probabilities, memorized templates, or task-specific readouts remain alternative explanations for any accuracy gain.", "", "## Corrected/degraded decision analysis", "", "| Family | W→R rate [95%] | R→W rate [95%] | W→R given wrong | R→W given right |", "|---|---:|---:|---:|---:|"]
     insertion = lines.index("## Corrected/degraded decision analysis")
     descriptive = ["| Fresh-ID nominal difficulty | Selected one pass | Selected recurrence, depth 4 |", "|---|---:|---:|"]
-    for stratum in sorted(fid["systems"][selected]["difficulty"]):
+    for stratum in (s for s in ("easy", "moderate", "hard", "extrapolation") if s in fid["systems"][selected]["difficulty"]):
         descriptive.append(f"| {stratum} | {100*fid['systems'][onepass]['difficulty'][stratum]['1']:.2f}% | {100*fid['systems'][selected]['difficulty'][stratum]['4']:.2f}% |")
     descriptive += ["", "Difficulty is a predefined generator descriptor, not an independently established reasoning-depth scale. Harder-depth shift and every task family are also reported without filtering.", ""]
     lines[insertion:insertion] = descriptive
@@ -431,7 +448,16 @@ def main():
             return " / ".join("—" if d[name] is None else f"{d[name]:.4f}" for d in values)
         lines.append(f"| {c} | {gates('update')} | {gates('reinjection')} | {diag['gradient_norm_median']:.3f} / {diag['gradient_norm_max']:.3f} |")
     lines += ["", "Gate values and nonzero saved LoRA B norms are checkpoint measurements. A gate staying near initialization is a limitation to investigate, not proof that it caused a failure. All reported gradients were clipped to norm one before the optimizer update."]
-    lines += ["", "![Training and validation loss](figures/training_validation_loss.png)", "", "## Limitations", "", "This is a completed small controlled study, not an exhaustive hyperparameter sweep or broad reasoning benchmark. Only rank-8 attention adapters, one block, three short main epochs, one optimizer schedule and few synthetic instances were tested. The additional one-pass control uses approximate training-cost matching; exact hardware budgets differ. A fixed-depth compute control is also available by comparing the same adapted model at depths 1–4, but there is no separate larger nonshared backbone. No full-model fine-tuning, natural task suite, incremental cache optimization, controller retraining, trajectory objective or loop memory was run. Saved weights and large hidden arrays remain ignored. The preserved historical release and reports are unchanged.", "", "## Future work", "", "Use a larger fresh training/validation set and a separately reported diagnostic task mixture where the frozen representation has intermediate competence. Retain the original hard mixture as primary. Test longer training and a small gate-strength ablation before investing in memory/halting. Compare against matched one-pass optimization, and require paired structural-transfer evidence before attributing gains to recurrence. Old C/V/D probes are not assumed compatible with the newly trained states; transfer/recalibration is deferred until useful fixed-depth computation is established. This experiment prioritizes the thinker.", "", "## Reproduction and local status", "", "```sh\nLATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q\n.venv/bin/python -m latent_loop.experiment05.validate\n.venv/bin/python -m latent_loop.experiment05.train pilot\n.venv/bin/python -m latent_loop.experiment05.train main\n.venv/bin/python -m latent_loop.experiment05.evaluate freeze\n.venv/bin/python -m latent_loop.experiment05.evaluate final\n.venv/bin/python -m latent_loop.experiment05.evaluate timing\n.venv/bin/python -m latent_loop.experiment05.report\n```", "", "The completed config/protocol is consumed: fitting refuses after final opening. Use a new independent namespace, fresh seeds/runtime clock and manifests for a new experiment, rather than overwriting these files. Public CPU report regeneration reads saved measurements without MLX. Training resumes adapter/optimizer checkpoints and deterministic batch/depth schedules after safe interruptions. Source/config/data hashes reject incompatible resume. No Experiment 5 commit is pushed. Public v0.1.0 is `0a637eb97d66eebbd740b612ab92e9095c496931`.", "", "[Protocol](../../experiments/experiment_05/frozen_protocol.json) · [Dataset manifest](../../experiments/experiment_05/dataset_manifest.json) · [Summary](../../results/experiment_05/summary.json) · [Public audit](../../results/experiment_05/public_audit.json) · [Primary references](../../experiments/experiment_05/research_references.md)"]
+    lines += ["", "![Training and validation loss](figures/training_validation_loss.png)", "", "## Limitations", "", "This is a completed small controlled study, not an exhaustive hyperparameter sweep or broad reasoning benchmark. Only rank-8 attention adapters, one block, three short main epochs, one optimizer schedule and few synthetic instances were tested. The additional one-pass control uses approximate training-cost matching; exact hardware budgets differ. A fixed-depth compute control is also available by comparing the same adapted model at depths 1–4, but there is no separate larger nonshared backbone. No full-model fine-tuning, natural task suite, incremental cache optimization, controller retraining, trajectory objective or loop memory was run. Saved weights and large hidden arrays remain ignored. The preserved historical release and reports are unchanged.", "", "## Future work", "", "Use a larger fresh training/validation set and a separately reported diagnostic task mixture where the frozen representation has intermediate competence. Retain the original hard mixture as primary. Test longer training and a small gate-strength ablation before investing in memory/halting. Compare against matched one-pass optimization, and require paired structural-transfer evidence before attributing gains to recurrence. Old C/V/D probes are not assumed compatible with the newly trained states; transfer/recalibration is deferred until useful fixed-depth computation is established. This experiment prioritizes the thinker.", "", "## Reproduction and local status", "", "```sh\nLATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q\n.venv/bin/python -m latent_loop.experiment05.validate\n.venv/bin/python -m latent_loop.experiment05.train pilot\n.venv/bin/python -m latent_loop.experiment05.train main\n.venv/bin/python -m latent_loop.experiment05.evaluate freeze\n.venv/bin/python -m latent_loop.experiment05.evaluate final\n.venv/bin/python -m latent_loop.experiment05.evaluate timing\n.venv/bin/python -m latent_loop.experiment05.report\n```", "", "The completed config/protocol is consumed: fitting refuses after final opening. Use a new independent namespace, fresh seeds/runtime clock and manifests for a new experiment, rather than overwriting these files. CPU report regeneration reads saved measurements without MLX. Training resumes adapter/optimizer checkpoints and deterministic batch/depth schedules after safe interruptions. Source/config/data hashes reject incompatible resume. No Experiment 5 commit is pushed. Public v0.1.0 is `0a637eb97d66eebbd740b612ab92e9095c496931`.", "", "[Protocol](../../experiments/experiment_05/frozen_protocol.json) · [Dataset manifest](../../experiments/experiment_05/dataset_manifest.json) · [Summary](../../results/experiment_05/summary.json) · [Public audit](../../results/experiment_05/public_audit.json) · [Primary references](../../experiments/experiment_05/research_references.md)"]
+    pos = lines.index("## Architecture")
+    lines[pos:pos] = [f"The selected recurrent model scores {100*fid['systems'][selected]['depths']['1']['accuracy']:.2f}% at depth one. Depth four minus depth one is {interval(paired['selected_depth4_minus_depth1'])} percentage points. The simultaneous multi-depth condition scores {100*fid['systems']['multi_depth']['depths']['4']['accuracy']:.2f}% at depth four; its unfavorable result remains part of the main study.", ""]
+    pos = lines.index("## Failure analysis")
+    lines[pos:pos] = ["The bounded untrained control helps inspect stabilization from the cap and gated update. It uses fixed 0.05 reinjection and therefore matches the gated families' initialization more closely than the selected no-reinjection model. Differences against the latter do not isolate adaptation alone. Small state drift does not demonstrate better decisions.", ""]
+    pos = lines.index("## Limitations") + 2
+    lines[pos:pos] = ["Checkpoint and family selection by NLL can favor calibrated probabilities over decision accuracy. That criterion was preserved after final opening; this study does not evaluate final accuracy of unselected checkpoints.", ""]
+    pos = lines.index("## Reproduction and local status") + 2
+    env = json.loads((OUT / "runtime_environment.json").read_text())
+    lines[pos:pos] = [f"Verified Python {env['python']}, MLX {env['training_versions']['mlx']}, mlx-lm {env['training_versions']['mlx-lm']}, FP32 on Apple Silicon. [Exact dependency versions](../../results/experiment_05/runtime_environment.json) include the clean CPU report environment, which has no MLX installed.", ""]
     REPORT.mkdir(parents=True, exist_ok=True)
     path = REPORT / "train_the_thinker.md"
     path.write_text("\n".join(lines) + "\n")
@@ -443,6 +469,10 @@ def main():
         return match.group(0)
     body = re.sub(r'src="([^"]+)"', embed, body)
     path.with_suffix(".html").write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Experiment 5 — Train the Loop, Not the Judge</title><style>body{font:16px/1.6 system-ui;max-width:1100px;margin:40px auto;padding:0 24px}table{border-collapse:collapse;font-size:14px}td,th{border:1px solid #ddd;padding:6px}img{max-width:100%}pre{overflow:auto;background:#f5f5f5;padding:16px}</style>'+body+'</html>')
+    atomic_json(OUT / "report_artifact_manifest.json", {"generator_sha256": sha(__file__),
+                "input_hashes": {str(p): sha(p) for p in (OUT / "summary.json", OUT / "public_audit.json", OUT / "latency.json", OUT / "runtime_environment.json", EXP / "frozen_protocol.json")},
+                "artifact_hashes": {str(p): sha(p) for p in sorted(REPORT.rglob("*")) if p.is_file()},
+                "figure_source": "Saved measured logits, trajectories, epoch records and synchronized timings; no synthetic result points"})
     print("Local report complete:", conclusion, "paired", interval(main_comparison), flush=True)
 
 

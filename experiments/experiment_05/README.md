@@ -22,6 +22,12 @@ The six-hour clock includes validation, fitting and evaluation; the training
 guard reserves twenty minutes. The MLX allocator is limited to 48 GiB. The
 primary depth is four and depths five through eight are diagnostics only.
 
+Training finished before a long session idle interval. On the user's subsequent
+continuation, [resume_budget.json](resume_budget.json) recorded that interval
+before final opening. Evaluation retains the original six-hour **active** budget
+and reports total calendar elapsed time separately. No training configuration,
+checkpoint or selection rule was changed by this clock accounting.
+
 ## Execution and resume
 
 ```sh

@@ -1,0 +1,32 @@
+{
+  "verified_utc": "2026-10-09T12:11:32.851437+00:00",
+  "mlx_suite": {
+    "passed": 33,
+    "command": "LATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q"
+  },
+  "cpu_report_regeneration": "Passed in isolated environment without MLX",
+  "html_embedded_images": 8,
+  "relative_links_missing": [],
+  "artifact_and_checkpoint_hashes_verified": true,
+  "historical_files_unchanged": true,
+  "tracked_model_weights_or_hidden_array_archives": false,
+  "active_resource_budget_passed": true,
+  "github_release_reverified": {
+    "repository": "https://github.com/johnathonkillaly/latent-loop-confidence",
+    "release": "https://github.com/johnathonkillaly/latent-loop-confidence/releases/tag/v0.1.0",
+    "tag": "v0.1.0",
+    "main_and_tag_commit": "0a637eb97d66eebbd740b612ab92e9095c496931",
+    "public": true,
+    "draft": false,
+    "remote_experiment_05_branch_exists": false
+  },
+  "figures_visually_reviewed": 8,
+  "unfinished_optional_work": "C/V/D transfer, trajectory loss and loop memory deferred because useful fixed-depth recurrence was not established",
+  "cpu_suite": {
+    "passed": 21,
+    "skipped": 12,
+    "command": "PYTHONPATH=src artifacts/publication/cpu-env/bin/python -m pytest -q",
+    "mlx_installed": false
+  },
+  "completed_qa_utc": "2026-10-09T12:12:38.363612+00:00"
+}

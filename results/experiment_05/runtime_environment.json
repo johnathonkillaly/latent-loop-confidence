@@ -1,0 +1,31 @@
+{
+  "recorded_utc": "2026-10-09T11:51:44.813247+00:00",
+  "python": "3.12.15",
+  "machine": "arm64",
+  "macos": "27.0.1",
+  "training_versions": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "markdown": "3.11",
+    "pytest": "9.1.1",
+    "mlx": "0.32.3",
+    "mlx-lm": "0.32.0",
+    "transformers": "5.19.0",
+    "huggingface-hub": "1.33.0",
+    "safetensors": "0.8.0"
+  },
+  "cpu_report_environment": {
+    "python": "3.12.15",
+    "mlx_installed": false,
+    "versions": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.2",
+      "markdown": "3.11",
+      "pytest": "9.1.1"
+    }
+  },
+  "training_versions_match_pretraining_validation": true,
+  "dependency_upgrades_in_existing_environment": false
+}

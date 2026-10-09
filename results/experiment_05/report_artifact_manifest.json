@@ -1,0 +1,31 @@
+{
+  "generator_sha256": "f70a15d0197309207d6a276966ff317de6a6b20a29e99255ce5ae9ba4b541620",
+  "input_hashes": {
+    "results/experiment_05/summary.json": "b35eb3cc38cbd130c3e8bf0082c4eceb0ebe29270a3d64dc6920af499f50879a",
+    "results/experiment_05/public_audit.json": "8c878b31ca10c957748fb63f3f5479a545bf2a983f267e3e7570640df9e837d2",
+    "results/experiment_05/latency.json": "6b4e3cf19a6210f7ceea3985e512e0b2b56b530989a2e05745f91a3c7c620e98",
+    "results/experiment_05/runtime_environment.json": "c0a83cebc19500ba7b3648eed8913179fdf38fd0f8e1575373171fba3120cd33",
+    "experiments/experiment_05/frozen_protocol.json": "29ddad758293a96822394d20dd2e2df62943aeedbbadb6bc9e24834768136333"
+  },
+  "artifact_hashes": {
+    "reports/experiment_05/figures/accuracy_depth.png": "4183ef4284dd4f43e3bdd05aacda12928f3d6f471d36a96b438ae9fc07d2bafd",
+    "reports/experiment_05/figures/accuracy_depth.svg": "04375ade56b8c2757c0e462d8650a311e64c9442d02aa99c996641b585345f6e",
+    "reports/experiment_05/figures/accuracy_latency.png": "11a646d90da83cbb6b41009e87598c1ec4206c2bcd26de2d811ca0ce8a29d9a5",
+    "reports/experiment_05/figures/accuracy_latency.svg": "1141611d9e1f15d109a0e915138b04d8b112de5200674f09c54378dee416a45d",
+    "reports/experiment_05/figures/generalization_tasks.png": "2b8702b6dffba68a043d582b41b87e9f6426a906e3360159b118848f49512a37",
+    "reports/experiment_05/figures/generalization_tasks.svg": "487cee8ef3d471ade3f1a83ca56726f8003343938d528bd299bd0f22f7efa09c",
+    "reports/experiment_05/figures/parameters_accuracy.png": "875ae0f52a9e2c4f7b12d3f854b0cccd51f9c5c8b9df7ef6671eaffde5dcabf9",
+    "reports/experiment_05/figures/parameters_accuracy.svg": "21f5c89f6b8ad472aa05a2944f9a6882279a88a1d53123f7a37a5683498ab11a",
+    "reports/experiment_05/figures/state_drift.png": "dd1e6f9ca2c9f13ef745825f60a9c81932e344b87ba3d16ef2a8188519c72ce4",
+    "reports/experiment_05/figures/state_drift.svg": "9410e3662239ed3eb787f939f33fc7c5398f04888343ae8638954b0ca7294d6a",
+    "reports/experiment_05/figures/stress_depth.png": "0c4eec120e11b7c47fb88c1d9e7596d02afbfd03be930e1aae3778b7d98a9b54",
+    "reports/experiment_05/figures/stress_depth.svg": "d2dc3c23d1f6b270505c38fa11347329755fc2a0494ec701293c2b6f9caabb48",
+    "reports/experiment_05/figures/training_validation_loss.png": "e9e83e2d33fa5bffdadb6fda7acb730f42e9bac2ac4c54dcfd7aa5f7be19d46e",
+    "reports/experiment_05/figures/training_validation_loss.svg": "1d14164b78d2ebd3dd8b1f15fd4d5e9111d451af931361711e3f92bd1695d9a6",
+    "reports/experiment_05/figures/transitions.png": "5f772f3dee936731c19ada1f8bd73ae82c36e84b06676545d60bc0db14a99781",
+    "reports/experiment_05/figures/transitions.svg": "a59a9157894d009405528ef06f78337cd780b32f5958db3361e415ad1da82bce",
+    "reports/experiment_05/train_the_thinker.html": "b09dfb3ab26e4aa6f0d3e107457fe7854c5a945c4d930434ba0de89dc2f71d1b",
+    "reports/experiment_05/train_the_thinker.md": "cd232972a20244caa5df27dc58fb26b83d016b39bf2dd13d331699e854abb921"
+  },
+  "figure_source": "Saved measured logits, trajectories, epoch records and synchronized timings; no synthetic result points"
+}
