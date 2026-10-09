@@ -1,0 +1,40 @@
+{
+  "generated": "2026-10-09T14:57:47.439534+00:00",
+  "embedded_figures": 12,
+  "inputs": {
+    "results/experiment_05c/summary.json": "a538505e3ef8a9852634b5cd6c33ba8985b01025c0a5df428171a7b233976e6e",
+    "results/experiment_05c/rollout_summary.json": "4d66721d8165d72a45e05bffd02be90bf6a9cf9ddb7ad04c29c5001aac312005",
+    "results/experiment_05c/descriptive_analysis.json": "ca3e06754beb96b4b42c736a0ea7cdca9fae43a03bfc88a6b09bb2a6ad5abc54",
+    "results/experiment_05c/propagation_analysis.json": "5aca3cb695bb0b7f83c9f221b3531ca5bb8f3acbdc690350b423a16710306270",
+    "results/experiment_05c/latency.json": "ebf36e47d8563805a23e292248c37a7c214caa35a1b46d1d3768debfec00eb29",
+    "results/experiment_05c/train_depth_diagnostic.json": "8e67bbf424d2f07bcedc4138686c79725b7a1655453fad8dd74016989fd0ff8f"
+  },
+  "outputs": {
+    "reports/experiment_05c/scaling_and_failure_frontier.md": "aa04010ef5de59c40d6aa44adbc051c49241bdae57d2740dd7323c746e3ebd49",
+    "reports/experiment_05c/scaling_and_failure_frontier.html": "7777f4214a452f3a3aca2af77e7f855c1f7f9d255f84e4d7d3fccdc3bd44423d",
+    "reports/experiment_05c/figures/recurrent_vs_feedforward.svg": "8fec9d26e3d831455360712cd2d9d0ac779b3d464d6d89638f64796925444066",
+    "reports/experiment_05c/figures/path_loop_completion_heatmap.png": "d497620cf9acf15c3ed2c741bafac63a7bfa6d730dde55268fad11dce02c714d",
+    "reports/experiment_05c/figures/accuracy_vs_path_length.svg": "efda7f525d41158d671226b83fe8d93acad2e025dc939a13e78e7ed9c0b93569",
+    "reports/experiment_05c/figures/training_validation_loss.svg": "76a3285c16590df943624067c829899071a813bcc412a0b2bde03f159cd85d86",
+    "reports/experiment_05c/figures/train_depth_test_depth_generalization.svg": "b33e03aaa196b1fdcbae19e089e3e32d091135cfa7138a5ad909d486688262b5",
+    "reports/experiment_05c/figures/new_failure_examples.png": "926ccc67ac470a728f493fdf8c7835c48ff664608a4aab214a69db4232b43b46",
+    "reports/experiment_05c/figures/bounded_states_and_drift.svg": "036474327899fb9fa686ba0aae40da9556ee3f0fc5a9cd57d6d9e069ce6e9f1e",
+    "reports/experiment_05c/figures/bounded_states_and_drift.png": "abda72a28086702671212c0b528e4567874739ce90e9ee884f972681fcc23142",
+    "reports/experiment_05c/figures/new_failure_examples.svg": "40dc43e194b2ad1beb317119dd18f33a3a4e28e7d452beebe914608d0c7d19fd",
+    "reports/experiment_05c/figures/train_depth_test_depth_generalization.png": "e9bbce45a35343fdc5848f6ab104a73cb5b482d2d0e5dbc4b68a327fd0b1e286",
+    "reports/experiment_05c/figures/training_validation_loss.png": "0499fc1e0f77305f1fc680a93a1ccc873a5d7cb11458e85966b208c78f4dcd88",
+    "reports/experiment_05c/figures/accuracy_vs_path_length.png": "92af1e4fa5dec41df52a65280eeda017eee4fbeb1e0f9a6cb4d9501b26af47be",
+    "reports/experiment_05c/figures/recurrent_vs_feedforward.png": "de012b536dcca7f532c2bb735aaf439cefa26f1e595c0b22108aa3effe8fdeac",
+    "reports/experiment_05c/figures/path_loop_completion_heatmap.svg": "695392955642be85b1de1844e635b3175aa6149e69ea70eafe06ac0b0e34e8a5",
+    "reports/experiment_05c/figures/corrected_vs_degraded.png": "cc073057dda43ef31298932582bf1dacac2c80e126c7d87671dd4b984f375cef",
+    "reports/experiment_05c/figures/hidden_state_propagation.png": "23684be98c2ce5d0d29faa2b8c1aab75a6c37456f62e6b189552f2ac66156a53",
+    "reports/experiment_05c/figures/accuracy_vs_actual_latency.svg": "29160f20d99c8979c5e837a958e2e2140dd6bff59bb1dac8cc7ed6f4b60af56a",
+    "reports/experiment_05c/figures/accuracy_vs_iterations.png": "c216fc4b42316f0b3ba2546e81efc1e80ed8a1a69b4e167de3eededa8dee655e",
+    "reports/experiment_05c/figures/size_loop_accuracy_heatmap.png": "f8c73c2c2c56a13c1d16db3a4ee6bb163ae302bcf7fb7c9c5ad47fe0a9a5a8eb",
+    "reports/experiment_05c/figures/size_loop_accuracy_heatmap.svg": "c978f81660e3938186e260d0f4a3e12256995b031caec273ae2abf444f4578bf",
+    "reports/experiment_05c/figures/accuracy_vs_iterations.svg": "7b98d3fe3f8689f97e3355dbdcc9e044e8f72e97dd1a560fe7777044ef52a47a",
+    "reports/experiment_05c/figures/accuracy_vs_actual_latency.png": "b5643e902f97bdd0919714a2a9d3b72fed096dbed45bd325c1d69af33b707d73",
+    "reports/experiment_05c/figures/hidden_state_propagation.svg": "1f979e1682effa2ad02607ffbfbb0031cc1e62a90f66a5ca74499661d2a617ae",
+    "reports/experiment_05c/figures/corrected_vs_degraded.svg": "2fa80d7df5d1fe93cc090298781e24e0e93a6776567054ad5bfc86ac83286f7c"
+  }
+}

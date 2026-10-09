@@ -1,0 +1,21 @@
+{
+  "verified": "2026-10-09T14:55:16.581248+00:00",
+  "results": {
+    "larger": {
+      "episodes": 60,
+      "training_seeds": 3,
+      "completion": 0.95,
+      "all_actions_positions_outcomes_and_offline_metrics_exact": true
+    },
+    "long_paths": {
+      "episodes": 60,
+      "training_seeds": 3,
+      "completion": 0.5444444444444444,
+      "all_actions_positions_outcomes_and_offline_metrics_exact": true
+    }
+  },
+  "live_inference_seconds_with_scoring": 6.3586347499949625,
+  "peak_mlx_gib": 0.00247182697057724,
+  "timings_not_expected_identical": true,
+  "historical_artifacts_modified": false
+}

@@ -1,0 +1,7 @@
+{
+  "completed": "2026-10-09T14:38:28.904584+00:00",
+  "seconds": 18.358328458009055,
+  "peak_mlx_gib": 0.014316465705633163,
+  "peak_rss_gib": 0.160736083984375,
+  "rerun_reason": "Frozen diagnostic numeric computation succeeded, final NumPy coordinate serialization failed; rerun with metadata-only native-scalar export wrapper"
+}

@@ -1,0 +1,18 @@
+{
+  "checked": "2026-10-09T14:34:06.179097+00:00",
+  "backend": "Independent CPU-only environment; no MLX",
+  "all_byte_identical": true,
+  "splits": {
+    "train": true,
+    "validation": true,
+    "size5": true,
+    "size7": true,
+    "size9": true,
+    "size11": true,
+    "size15": true,
+    "structure9": true,
+    "dense9": true,
+    "long15": true
+  },
+  "examples": 10860
+}

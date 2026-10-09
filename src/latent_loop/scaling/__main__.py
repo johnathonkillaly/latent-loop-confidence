@@ -20,5 +20,5 @@ def main():
         {'freeze':freeze,'evaluate':evaluate,'rollout':rollouts,'latency':latency}[a.command]()
     else:
         from importlib import import_module
-        import_module('latent_loop.scaling.'+{'propagation':'diagnostics'}.get(a.command,a.command)).run()
+        import_module('latent_loop.scaling.'+{'propagation':'diagnostic_export'}.get(a.command,a.command)).run()
 if __name__=='__main__':main()

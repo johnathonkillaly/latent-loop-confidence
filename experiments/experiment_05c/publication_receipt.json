@@ -4,5 +4,7 @@
   "tag": "v0.2.0",
   "commit": "1ebd435b94448d45e42141b49808839218c2b7b2",
   "v010_commit": "0a637eb97d66eebbd740b612ab92e9095c496931",
-  "remote_release_verified": true
+  "remote_release_verified": true,
+  "release_notes_links": "Absolute links pinned to v0.2.0 verified during final release QA; tag unchanged",
+  "final_remote_check": "2026-10-09T15:00:17.165602+00:00"
 }

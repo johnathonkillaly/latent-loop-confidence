@@ -1,0 +1,13 @@
+{
+  "checked": "2026-10-09T15:00:37.258782+00:00",
+  "all_passed": true,
+  "new_labels_and_topologies_checked": 10860,
+  "historical_topologies_excluded": 6371,
+  "trajectory_files": 144,
+  "decisions_recomputed": 1158300,
+  "source_freeze_verified": true,
+  "historical_files_unchanged": true,
+  "security_files_scanned": 370,
+  "security_findings": [],
+  "scope": "CPU metric/solver/graph-exclusion/finite-state audit. Exact historical inference separately verified. Full independent model retraining not claimed."
+}

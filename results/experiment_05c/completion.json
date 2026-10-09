@@ -1,0 +1,36 @@
+{
+  "measurement_and_QA_completed": "2026-10-09T15:00:17.157657+00:00",
+  "study_started": "2026-10-09T14:21:13+00:00",
+  "active_study_elapsed_seconds": 2344.157657,
+  "known_idle_intervals_excluded_seconds": 0,
+  "duration_definition": "Elapsed active study through this receipt, including implementation/generation/evaluation/analysis; not training duration. No session idle interval occurred. Commit/backup seconds follow.",
+  "fits": 15,
+  "fit_epoch_seconds_including_validation": 157.84421449511137,
+  "training_examples_presentations": 2700000,
+  "training_seeds": [
+    101,
+    202,
+    303
+  ],
+  "peak_recorded_mlx_gib": 0.8246341422200203,
+  "frozen_sources_and_weights_preserved": true,
+  "published_experiment_05c": false,
+  "next_phase_started": false,
+  "test_results": {
+    "checked": "2026-10-09T14:32:42.371759+00:00",
+    "mlx": {
+      "passed": 54,
+      "skipped": 0,
+      "failed": 0
+    },
+    "cpu_only": {
+      "passed": 34,
+      "skipped": 14,
+      "failed": 0
+    },
+    "scope": "Full historical suite plus new conservative graph exclusion, independent structural solver, final access guard, exact executor parity, bounded32-loop states and finite gradients/global-context tests",
+    "final_checked": "2026-10-09T14:47:01.730264+00:00"
+  },
+  "dataset_reproduction": true,
+  "independent_neural_retraining_replication": false
+}

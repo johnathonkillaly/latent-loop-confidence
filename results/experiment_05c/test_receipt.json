@@ -1,7 +1,7 @@
 {
   "checked": "2026-10-09T14:32:42.371759+00:00",
   "mlx": {
-    "passed": 53,
+    "passed": 54,
     "skipped": 0,
     "failed": 0
   },
@@ -10,5 +10,6 @@
     "skipped": 14,
     "failed": 0
   },
-  "scope": "Full historical suite plus new conservative graph exclusion, independent structural solver, final access guard, exact executor parity, bounded32-loop states and finite gradients/global-context tests"
+  "scope": "Full historical suite plus new conservative graph exclusion, independent structural solver, final access guard, exact executor parity, bounded32-loop states and finite gradients/global-context tests",
+  "final_checked": "2026-10-09T14:47:01.730264+00:00"
 }

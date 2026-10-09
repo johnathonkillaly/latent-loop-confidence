@@ -49,6 +49,18 @@ def run():
             for kind,pattern in patterns.items():
                 if re.search(pattern,text):findings.append({'path':str(p),'category':kind})
     assert not findings,findings
+    episode_cache={}
+    row_cache={split:{r['id']:r for r in read(OUT/'datasets'/f'{split}.jsonl.gz')} for split,spec in manifest['splits'].items() if spec.get('final')}
+    for cell in frontier:
+        split=cell['split'];c=cell['model'];d=cell['loops'];key=(split,c,d)
+        if key not in episode_cache:
+            p=OUT/'rollouts'/f'{c}_depth{d}_{split}.jsonl.gz';episode_cache[key]=read(p) if p.exists() else []
+        group=[]
+        for ep in episode_cache[key]:
+            row=row_cache[split][ep['id']];j=cell['junctions'];junction_count=row['topology']['junctions']
+            if ep['path_bin']==cell['path_bin'] and (j=='all' or (junction_count<=5 if j=='0-5' else 6<=junction_count<=15 if j=='6-15' else junction_count>=16)):group.append(ep)
+        comp=float(np.mean([ep['done'] for ep in group])) if group else None
+        cell.update(completion=comp,independent_episodes=len({ep['id'] for ep in group}),passes_80pct_completion=comp>=.8 if comp is not None else None,mean_solved_excess_steps=float(np.mean([ep['steps']-ep['optimum'] for ep in group if ep['done']])) if any(ep['done'] for ep in group) else None,mean_invalid=float(np.mean([ep['invalid'] for ep in group])) if group else None)
     write_json(OUT/'failure_frontier.json',{'thresholds':cfg['thresholds'],'status':'Descriptive engineering thresholds, not hypothesis tests; small cells retained with counts','cells':frontier})
     write_json(OUT/'public_audit.json',{'checked':now(),'all_passed':True,'new_labels_and_topologies_checked':n,'historical_topologies_excluded':manifest['historical_graph_fingerprints'],'trajectory_files':files,'decisions_recomputed':decisions,'source_freeze_verified':True,'historical_files_unchanged':True,'security_files_scanned':scanned,'security_findings':findings,'scope':'CPU metric/solver/graph-exclusion/finite-state audit. Exact historical inference separately verified. Full independent model retraining not claimed.'})
     print('Public audit:',n,'new labels,',decisions,'decisions,',files,'trace files, no security findings',flush=True)

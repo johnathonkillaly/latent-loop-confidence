@@ -25,3 +25,9 @@ def test_new_forward_gradient_and_global_context():
         assert all(np.isfinite(np.asarray(v)).all() for _,v in tree_flatten(g))
         assert float(mx.linalg.norm(g['encoder']['weight']))>0
         if hasattr(m,'context'):assert float(mx.linalg.norm(g['context']['weight']))>0
+
+def test_diagnostic_metadata_export_preserves_values():
+    import json
+    from latent_loop.scaling.diagnostic_export import native
+    v={'coordinates':[np.int64(2),np.int32(3)],'measurement':np.float64(.25),'flag':np.bool_(True)}
+    assert json.loads(json.dumps(native(v)))=={'coordinates':[2,3],'measurement':.25,'flag':True}

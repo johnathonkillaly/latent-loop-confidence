@@ -6,6 +6,27 @@
       "resolution": "Explicit native integer conversion; full deterministic generation rerun before fitting",
       "scientific_results_invalidated": false,
       "recorded": "2026-10-09T14:25:37.038733+00:00"
+    },
+    {
+      "stage": "post-freeze diagnostic metadata export",
+      "error": "NumPy int64 coordinate could not serialize to JSON after numerical measurements completed",
+      "resolution": "Separate native-scalar save_rows wrapper; frozen scientific sources/weights unchanged; complete diagnostic rerun",
+      "recorded": "2026-10-09T14:38:10.350592+00:00",
+      "scientific_results_invalidated": false
+    },
+    {
+      "stage": "post-final descriptive analysis",
+      "error": "Empty common-distance2\u201320 stratum on long-path-only split produced NaN; strict JSON export correctly rejected it",
+      "resolution": "Represent absent strata as null; no inference/training/primary metric changed",
+      "recorded": "2026-10-09T14:43:33.860285+00:00",
+      "scientific_results_invalidated": false
+    },
+    {
+      "stage": "post-final public audit reporting",
+      "error": "Frontier junction variable shadowed total checked-label count in audit receipt",
+      "resolution": "Separate junction variable; rerun complete numerical audit; all10860 label checks and1158300 decision checks had actually passed",
+      "scientific_results_invalidated": false,
+      "recorded": "2026-10-09T14:47:01.730698+00:00"
     }
   ]
 }

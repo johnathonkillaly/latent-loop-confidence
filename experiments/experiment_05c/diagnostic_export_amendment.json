@@ -1,0 +1,7 @@
+{
+  "recorded": "2026-10-09T14:38:28.904893+00:00",
+  "frozen_diagnostics_sha256": "061e99254deb1d4909be9cba1ced063281de0b3f3536df4ca7255bae985b46c9",
+  "export_wrapper_sha256": "1b74e2b17876dd2a7390331effd2daf7e4abe3a75598c357dafedd9358d97455",
+  "change": "Convert NumPy scalar metadata recursively at save_rows boundary only; all frozen model/evaluation/diagnostic computation remains byte-identical",
+  "post_final_model_or_depth_selection": false
+}

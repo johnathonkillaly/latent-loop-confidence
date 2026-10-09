@@ -1,0 +1,3561 @@
+{
+  "size5": {
+    "maze_count": 24,
+    "models": {
+      "frozen_05b@4": {
+        "completion": 0.5555555555555556,
+        "completion_interval": {
+          "mean": 0.5555555555555556,
+          "ci95": [
+            0.5,
+            0.6388888888888888
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.777777777777778,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.4444444444444444,
+        "mean_inference_seconds": 0.003515169663134859,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.2222222222222222
+        }
+      },
+      "frozen_05b@8": {
+        "completion": 0.8194444444444444,
+        "completion_interval": {
+          "mean": 0.8194444444444444,
+          "ci95": [
+            0.7222222222222222,
+            0.9166666666666666
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.375,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.013888888888888888,
+        "cycle_rate": 0.18055555555555555,
+        "mean_inference_seconds": 0.005673041778613374,
+        "by_path": {
+          "13-20": 0.3888888888888889,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.8888888888888888
+        }
+      },
+      "frozen_05b@16": {
+        "completion": 0.9444444444444444,
+        "completion_interval": {
+          "mean": 0.9444444444444444,
+          "ci95": [
+            0.8333333333333334,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.277777777777778,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.05555555555555555,
+        "mean_inference_seconds": 0.015087976662875412,
+        "by_path": {
+          "13-20": 0.8333333333333334,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.9444444444444444
+        }
+      },
+      "frozen_05b@32": {
+        "completion": 0.9166666666666666,
+        "completion_interval": {
+          "mean": 0.9166666666666666,
+          "ci95": [
+            0.8052083333333334,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.25,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.013888888888888888,
+        "cycle_rate": 0.08333333333333333,
+        "mean_inference_seconds": 0.02303625593372595,
+        "by_path": {
+          "13-20": 0.8333333333333334,
+          "2-4": 1.0,
+          "5-8": 0.9444444444444444,
+          "9-12": 0.8888888888888888
+        }
+      },
+      "rec_variable@4": {
+        "completion": 0.5972222222222222,
+        "completion_interval": {
+          "mean": 0.5972222222222222,
+          "ci95": [
+            0.5,
+            0.6805555555555556
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.972222222222222,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.4027777777777778,
+        "mean_inference_seconds": 0.005778904497371211,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.3888888888888889
+        }
+      },
+      "rec_variable@8": {
+        "completion": 0.9722222222222222,
+        "completion_interval": {
+          "mean": 0.9722222222222222,
+          "ci95": [
+            0.8888888888888888,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.458333333333333,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.027777777777777776,
+        "mean_inference_seconds": 0.015164228057377235,
+        "by_path": {
+          "13-20": 0.9444444444444444,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.9444444444444444
+        }
+      },
+      "rec_variable@16": {
+        "completion": 0.9861111111111112,
+        "completion_interval": {
+          "mean": 0.9861111111111112,
+          "ci95": [
+            0.9444444444444444,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.513888888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.013888888888888888,
+        "mean_inference_seconds": 0.01610295752571902,
+        "by_path": {
+          "13-20": 1.0,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.9444444444444444
+        }
+      },
+      "rec_variable@32": {
+        "completion": 0.9861111111111112,
+        "completion_interval": {
+          "mean": 0.9861111111111112,
+          "ci95": [
+            0.9444444444444444,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.513888888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.013888888888888888,
+        "mean_inference_seconds": 0.023606468637606466,
+        "by_path": {
+          "13-20": 1.0,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.9444444444444444
+        }
+      },
+      "rec_curriculum@4": {
+        "completion": 0.5972222222222222,
+        "completion_interval": {
+          "mean": 0.5972222222222222,
+          "ci95": [
+            0.5135416666666667,
+            0.6805555555555556
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.083333333333333,
+        "solved_step_ratio": 1.0116279069767442,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.4027777777777778,
+        "mean_inference_seconds": 0.005912605943699923,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.9444444444444444,
+          "5-8": 1.0,
+          "9-12": 0.4444444444444444
+        }
+      },
+      "rec_curriculum@8": {
+        "completion": 0.8333333333333334,
+        "completion_interval": {
+          "mean": 0.8333333333333334,
+          "ci95": [
+            0.7083333333333334,
+            0.9447916666666664
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.5,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.16666666666666666,
+        "mean_inference_seconds": 0.013254006529273788,
+        "by_path": {
+          "13-20": 0.5,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.8333333333333334
+        }
+      },
+      "rec_curriculum@16": {
+        "completion": 0.9583333333333334,
+        "completion_interval": {
+          "mean": 0.9583333333333334,
+          "ci95": [
+            0.875,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.277777777777778,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.013888888888888888,
+        "cycle_rate": 0.041666666666666664,
+        "mean_inference_seconds": 0.016640100669772236,
+        "by_path": {
+          "13-20": 0.8888888888888888,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.9444444444444444
+        }
+      },
+      "rec_curriculum@32": {
+        "completion": 0.9027777777777778,
+        "completion_interval": {
+          "mean": 0.9027777777777778,
+          "ci95": [
+            0.7361111111111112,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.777777777777778,
+        "solved_step_ratio": 1.0123076923076924,
+        "mean_invalid": 0.041666666666666664,
+        "cycle_rate": 0.09722222222222222,
+        "mean_inference_seconds": 0.019878247055708523,
+        "by_path": {
+          "13-20": 0.7222222222222222,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 0.8888888888888888
+        }
+      },
+      "ff4_params@4": {
+        "completion": 0.4444444444444444,
+        "completion_interval": {
+          "mean": 0.4444444444444444,
+          "ci95": [
+            0.3055555555555556,
+            0.5833333333333334
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.708333333333333,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5555555555555556,
+        "mean_inference_seconds": 0.0038570608190234956,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.7222222222222222,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.2222222222222222
+        }
+      },
+      "ff8@8": {
+        "completion": 0.6388888888888888,
+        "completion_interval": {
+          "mean": 0.6388888888888888,
+          "ci95": [
+            0.4166666666666667,
+            0.847916666666666
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.75,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.3611111111111111,
+        "mean_inference_seconds": 0.013906928969542301,
+        "by_path": {
+          "13-20": 0.2777777777777778,
+          "2-4": 0.7777777777777778,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.6666666666666666
+        }
+      },
+      "global_cnn@4": {
+        "completion": 0.4166666666666667,
+        "completion_interval": {
+          "mean": 0.4166666666666667,
+          "ci95": [
+            0.2638888888888889,
+            0.5694444444444444
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.125,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5833333333333334,
+        "mean_inference_seconds": 0.007005010403291736,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.7222222222222222,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.2222222222222222
+        }
+      },
+      "greedy@0": {
+        "completion": 0.375,
+        "completion_interval": {
+          "mean": 0.375,
+          "ci95": [
+            0.25,
+            0.5
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 3.1666666666666665,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.625,
+        "mean_inference_seconds": 3.789754676593778e-06,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8333333333333334,
+          "5-8": 0.6666666666666666,
+          "9-12": 0.0
+        }
+      },
+      "bfs@0": {
+        "completion": 1.0,
+        "completion_interval": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.625,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.0,
+        "mean_inference_seconds": 0.00039200879230823676,
+        "by_path": {
+          "13-20": 1.0,
+          "2-4": 1.0,
+          "5-8": 1.0,
+          "9-12": 1.0
+        }
+      }
+    }
+  },
+  "size7": {
+    "maze_count": 30,
+    "models": {
+      "frozen_05b@4": {
+        "completion": 0.34444444444444444,
+        "completion_interval": {
+          "mean": 0.34444444444444444,
+          "ci95": [
+            0.24444444444444444,
+            0.43333333333333335
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.633333333333334,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6555555555555556,
+        "mean_inference_seconds": 0.005694260143758988,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "5-8": 0.6111111111111112,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "frozen_05b@8": {
+        "completion": 0.7111111111111111,
+        "completion_interval": {
+          "mean": 0.7111111111111111,
+          "ci95": [
+            0.6333333333333333,
+            0.7888888888888889
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.622222222222222,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.022222222222222223,
+        "cycle_rate": 0.28888888888888886,
+        "mean_inference_seconds": 0.01504435852564509,
+        "by_path": {
+          "13-20": 0.6666666666666666,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 1.0,
+          "9-12": 0.8888888888888888
+        }
+      },
+      "frozen_05b@16": {
+        "completion": 0.7222222222222222,
+        "completion_interval": {
+          "mean": 0.7222222222222222,
+          "ci95": [
+            0.6222222222222222,
+            0.8
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.7444444444444445,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.022222222222222223,
+        "cycle_rate": 0.2777777777777778,
+        "mean_inference_seconds": 0.01744212779287611,
+        "by_path": {
+          "13-20": 0.8333333333333334,
+          "2-4": 1.0,
+          "21-32": 0.05555555555555555,
+          "5-8": 0.9444444444444444,
+          "9-12": 0.7777777777777778
+        }
+      },
+      "frozen_05b@32": {
+        "completion": 0.6666666666666666,
+        "completion_interval": {
+          "mean": 0.6666666666666666,
+          "ci95": [
+            0.5444444444444444,
+            0.7666666666666667
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.633333333333334,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.03333333333333333,
+        "cycle_rate": 0.3333333333333333,
+        "mean_inference_seconds": 0.024644647646507818,
+        "by_path": {
+          "13-20": 0.7777777777777778,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.1111111111111111,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.6111111111111112
+        }
+      },
+      "rec_variable@4": {
+        "completion": 0.3,
+        "completion_interval": {
+          "mean": 0.3,
+          "ci95": [
+            0.2222222222222222,
+            0.3888888888888889
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.644444444444445,
+        "solved_step_ratio": 1.0296296296296297,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7,
+        "mean_inference_seconds": 0.004872773201916264,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8888888888888888,
+          "21-32": 0.0,
+          "5-8": 0.5,
+          "9-12": 0.1111111111111111
+        }
+      },
+      "rec_variable@8": {
+        "completion": 0.6666666666666666,
+        "completion_interval": {
+          "mean": 0.6666666666666666,
+          "ci95": [
+            0.5333333333333333,
+            0.8
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.6,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.011111111111111112,
+        "cycle_rate": 0.3333333333333333,
+        "mean_inference_seconds": 0.014232636988001306,
+        "by_path": {
+          "13-20": 0.6111111111111112,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.16666666666666666,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.7222222222222222
+        }
+      },
+      "rec_variable@16": {
+        "completion": 0.8555555555555555,
+        "completion_interval": {
+          "mean": 0.8555555555555555,
+          "ci95": [
+            0.7777777777777778,
+            0.9333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 9.21111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.14444444444444443,
+        "mean_inference_seconds": 0.01871255414589541,
+        "by_path": {
+          "13-20": 0.8888888888888888,
+          "2-4": 1.0,
+          "21-32": 0.5555555555555556,
+          "5-8": 0.9444444444444444,
+          "9-12": 0.8888888888888888
+        }
+      },
+      "rec_variable@32": {
+        "completion": 0.8444444444444444,
+        "completion_interval": {
+          "mean": 0.8444444444444444,
+          "ci95": [
+            0.7333333333333333,
+            0.9333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 9.344444444444445,
+        "solved_step_ratio": 1.0052631578947369,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.15555555555555556,
+        "mean_inference_seconds": 0.026510465585063987,
+        "by_path": {
+          "13-20": 0.8888888888888888,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.6111111111111112,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.8888888888888888
+        }
+      },
+      "rec_curriculum@4": {
+        "completion": 0.2777777777777778,
+        "completion_interval": {
+          "mean": 0.2777777777777778,
+          "ci95": [
+            0.16666666666666666,
+            0.3888888888888889
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.822222222222222,
+        "solved_step_ratio": 1.016,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7222222222222222,
+        "mean_inference_seconds": 0.003004775943150485,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.7777777777777778,
+          "21-32": 0.0,
+          "5-8": 0.4444444444444444,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "rec_curriculum@8": {
+        "completion": 0.5666666666666667,
+        "completion_interval": {
+          "mean": 0.5666666666666667,
+          "ci95": [
+            0.4444444444444444,
+            0.6777777777777778
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.566666666666666,
+        "solved_step_ratio": 1.0028011204481793,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.43333333333333335,
+        "mean_inference_seconds": 0.0070576122779231,
+        "by_path": {
+          "13-20": 0.4444444444444444,
+          "2-4": 0.8888888888888888,
+          "21-32": 0.16666666666666666,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.5
+        }
+      },
+      "rec_curriculum@16": {
+        "completion": 0.7333333333333333,
+        "completion_interval": {
+          "mean": 0.7333333333333333,
+          "ci95": [
+            0.5666666666666667,
+            0.8888888888888888
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.944444444444445,
+        "solved_step_ratio": 1.0068265068265068,
+        "mean_invalid": 0.07777777777777778,
+        "cycle_rate": 0.26666666666666666,
+        "mean_inference_seconds": 0.013033170954279033,
+        "by_path": {
+          "13-20": 0.6111111111111112,
+          "2-4": 1.0,
+          "21-32": 0.3333333333333333,
+          "5-8": 0.9444444444444444,
+          "9-12": 0.7777777777777778
+        }
+      },
+      "rec_curriculum@32": {
+        "completion": 0.6222222222222222,
+        "completion_interval": {
+          "mean": 0.6222222222222222,
+          "ci95": [
+            0.42194444444444446,
+            0.8113888888888886
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.688888888888889,
+        "solved_step_ratio": 1.0054945054945055,
+        "mean_invalid": 0.23333333333333334,
+        "cycle_rate": 0.37777777777777777,
+        "mean_inference_seconds": 0.018796572322672647,
+        "by_path": {
+          "13-20": 0.5555555555555556,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.2222222222222222,
+          "5-8": 0.7777777777777778,
+          "9-12": 0.6111111111111112
+        }
+      },
+      "ff4_params@4": {
+        "completion": 0.3,
+        "completion_interval": {
+          "mean": 0.3,
+          "ci95": [
+            0.18888888888888888,
+            0.4111111111111111
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.811111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7,
+        "mean_inference_seconds": 0.0029994939893691077,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.7777777777777778,
+          "21-32": 0.0,
+          "5-8": 0.5,
+          "9-12": 0.2222222222222222
+        }
+      },
+      "ff8@8": {
+        "completion": 0.4,
+        "completion_interval": {
+          "mean": 0.4,
+          "ci95": [
+            0.26666666666666666,
+            0.5333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.966666666666667,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6,
+        "mean_inference_seconds": 0.006727481568102828,
+        "by_path": {
+          "13-20": 0.2222222222222222,
+          "2-4": 0.7777777777777778,
+          "21-32": 0.0,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.2777777777777778
+        }
+      },
+      "global_cnn@4": {
+        "completion": 0.4111111111111111,
+        "completion_interval": {
+          "mean": 0.4111111111111111,
+          "ci95": [
+            0.28888888888888886,
+            0.5333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.111111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5888888888888889,
+        "mean_inference_seconds": 0.004384144521706427,
+        "by_path": {
+          "13-20": 0.16666666666666666,
+          "2-4": 0.6666666666666666,
+          "21-32": 0.0,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.5
+        }
+      },
+      "greedy@0": {
+        "completion": 0.36666666666666664,
+        "completion_interval": {
+          "mean": 0.36666666666666664,
+          "ci95": [
+            0.23333333333333334,
+            0.5
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 3.7333333333333334,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6333333333333333,
+        "mean_inference_seconds": 3.96519850861902e-06,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8333333333333334,
+          "21-32": 0.0,
+          "5-8": 0.6666666666666666,
+          "9-12": 0.3333333333333333
+        }
+      },
+      "bfs@0": {
+        "completion": 1.0,
+        "completion_interval": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 10.666666666666666,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.0,
+        "mean_inference_seconds": 0.0009282943065045401,
+        "by_path": {
+          "13-20": 1.0,
+          "2-4": 1.0,
+          "21-32": 1.0,
+          "5-8": 1.0,
+          "9-12": 1.0
+        }
+      }
+    }
+  },
+  "size9": {
+    "maze_count": 30,
+    "models": {
+      "frozen_05b@4": {
+        "completion": 0.26666666666666666,
+        "completion_interval": {
+          "mean": 0.26666666666666666,
+          "ci95": [
+            0.16666666666666666,
+            0.36666666666666664
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.722222222222222,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7333333333333333,
+        "mean_inference_seconds": 0.0031922629761134483,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8888888888888888,
+          "21-32": 0.0,
+          "5-8": 0.2777777777777778,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "frozen_05b@8": {
+        "completion": 0.6222222222222222,
+        "completion_interval": {
+          "mean": 0.6222222222222222,
+          "ci95": [
+            0.49972222222222223,
+            0.7333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.833333333333333,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.03333333333333333,
+        "cycle_rate": 0.37777777777777777,
+        "mean_inference_seconds": 0.0063172911764316575,
+        "by_path": {
+          "13-20": 0.5,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 0.7777777777777778,
+          "9-12": 0.8333333333333334
+        }
+      },
+      "frozen_05b@16": {
+        "completion": 0.7222222222222222,
+        "completion_interval": {
+          "mean": 0.7222222222222222,
+          "ci95": [
+            0.6111111111111112,
+            0.8
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.944444444444445,
+        "solved_step_ratio": 1.0051282051282053,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.2777777777777778,
+        "mean_inference_seconds": 0.012906771889215128,
+        "by_path": {
+          "13-20": 0.7222222222222222,
+          "2-4": 1.0,
+          "21-32": 0.05555555555555555,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.9444444444444444
+        }
+      },
+      "frozen_05b@32": {
+        "completion": 0.6444444444444445,
+        "completion_interval": {
+          "mean": 0.6444444444444445,
+          "ci95": [
+            0.5222222222222223,
+            0.7444444444444445
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.377777777777778,
+        "solved_step_ratio": 1.0095785440613028,
+        "mean_invalid": 0.044444444444444446,
+        "cycle_rate": 0.35555555555555557,
+        "mean_inference_seconds": 0.02224811670958944,
+        "by_path": {
+          "13-20": 0.6666666666666666,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.7222222222222222
+        }
+      },
+      "rec_variable@4": {
+        "completion": 0.26666666666666666,
+        "completion_interval": {
+          "mean": 0.26666666666666666,
+          "ci95": [
+            0.16666666666666666,
+            0.36666666666666664
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.544444444444444,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7333333333333333,
+        "mean_inference_seconds": 0.003129373287245269,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8333333333333334,
+          "21-32": 0.0,
+          "5-8": 0.4444444444444444,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "rec_variable@8": {
+        "completion": 0.5777777777777777,
+        "completion_interval": {
+          "mean": 0.5777777777777777,
+          "ci95": [
+            0.4666666666666667,
+            0.6891666666666664
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.777777777777778,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.4222222222222222,
+        "mean_inference_seconds": 0.007733890265000001,
+        "by_path": {
+          "13-20": 0.6666666666666666,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "5-8": 0.6111111111111112,
+          "9-12": 0.6666666666666666
+        }
+      },
+      "rec_variable@16": {
+        "completion": 0.7666666666666667,
+        "completion_interval": {
+          "mean": 0.7666666666666667,
+          "ci95": [
+            0.6666666666666666,
+            0.8555555555555555
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 8.855555555555556,
+        "solved_step_ratio": 1.0112721417069241,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.23333333333333334,
+        "mean_inference_seconds": 0.01355620287892331,
+        "by_path": {
+          "13-20": 0.8888888888888888,
+          "2-4": 1.0,
+          "21-32": 0.2777777777777778,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.7777777777777778
+        }
+      },
+      "rec_variable@32": {
+        "completion": 0.7555555555555555,
+        "completion_interval": {
+          "mean": 0.7555555555555555,
+          "ci95": [
+            0.6333333333333333,
+            0.8444444444444444
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 9.255555555555556,
+        "solved_step_ratio": 1.0081699346405228,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.24444444444444444,
+        "mean_inference_seconds": 0.025239687112561013,
+        "by_path": {
+          "13-20": 0.8333333333333334,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.3333333333333333,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.7777777777777778
+        }
+      },
+      "rec_curriculum@4": {
+        "completion": 0.3111111111111111,
+        "completion_interval": {
+          "mean": 0.3111111111111111,
+          "ci95": [
+            0.2222222222222222,
+            0.4
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.822222222222222,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6888888888888889,
+        "mean_inference_seconds": 0.0028652720990875323,
+        "by_path": {
+          "13-20": 0.05555555555555555,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 0.4444444444444444,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "rec_curriculum@8": {
+        "completion": 0.5555555555555556,
+        "completion_interval": {
+          "mean": 0.5555555555555556,
+          "ci95": [
+            0.43333333333333335,
+            0.6666666666666666
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.355555555555555,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.4444444444444444,
+        "mean_inference_seconds": 0.0070154857749002986,
+        "by_path": {
+          "13-20": 0.3333333333333333,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.6666666666666666
+        }
+      },
+      "rec_curriculum@16": {
+        "completion": 0.7,
+        "completion_interval": {
+          "mean": 0.7,
+          "ci95": [
+            0.5666666666666667,
+            0.8
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.566666666666666,
+        "solved_step_ratio": 1.00352733686067,
+        "mean_invalid": 0.12222222222222222,
+        "cycle_rate": 0.3,
+        "mean_inference_seconds": 0.012122662879280849,
+        "by_path": {
+          "13-20": 0.6666666666666666,
+          "2-4": 1.0,
+          "21-32": 0.05555555555555555,
+          "5-8": 0.9444444444444444,
+          "9-12": 0.8333333333333334
+        }
+      },
+      "rec_curriculum@32": {
+        "completion": 0.5444444444444444,
+        "completion_interval": {
+          "mean": 0.5444444444444444,
+          "ci95": [
+            0.3333333333333333,
+            0.7333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.222222222222222,
+        "solved_step_ratio": 1.0072562358276644,
+        "mean_invalid": 0.2777777777777778,
+        "cycle_rate": 0.45555555555555555,
+        "mean_inference_seconds": 0.0185559379564236,
+        "by_path": {
+          "13-20": 0.4444444444444444,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.5555555555555556
+        }
+      },
+      "ff4_params@4": {
+        "completion": 0.23333333333333334,
+        "completion_interval": {
+          "mean": 0.23333333333333334,
+          "ci95": [
+            0.16666666666666666,
+            0.3111111111111111
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.722222222222222,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7666666666666667,
+        "mean_inference_seconds": 0.003242744444934134,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8888888888888888,
+          "21-32": 0.0,
+          "5-8": 0.2777777777777778,
+          "9-12": 0.0
+        }
+      },
+      "ff8@8": {
+        "completion": 0.36666666666666664,
+        "completion_interval": {
+          "mean": 0.36666666666666664,
+          "ci95": [
+            0.23333333333333334,
+            0.5
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.177777777777778,
+        "solved_step_ratio": 1.0075757575757576,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6333333333333333,
+        "mean_inference_seconds": 0.006779330176100808,
+        "by_path": {
+          "13-20": 0.3333333333333333,
+          "2-4": 0.6666666666666666,
+          "21-32": 0.0,
+          "5-8": 0.6666666666666666,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "global_cnn@4": {
+        "completion": 0.3888888888888889,
+        "completion_interval": {
+          "mean": 0.3888888888888889,
+          "ci95": [
+            0.26666666666666666,
+            0.5
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.8,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.011111111111111112,
+        "cycle_rate": 0.6111111111111112,
+        "mean_inference_seconds": 0.00479277337904528,
+        "by_path": {
+          "13-20": 0.3333333333333333,
+          "2-4": 0.8333333333333334,
+          "21-32": 0.0,
+          "5-8": 0.6111111111111112,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "greedy@0": {
+        "completion": 0.4,
+        "completion_interval": {
+          "mean": 0.4,
+          "ci95": [
+            0.26666666666666666,
+            0.5333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.966666666666667,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6,
+        "mean_inference_seconds": 5.444464234945675e-06,
+        "by_path": {
+          "13-20": 0.16666666666666666,
+          "2-4": 0.8333333333333334,
+          "21-32": 0.0,
+          "5-8": 0.5,
+          "9-12": 0.5
+        }
+      },
+      "bfs@0": {
+        "completion": 1.0,
+        "completion_interval": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 11.133333333333333,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.0,
+        "mean_inference_seconds": 0.0014083917364284086,
+        "by_path": {
+          "13-20": 1.0,
+          "2-4": 1.0,
+          "21-32": 1.0,
+          "5-8": 1.0,
+          "9-12": 1.0
+        }
+      }
+    }
+  },
+  "size11": {
+    "maze_count": 36,
+    "models": {
+      "frozen_05b@4": {
+        "completion": 0.24074074074074073,
+        "completion_interval": {
+          "mean": 0.24074074074074073,
+          "ci95": [
+            0.17592592592592593,
+            0.30578703703703686
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 3.9537037037037037,
+        "solved_step_ratio": 1.0192307692307692,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7592592592592593,
+        "mean_inference_seconds": 0.0024636766009078,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.3333333333333333,
+          "9-12": 0.1111111111111111
+        }
+      },
+      "frozen_05b@8": {
+        "completion": 0.4722222222222222,
+        "completion_interval": {
+          "mean": 0.4722222222222222,
+          "ci95": [
+            0.3888888888888889,
+            0.5648148148148148
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.018518518518518,
+        "solved_step_ratio": 1.007843137254902,
+        "mean_invalid": 0.009259259259259259,
+        "cycle_rate": 0.5277777777777778,
+        "mean_inference_seconds": 0.006743990432706023,
+        "by_path": {
+          "13-20": 0.4444444444444444,
+          "2-4": 1.0,
+          "21-32": 0.05555555555555555,
+          "33-64": 0.0,
+          "5-8": 1.0,
+          "9-12": 0.3333333333333333
+        }
+      },
+      "frozen_05b@16": {
+        "completion": 0.5648148148148148,
+        "completion_interval": {
+          "mean": 0.5648148148148148,
+          "ci95": [
+            0.4722222222222222,
+            0.6666666666666666
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 8.222222222222221,
+        "solved_step_ratio": 1.0122950819672132,
+        "mean_invalid": 0.009259259259259259,
+        "cycle_rate": 0.4351851851851852,
+        "mean_inference_seconds": 0.013014419344539487,
+        "by_path": {
+          "13-20": 0.6666666666666666,
+          "2-4": 1.0,
+          "21-32": 0.2777777777777778,
+          "33-64": 0.0,
+          "5-8": 0.9444444444444444,
+          "9-12": 0.5
+        }
+      },
+      "frozen_05b@32": {
+        "completion": 0.49074074074074076,
+        "completion_interval": {
+          "mean": 0.49074074074074076,
+          "ci95": [
+            0.3888888888888889,
+            0.6111111111111112
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.833333333333333,
+        "solved_step_ratio": 1.0202721436905675,
+        "mean_invalid": 0.018518518518518517,
+        "cycle_rate": 0.5092592592592593,
+        "mean_inference_seconds": 0.02208406054786691,
+        "by_path": {
+          "13-20": 0.5555555555555556,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.1111111111111111,
+          "33-64": 0.0,
+          "5-8": 0.9444444444444444,
+          "9-12": 0.3888888888888889
+        }
+      },
+      "rec_variable@4": {
+        "completion": 0.23148148148148148,
+        "completion_interval": {
+          "mean": 0.23148148148148148,
+          "ci95": [
+            0.16666666666666666,
+            0.3055555555555556
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.027777777777778,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7685185185185185,
+        "mean_inference_seconds": 0.002498021130223707,
+        "by_path": {
+          "13-20": 0.05555555555555555,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.2777777777777778,
+          "9-12": 0.1111111111111111
+        }
+      },
+      "rec_variable@8": {
+        "completion": 0.4074074074074074,
+        "completion_interval": {
+          "mean": 0.4074074074074074,
+          "ci95": [
+            0.3055555555555556,
+            0.5092592592592593
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.916666666666667,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5925925925925926,
+        "mean_inference_seconds": 0.0066903092060615395,
+        "by_path": {
+          "13-20": 0.5,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.6111111111111112,
+          "9-12": 0.3333333333333333
+        }
+      },
+      "rec_variable@16": {
+        "completion": 0.6111111111111112,
+        "completion_interval": {
+          "mean": 0.6111111111111112,
+          "ci95": [
+            0.5,
+            0.7222222222222222
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 9.86111111111111,
+        "solved_step_ratio": 1.0143862871135598,
+        "mean_invalid": 0.018518518518518517,
+        "cycle_rate": 0.3888888888888889,
+        "mean_inference_seconds": 0.016074929505487456,
+        "by_path": {
+          "13-20": 0.7777777777777778,
+          "2-4": 1.0,
+          "21-32": 0.3333333333333333,
+          "33-64": 0.1111111111111111,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.5555555555555556
+        }
+      },
+      "rec_variable@32": {
+        "completion": 0.6481481481481481,
+        "completion_interval": {
+          "mean": 0.6481481481481481,
+          "ci95": [
+            0.5277777777777778,
+            0.7777777777777778
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 10.324074074074074,
+        "solved_step_ratio": 1.0103174603174605,
+        "mean_invalid": 0.027777777777777776,
+        "cycle_rate": 0.35185185185185186,
+        "mean_inference_seconds": 0.029189112477777397,
+        "by_path": {
+          "13-20": 0.7777777777777778,
+          "2-4": 1.0,
+          "21-32": 0.3888888888888889,
+          "33-64": 0.16666666666666666,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.7222222222222222
+        }
+      },
+      "rec_curriculum@4": {
+        "completion": 0.24074074074074073,
+        "completion_interval": {
+          "mean": 0.24074074074074073,
+          "ci95": [
+            0.16666666666666666,
+            0.32407407407407407
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.166666666666667,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7592592592592593,
+        "mean_inference_seconds": 0.002735390918840292,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.3888888888888889,
+          "9-12": 0.1111111111111111
+        }
+      },
+      "rec_curriculum@8": {
+        "completion": 0.4074074074074074,
+        "completion_interval": {
+          "mean": 0.4074074074074074,
+          "ci95": [
+            0.3055555555555556,
+            0.5094907407407405
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.768518518518518,
+        "solved_step_ratio": 1.005050505050505,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5925925925925926,
+        "mean_inference_seconds": 0.0065001234090434285,
+        "by_path": {
+          "13-20": 0.4444444444444444,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.7777777777777778,
+          "9-12": 0.2777777777777778
+        }
+      },
+      "rec_curriculum@16": {
+        "completion": 0.5092592592592593,
+        "completion_interval": {
+          "mean": 0.5092592592592593,
+          "ci95": [
+            0.4074074074074074,
+            0.6111111111111112
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.407407407407407,
+        "solved_step_ratio": 1.0080808080808081,
+        "mean_invalid": 0.12037037037037036,
+        "cycle_rate": 0.49074074074074076,
+        "mean_inference_seconds": 0.011646784002314907,
+        "by_path": {
+          "13-20": 0.7222222222222222,
+          "2-4": 1.0,
+          "21-32": 0.05555555555555555,
+          "33-64": 0.0,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.4444444444444444
+        }
+      },
+      "rec_curriculum@32": {
+        "completion": 0.42592592592592593,
+        "completion_interval": {
+          "mean": 0.42592592592592593,
+          "ci95": [
+            0.3055555555555556,
+            0.5277777777777778
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.416666666666667,
+        "solved_step_ratio": 1.0096618357487923,
+        "mean_invalid": 0.3611111111111111,
+        "cycle_rate": 0.5740740740740741,
+        "mean_inference_seconds": 0.018518894351237342,
+        "by_path": {
+          "13-20": 0.3888888888888889,
+          "2-4": 0.8888888888888888,
+          "21-32": 0.16666666666666666,
+          "33-64": 0.0,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.3888888888888889
+        }
+      },
+      "ff4_params@4": {
+        "completion": 0.21296296296296297,
+        "completion_interval": {
+          "mean": 0.21296296296296297,
+          "ci95": [
+            0.16666666666666666,
+            0.2777777777777778
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 3.861111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7870370370370371,
+        "mean_inference_seconds": 0.002751386649497026,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.3333333333333333,
+          "9-12": 0.0
+        }
+      },
+      "ff8@8": {
+        "completion": 0.28703703703703703,
+        "completion_interval": {
+          "mean": 0.28703703703703703,
+          "ci95": [
+            0.16666666666666666,
+            0.3983796296296294
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.287037037037037,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7129629629629629,
+        "mean_inference_seconds": 0.006256258433158682,
+        "by_path": {
+          "13-20": 0.3333333333333333,
+          "2-4": 0.7222222222222222,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.6111111111111112,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "global_cnn@4": {
+        "completion": 0.3333333333333333,
+        "completion_interval": {
+          "mean": 0.3333333333333333,
+          "ci95": [
+            0.2222222222222222,
+            0.4537037037037037
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.101851851851852,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6666666666666666,
+        "mean_inference_seconds": 0.003819187852463478,
+        "by_path": {
+          "13-20": 0.16666666666666666,
+          "2-4": 0.8333333333333334,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.2777777777777778
+        }
+      },
+      "greedy@0": {
+        "completion": 0.25,
+        "completion_interval": {
+          "mean": 0.25,
+          "ci95": [
+            0.1388888888888889,
+            0.3333333333333333
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.138888888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.75,
+        "mean_inference_seconds": 4.450469229292746e-06,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.6666666666666666,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.6666666666666666,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "bfs@0": {
+        "completion": 1.0,
+        "completion_interval": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 14.972222222222221,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.0,
+        "mean_inference_seconds": 0.0026482915337611404,
+        "by_path": {
+          "13-20": 1.0,
+          "2-4": 1.0,
+          "21-32": 1.0,
+          "33-64": 1.0,
+          "5-8": 1.0,
+          "9-12": 1.0
+        }
+      }
+    }
+  },
+  "size15": {
+    "maze_count": 36,
+    "models": {
+      "frozen_05b@4": {
+        "completion": 0.2777777777777778,
+        "completion_interval": {
+          "mean": 0.2777777777777778,
+          "ci95": [
+            0.19444444444444445,
+            0.35185185185185186
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.12962962962963,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7222222222222222,
+        "mean_inference_seconds": 0.003153172538548932,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.5555555555555556,
+          "9-12": 0.1111111111111111
+        }
+      },
+      "frozen_05b@8": {
+        "completion": 0.35185185185185186,
+        "completion_interval": {
+          "mean": 0.35185185185185186,
+          "ci95": [
+            0.26851851851851855,
+            0.4444444444444444
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.833333333333333,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.027777777777777776,
+        "cycle_rate": 0.6481481481481481,
+        "mean_inference_seconds": 0.007386027102728366,
+        "by_path": {
+          "13-20": 0.1111111111111111,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.5555555555555556,
+          "9-12": 0.4444444444444444
+        }
+      },
+      "frozen_05b@16": {
+        "completion": 0.4074074074074074,
+        "completion_interval": {
+          "mean": 0.4074074074074074,
+          "ci95": [
+            0.3055555555555556,
+            0.5185185185185185
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 8.25,
+        "solved_step_ratio": 1.0082644628099173,
+        "mean_invalid": 0.009259259259259259,
+        "cycle_rate": 0.5925925925925926,
+        "mean_inference_seconds": 0.014104167798601944,
+        "by_path": {
+          "13-20": 0.16666666666666666,
+          "2-4": 1.0,
+          "21-32": 0.05555555555555555,
+          "33-64": 0.0,
+          "5-8": 0.6111111111111112,
+          "9-12": 0.6111111111111112
+        }
+      },
+      "frozen_05b@32": {
+        "completion": 0.4074074074074074,
+        "completion_interval": {
+          "mean": 0.4074074074074074,
+          "ci95": [
+            0.29606481481481484,
+            0.5277777777777778
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 8.546296296296296,
+        "solved_step_ratio": 1.0240800865800865,
+        "mean_invalid": 0.05555555555555555,
+        "cycle_rate": 0.5925925925925926,
+        "mean_inference_seconds": 0.026211198121018242,
+        "by_path": {
+          "13-20": 0.2777777777777778,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.05555555555555555,
+          "33-64": 0.05555555555555555,
+          "5-8": 0.6111111111111112,
+          "9-12": 0.5
+        }
+      },
+      "rec_variable@4": {
+        "completion": 0.24074074074074073,
+        "completion_interval": {
+          "mean": 0.24074074074074073,
+          "ci95": [
+            0.14814814814814814,
+            0.3333333333333333
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.25,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7592592592592593,
+        "mean_inference_seconds": 0.0032206162588274173,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8333333333333334,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.3888888888888889,
+          "9-12": 0.2222222222222222
+        }
+      },
+      "rec_variable@8": {
+        "completion": 0.3148148148148148,
+        "completion_interval": {
+          "mean": 0.3148148148148148,
+          "ci95": [
+            0.23148148148148148,
+            0.4074074074074074
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.444444444444445,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6851851851851852,
+        "mean_inference_seconds": 0.006958226194978191,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.5555555555555556,
+          "9-12": 0.3333333333333333
+        }
+      },
+      "rec_variable@16": {
+        "completion": 0.4074074074074074,
+        "completion_interval": {
+          "mean": 0.4074074074074074,
+          "ci95": [
+            0.2962962962962963,
+            0.5277777777777778
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 9.027777777777779,
+        "solved_step_ratio": 1.0246753246753249,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5925925925925926,
+        "mean_inference_seconds": 0.015998689232758437,
+        "by_path": {
+          "13-20": 0.05555555555555555,
+          "2-4": 1.0,
+          "21-32": 0.05555555555555555,
+          "33-64": 0.0,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.6111111111111112
+        }
+      },
+      "rec_variable@32": {
+        "completion": 0.4537037037037037,
+        "completion_interval": {
+          "mean": 0.4537037037037037,
+          "ci95": [
+            0.3148148148148148,
+            0.6111111111111112
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 10.37037037037037,
+        "solved_step_ratio": 1.0163265306122449,
+        "mean_invalid": 0.009259259259259259,
+        "cycle_rate": 0.5462962962962963,
+        "mean_inference_seconds": 0.03187128602561037,
+        "by_path": {
+          "13-20": 0.16666666666666666,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.1111111111111111,
+          "33-64": 0.1111111111111111,
+          "5-8": 0.6666666666666666,
+          "9-12": 0.7222222222222222
+        }
+      },
+      "rec_curriculum@4": {
+        "completion": 0.28703703703703703,
+        "completion_interval": {
+          "mean": 0.28703703703703703,
+          "ci95": [
+            0.19444444444444445,
+            0.37962962962962965
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.5092592592592595,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7129629629629629,
+        "mean_inference_seconds": 0.0035985460173698675,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8888888888888888,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.5555555555555556,
+          "9-12": 0.2777777777777778
+        }
+      },
+      "rec_curriculum@8": {
+        "completion": 0.37962962962962965,
+        "completion_interval": {
+          "mean": 0.37962962962962965,
+          "ci95": [
+            0.29606481481481484,
+            0.4722222222222222
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.175925925925926,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6203703703703703,
+        "mean_inference_seconds": 0.006599387213672917,
+        "by_path": {
+          "13-20": 0.1111111111111111,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.4444444444444444
+        }
+      },
+      "rec_curriculum@16": {
+        "completion": 0.4537037037037037,
+        "completion_interval": {
+          "mean": 0.4537037037037037,
+          "ci95": [
+            0.37037037037037035,
+            0.5555555555555556
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.342592592592593,
+        "solved_step_ratio": 1.0018552875695734,
+        "mean_invalid": 0.08333333333333333,
+        "cycle_rate": 0.5462962962962963,
+        "mean_inference_seconds": 0.012515240890530145,
+        "by_path": {
+          "13-20": 0.2222222222222222,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.05555555555555555,
+          "33-64": 0.0,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.6666666666666666
+        }
+      },
+      "rec_curriculum@32": {
+        "completion": 0.4537037037037037,
+        "completion_interval": {
+          "mean": 0.4537037037037037,
+          "ci95": [
+            0.28703703703703703,
+            0.5833333333333334
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.25,
+        "solved_step_ratio": 1.0066833751044277,
+        "mean_invalid": 0.32407407407407407,
+        "cycle_rate": 0.5462962962962963,
+        "mean_inference_seconds": 0.01966025767547695,
+        "by_path": {
+          "13-20": 0.3333333333333333,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.6111111111111112
+        }
+      },
+      "ff4_params@4": {
+        "completion": 0.16666666666666666,
+        "completion_interval": {
+          "mean": 0.16666666666666666,
+          "ci95": [
+            0.07407407407407407,
+            0.26851851851851855
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.287037037037037,
+        "solved_step_ratio": 1.0185185185185184,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.8333333333333334,
+        "mean_inference_seconds": 0.0030019691025868437,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.5,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.3888888888888889,
+          "9-12": 0.1111111111111111
+        }
+      },
+      "ff8@8": {
+        "completion": 0.16666666666666666,
+        "completion_interval": {
+          "mean": 0.16666666666666666,
+          "ci95": [
+            0.05555555555555555,
+            0.26851851851851855
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.814814814814815,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.8333333333333334,
+        "mean_inference_seconds": 0.006408837702582349,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.5,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.2222222222222222,
+          "9-12": 0.2777777777777778
+        }
+      },
+      "global_cnn@4": {
+        "completion": 0.24074074074074073,
+        "completion_interval": {
+          "mean": 0.24074074074074073,
+          "ci95": [
+            0.12962962962962962,
+            0.3611111111111111
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.296296296296297,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7592592592592593,
+        "mean_inference_seconds": 0.004927589553349039,
+        "by_path": {
+          "13-20": 0.16666666666666666,
+          "2-4": 0.4444444444444444,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.2777777777777778,
+          "9-12": 0.5555555555555556
+        }
+      },
+      "greedy@0": {
+        "completion": 0.4166666666666667,
+        "completion_interval": {
+          "mean": 0.4166666666666667,
+          "ci95": [
+            0.3333333333333333,
+            0.5
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.138888888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5833333333333334,
+        "mean_inference_seconds": 6.946693853630374e-06,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "33-64": 0.0,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.6666666666666666
+        }
+      },
+      "bfs@0": {
+        "completion": 1.0,
+        "completion_interval": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "independent_mazes": 36,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 15.5,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.0,
+        "mean_inference_seconds": 0.005432545974650161,
+        "by_path": {
+          "13-20": 1.0,
+          "2-4": 1.0,
+          "21-32": 1.0,
+          "33-64": 1.0,
+          "5-8": 1.0,
+          "9-12": 1.0
+        }
+      }
+    }
+  },
+  "structure9": {
+    "maze_count": 24,
+    "models": {
+      "frozen_05b@4": {
+        "completion": 0.09722222222222222,
+        "completion_interval": {
+          "mean": 0.09722222222222222,
+          "ci95": [
+            0.0,
+            0.19444444444444445
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 3.1944444444444446,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.9027777777777778,
+        "mean_inference_seconds": 0.002472502376096802,
+        "by_path": {
+          "13-20": 0.0,
+          "21-32": 0.0,
+          "5-8": 0.3888888888888889,
+          "9-12": 0.0
+        }
+      },
+      "frozen_05b@8": {
+        "completion": 0.19444444444444445,
+        "completion_interval": {
+          "mean": 0.19444444444444445,
+          "ci95": [
+            0.09722222222222222,
+            0.2916666666666667
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.111111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.041666666666666664,
+        "cycle_rate": 0.8055555555555556,
+        "mean_inference_seconds": 0.004577466153326289,
+        "by_path": {
+          "13-20": 0.0,
+          "21-32": 0.05555555555555555,
+          "5-8": 0.6666666666666666,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "frozen_05b@16": {
+        "completion": 0.3888888888888889,
+        "completion_interval": {
+          "mean": 0.3888888888888889,
+          "ci95": [
+            0.25,
+            0.5277777777777778
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.875,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.05555555555555555,
+        "cycle_rate": 0.6111111111111112,
+        "mean_inference_seconds": 0.010787111829308237,
+        "by_path": {
+          "13-20": 0.16666666666666666,
+          "21-32": 0.1111111111111111,
+          "5-8": 0.7777777777777778,
+          "9-12": 0.5
+        }
+      },
+      "frozen_05b@32": {
+        "completion": 0.375,
+        "completion_interval": {
+          "mean": 0.375,
+          "ci95": [
+            0.2357638888888889,
+            0.5
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.638888888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.041666666666666664,
+        "cycle_rate": 0.625,
+        "mean_inference_seconds": 0.019795221190684567,
+        "by_path": {
+          "13-20": 0.2777777777777778,
+          "21-32": 0.05555555555555555,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.4444444444444444
+        }
+      },
+      "rec_variable@4": {
+        "completion": 0.1111111111111111,
+        "completion_interval": {
+          "mean": 0.1111111111111111,
+          "ci95": [
+            0.013888888888888888,
+            0.20833333333333334
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.125,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.8888888888888888,
+        "mean_inference_seconds": 0.0024971121664647297,
+        "by_path": {
+          "13-20": 0.0,
+          "21-32": 0.0,
+          "5-8": 0.3888888888888889,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "rec_variable@8": {
+        "completion": 0.3055555555555556,
+        "completion_interval": {
+          "mean": 0.3055555555555556,
+          "ci95": [
+            0.16666666666666666,
+            0.4444444444444444
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.763888888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6944444444444444,
+        "mean_inference_seconds": 0.00555571472331293,
+        "by_path": {
+          "13-20": 0.0,
+          "21-32": 0.05555555555555555,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.3333333333333333
+        }
+      },
+      "rec_variable@16": {
+        "completion": 0.4583333333333333,
+        "completion_interval": {
+          "mean": 0.4583333333333333,
+          "ci95": [
+            0.3055555555555556,
+            0.5833333333333334
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 8.26388888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5416666666666666,
+        "mean_inference_seconds": 0.013678599417592826,
+        "by_path": {
+          "13-20": 0.1111111111111111,
+          "21-32": 0.2777777777777778,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.6111111111111112
+        }
+      },
+      "rec_variable@32": {
+        "completion": 0.5277777777777778,
+        "completion_interval": {
+          "mean": 0.5277777777777778,
+          "ci95": [
+            0.375,
+            0.6805555555555556
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 8.930555555555555,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.027777777777777776,
+        "cycle_rate": 0.4722222222222222,
+        "mean_inference_seconds": 0.0271470410098118,
+        "by_path": {
+          "13-20": 0.2222222222222222,
+          "21-32": 0.3333333333333333,
+          "5-8": 0.8888888888888888,
+          "9-12": 0.6666666666666666
+        }
+      },
+      "rec_curriculum@4": {
+        "completion": 0.1111111111111111,
+        "completion_interval": {
+          "mean": 0.1111111111111111,
+          "ci95": [
+            0.027777777777777776,
+            0.2222222222222222
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.291666666666667,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.8888888888888888,
+        "mean_inference_seconds": 0.002867984956739949,
+        "by_path": {
+          "13-20": 0.0,
+          "21-32": 0.0,
+          "5-8": 0.3888888888888889,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "rec_curriculum@8": {
+        "completion": 0.2638888888888889,
+        "completion_interval": {
+          "mean": 0.2638888888888889,
+          "ci95": [
+            0.1527777777777778,
+            0.4027777777777778
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.041666666666667,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7361111111111112,
+        "mean_inference_seconds": 0.006071761098307131,
+        "by_path": {
+          "13-20": 0.0,
+          "21-32": 0.16666666666666666,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "rec_curriculum@16": {
+        "completion": 0.3472222222222222,
+        "completion_interval": {
+          "mean": 0.3472222222222222,
+          "ci95": [
+            0.20833333333333334,
+            0.486458333333333
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.083333333333333,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.06944444444444445,
+        "cycle_rate": 0.6527777777777778,
+        "mean_inference_seconds": 0.01152768802825853,
+        "by_path": {
+          "13-20": 0.2222222222222222,
+          "21-32": 0.16666666666666666,
+          "5-8": 0.7777777777777778,
+          "9-12": 0.2222222222222222
+        }
+      },
+      "rec_curriculum@32": {
+        "completion": 0.3472222222222222,
+        "completion_interval": {
+          "mean": 0.3472222222222222,
+          "ci95": [
+            0.20833333333333334,
+            0.4861111111111111
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.888888888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.09722222222222222,
+        "cycle_rate": 0.6527777777777778,
+        "mean_inference_seconds": 0.01995368457028235,
+        "by_path": {
+          "13-20": 0.1111111111111111,
+          "21-32": 0.2222222222222222,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.3333333333333333
+        }
+      },
+      "ff4_params@4": {
+        "completion": 0.125,
+        "completion_interval": {
+          "mean": 0.125,
+          "ci95": [
+            0.027777777777777776,
+            0.2361111111111111
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 3.9166666666666665,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.875,
+        "mean_inference_seconds": 0.0026012315811385633,
+        "by_path": {
+          "13-20": 0.0,
+          "21-32": 0.0,
+          "5-8": 0.4444444444444444,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "ff8@8": {
+        "completion": 0.2638888888888889,
+        "completion_interval": {
+          "mean": 0.2638888888888889,
+          "ci95": [
+            0.16666666666666666,
+            0.3611111111111111
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.902777777777778,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7361111111111112,
+        "mean_inference_seconds": 0.004909247099527015,
+        "by_path": {
+          "13-20": 0.0,
+          "21-32": 0.0,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.2222222222222222
+        }
+      },
+      "global_cnn@4": {
+        "completion": 0.2916666666666667,
+        "completion_interval": {
+          "mean": 0.2916666666666667,
+          "ci95": [
+            0.16666666666666666,
+            0.4166666666666667
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.888888888888889,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7083333333333334,
+        "mean_inference_seconds": 0.004328756402982335,
+        "by_path": {
+          "13-20": 0.05555555555555555,
+          "21-32": 0.0,
+          "5-8": 0.6666666666666666,
+          "9-12": 0.4444444444444444
+        }
+      },
+      "greedy@0": {
+        "completion": 0.25,
+        "completion_interval": {
+          "mean": 0.25,
+          "ci95": [
+            0.125,
+            0.4166666666666667
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.416666666666667,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.75,
+        "mean_inference_seconds": 5.970750862616114e-06,
+        "by_path": {
+          "13-20": 0.16666666666666666,
+          "21-32": 0.0,
+          "5-8": 0.3333333333333333,
+          "9-12": 0.5
+        }
+      },
+      "bfs@0": {
+        "completion": 1.0,
+        "completion_interval": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 14.791666666666666,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.0,
+        "mean_inference_seconds": 0.001859940575135018,
+        "by_path": {
+          "13-20": 1.0,
+          "21-32": 1.0,
+          "5-8": 1.0,
+          "9-12": 1.0
+        }
+      }
+    }
+  },
+  "dense9": {
+    "maze_count": 30,
+    "models": {
+      "frozen_05b@4": {
+        "completion": 0.3333333333333333,
+        "completion_interval": {
+          "mean": 0.3333333333333333,
+          "ci95": [
+            0.24444444444444444,
+            0.4
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.311111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6666666666666666,
+        "mean_inference_seconds": 0.0030561792767710154,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 0.6111111111111112,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "frozen_05b@8": {
+        "completion": 0.5666666666666667,
+        "completion_interval": {
+          "mean": 0.5666666666666667,
+          "ci95": [
+            0.4666666666666667,
+            0.6666666666666666
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.444444444444445,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.011111111111111112,
+        "cycle_rate": 0.43333333333333335,
+        "mean_inference_seconds": 0.006228143632405489,
+        "by_path": {
+          "13-20": 0.4444444444444444,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 1.0,
+          "9-12": 0.3888888888888889
+        }
+      },
+      "frozen_05b@16": {
+        "completion": 0.7222222222222222,
+        "completion_interval": {
+          "mean": 0.7222222222222222,
+          "ci95": [
+            0.6111111111111112,
+            0.8333333333333334
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.7555555555555555,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.2777777777777778,
+        "mean_inference_seconds": 0.012397714855291673,
+        "by_path": {
+          "13-20": 0.6666666666666666,
+          "2-4": 1.0,
+          "21-32": 0.2222222222222222,
+          "5-8": 1.0,
+          "9-12": 0.7222222222222222
+        }
+      },
+      "frozen_05b@32": {
+        "completion": 0.6888888888888889,
+        "completion_interval": {
+          "mean": 0.6888888888888889,
+          "ci95": [
+            0.5777777777777777,
+            0.8
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.9,
+        "solved_step_ratio": 1.0032258064516129,
+        "mean_invalid": 0.022222222222222223,
+        "cycle_rate": 0.3111111111111111,
+        "mean_inference_seconds": 0.02315756248960194,
+        "by_path": {
+          "13-20": 0.7222222222222222,
+          "2-4": 1.0,
+          "21-32": 0.2222222222222222,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.6666666666666666
+        }
+      },
+      "rec_variable@4": {
+        "completion": 0.25555555555555554,
+        "completion_interval": {
+          "mean": 0.25555555555555554,
+          "ci95": [
+            0.17777777777777778,
+            0.3333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.2,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7444444444444445,
+        "mean_inference_seconds": 0.003355534213025951,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "5-8": 0.3333333333333333,
+          "9-12": 0.0
+        }
+      },
+      "rec_variable@8": {
+        "completion": 0.6111111111111112,
+        "completion_interval": {
+          "mean": 0.6111111111111112,
+          "ci95": [
+            0.5,
+            0.7
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.011111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.3888888888888889,
+        "mean_inference_seconds": 0.0071129263664867414,
+        "by_path": {
+          "13-20": 0.6111111111111112,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 1.0,
+          "9-12": 0.4444444444444444
+        }
+      },
+      "rec_variable@16": {
+        "completion": 0.8666666666666667,
+        "completion_interval": {
+          "mean": 0.8666666666666667,
+          "ci95": [
+            0.7552777777777778,
+            0.9666666666666667
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 9.411111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.13333333333333333,
+        "mean_inference_seconds": 0.015312434686832906,
+        "by_path": {
+          "13-20": 0.8333333333333334,
+          "2-4": 1.0,
+          "21-32": 0.6111111111111112,
+          "5-8": 1.0,
+          "9-12": 0.8888888888888888
+        }
+      },
+      "rec_variable@32": {
+        "completion": 0.9,
+        "completion_interval": {
+          "mean": 0.9,
+          "ci95": [
+            0.8222222222222222,
+            0.9777777777777777
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 9.677777777777777,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.1,
+        "mean_inference_seconds": 0.028769154610280463,
+        "by_path": {
+          "13-20": 0.8888888888888888,
+          "2-4": 1.0,
+          "21-32": 0.6666666666666666,
+          "5-8": 1.0,
+          "9-12": 0.9444444444444444
+        }
+      },
+      "rec_curriculum@4": {
+        "completion": 0.3111111111111111,
+        "completion_interval": {
+          "mean": 0.3111111111111111,
+          "ci95": [
+            0.23333333333333334,
+            0.4
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.344444444444444,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6888888888888889,
+        "mean_inference_seconds": 0.003497554254297736,
+        "by_path": {
+          "13-20": 0.05555555555555555,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 0.4444444444444444,
+          "9-12": 0.05555555555555555
+        }
+      },
+      "rec_curriculum@8": {
+        "completion": 0.5666666666666667,
+        "completion_interval": {
+          "mean": 0.5666666666666667,
+          "ci95": [
+            0.43333333333333335,
+            0.6888888888888889
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.666666666666667,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.43333333333333335,
+        "mean_inference_seconds": 0.006328650055285026,
+        "by_path": {
+          "13-20": 0.6666666666666666,
+          "2-4": 1.0,
+          "21-32": 0.0,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.4444444444444444
+        }
+      },
+      "rec_curriculum@16": {
+        "completion": 0.6777777777777778,
+        "completion_interval": {
+          "mean": 0.6777777777777778,
+          "ci95": [
+            0.5,
+            0.8224999999999997
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.055555555555555,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.13333333333333333,
+        "cycle_rate": 0.32222222222222224,
+        "mean_inference_seconds": 0.010917984641047143,
+        "by_path": {
+          "13-20": 0.7222222222222222,
+          "2-4": 1.0,
+          "21-32": 0.16666666666666666,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.6666666666666666
+        }
+      },
+      "rec_curriculum@32": {
+        "completion": 0.5555555555555556,
+        "completion_interval": {
+          "mean": 0.5555555555555556,
+          "ci95": [
+            0.36666666666666664,
+            0.7333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.711111111111111,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.2777777777777778,
+        "cycle_rate": 0.4444444444444444,
+        "mean_inference_seconds": 0.017125398689758084,
+        "by_path": {
+          "13-20": 0.5555555555555556,
+          "2-4": 1.0,
+          "21-32": 0.1111111111111111,
+          "5-8": 0.7222222222222222,
+          "9-12": 0.3888888888888889
+        }
+      },
+      "ff4_params@4": {
+        "completion": 0.26666666666666666,
+        "completion_interval": {
+          "mean": 0.26666666666666666,
+          "ci95": [
+            0.18888888888888888,
+            0.35555555555555557
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.222222222222222,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.7333333333333333,
+        "mean_inference_seconds": 0.002878395312776168,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "5-8": 0.2777777777777778,
+          "9-12": 0.1111111111111111
+        }
+      },
+      "ff8@8": {
+        "completion": 0.45555555555555555,
+        "completion_interval": {
+          "mean": 0.45555555555555555,
+          "ci95": [
+            0.3,
+            0.6111111111111112
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.333333333333333,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.5444444444444444,
+        "mean_inference_seconds": 0.0058971361748667225,
+        "by_path": {
+          "13-20": 0.2777777777777778,
+          "2-4": 0.9444444444444444,
+          "21-32": 0.0,
+          "5-8": 0.6666666666666666,
+          "9-12": 0.3888888888888889
+        }
+      },
+      "global_cnn@4": {
+        "completion": 0.2777777777777778,
+        "completion_interval": {
+          "mean": 0.2777777777777778,
+          "ci95": [
+            0.16666666666666666,
+            0.3888888888888889
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.311111111111111,
+        "solved_step_ratio": 1.008888888888889,
+        "mean_invalid": 0.011111111111111112,
+        "cycle_rate": 0.7222222222222222,
+        "mean_inference_seconds": 0.0036767619998297756,
+        "by_path": {
+          "13-20": 0.2222222222222222,
+          "2-4": 0.8333333333333334,
+          "21-32": 0.0,
+          "5-8": 0.16666666666666666,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "greedy@0": {
+        "completion": 0.4,
+        "completion_interval": {
+          "mean": 0.4,
+          "ci95": [
+            0.3,
+            0.5333333333333333
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.133333333333334,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.6,
+        "mean_inference_seconds": 4.468102512570719e-06,
+        "by_path": {
+          "13-20": 0.0,
+          "2-4": 0.8333333333333334,
+          "21-32": 0.16666666666666666,
+          "5-8": 0.8333333333333334,
+          "9-12": 0.16666666666666666
+        }
+      },
+      "bfs@0": {
+        "completion": 1.0,
+        "completion_interval": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "independent_mazes": 30,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 10.7,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.0,
+        "mean_inference_seconds": 0.0010724415706742244,
+        "by_path": {
+          "13-20": 1.0,
+          "2-4": 1.0,
+          "21-32": 1.0,
+          "5-8": 1.0,
+          "9-12": 1.0
+        }
+      }
+    }
+  },
+  "long15": {
+    "maze_count": 24,
+    "models": {
+      "frozen_05b@4": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.236111111111111,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.0032684143599100127,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "frozen_05b@8": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.319444444444445,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.06944444444444445,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.006586027984667453,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "frozen_05b@16": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.513888888888889,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.013888888888888888,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.011107332804992135,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "frozen_05b@32": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.041666666666667,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.06944444444444445,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.021112870845980878,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "rec_variable@4": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.277777777777778,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.0030306539570624912,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "rec_variable@8": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.694444444444445,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.007080938056282725,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "rec_variable@16": {
+        "completion": 0.013888888888888888,
+        "completion_interval": {
+          "mean": 0.013888888888888888,
+          "ci95": [
+            0.0,
+            0.08333333333333333
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 9.694444444444445,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.013888888888888888,
+        "cycle_rate": 0.9861111111111112,
+        "mean_inference_seconds": 0.016774762783623172,
+        "by_path": {
+          "21-32": 0.05555555555555555,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "rec_variable@32": {
+        "completion": 0.013888888888888888,
+        "completion_interval": {
+          "mean": 0.013888888888888888,
+          "ci95": [
+            0.0,
+            0.08333333333333333
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 11.0,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.027777777777777776,
+        "cycle_rate": 0.9861111111111112,
+        "mean_inference_seconds": 0.03493945880957957,
+        "by_path": {
+          "21-32": 0.05555555555555555,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "rec_curriculum@4": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.333333333333333,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.0030270064184555346,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "rec_curriculum@8": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 6.666666666666667,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.007635679364587607,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "rec_curriculum@16": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 7.097222222222222,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.09722222222222222,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.013103119155655603,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "rec_curriculum@32": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.652777777777778,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.2222222222222222,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.017900766262553387,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "ff4_params@4": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 3.8194444444444446,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.002537537542795892,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "ff8@8": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 5.041666666666667,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.005632671417010392,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "global_cnn@4": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 3,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.930555555555555,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 0.004013744778300558,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "greedy@0": {
+        "completion": 0.0,
+        "completion_interval": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 4.583333333333333,
+        "solved_step_ratio": null,
+        "mean_invalid": 0.0,
+        "cycle_rate": 1.0,
+        "mean_inference_seconds": 4.788334384405364e-06,
+        "by_path": {
+          "21-32": 0.0,
+          "33-48": 0.0,
+          "49-80": 0.0,
+          "81-126": 0.0
+        }
+      },
+      "bfs@0": {
+        "completion": 1.0,
+        "completion_interval": {
+          "mean": 1.0,
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "independent_mazes": 24,
+          "training_seeds": 1,
+          "bootstrap": "paired crossed training seeds and maze instances, within fixed path strata",
+          "replicates": 1000
+        },
+        "mean_steps": 52.708333333333336,
+        "solved_step_ratio": 1.0,
+        "mean_invalid": 0.0,
+        "cycle_rate": 0.0,
+        "mean_inference_seconds": 0.016139949214751443,
+        "by_path": {
+          "21-32": 1.0,
+          "33-48": 1.0,
+          "49-80": 1.0,
+          "81-126": 1.0
+        }
+      }
+    }
+  }
+}
