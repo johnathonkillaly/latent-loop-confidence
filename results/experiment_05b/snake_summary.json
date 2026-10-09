@@ -1,0 +1,54 @@
+{
+  "status": "Environment, simulator tests, exact bounded teacher and baseline smoke only; no Snake neural model trained",
+  "seed": 559001,
+  "episodes": 60,
+  "board": 4,
+  "maximum_steps": 12,
+  "food_respawn": false,
+  "reverse": "prohibited; attempting reverse terminates as illegal collision",
+  "utility_order": [
+    "survival_steps",
+    "food_collected",
+    "reachable_free_space",
+    "negative_manhattan_to_food"
+  ],
+  "completed": "2026-10-09T12:49:55.407927+00:00",
+  "seconds": 1.842964249997749,
+  "policies": {
+    "oracle_h2": {
+      "survival_steps": 12.0,
+      "food_collected": 1.0,
+      "collision_rate": 0.0,
+      "illegal_actions_mean": 0.0,
+      "mean_episode_inference_seconds": 0.001310722462706811
+    },
+    "oracle_h4": {
+      "survival_steps": 12.0,
+      "food_collected": 0.6,
+      "collision_rate": 0.0,
+      "illegal_actions_mean": 0.0,
+      "mean_episode_inference_seconds": 0.005938038709185397
+    },
+    "oracle_h6": {
+      "survival_steps": 12.0,
+      "food_collected": 0.5333333333333333,
+      "collision_rate": 0.0,
+      "illegal_actions_mean": 0.0,
+      "mean_episode_inference_seconds": 0.020530841051368043
+    },
+    "random_legal": {
+      "survival_steps": 2.1333333333333333,
+      "food_collected": 0.08333333333333333,
+      "collision_rate": 0.9666666666666667,
+      "illegal_actions_mean": 0.0,
+      "mean_episode_inference_seconds": 8.408126523136161e-05
+    },
+    "safe_greedy": {
+      "survival_steps": 11.866666666666667,
+      "food_collected": 1.0,
+      "collision_rate": 0.016666666666666666,
+      "illegal_actions_mean": 0.0,
+      "mean_episode_inference_seconds": 0.00019869798731330472
+    }
+  }
+}

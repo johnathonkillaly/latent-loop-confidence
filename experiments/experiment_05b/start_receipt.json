@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-10-09T12:35:07+00:00",
+  "recorded_utc": "2026-10-09T12:43:25.497298+00:00",
+  "base_commit": "17ae4e4acac70ef099a55522f0964381a01516d9",
+  "branch": "research/exp05b-maze-planning",
+  "public_tag_commit": "0a637eb97d66eebbd740b612ab92e9095c496931",
+  "active_budget_hours": 6,
+  "hardware": "arm64",
+  "resource_review": "No local ML training process observed; CPU backup/security/browser activity present. No unrelated processes terminated; no remote workstation accessed."
+}

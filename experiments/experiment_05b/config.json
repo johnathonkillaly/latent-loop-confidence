@@ -1,0 +1,33 @@
+{
+  "seeds": [11, 22, 33],
+  "epochs": 20,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "clip_norm": 1.0,
+  "max_active_hours": 6,
+  "memory_gib": 48,
+  "conditions": {
+    "rec_final4": {"width": 32, "shared": true, "blocks": 1, "objective": "final", "depth": 4},
+    "rec_variable": {"width": 32, "shared": true, "blocks": 1, "objective": "variable", "depth": 4},
+    "rec_curriculum": {"width": 32, "shared": true, "blocks": 1, "objective": "curriculum", "depth": 4},
+    "rec_simultaneous": {"width": 32, "shared": true, "blocks": 1, "objective": "simultaneous", "depth": 4},
+    "ff_onepass": {"width": 32, "shared": false, "blocks": 1, "objective": "final", "depth": 1},
+    "ff4_matched_params": {"width": 16, "shared": false, "blocks": 4, "objective": "final", "depth": 4},
+    "ff4_matched_compute": {"width": 32, "shared": false, "blocks": 4, "objective": "final", "depth": 4}
+  },
+  "datasets": {
+    "train": {"seed": 551001, "count": 3600, "balanced": true},
+    "validation": {"seed": 551101, "count": 600, "balanced": true},
+    "fresh_id": {"seed": 551201, "count": 600, "balanced": true, "final": true},
+    "natural": {"seed": 551301, "count": 600, "final": true},
+    "structure": {"seed": 551401, "count": 360, "algorithm": "growth", "balanced": true, "final": true},
+    "larger": {"seed": 551501, "count": 360, "size": 7, "balanced": true, "final": true},
+    "dense": {"seed": 551601, "count": 360, "density": 0.44, "balanced": true, "final": true},
+    "long_paths": {"seed": 551701, "count": 360, "size": 7, "density": 0.35, "min_distance": 10, "final": true}
+  },
+  "qwen": {"train_count": 720, "validation_count": 120, "epochs": 3, "batch_size": 4, "rank": 8, "start": 12, "count": 3, "learning_rate": 0.0005, "seeds": [11, 22, 33], "depth": 4},
+  "rollout": {"per_split": 60, "step_multiplier": 4, "minimum_budget": 24},
+  "latency": {"warmups": 3, "repeats": 5, "items": 24},
+  "snake": {"utility_order": ["survival_steps", "food_collected", "reachable_free_space", "negative_manhattan_to_food"], "horizons": [2, 4, 6], "food_respawn": false}
+}

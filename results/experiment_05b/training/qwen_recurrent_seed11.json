@@ -1,0 +1,84 @@
+{
+  "condition": "qwen_recurrent",
+  "seed": 11,
+  "config_sha256": "e8df6628ab3515419a9e2e68c7b9efe0e160152dab76b70bc79a3b4864dd21cf",
+  "dataset_sha256": "65ca194ee1e6c70a45c1d836671ba68a59ceb25969bcd85a94d7ed59cc9bf624",
+  "source_sha256": "4072391c1005daeef3d21915c63c36c176f2af1c40f36f2f4d2c978911dbcee3",
+  "created": "2026-10-09T12:51:23.712762+00:00",
+  "epochs": [
+    {
+      "epoch": 1,
+      "training_loss": 1.3584781712955898,
+      "validation": {
+        "accuracy": 0.3,
+        "set_nll": 1.2487389506751856,
+        "invalid_rate": 0.39166666666666666,
+        "mean_regret": 1.0083333333333333,
+        "ece": 0.00755040731965928
+      },
+      "gradient_norm_mean": 2.2391620212131076,
+      "gradient_norm_max": 38.52394485473633,
+      "seconds": 27.15225700000883
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.2851822389496697,
+      "validation": {
+        "accuracy": 0.3,
+        "set_nll": 1.2508301266719186,
+        "invalid_rate": 0.4,
+        "mean_regret": 1.0,
+        "ece": 0.03075283447994087
+      },
+      "gradient_norm_mean": 0.4557896693961488,
+      "gradient_norm_max": 1.2945966720581055,
+      "seconds": 27.123623000006774
+    }
+  ],
+  "best_validation_loss": 1.2487389506751856,
+  "parameters": {
+    "trainable": 122881,
+    "total": 596172801,
+    "trainable_keys": [
+      "backbone.model.layers.12.self_attn.q_proj.lora_a",
+      "backbone.model.layers.12.self_attn.q_proj.lora_b",
+      "backbone.model.layers.12.self_attn.v_proj.lora_a",
+      "backbone.model.layers.12.self_attn.v_proj.lora_b",
+      "backbone.model.layers.13.self_attn.q_proj.lora_a",
+      "backbone.model.layers.13.self_attn.q_proj.lora_b",
+      "backbone.model.layers.13.self_attn.v_proj.lora_a",
+      "backbone.model.layers.13.self_attn.v_proj.lora_b",
+      "backbone.model.layers.14.self_attn.q_proj.lora_a",
+      "backbone.model.layers.14.self_attn.q_proj.lora_b",
+      "backbone.model.layers.14.self_attn.v_proj.lora_a",
+      "backbone.model.layers.14.self_attn.v_proj.lora_b",
+      "update_logit"
+    ]
+  },
+  "environment": {
+    "device": {
+      "device_name": "Apple M4 Max",
+      "max_recommended_working_set_size": 120259084288,
+      "memory_size": 137438953472,
+      "architecture": "applegpu_g16s",
+      "max_buffer_length": 86586540032,
+      "resource_limit": 499000
+    },
+    "backend": "MLX Metal",
+    "machine": "arm64",
+    "os": "27.0.1",
+    "versions": {
+      "mlx": "0.32.3",
+      "mlx-lm": "0.32.0",
+      "numpy": "2.5.3",
+      "transformers": "5.19.0"
+    },
+    "memory_budget_gb": 48
+  },
+  "best_epoch": 1,
+  "completed_epochs": 2,
+  "checkpoint_sha256": "6ca46ae2ecd9b1eac1a0dd4b63821ac0cc067fbf349e5b428c75eb754c7a8bd7",
+  "peak_mlx_gib": 4.434218683280051,
+  "peak_rss_gib": 1.61029052734375,
+  "updated": "2026-10-09T12:52:17.990466+00:00"
+}

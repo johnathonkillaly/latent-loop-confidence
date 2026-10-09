@@ -1,0 +1,14 @@
+[
+  {
+    "stage": "dataset serialization before training",
+    "failure": "NumPy int64 coordinates not JSON serializable",
+    "remediation": "Convert all serialized coordinates and walls to Python integers",
+    "scientific_results_affected": false
+  },
+  {
+    "stage": "dataset serialization before training",
+    "failure": "NumPy-derived comparison returned a non-JSON boolean",
+    "remediation": "Normalize maze coordinates/walls to native integers at construction",
+    "scientific_results_affected": false
+  }
+]

@@ -1,0 +1,113 @@
+{
+  "created": "2026-10-09T12:45:23.438457+00:00",
+  "canonicalization": "D4 wall-layout only: excludes any start/goal relabeling across splits",
+  "splits": {
+    "train": {
+      "seed": 551001,
+      "count": 3600,
+      "balanced": true,
+      "sha256": "dbb8d62401e4b62b2d7d55b4f7f93f27583430ab2dd40d79b72b780ee28894d1",
+      "attempts": 95285,
+      "rejections": {
+        "unsolvable": 18487,
+        "family": 73126,
+        "layout": 72
+      }
+    },
+    "validation": {
+      "seed": 551101,
+      "count": 600,
+      "balanced": true,
+      "sha256": "fdbe34edb43ab12a862d165cbe94685139c753116f2e2e95b18beda8c0f53a9b",
+      "attempts": 16756,
+      "rejections": {
+        "unsolvable": 3267,
+        "family": 12863,
+        "layout": 26
+      }
+    },
+    "fresh_id": {
+      "seed": 551201,
+      "count": 600,
+      "balanced": true,
+      "final": true,
+      "sha256": "c34764b80ddc5a7671919e5880b55f5721d7360992b69f8afaca8d7625757056",
+      "attempts": 15254,
+      "rejections": {
+        "unsolvable": 2973,
+        "family": 11650,
+        "layout": 31
+      }
+    },
+    "natural": {
+      "seed": 551301,
+      "count": 600,
+      "final": true,
+      "sha256": "e646c3317e3cec92c5a83e45a01fd1b37ce73ca10b6c2e6c904e761b11f8bbd7",
+      "attempts": 795,
+      "rejections": {
+        "unsolvable": 162,
+        "family": 0,
+        "layout": 33
+      }
+    },
+    "structure": {
+      "seed": 551401,
+      "count": 360,
+      "algorithm": "growth",
+      "balanced": true,
+      "final": true,
+      "sha256": "d8f0711f3b223713ce3ff67f1a936df0e973159cc6c9679cb85ff12a3fce0579",
+      "attempts": 23900,
+      "rejections": {
+        "unsolvable": 0,
+        "family": 23511,
+        "layout": 29
+      }
+    },
+    "larger": {
+      "seed": 551501,
+      "count": 360,
+      "size": 7,
+      "balanced": true,
+      "final": true,
+      "sha256": "84ea68a9e651d479102161dc1b9e182a4b24f8dd825412fb160b5ccb124c378d",
+      "attempts": 5274,
+      "rejections": {
+        "unsolvable": 1015,
+        "family": 3899,
+        "layout": 0
+      }
+    },
+    "dense": {
+      "seed": 551601,
+      "count": 360,
+      "density": 0.44,
+      "balanced": true,
+      "final": true,
+      "sha256": "60e918413381a659b60fa65cbe4d52ae85e461ed40dc6f387f78868f6965db2f",
+      "attempts": 17661,
+      "rejections": {
+        "unsolvable": 7799,
+        "family": 9499,
+        "layout": 3
+      }
+    },
+    "long_paths": {
+      "seed": 551701,
+      "count": 360,
+      "size": 7,
+      "density": 0.35,
+      "min_distance": 10,
+      "final": true,
+      "sha256": "e149aa2125287431e1deff0249beb0b429d75d405e934905f793663e299094e0",
+      "attempts": 6345,
+      "rejections": {
+        "unsolvable": 1960,
+        "family": 4025,
+        "layout": 0
+      }
+    }
+  },
+  "total_distinct_layouts": 6840
+}

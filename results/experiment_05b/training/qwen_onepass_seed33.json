@@ -1,0 +1,97 @@
+{
+  "condition": "qwen_onepass",
+  "seed": 33,
+  "config_sha256": "e8df6628ab3515419a9e2e68c7b9efe0e160152dab76b70bc79a3b4864dd21cf",
+  "dataset_sha256": "65ca194ee1e6c70a45c1d836671ba68a59ceb25969bcd85a94d7ed59cc9bf624",
+  "source_sha256": "4072391c1005daeef3d21915c63c36c176f2af1c40f36f2f4d2c978911dbcee3",
+  "created": "2026-10-09T12:50:24.183662+00:00",
+  "epochs": [
+    {
+      "epoch": 1,
+      "training_loss": 1.3257521086268955,
+      "validation": {
+        "accuracy": 0.3,
+        "set_nll": 1.2637237609704386,
+        "invalid_rate": 0.39166666666666666,
+        "mean_regret": 1.0083333333333333,
+        "ece": 0.02922544842032687
+      },
+      "gradient_norm_mean": 1.414155280424489,
+      "gradient_norm_max": 19.174823760986328,
+      "seconds": 19.913349875001586
+    },
+    {
+      "epoch": 2,
+      "training_loss": 1.2886343081792195,
+      "validation": {
+        "accuracy": 0.23333333333333334,
+        "set_nll": 1.2601769187564202,
+        "invalid_rate": 0.4666666666666667,
+        "mean_regret": 1.0666666666666667,
+        "ece": 0.03163784645418405
+      },
+      "gradient_norm_mean": 0.289844788155622,
+      "gradient_norm_max": 0.7493837475776672,
+      "seconds": 19.6739247910009
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.2638835112253826,
+      "validation": {
+        "accuracy": 0.25,
+        "set_nll": 1.230047019087301,
+        "invalid_rate": 0.45,
+        "mean_regret": 1.05,
+        "ece": 0.13132466125841025
+      },
+      "gradient_norm_mean": 0.862186624109745,
+      "gradient_norm_max": 8.430569648742676,
+      "seconds": 19.55366962500557
+    }
+  ],
+  "best_validation_loss": 1.230047019087301,
+  "parameters": {
+    "trainable": 122880,
+    "total": 596172801,
+    "trainable_keys": [
+      "backbone.model.layers.12.self_attn.q_proj.lora_a",
+      "backbone.model.layers.12.self_attn.q_proj.lora_b",
+      "backbone.model.layers.12.self_attn.v_proj.lora_a",
+      "backbone.model.layers.12.self_attn.v_proj.lora_b",
+      "backbone.model.layers.13.self_attn.q_proj.lora_a",
+      "backbone.model.layers.13.self_attn.q_proj.lora_b",
+      "backbone.model.layers.13.self_attn.v_proj.lora_a",
+      "backbone.model.layers.13.self_attn.v_proj.lora_b",
+      "backbone.model.layers.14.self_attn.q_proj.lora_a",
+      "backbone.model.layers.14.self_attn.q_proj.lora_b",
+      "backbone.model.layers.14.self_attn.v_proj.lora_a",
+      "backbone.model.layers.14.self_attn.v_proj.lora_b"
+    ]
+  },
+  "environment": {
+    "device": {
+      "device_name": "Apple M4 Max",
+      "max_recommended_working_set_size": 120259084288,
+      "memory_size": 137438953472,
+      "architecture": "applegpu_g16s",
+      "max_buffer_length": 86586540032,
+      "resource_limit": 499000
+    },
+    "backend": "MLX Metal",
+    "machine": "arm64",
+    "os": "27.0.1",
+    "versions": {
+      "mlx": "0.32.3",
+      "mlx-lm": "0.32.0",
+      "numpy": "2.5.3",
+      "transformers": "5.19.0"
+    },
+    "memory_budget_gb": 48
+  },
+  "best_epoch": 3,
+  "completed_epochs": 3,
+  "checkpoint_sha256": "4af881a8e555ae877b2a274eded0bd88399636be26bd2a3dc2706e83074d6168",
+  "peak_mlx_gib": 3.99590427801013,
+  "peak_rss_gib": 1.570709228515625,
+  "updated": "2026-10-09T12:51:23.326972+00:00"
+}
