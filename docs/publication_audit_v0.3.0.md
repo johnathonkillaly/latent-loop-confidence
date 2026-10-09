@@ -1,6 +1,14 @@
-# v0.3.0 publication preparation audit
+# v0.3.0 publication audit
 
-**Status: completed local research prepared for review; not published.** No v0.3.0 tag, branch push, release API mutation or publication action was performed. The user must review the consolidated snapshot before any future publication. No critical security/licensing blocker was found in this audit; scientific limitations are prominent release content.
+**Status: publication authorized; scientific, security and licensing checks passed.** The user explicitly authorized publishing the completed v0.3.0 snapshot. This pass reuses the verified preparation audits below and adds lightweight integrity, documentation-link and artifact-exclusion checks. No new research, training, dataset generation, model inference or large test suite is performed.
+
+## Publication-only verification
+
+The starting scientific snapshot is `b36080c1164a3c5614836e02d59c0775c10bd743`, on `research/exp05e-rendezvous`, with a clean working tree. All 106 file hashes in the existing security receipt match before publication edits. Publication changes are restricted to release documentation and the [lightweight check receipt](../results/publication_v0.3.0.json); scientific source, measurements, figures and reports are preserved byte-for-byte.
+
+Public main `1ebd435b94448d45e42141b49808839218c2b7b2` is an ancestor of this snapshot, allowing normal fast-forward publication. Only main and the new v0.3.0 tag are publication targets; previous tags and unrelated refs are preserved. No force-push or history rewriting is permitted. GitHub's release and remote tag identify the final publication commit.
+
+Detailed experiment reports retain their original research-time local/unpublished status statements. Current release status is documented in the README, overview and release notes. The following sections record the original preparation audit and its scope; historical remote observations preceded publication.
 
 ## Snapshot and history
 
@@ -14,7 +22,7 @@ The verified starting branch was `research/exp05d-decision-bridge`, at `e1b02d39
 | 5C | `1f2e4947689984643bbadccb3327a8baec4cba81` |
 | 5D | `e1b02d3950bcd59b4de875549eb0da21dfc6304c` |
 
-The historical backup bundles remain outside the publication tree, including the verified 5D bundle. No historical commit was rewritten and no completed experiment artifact was overwritten. Current README, overview and limitations describe the consolidated draft; historical release audit documents and detailed experiment artifacts are preserved.
+The historical backup bundles remain outside the publication tree, including the verified 5D bundle. No historical commit was rewritten and no completed experiment artifact was overwritten. README, overview and limitations were prepared for the consolidated release; historical release audit documents and detailed experiment artifacts are preserved.
 
 Read-only remote inspection confirms public `main` remains `1ebd435b94448d45e42141b49808839218c2b7b2`. Public v0.1.0 still peels to `0a637eb97d66eebbd740b612ab92e9095c496931`; v0.2.0 still peels to `1ebd435b94448d45e42141b49808839218c2b7b2`. The existing [v0.2.0 release](https://github.com/johnathonkillaly/latent-loop-confidence/releases/tag/v0.2.0) was verified with GitHub's release API. Remote refs contain no 5C/5D/5E branch or v0.3.0 tag. No unrelated remote work was changed.
 
@@ -58,6 +66,6 @@ Original source and generated synthetic artifacts retain MIT. New graph/task sol
 
 ## Review-ready material and remaining action
 
-[Draft release notes](release_notes_v0.3.0.md), [reproduction guide](reproduction_v0.3.0.md), updated [overview](research_overview.md), [Rendezvous Markdown/HTML](../reports/experiment_05e/the_rendezvous.md), and [series conclusion](../reports/research_conclusion.md) are prepared locally. The completed branch is committed with a clean working tree and a verified external bundle at handoff. The final commit is identified by Git and the handoff, avoiding a self-referential hash inside its own content.
+[Release notes](release_notes_v0.3.0.md), [reproduction guide](reproduction_v0.3.0.md), updated [overview](research_overview.md), [Rendezvous Markdown/HTML](../reports/experiment_05e/the_rendezvous.md), and [series conclusion](../reports/research_conclusion.md) are prepared locally. The completed branch is committed with a clean working tree and a verified external bundle at handoff. The final commit is identified by Git and the handoff, avoiding a self-referential hash inside its own content.
 
-**Remaining publication action: user review and any later explicit release authorization. No publication is represented as completed.**
+The preparation-stage review gate was satisfied by the user’s explicit publication instruction. Release creation and remote verification follow the lightweight checks; no additional scientific work is authorized in this publication pass.

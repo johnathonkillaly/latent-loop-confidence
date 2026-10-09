@@ -6,7 +6,7 @@ Can a small neural network predict whether additional latent computation will im
 
 **A tiny recurrent network learned to improve decisions across repeated hidden-state updates, but recurrence superiority and scalable planning were not established.** Earlier Qwen studies found useful prediction signals without a reliable recurrent decision advantage. Grid planning and language-model reasoning are separate experimental systems.
 
-**Local v0.3.0 draft:** Experiments 5C–5E are completed locally and prepared for review. Public releases remain v0.1.0 and v0.2.0. Nothing from this draft has been pushed or published.
+**v0.3.0 — Final Results:** This release includes completed Experiments 5C–5E and the research conclusion. See the [changelog](CHANGELOG.md) and [release notes](docs/release_notes_v0.3.0.md). Earlier v0.1.0 and v0.2.0 releases are preserved.
 
 The closing frozen-Qwen study improves constrained structural-choice accuracy **27.50% → 33.11%, +5.61 pp [2.89, 8.31]**, but a matched direct classifier reaches **42.58%** and a simple abstain prior **44.75%**. Novel option wording also collapses the learned heads. The recommendation is **PIVOT** toward carefully validated task adaptation and exact solvers. See the [Rendezvous report](reports/experiment_05e/the_rendezvous.md) and [research conclusion](reports/research_conclusion.md).
 
@@ -90,12 +90,14 @@ Six synthetic task families, conditional four-choice predictions, one small froz
 
 Experiment 5 trains Qwen middle-layer LoRA adapters; its paired gains remain inconclusive. Experiment 5B shows useful repeated local grid computation, while eight-loop completion is 95% on 7×7 and only 54.44% on the long-path subset. Snake horizon-six agreement is 96.61% at four loops, equaled by its four-block feedforward control. Qwen maze recurrence scores 28.33% versus one-pass 47.78%; no transfer of the grid benefit was established.
 
-Experiments 5C, 5D and 5E are completed in this local draft. 5C exposes a failure frontier; 5D connects recurrence to candidate scoring; 5E returns to frozen language-model output intervention. Scoring improves some constrained decisions, but structural graph harm, label sensitivity and competitive ordinary classifiers rule out broad reasoning or architectural claims. No further experiment starts automatically.
+Experiments 5C, 5D and 5E complete this research series. 5C exposes a failure frontier; 5D connects recurrence to candidate scoring; 5E returns to frozen language-model output intervention. Scoring improves some constrained decisions, but structural graph harm, label sensitivity and competitive ordinary classifiers rule out broad reasoning or architectural claims. No further experiment starts automatically.
 
-See the **unpublished** [v0.3.0 draft notes](docs/release_notes_v0.3.0.md), [audit](docs/publication_audit_v0.3.0.md), [reproduction guide](docs/reproduction_v0.3.0.md), and [conclusion](reports/research_conclusion.md). The [v0.2.0 notes](docs/release_notes_v0.2.0.md), [audit](docs/publication_audit_v0.2.0.md) and [reproduction guide](docs/reproduction_v0.2.0.md) remain historical release records.
+See the [v0.3.0 release notes](docs/release_notes_v0.3.0.md), [audit](docs/publication_audit_v0.3.0.md), [reproduction guide](docs/reproduction_v0.3.0.md), and [conclusion](reports/research_conclusion.md). The [v0.2.0 notes](docs/release_notes_v0.2.0.md), [audit](docs/publication_audit_v0.2.0.md) and [reproduction guide](docs/reproduction_v0.2.0.md) remain historical release records.
 
 ## Attribution and license
 
 Original project code and generated synthetic artifacts use [MIT](LICENSE). The separately downloaded Qwen3 model uses Apache-2.0; its weights/tokenizer are not distributed here. Installed dependencies retain their own licenses. See [third-party provenance](docs/third_party_licenses.md).
 
 This work is inspired by [Qwen3](https://arxiv.org/abs/2505.09388), [RecurTrace](https://arxiv.org/html/2609.03379v2), [Universal Transformers](https://arxiv.org/abs/1807.03819), [Adaptive Computation Time](https://arxiv.org/abs/1603.08983), [PonderNet](https://arxiv.org/abs/2107.05407), and [Encode-Think-Decode](https://arxiv.org/abs/2510.07358). The [literature review](docs/literature_review.md) explains the differences and additional references. No RecurTrace implementation was copied. This is an independent adaptation, with no claim of official reproduction or architectural novelty.
+
+Publication-status statements inside preserved experiment reports describe their original local completion, before this release.

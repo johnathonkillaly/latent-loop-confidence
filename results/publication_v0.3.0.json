@@ -1,0 +1,37 @@
+{
+  "scope": "Publication-only lightweight verification; no research, training, data generation, inference or test-suite rerun.",
+  "checked_at_utc": "2026-10-09T21:08:28.662126+00:00",
+  "scientific_snapshot": "b36080c1164a3c5614836e02d59c0775c10bd743",
+  "prior_public_main": "1ebd435b94448d45e42141b49808839218c2b7b2",
+  "fast_forward_ancestry": true,
+  "preserved_annotated_tag_objects": {
+    "v0.1.0": "ba0e3cc4cdea50957b4d7c214ce9a1cf02bbe071",
+    "v0.2.0": "0cb43b1a143d90d6698836c3da55efb81de5c205"
+  },
+  "existing_security_receipt_sha256": "c45e5ca96f0c78e5d1b67c531a821989b8de9aed78557a977264691c91cb44c2",
+  "pre_edit_security_receipt_hashes_verified": 106,
+  "unchanged_security_receipt_hashes_reverified": 103,
+  "frozen_scientific_source_hashes_verified": 9,
+  "dataset_manifest_hash_verified": true,
+  "scientific_artifacts_changed": false,
+  "publication_files": [
+    "CHANGELOG.md",
+    "README.md",
+    "docs/limitations.md",
+    "docs/publication_audit_v0.3.0.md",
+    "docs/release_notes_v0.3.0.md",
+    "docs/reproduction_v0.3.0.md",
+    "docs/research_overview.md",
+    "results/publication_v0.3.0.json"
+  ],
+  "relative_links_checked": 163,
+  "missing_links": [],
+  "tracked_files_checked_for_exclusions_and_size": 2049,
+  "forbidden_artifacts": [],
+  "files_over_25_MiB": [],
+  "new_document_sensitive_pattern_findings": [],
+  "reused_test_receipt": "results/experiment_05e/test_verification.json",
+  "reused_verification": "72 MLX tests passed; CPU 46 passed and 17 skipped. Previous solver, report regeneration, cached-feature refit and licensing audits reused; not repeated for publication.",
+  "reproducibility_limit": "Full independent historical retraining and complete independent feature re-extraction are not claimed.",
+  "publication_blockers": []
+}

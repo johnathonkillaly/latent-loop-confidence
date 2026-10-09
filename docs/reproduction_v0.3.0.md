@@ -1,6 +1,6 @@
-# Reproducing the v0.3.0 draft
+# Reproducing v0.3.0
 
-This is local preparation, not a published release. Historical guidance remains in [v0.1](reproduction.md) and [v0.2](reproduction_v0.2.0.md). Use Python 3.12; package metadata permits ≥3.11. The existing environment pins MLX 0.32.3 and mlx-lm 0.32.0. No dependency upgrade was needed. CPU-only public analysis uses NumPy/SciPy/Matplotlib/Markdown; model extraction and neural fits require Apple Silicon/Metal.
+This guide accompanies the completed v0.3.0 research release. Historical guidance remains in [v0.1](reproduction.md) and [v0.2](reproduction_v0.2.0.md). Use Python 3.12; package metadata permits ≥3.11. The existing environment pins MLX 0.32.3 and mlx-lm 0.32.0. No dependency upgrade was needed. CPU-only public analysis uses NumPy/SciPy/Matplotlib/Markdown; model extraction and neural fits require Apple Silicon/Metal.
 
 ## Public analyses without weights
 

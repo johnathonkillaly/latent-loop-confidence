@@ -62,4 +62,4 @@ The original question distinguishes predicting useful computation from creating 
 
 **PIVOT:** favor ordinary constrained task adaptation and exact external solvers. The [research conclusion](../reports/research_conclusion.md) synthesizes Experiments 1–5.4 and identifies one narrowly justified optional replication; none is started here.
 
-Public releases are still **v0.1.0 and v0.2.0**. Experiments 5C/5D/5E are completed local work proposed for **v0.3.0**, not published. Previous release tags are unchanged. See the [draft release notes](release_notes_v0.3.0.md), [publication audit](publication_audit_v0.3.0.md), [reproduction guide](reproduction_v0.3.0.md), [limitations](limitations.md), and [references](literature_review.md).
+**v0.3.0 — Final Results** includes completed Experiments 5C/5D/5E and the research conclusion. Previous v0.1.0 and v0.2.0 release tags are unchanged. See the [release notes](release_notes_v0.3.0.md), [publication audit](publication_audit_v0.3.0.md), [reproduction guide](reproduction_v0.3.0.md), [limitations](limitations.md), and [references](literature_review.md).
