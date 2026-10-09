@@ -57,6 +57,16 @@ def audit(config):
     split_rows = {}
     sources = {}
     manifest = json.loads((EXP / "dataset_manifest.json").read_text())
+    frozen = json.loads((EXP / "frozen_protocol.json").read_text())
+    for name, expected in frozen["source_hashes"].items():
+        assert sha(name) == expected, f"Frozen source changed: {name}"
+    for condition, seeds in frozen["fits"].items():
+        for seed, record in seeds.items():
+            p = OUT / "training" / f"main_{condition}_seed{seed}.json"
+            assert sha(p) == record["training_record_sha256"]
+            sources[str(p)] = sha(p)
+    prior = json.loads((EXP / "class_prior_diagnostic.json").read_text())
+    assert prior["recorded_utc"] < frozen["frozen_utc"]
     for split in ("train", "val", *FINAL):
         p = OUT / "datasets" / f"{split}.jsonl.gz"
         rows = trace(p)
@@ -75,6 +85,9 @@ def audit(config):
                 assert row["id"] not in final_ids
                 final_ids.add(row["id"])
         sources[str(p)] = sha(p)
+    training_labels = np.array([r["label"] for r in split_rows["train"]])
+    assert prior["training_counts"] == {str(k): int((training_labels == k).sum()) for k in range(4)}
+    assert np.array_equal(np.array(prior["fixed_probabilities"]), np.bincount(training_labels, minlength=4) / len(training_labels))
     expected_paths = {}
     baseline_by_id = {}
     for split in FINAL:
@@ -135,6 +148,7 @@ def audit(config):
 def summarize(config, frozen):
     result = {}
     arrays = {}
+    prior = json.loads((EXP / "class_prior_diagnostic.json").read_text())
     for split in FINAL:
         rows = trace(OUT / "datasets" / f"{split}.jsonl.gz")
         labels = np.array([r["label"] for r in rows])
@@ -191,6 +205,7 @@ def summarize(config, frozen):
             untrained[condition] = {str(k + 1): {**statistic(l[k], labels), "state_drift": float(cube(rr, "state_drift")[k].mean())} for k in range(4)}
             comparisons[f"selected_minus_{condition}"] = bootstrap(chosen - (l[3].argmax(-1) == labels)[None, :], config["bootstrap_repeats"], 550801)
         result[split] = {"n": len(rows), "frozen": statistic(baselogits, labels),
+                         "training_answer_position_prior": statistic(np.tile(np.log(prior["fixed_probabilities"]), (len(rows), 1)), labels),
                          "historical_one_pass": {name: float(np.mean([statistic(np.array(l), labels)[name] for l in base["historical_one_pass_logits"].values()])) for name in ("accuracy", "nll", "ece", "brier")},
                          "systems": systems, "untrained": untrained, "paired_comparisons": comparisons}
         arrays[split] = (rows, labels, logits_by)
@@ -327,7 +342,7 @@ def main():
              f"Selected before final opening: recurrent family **{selected}**, fixed depth **4**; one-pass family **{onepass}**, depth **1**. Fresh-ID accuracies are **{100*fid['systems'][selected]['depths']['4']['accuracy']:.2f}%** versus **{100*fid['systems'][onepass]['depths']['1']['accuracy']:.2f}%**; paired difference **{interval(main_comparison)} percentage points**.", "",
              f"Completed 15 main fits (five conditions × three seeds), plus two separate pilot fits. Seeds {config['seeds']}. Total study wall time through report: {duration/60:.1f} minutes; synchronized fitting excludes evaluation/checkpoint/report overhead. Peak MLX allocation {peak:.2f} GiB; process RSS {rss:.2f} GiB. All Experiment 5 work is local and excluded from the public v0.1.0 release.", "",
              "## Architecture", "", "Frozen pinned Qwen3-0.6B: 28 layers, hidden width 1,024, 16 query heads, eight KV heads, 128-dimensional attention heads, SwiGLU width 3,072, tied embeddings. These are inspected model configuration values, not loader assumptions. Early layers 0–11 feed shared middle layers 12–14, followed by late layers 15–27. Rank-8 query/value LoRA is shared across loops. All original arrays stay frozen. No final-state MLP substitutes for the recurrent transformer block.", "",
-             "Depth one runs the adapted block once. Later passes RMS-match the original block input to the current token state, optionally convexly reinject it with r in [0, 0.25], apply the same adapted transformer block, cap proposal norm at twice that token's depth-one norm, and mix using sigmoid(u), initialized to 0.1. Reinjection initializes to 0.05. This bounds growth relative to the learned first state; it does not guarantee preservation of the original model at later depths. LoRA zero-output B gives depth-one initialization parity, while the open update path permits learning.", "",
+             "Depth one runs the adapted block once. Later passes RMS-match the original block input to the current token state, optionally convexly reinject it with r in [0, 0.25], apply the same adapted transformer block, cap proposal norm at twice that token's depth-one norm, and mix using sigmoid(u), initialized to 0.1. Reinjection initializes to 0.05. Gates are shared global learned scalars, not input-dependent networks. This bounds growth relative to the learned first state; it does not guarantee preservation of the original model at later depths. LoRA zero-output B gives depth-one initialization parity, while the open update path permits learning.", "",
              "```mermaid\nflowchart LR\n X[Tokens] --> E[Frozen early layers]\n E --> H[Original state h0]\n H --> F[Shared middle transformer + LoRA]\n F --> U[Bounded gated recurrent update]\n H --> U\n U --> F\n U --> L[Frozen late layers]\n L --> Y[Four-label decision]\n```", "",
              "## Research motivation", "", "Earlier probes recognized correctness, loss gains and decision transitions, while additional recurrence often damaged answers. This experiment trains the computation itself. A gain can reflect task-specific adaptation, calibration, extra capacity or computation; shared weights and additional loops do not by themselves demonstrate reasoning.", "",
              "## Differences from RecurTrace", "", "See the [primary-source review](../../experiments/experiment_05/research_references.md). This is a small LoRA/gate study, with bounded updates and four-depth CE rather than a reproduction of loop memory, stochastic-depth large-mixture training, or halting distillation. No author implementation is copied. There is no memory or controller in the primary study.", "",
@@ -366,6 +381,11 @@ def main():
     lines += ["", "Rates cover three adjacent recurrent transitions per problem, retaining their dependence in bootstrap. Initial frozen→trained-depth-one transitions are reported separately as adaptation, not evidence for additional loops. WW/RR, loss, correct-answer probability, confidence, margin, entropy, state distance and norm are recorded per example/depth. No labels or future states enter inference.", "", "![Corrections and degradations](figures/transitions.png)", "", "![Recurrent drift](figures/state_drift.png)", "", "## Failure analysis", "", conclusion, "", "Low backbone competence and CE near the four-choice uniform baseline restrict interpretation. A lower NLL may largely soften incorrect overconfident decisions. Norm bounds prevent unbounded growth but can also restrict useful adaptation; first-state norms are learned and do not guarantee closeness to the original model. Validation-selected models can generalize poorly from 144 items. Reinjection ablations below use the same trained weights, so they are diagnostics rather than independently fitted causal comparisons.", "", "| Family | Learned gate depth-4 accuracy | Fixed gate ablation | No reinjection ablation |", "|---|---:|---:|---:|"]
     for condition in ("reinjection", "multi_depth"):
         lines.append(f"| {condition} | {100*fid['systems'][condition]['depths']['4']['accuracy']:.2f}% | {100*ablations[condition]['fixed']['4']:.2f}% | {100*ablations[condition]['none']['4']:.2f}% |")
+    lines += ["", f"Exploratory answer-position diagnostic, specified during validation before final opening: a constant prior fitted solely from training labels achieves {100*fid['training_answer_position_prior']['accuracy']:.2f}% fresh-ID accuracy and NLL {fid['training_answer_position_prior']['nll']:.4f}. Uniform four-option CE is {np.log(4):.4f}. The prior does not select any trained model.", "",
+              "| Fresh-ID family at reported depth | Prediction frequencies A/B/C/D (%) | Mean option entropy (nats) | Accuracy SD across seeds, pp |", "|---|---|---:|---:|"]
+    for c in CONDITIONS:
+        r = fid["systems"][c]["depths"]["1" if c.startswith("one_pass") else "4"]
+        lines.append(f"| {c} | {' / '.join(f'{100*v:.1f}' for v in r['prediction_class_frequencies'])} | {r['mean_option_entropy']:.4f} | {100*r['accuracy_seed_sd']:.2f} |")
     lines += ["", "![Training and validation loss](figures/training_validation_loss.png)", "", "## Limitations", "", "This is a completed small controlled study, not an exhaustive hyperparameter sweep or broad reasoning benchmark. Only rank-8 attention adapters, one block, three short main epochs, one optimizer schedule and few synthetic instances were tested. The additional one-pass control uses approximate training-cost matching; exact hardware budgets differ. A fixed-depth compute control is also available by comparing the same adapted model at depths 1–4, but there is no separate larger nonshared backbone. No full-model fine-tuning, natural task suite, incremental cache optimization, controller retraining, trajectory objective or loop memory was run. Saved weights and large hidden arrays remain ignored. The preserved historical release and reports are unchanged.", "", "## Future work", "", "Use a larger fresh training/validation set and a separately reported diagnostic task mixture where the frozen representation has intermediate competence. Retain the original hard mixture as primary. Test longer training and a small gate-strength ablation before investing in memory/halting. Compare against matched one-pass optimization, and require paired structural-transfer evidence before attributing gains to recurrence. Old C/V/D probes are not assumed compatible with the newly trained states; transfer/recalibration is deferred until useful fixed-depth computation is established. This experiment prioritizes the thinker.", "", "## Reproduction and local status", "", "```sh\nLATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q\n.venv/bin/python -m latent_loop.experiment05.validate\n.venv/bin/python -m latent_loop.experiment05.train pilot\n.venv/bin/python -m latent_loop.experiment05.train main\n.venv/bin/python -m latent_loop.experiment05.evaluate freeze\n.venv/bin/python -m latent_loop.experiment05.evaluate final\n.venv/bin/python -m latent_loop.experiment05.evaluate timing\n.venv/bin/python -m latent_loop.experiment05.report\n```", "", "The completed config/protocol is consumed: fitting refuses after final opening. Use a new independent namespace, fresh seeds/runtime clock and manifests for a new experiment, rather than overwriting these files. Public CPU report regeneration reads saved measurements without MLX. Training resumes adapter/optimizer checkpoints and deterministic batch/depth schedules after safe interruptions. Source/config/data hashes reject incompatible resume. No Experiment 5 commit is pushed. Public v0.1.0 is `0a637eb97d66eebbd740b612ab92e9095c496931`.", "", "[Protocol](../../experiments/experiment_05/frozen_protocol.json) · [Dataset manifest](../../experiments/experiment_05/dataset_manifest.json) · [Summary](../../results/experiment_05/summary.json) · [Public audit](../../results/experiment_05/public_audit.json) · [Primary references](../../experiments/experiment_05/research_references.md)"]
     REPORT.mkdir(parents=True, exist_ok=True)
     path = REPORT / "train_the_thinker.md"

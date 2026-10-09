@@ -1,0 +1,23 @@
+{
+  "recorded_utc": "2026-10-09T02:19:05.188585+00:00",
+  "status": "Exploratory diagnostic specified during validation before final opening; never selects checkpoints or families",
+  "training_counts": {
+    "0": 137,
+    "1": 131,
+    "2": 141,
+    "3": 167
+  },
+  "validation_counts": {
+    "0": 28,
+    "1": 36,
+    "2": 40,
+    "3": 40
+  },
+  "fixed_prediction": 3,
+  "fixed_probabilities": [
+    0.2378472222222222,
+    0.22743055555555555,
+    0.24479166666666666,
+    0.2899305555555556
+  ]
+}

@@ -48,7 +48,7 @@ def freeze(config):
         scores[condition] = float(np.mean([r["selection_nll"] for r in fits[condition].values()]))
     recurrent = min(("recurrent", "reinjection", "multi_depth"), key=lambda c: (scores[c], c))
     onepass = min(("one_pass", "one_pass_compute"), key=lambda c: (scores[c], c))
-    sources = [EXP / "config.json", EXP / "dataset_manifest.json", EXP / "plan.md", *[p for p in Path("src/latent_loop/experiment05").glob("*.py") if p.name != "report.py"]]
+    sources = [EXP / "config.json", EXP / "dataset_manifest.json", EXP / "plan.md", EXP / "class_prior_diagnostic.json", *[p for p in Path("src/latent_loop/experiment05").glob("*.py") if p.name != "report.py"]]
     value = {"frozen_utc": utc(), "selected_recurrent_family": recurrent, "selected_one_pass_family": onepass,
              "family_selection_rule": "Mean validation NLL at fixed primary inference depth across seeds; no final data used",
              "primary_inference_depth": config["primary_inference_depth"], "validation_selection_scores": scores,
