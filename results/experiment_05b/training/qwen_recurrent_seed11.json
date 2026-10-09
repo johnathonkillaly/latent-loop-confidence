@@ -33,6 +33,20 @@
       "gradient_norm_mean": 0.4557896693961488,
       "gradient_norm_max": 1.2945966720581055,
       "seconds": 27.123623000006774
+    },
+    {
+      "epoch": 3,
+      "training_loss": 1.2783820655610827,
+      "validation": {
+        "accuracy": 0.31666666666666665,
+        "set_nll": 1.2637775195905567,
+        "invalid_rate": 0.36666666666666664,
+        "mean_regret": 1.0,
+        "ece": 0.10027766127459745
+      },
+      "gradient_norm_mean": 0.4651444300181336,
+      "gradient_norm_max": 1.4311131238937378,
+      "seconds": 26.827882417012006
     }
   ],
   "best_validation_loss": 1.2487389506751856,
@@ -76,9 +90,9 @@
     "memory_budget_gb": 48
   },
   "best_epoch": 1,
-  "completed_epochs": 2,
+  "completed_epochs": 3,
   "checkpoint_sha256": "6ca46ae2ecd9b1eac1a0dd4b63821ac0cc067fbf349e5b428c75eb754c7a8bd7",
-  "peak_mlx_gib": 4.434218683280051,
+  "peak_mlx_gib": 4.434248902834952,
   "peak_rss_gib": 1.61029052734375,
-  "updated": "2026-10-09T12:52:17.990466+00:00"
+  "updated": "2026-10-09T12:52:44.819245+00:00"
 }

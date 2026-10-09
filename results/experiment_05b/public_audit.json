@@ -1,0 +1,10 @@
+{
+  "all_passed": true,
+  "independently_recomputed_maze_labels": 6840,
+  "distinct_canonical_wall_layouts": 6840,
+  "checked_trajectory_files": 154,
+  "checked_decisions": 290640,
+  "scope": "Public dataset labels/hashes and ALL seed/depth grid/Qwen classification accuracy, set NLL, regret, invalid rate, ECE recomputed from logits. No claim of independent full retraining.",
+  "snake_states_recomputed": 4800,
+  "snake_decisions_recomputed": 18000
+}

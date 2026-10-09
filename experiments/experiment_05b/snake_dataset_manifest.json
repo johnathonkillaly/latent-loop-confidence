@@ -1,0 +1,26 @@
+{
+  "created": "2026-10-09T13:16:01.413147+00:00",
+  "config_sha256": "0cb91471c508a136bdf3b93dffaedfddab16a77a92a745afdb11238774fa3f2a",
+  "canonicalization": "D4 of walls, ordered body and food; heading determined by head/neck edge",
+  "splits": {
+    "train": {
+      "count": 3600,
+      "seed": 559201,
+      "attempts": 4223,
+      "sha256": "54e69a8fd598fbbe0c2322a9a26629f549ae204b685825ba70cfde1fe8fe49cc"
+    },
+    "validation": {
+      "count": 600,
+      "seed": 559301,
+      "attempts": 834,
+      "sha256": "12f886d23f1b2f0bde93fdff6420e58565907be7a5b451ded20c4c3f6a2642db"
+    },
+    "final": {
+      "count": 600,
+      "seed": 559401,
+      "attempts": 827,
+      "sha256": "280d522ca8c89e15d9a95d7c7dc8e9bb363d4875a5ff02c35c39b4480e96ae26"
+    }
+  },
+  "timestamp_note": "Configuration start timestamp corrected to actual generator creation before any fit or final evaluation; no generator parameters or data changed"
+}

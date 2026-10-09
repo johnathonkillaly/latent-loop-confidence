@@ -1,0 +1,28 @@
+{
+  "checked_utc": "2026-10-09T13:24:16.175686+00:00",
+  "mlx_tests": {
+    "passed": 48,
+    "skipped": 0,
+    "seconds": 2.21,
+    "command": "LATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q"
+  },
+  "clean_cpu_tests": {
+    "passed": 31,
+    "skipped": 13,
+    "seconds": 0.88,
+    "command": "PYTHONPATH=src artifacts/publication/cpu-env/bin/python -m pytest -q"
+  },
+  "source_and_checkpoint_freezes_verified": true,
+  "historical_files_unchanged": true,
+  "public_tag_unchanged": true,
+  "new_content_security_review": {
+    "text_and_compressed_files": 446,
+    "findings": [],
+    "method": "Heuristic token/key/private-path/private-IP scan plus manual artifact/privacy/license review; no guarantee of exhaustive detection",
+    "remediation": "One protocol source-path key normalized; original receipt preserved in ignored artifacts"
+  },
+  "trained_demonstration_locality_checks": 72,
+  "dataset_reproduction": "All eight maze and three Snake gzip files byte-identical in clean CPU environment",
+  "remote_mutations": 0,
+  "snake_neural_training": true
+}

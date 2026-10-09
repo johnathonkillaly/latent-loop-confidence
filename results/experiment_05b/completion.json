@@ -1,0 +1,26 @@
+{
+  "completed_utc": "2026-10-09T13:22:49.834644+00:00",
+  "started_utc": "2026-10-09T12:35:07+00:00",
+  "elapsed_seconds_through_report_qa": 2862.834776,
+  "active_budget_hours": 6,
+  "within_budget": true,
+  "main_grid_fits": 21,
+  "main_qwen_fits": 6,
+  "grid_pilot_fits": 1,
+  "fit_epoch_seconds_total": 500.9663485704077,
+  "maximum_training_peak_mlx_gib": 4.434264370240271,
+  "tests": {
+    "mlx_passed": 48,
+    "cpu_passed": 31,
+    "cpu_skipped": 13
+  },
+  "report_figures": 16,
+  "relative_report_links_valid": true,
+  "self_contained_html_figures_verified": true,
+  "visual_qa": "Inspected maze accuracy/depth, spatial activations, full rollouts, generalization, failure/degradation, initial Snake baselines and prospective learned Snake PNG figures",
+  "remote_verification": "main and peeled v0.1.0 still at initial public release; neither local Experiment 5 nor 5b branch exists remotely",
+  "published": false,
+  "snake_stage": "initial simulator smoke plus prospective neural safety/planning comparison and full episodes",
+  "main_snake_fits": 12,
+  "main_fits_total": 39
+}

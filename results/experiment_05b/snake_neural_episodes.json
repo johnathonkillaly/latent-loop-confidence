@@ -1,0 +1,93 @@
+{
+  "snake_safety_rec@1": {
+    "survival_steps": 8.666666666666666,
+    "food_collected": 0.4888888888888889,
+    "collision": 0.4166666666666667,
+    "illegal_actions": 0.08333333333333333,
+    "inference_seconds": 0.0035814680015189677
+  },
+  "snake_safety_rec@2": {
+    "survival_steps": 8.78888888888889,
+    "food_collected": 0.4777777777777778,
+    "collision": 0.4,
+    "illegal_actions": 0.14444444444444443,
+    "inference_seconds": 0.004954394409853396
+  },
+  "snake_safety_rec@4": {
+    "survival_steps": 8.877777777777778,
+    "food_collected": 0.4722222222222222,
+    "collision": 0.38333333333333336,
+    "illegal_actions": 0.1388888888888889,
+    "inference_seconds": 0.005487914833550652
+  },
+  "snake_safety_rec@8": {
+    "survival_steps": 8.966666666666667,
+    "food_collected": 0.4722222222222222,
+    "collision": 0.38333333333333336,
+    "illegal_actions": 0.1111111111111111,
+    "inference_seconds": 0.00808364244076074
+  },
+  "snake_plan_rec@1": {
+    "survival_steps": 8.783333333333333,
+    "food_collected": 0.5444444444444444,
+    "collision": 0.4166666666666667,
+    "illegal_actions": 0.1,
+    "inference_seconds": 0.003673057275914794
+  },
+  "snake_plan_rec@2": {
+    "survival_steps": 9.194444444444445,
+    "food_collected": 0.5888888888888889,
+    "collision": 0.35555555555555557,
+    "illegal_actions": 0.03888888888888889,
+    "inference_seconds": 0.004454935077875335
+  },
+  "snake_plan_rec@4": {
+    "survival_steps": 9.427777777777777,
+    "food_collected": 0.5555555555555556,
+    "collision": 0.32222222222222224,
+    "illegal_actions": 0.05,
+    "inference_seconds": 0.007441041456816796
+  },
+  "snake_plan_rec@8": {
+    "survival_steps": 9.566666666666666,
+    "food_collected": 0.5277777777777778,
+    "collision": 0.3055555555555556,
+    "illegal_actions": 0.05,
+    "inference_seconds": 0.009998816732372183
+  },
+  "snake_plan_ff1@1": {
+    "survival_steps": 9.216666666666667,
+    "food_collected": 0.5222222222222223,
+    "collision": 0.3388888888888889,
+    "illegal_actions": 0.1,
+    "inference_seconds": 0.003591905124307636
+  },
+  "snake_plan_ff4@4": {
+    "survival_steps": 9.03888888888889,
+    "food_collected": 0.6333333333333333,
+    "collision": 0.38333333333333336,
+    "illegal_actions": 0.03333333333333333,
+    "inference_seconds": 0.006336594225528339
+  },
+  "random_legal@0": {
+    "survival_steps": 1.8666666666666667,
+    "food_collected": 0.16666666666666666,
+    "collision": 0.9833333333333333,
+    "illegal_actions": 0.0,
+    "inference_seconds": 1.0480467850963275e-05
+  },
+  "safe_greedy@0": {
+    "survival_steps": 8.733333333333333,
+    "food_collected": 0.9,
+    "collision": 0.45,
+    "illegal_actions": 0.0,
+    "inference_seconds": 0.0001742305510560982
+  },
+  "oracle_h6@0": {
+    "survival_steps": 10.65,
+    "food_collected": 0.5,
+    "collision": 0.11666666666666667,
+    "illegal_actions": 0.0,
+    "inference_seconds": 0.010959825949733689
+  }
+}

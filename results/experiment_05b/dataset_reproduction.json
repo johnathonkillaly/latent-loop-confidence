@@ -1,0 +1,15 @@
+{
+  "all_byte_identical": true,
+  "splits": {
+    "train": true,
+    "validation": true,
+    "fresh_id": true,
+    "natural": true,
+    "structure": true,
+    "larger": true,
+    "dense": true,
+    "long_paths": true
+  },
+  "backend": "clean CPU-only Python environment, no MLX",
+  "distinct_layouts": 6840
+}

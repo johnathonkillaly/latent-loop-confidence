@@ -1,0 +1,72 @@
+{
+  "started_utc": "2026-10-09T13:16:01.413147+00:00",
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "epochs": 20,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "teacher_horizons": [
+    2,
+    4,
+    6
+  ],
+  "train_horizon": 6,
+  "utility_order": [
+    "survival_steps",
+    "food_collected",
+    "reachable_free_space",
+    "negative_manhattan_to_food"
+  ],
+  "board_size": 4,
+  "wall_probability": 0.1,
+  "post_food_fraction": 0.2,
+  "body_length": [
+    2,
+    3,
+    4
+  ],
+  "train_count": 3600,
+  "validation_count": 600,
+  "final_count": 600,
+  "split_seeds": [
+    559201,
+    559301,
+    559401
+  ],
+  "conditions": {
+    "snake_safety_rec": {
+      "width": 32,
+      "shared": true,
+      "blocks": 1,
+      "objective": "safety"
+    },
+    "snake_plan_rec": {
+      "width": 32,
+      "shared": true,
+      "blocks": 1,
+      "objective": "planning"
+    },
+    "snake_plan_ff1": {
+      "width": 32,
+      "shared": false,
+      "blocks": 1,
+      "objective": "planning"
+    },
+    "snake_plan_ff4": {
+      "width": 32,
+      "shared": false,
+      "blocks": 4,
+      "objective": "planning"
+    }
+  },
+  "checkpoint_rule": "minimum validation target-set NLL at depth4 (depth1 for ff1)",
+  "primary": "snake_plan_rec depth4 minus depth1 for horizon6 optimal-set accuracy; recurrence versus four-block feedforward is a separate control",
+  "secondary": "horizon2/4 teacher agreement, immediate safety, depths2/8, full episodes; no final depth selection",
+  "episodes": 60,
+  "maximum_episode_steps": 12,
+  "episode_selection": "first 60 final states with food present; fixed before generating final data",
+  "memory_gib": 48
+}

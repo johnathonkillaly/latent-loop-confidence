@@ -1,0 +1,112 @@
+{
+  "frozen": "2026-10-09T12:55:19.318594+00:00",
+  "validation_scores": {
+    "rec_final4": {
+      "accuracy": 0.9772222222222222,
+      "set_nll": 0.052854652663230896,
+      "invalid_rate": 0.0,
+      "mean_regret": 0.045555555555555564,
+      "ece": 0.012033493583169541
+    },
+    "rec_variable": {
+      "accuracy": 0.9727777777777779,
+      "set_nll": 0.06533705452514954,
+      "invalid_rate": 0.0,
+      "mean_regret": 0.05444444444444444,
+      "ece": 0.01885367142420324
+    },
+    "rec_curriculum": {
+      "accuracy": 0.9661111111111111,
+      "set_nll": 0.08919584363629424,
+      "invalid_rate": 0.0,
+      "mean_regret": 0.06777777777777778,
+      "ece": 0.021388872850768317
+    },
+    "rec_simultaneous": {
+      "accuracy": 0.98,
+      "set_nll": 0.04981463621237769,
+      "invalid_rate": 0.0,
+      "mean_regret": 0.04,
+      "ece": 0.020398910288915384
+    },
+    "ff_onepass": {
+      "accuracy": 0.6755555555555555,
+      "set_nll": 0.5619334907942519,
+      "invalid_rate": 0.0,
+      "mean_regret": 0.648888888888889,
+      "ece": 0.05671933283693186
+    },
+    "ff4_matched_params": {
+      "accuracy": 0.9744444444444446,
+      "set_nll": 0.05990287530316668,
+      "invalid_rate": 0.0,
+      "mean_regret": 0.051111111111111114,
+      "ece": 0.01884491607793255
+    },
+    "ff4_matched_compute": {
+      "accuracy": 0.9772222222222222,
+      "set_nll": 0.05521905194585234,
+      "invalid_rate": 0.0,
+      "mean_regret": 0.04555555555555555,
+      "ece": 0.013788479017201828
+    }
+  },
+  "selected_recurrent": "rec_simultaneous",
+  "selected_feedforward": "ff4_matched_compute",
+  "primary_depth_pair": [
+    1,
+    4
+  ],
+  "secondary_depth_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "checkpoints": {
+    "artifacts/experiment_05b/checkpoints/rec_final4_seed11/best.safetensors": "b5203278d571cfd8b77d848cdc2ca8c9149bf4af92bad307f2711ffdfdd232ce",
+    "artifacts/experiment_05b/checkpoints/rec_final4_seed22/best.safetensors": "fc62fdc44d676a1bd7c182cf28302be7ed6c5bc324a0d9f9bdc62f0bc25b2ca2",
+    "artifacts/experiment_05b/checkpoints/rec_final4_seed33/best.safetensors": "47428129c877b7afd0b98469e7b36e22f8a86d05c151b4d6aa5091b38d6f1cd2",
+    "artifacts/experiment_05b/checkpoints/rec_variable_seed11/best.safetensors": "4285f3d6aefcd5f2c5a37bef5e710d3ac85a2e0b6b9b3571fb383cf35deeb2bf",
+    "artifacts/experiment_05b/checkpoints/rec_variable_seed22/best.safetensors": "8bd49c6405a18778523d8fa0c61761c23d35ce2b60561c1ad511486e06b9b40d",
+    "artifacts/experiment_05b/checkpoints/rec_variable_seed33/best.safetensors": "3cb123825567e8561aba31282956ce60d922f45e648f24c221762870368afba9",
+    "artifacts/experiment_05b/checkpoints/rec_curriculum_seed11/best.safetensors": "e754788ed8cad84d84f43b691608a63a233df6f3a176c68f6861ea3b1d625fb5",
+    "artifacts/experiment_05b/checkpoints/rec_curriculum_seed22/best.safetensors": "dd640f5f30b858e18ebe14c478e8283baf07825ac442041d1116a812090dcee5",
+    "artifacts/experiment_05b/checkpoints/rec_curriculum_seed33/best.safetensors": "7a24b5d164131d60e20973086944fbd19338dce0b67c55394c1a78a0a8be66b2",
+    "artifacts/experiment_05b/checkpoints/rec_simultaneous_seed11/best.safetensors": "1ab59e044b775b9edef493f497fca5070232f039321419b54c508193b5b27bd3",
+    "artifacts/experiment_05b/checkpoints/rec_simultaneous_seed22/best.safetensors": "6d309b43745d71777afd81fb9b9682019a239d3a9bd8e869746fb3dea7cb8eee",
+    "artifacts/experiment_05b/checkpoints/rec_simultaneous_seed33/best.safetensors": "6ebc9a6cbc55f458e8a5e065fe8235f55df43038c6d63cd223a760d6a299bb2f",
+    "artifacts/experiment_05b/checkpoints/ff_onepass_seed11/best.safetensors": "5c2573d126409769968707fc48aaa8f88a2d52974161c9ab1a5930a1f978aa1b",
+    "artifacts/experiment_05b/checkpoints/ff_onepass_seed22/best.safetensors": "a8e4a7aa94c997082c88b7f1eef429009f47a59316f151f3f27d824085b00d03",
+    "artifacts/experiment_05b/checkpoints/ff_onepass_seed33/best.safetensors": "8b94b022c3d21ed154f693c8c6684b660072ed2579bdb043b5daede279f584c9",
+    "artifacts/experiment_05b/checkpoints/ff4_matched_params_seed11/best.safetensors": "3ad9272b8ec809e0a3709ae1fa6a9803d3052b1bdf853bbe88d87a9b30f1020a",
+    "artifacts/experiment_05b/checkpoints/ff4_matched_params_seed22/best.safetensors": "4fc657469d2b7d9ed2a7f1895ba549af5bb56ea45998f8bb0aba6dc7c6033f44",
+    "artifacts/experiment_05b/checkpoints/ff4_matched_params_seed33/best.safetensors": "d1f408dccf34db3d8db158b4694da01a1877220a07a93fa90885c9d46e4cf0fa",
+    "artifacts/experiment_05b/checkpoints/ff4_matched_compute_seed11/best.safetensors": "ed397cdf9ac7c80d2e4d5f1a0edde3075067a4313ec9a5d857f0cc112f46a656",
+    "artifacts/experiment_05b/checkpoints/ff4_matched_compute_seed22/best.safetensors": "0b2a01aa21be642835001c271f22e6319485b3b4d40c17746b090ed695e28318",
+    "artifacts/experiment_05b/checkpoints/ff4_matched_compute_seed33/best.safetensors": "a08c09d22fbe2e0a2462b34ead95e330cb9fe4f0fac91df04375629f92e22a2e"
+  },
+  "sources": {
+    "src/latent_loop/planning/oracles.py": "9eaa1987e049eb1cc5d3b934e8200dd446ae305d5ba60b8dfcd2d7fb95263382",
+    "src/latent_loop/planning/analysis.py": "0fb1db9806b4f5539a1445b7a7da1d57beb9c18b6e9f45455207392299964b21",
+    "src/latent_loop/planning/__init__.py": "434e6ce282f372950d5579c1c777069b5582fb5349abbf2d43bdeab7a2389384",
+    "src/latent_loop/planning/grid_recurrence.py": "83a80df8f5546e978d7c84b1ca2e29c02122ac03dfa0338ee52b7d1ad1dbf23d",
+    "src/latent_loop/planning/rollout.py": "4a867a989f0f8a88b4f44a8f299944dce729d51860862e396ddeefeaa98d7e78",
+    "src/latent_loop/planning/qwen.py": "4072391c1005daeef3d21915c63c36c176f2af1c40f36f2f4d2c978911dbcee3",
+    "src/latent_loop/planning/train.py": "ed167d45ab8b212b7e28864050a6f01088fd1e1bcc031daa80f08e2fe5e96d29",
+    "src/latent_loop/planning/qwen_analysis.py": "7db3cecd3721f74f18dbaf3b306fad49ba4bafeda72dfbdd0afb4b7610924bc4",
+    "src/latent_loop/planning/evaluate.py": "89bb205ad2c03edb24ff76f1569875621ffa1c3588fbb0416e94f144ee6a3523",
+    "src/latent_loop/planning/__main__.py": "9e79b98a5bb577f6fa6a33e64123d75a0d4d4abf08d5e35a90eacae2fb63c6fc",
+    "src/latent_loop/planning/data.py": "529af7632fa05b47cad17f3709c74c0e1d232c805022632fac529dd42ca48b53",
+    "src/latent_loop/environments/__init__.py": "e496649360652ef11bef6d6f8229005b0d3f635896ba75c2d4ebbdd1773d0ac0",
+    "src/latent_loop/environments/maze.py": "73633a35afe910c0ac82e408589e40347b1d2d55ca742f8ce26aff6358ba145f",
+    "experiments/experiment_05b/config.json": "e8df6628ab3515419a9e2e68c7b9efe0e160152dab76b70bc79a3b4864dd21cf",
+    "experiments/experiment_05b/plan.md": "ffb2fabb41cad371af8b1c80fbb39ac1ba0e83d12b4c920d85cbe6d73330e46d",
+    "experiments/experiment_05b/dataset_manifest.json": "65ca194ee1e6c70a45c1d836671ba68a59ceb25969bcd85a94d7ed59cc9bf624"
+  },
+  "qwen_protocol": "Fixed in original config/plan; trained/evaluated separately with its own checkpoint freeze, no grid final selection feedback"
+}

@@ -1,0 +1,20 @@
+{
+  "mlx": {
+    "passed": 48,
+    "skipped": 0,
+    "seconds": 2.21,
+    "command": "LATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q"
+  },
+  "clean_cpu": {
+    "passed": 31,
+    "skipped": 13,
+    "seconds": 0.88,
+    "command": "PYTHONPATH=src artifacts/publication/cpu-env/bin/python -m pytest -q"
+  },
+  "package_compatibility": {
+    "command": "uv pip check --python .venv/bin/python",
+    "packages": 50,
+    "passed": true
+  },
+  "environment_note": "Existing MLX virtual environment is uv-managed and has no pip module; uv pip check succeeded without installing/upgrading anything"
+}

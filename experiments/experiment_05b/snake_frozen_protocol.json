@@ -1,0 +1,24 @@
+{
+  "frozen": "2026-10-09T13:18:09.692322+00:00",
+  "hashes": {
+    "experiments/experiment_05b/snake_config.json": "0cb91471c508a136bdf3b93dffaedfddab16a77a92a745afdb11238774fa3f2a",
+    "experiments/experiment_05b/snake_dataset_manifest.json": "7a39fc8b70ef030e78bbed46aa815d28d4228d64347e72af8f774e11dfcb0eff",
+    "src/latent_loop/planning/snake_training.py": "cbdc2bb4fb7f8c6346e0ee77a8c1893c2b8b08c6ed80088adc09f11ed9f2766a",
+    "src/latent_loop/environments/snake.py": "4bdf6c2882d9c2ad9693c8dface4d86b572043c24c408578e91c00a3d19c4a5a",
+    "src/latent_loop/planning/grid_recurrence.py": "83a80df8f5546e978d7c84b1ca2e29c02122ac03dfa0338ee52b7d1ad1dbf23d",
+    "artifacts/experiment_05b/checkpoints/snake_safety_rec_seed11/best.safetensors": "d7814c3a1978744bdc006b5f137a836167482706615cf0bcb31ccfffecf9ece5",
+    "artifacts/experiment_05b/checkpoints/snake_safety_rec_seed22/best.safetensors": "d0804f55a6f61c5f86092629c5db24cde53524a90d5624ec86d2814692d959d2",
+    "artifacts/experiment_05b/checkpoints/snake_safety_rec_seed33/best.safetensors": "500847fbbd687e963cb8cef1d5387263fa7235191bf2e29d16cf1750d8d85660",
+    "artifacts/experiment_05b/checkpoints/snake_plan_rec_seed11/best.safetensors": "3ccdf23095be5b4316dbd3fe3d2746ade59863ab3950ef24c3c813868d4f9bbd",
+    "artifacts/experiment_05b/checkpoints/snake_plan_rec_seed22/best.safetensors": "34a5f471b5675fe3bb7287f781a39b6e7ecff85d919c0de53f967dd133d07299",
+    "artifacts/experiment_05b/checkpoints/snake_plan_rec_seed33/best.safetensors": "2f780c707a2e79a12fc60dd9fa7eb847926e68473e8e0c3b3a30ddb7683532f8",
+    "artifacts/experiment_05b/checkpoints/snake_plan_ff1_seed11/best.safetensors": "9690d784f6385bd865a992a459aeb43a58c4b6c94fa5adacb7093b96e57f00ff",
+    "artifacts/experiment_05b/checkpoints/snake_plan_ff1_seed22/best.safetensors": "7e01ec8a8cd185287f8d995bb40df7b3083981d91e60b9cda20d66dc716f719d",
+    "artifacts/experiment_05b/checkpoints/snake_plan_ff1_seed33/best.safetensors": "ee5934e708a563fba7ffdd81327e75c62529cd425a3a6e4572abb80dc591189e",
+    "artifacts/experiment_05b/checkpoints/snake_plan_ff4_seed11/best.safetensors": "c43bc5fc81ab217acbe3b3f311632ea6d12718be173b7ac2a06297ccb191592b",
+    "artifacts/experiment_05b/checkpoints/snake_plan_ff4_seed22/best.safetensors": "55a67c7ecf0284d038641ce19a5ec4fd72c0bfdbc69968fdf7dc53015814b862",
+    "artifacts/experiment_05b/checkpoints/snake_plan_ff4_seed33/best.safetensors": "35273b49c1dcd310ba951c49771299b6b979be72b6137302a2fdedc4902e3eb9"
+  },
+  "primary": "snake_plan_rec depth4 minus depth1 for horizon6 optimal-set accuracy; recurrence versus four-block feedforward is a separate control",
+  "checkpoint_rule": "minimum validation target-set NLL at depth4 (depth1 for ff1)"
+}

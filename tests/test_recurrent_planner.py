@@ -56,3 +56,13 @@ def test_optimizer_restoration_exact(tmp_path):
     step(restored,resumed)
     for (_,a),(_,b) in zip(tree_flatten(full.parameters()),tree_flatten(restored.parameters())):
         np.testing.assert_array_equal(np.asarray(a),np.asarray(b))
+
+def test_snake_encoder_gradient_and_parameter_count():
+    from latent_loop.planning.snake_training import build,observation
+    from latent_loop.environments.snake import Snake
+    m=build({'width':32,'blocks':1,'shared':True},11)
+    x=mx.array(observation(Snake(4,((1,1),(1,0)),(3,3),1))[None]);y=mx.array([[True,True,True,False]])
+    loss,g=nn.value_and_grad(m,lambda model:set_loss(model(x,(4,))[4]['logits'],y))(m);mx.eval(loss,g)
+    assert m.parameter_count()==19044
+    assert all(np.isfinite(np.asarray(v)).all() for _,v in tree_flatten(g))
+    assert float(mx.linalg.norm(g['encoder']['weight']))>0

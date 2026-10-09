@@ -1,0 +1,621 @@
+{
+  "selected_condition": "rec_simultaneous",
+  "probe": "Ridge distance regression and linear reachability ranking; first 600 training layouts, fixed L2=10, normalized training features. Cells correlated within maze; these are descriptive metrics, no cell-level confidence intervals. No probes used by policies.",
+  "limitations": "Decodability and goal ablation are not evidence of a learned BFS algorithm. Goal removal is out-of-distribution; distance probes can exploit local topology and coordinates implicit in boundaries.",
+  "probes": [
+    {
+      "seed": 11,
+      "depth": 1,
+      "split": "validation",
+      "distance_r2": 0.4190664817430425,
+      "distance_mae": 1.4246251162442034,
+      "distance_spearman": 0.6173672964918321,
+      "reachability_auroc": 0.8814070351758794,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 11,
+      "depth": 1,
+      "split": "fresh_id",
+      "distance_r2": 0.42948002046966627,
+      "distance_mae": 1.4275870578450092,
+      "distance_spearman": 0.6112351074632774,
+      "reachability_auroc": 0.8696624084567717,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 11,
+      "depth": 1,
+      "split": "larger",
+      "distance_r2": 0.0679760010979229,
+      "distance_mae": 2.3341550131860114,
+      "distance_spearman": 0.44568889172894444,
+      "reachability_auroc": 0.7694495949967409,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 11,
+      "depth": 2,
+      "split": "validation",
+      "distance_r2": 0.5859471986749347,
+      "distance_mae": 1.189582350714708,
+      "distance_spearman": 0.8140113759544246,
+      "reachability_auroc": 0.950256923716326,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 11,
+      "depth": 2,
+      "split": "fresh_id",
+      "distance_r2": 0.5857746535349532,
+      "distance_mae": 1.1989398705975138,
+      "distance_spearman": 0.7993906890019284,
+      "reachability_auroc": 0.9346803857242271,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 11,
+      "depth": 2,
+      "split": "larger",
+      "distance_r2": 0.21473187593893106,
+      "distance_mae": 2.067573885116876,
+      "distance_spearman": 0.6302644850162482,
+      "reachability_auroc": 0.8386052779348971,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 11,
+      "depth": 4,
+      "split": "validation",
+      "distance_r2": 0.7003264507146347,
+      "distance_mae": 1.0174531927068675,
+      "distance_spearman": 0.8949707406142364,
+      "reachability_auroc": 0.9632617977103562,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 11,
+      "depth": 4,
+      "split": "fresh_id",
+      "distance_r2": 0.6920661816188307,
+      "distance_mae": 1.0328498037753024,
+      "distance_spearman": 0.885736494213732,
+      "reachability_auroc": 0.953947957053385,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 11,
+      "depth": 4,
+      "split": "larger",
+      "distance_r2": 0.3289493884756721,
+      "distance_mae": 1.879964815627721,
+      "distance_spearman": 0.764196061144806,
+      "reachability_auroc": 0.8744596764761604,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 11,
+      "depth": 8,
+      "split": "validation",
+      "distance_r2": 0.6254972619590944,
+      "distance_mae": 1.1905000021638237,
+      "distance_spearman": 0.8226468407441494,
+      "reachability_auroc": 0.9912834850946461,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 11,
+      "depth": 8,
+      "split": "fresh_id",
+      "distance_r2": 0.606535845005543,
+      "distance_mae": 1.2033021241392012,
+      "distance_spearman": 0.8086360087328217,
+      "reachability_auroc": 0.983671339099314,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 11,
+      "depth": 8,
+      "split": "larger",
+      "distance_r2": 0.2732367698047313,
+      "distance_mae": 2.0657930752242035,
+      "distance_spearman": 0.7253132375946807,
+      "reachability_auroc": 0.9276747040360799,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 22,
+      "depth": 1,
+      "split": "validation",
+      "distance_r2": 0.42313406042515667,
+      "distance_mae": 1.4143578256985307,
+      "distance_spearman": 0.6193865889556496,
+      "reachability_auroc": 0.8966448785279783,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 22,
+      "depth": 1,
+      "split": "fresh_id",
+      "distance_r2": 0.4329274209793478,
+      "distance_mae": 1.4168418410612065,
+      "distance_spearman": 0.6127147760795785,
+      "reachability_auroc": 0.8759599198064751,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 22,
+      "depth": 1,
+      "split": "larger",
+      "distance_r2": 0.07343072273392237,
+      "distance_mae": 2.321075398885961,
+      "distance_spearman": 0.4488631260332561,
+      "reachability_auroc": 0.7908504247695246,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 22,
+      "depth": 2,
+      "split": "validation",
+      "distance_r2": 0.5986186050115307,
+      "distance_mae": 1.1617442746762565,
+      "distance_spearman": 0.8196235413268945,
+      "reachability_auroc": 0.9414912910416745,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 22,
+      "depth": 2,
+      "split": "fresh_id",
+      "distance_r2": 0.5932452717329242,
+      "distance_mae": 1.1843507122820964,
+      "distance_spearman": 0.8020371192488088,
+      "reachability_auroc": 0.9366719687178977,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 22,
+      "depth": 2,
+      "split": "larger",
+      "distance_r2": 0.2040519855353099,
+      "distance_mae": 2.0833472813081437,
+      "distance_spearman": 0.6335671161282385,
+      "reachability_auroc": 0.8431608378981552,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 22,
+      "depth": 4,
+      "split": "validation",
+      "distance_r2": 0.6803041864364552,
+      "distance_mae": 1.0536699178045947,
+      "distance_spearman": 0.8923161991882806,
+      "reachability_auroc": 0.9728586541731212,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 22,
+      "depth": 4,
+      "split": "fresh_id",
+      "distance_r2": 0.6913778878615728,
+      "distance_mae": 1.0472170153679792,
+      "distance_spearman": 0.8914949576898513,
+      "reachability_auroc": 0.9675024853365146,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 22,
+      "depth": 4,
+      "split": "larger",
+      "distance_r2": 0.3439781973825615,
+      "distance_mae": 1.84401496191785,
+      "distance_spearman": 0.7756723932693043,
+      "reachability_auroc": 0.8890547381927341,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 22,
+      "depth": 8,
+      "split": "validation",
+      "distance_r2": 0.6645086310346888,
+      "distance_mae": 1.1437603735740896,
+      "distance_spearman": 0.8425460586789942,
+      "reachability_auroc": 0.988619790682737,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 22,
+      "depth": 8,
+      "split": "fresh_id",
+      "distance_r2": 0.6628066988031127,
+      "distance_mae": 1.1209046250084953,
+      "distance_spearman": 0.8449130994970115,
+      "reachability_auroc": 0.9790519269642443,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 22,
+      "depth": 8,
+      "split": "larger",
+      "distance_r2": 0.41994997736147255,
+      "distance_mae": 1.7921184061148139,
+      "distance_spearman": 0.7997923417830689,
+      "reachability_auroc": 0.9340067485724174,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 33,
+      "depth": 1,
+      "split": "validation",
+      "distance_r2": 0.40858219328843637,
+      "distance_mae": 1.450092774436959,
+      "distance_spearman": 0.6084078106992117,
+      "reachability_auroc": 0.9051309177466279,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 33,
+      "depth": 1,
+      "split": "fresh_id",
+      "distance_r2": 0.4216198834728966,
+      "distance_mae": 1.4457924390696084,
+      "distance_spearman": 0.6044582209640499,
+      "reachability_auroc": 0.8706422937999139,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 33,
+      "depth": 1,
+      "split": "larger",
+      "distance_r2": 0.07724704262794901,
+      "distance_mae": 2.3268690058519312,
+      "distance_spearman": 0.44901567431945333,
+      "reachability_auroc": 0.7817026278190012,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 33,
+      "depth": 2,
+      "split": "validation",
+      "distance_r2": 0.5908077176813629,
+      "distance_mae": 1.1866687148973878,
+      "distance_spearman": 0.8098093384110622,
+      "reachability_auroc": 0.9427948010730344,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 33,
+      "depth": 2,
+      "split": "fresh_id",
+      "distance_r2": 0.5785296997414887,
+      "distance_mae": 1.2067797687127066,
+      "distance_spearman": 0.7912365705832045,
+      "reachability_auroc": 0.9294154488517745,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 33,
+      "depth": 2,
+      "split": "larger",
+      "distance_r2": 0.22214701764574651,
+      "distance_mae": 2.057680834730038,
+      "distance_spearman": 0.6320143655387881,
+      "reachability_auroc": 0.8393630132816994,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 33,
+      "depth": 4,
+      "split": "validation",
+      "distance_r2": 0.7064577430990113,
+      "distance_mae": 1.0133700938292385,
+      "distance_spearman": 0.8907729309506598,
+      "reachability_auroc": 0.9760550874674122,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 33,
+      "depth": 4,
+      "split": "fresh_id",
+      "distance_r2": 0.7009341785601211,
+      "distance_mae": 1.022295745855346,
+      "distance_spearman": 0.883901843552848,
+      "reachability_auroc": 0.97281398084634,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 33,
+      "depth": 4,
+      "split": "larger",
+      "distance_r2": 0.3043609731737881,
+      "distance_mae": 1.9625012391670051,
+      "distance_spearman": 0.7512705782649023,
+      "reachability_auroc": 0.9062062483285879,
+      "cells": 12570,
+      "independent_mazes": 360
+    },
+    {
+      "seed": 33,
+      "depth": 8,
+      "split": "validation",
+      "distance_r2": 0.5748031133937193,
+      "distance_mae": 1.240361945944282,
+      "distance_spearman": 0.7910930892602301,
+      "reachability_auroc": 0.9846941474288737,
+      "cells": 2123,
+      "independent_mazes": 120
+    },
+    {
+      "seed": 33,
+      "depth": 8,
+      "split": "fresh_id",
+      "distance_r2": 0.584536987258353,
+      "distance_mae": 1.221711209025635,
+      "distance_spearman": 0.799488422770258,
+      "reachability_auroc": 0.9713286609006859,
+      "cells": 10659,
+      "independent_mazes": 600
+    },
+    {
+      "seed": 33,
+      "depth": 8,
+      "split": "larger",
+      "distance_r2": 0.3186202490184108,
+      "distance_mae": 1.9518595217418637,
+      "distance_spearman": 0.7240698832785267,
+      "reachability_auroc": 0.9208255049118144,
+      "cells": 12570,
+      "independent_mazes": 360
+    }
+  ],
+  "goal_ablation": [
+    {
+      "seed": 11,
+      "split": "fresh_id",
+      "depth": 1,
+      "accuracy": 0.6283333333333333,
+      "goal_removed_accuracy": 0.5633333333333334,
+      "decision_change_fraction": 0.065,
+      "max_abs_logit_change": 4.902647495269775
+    },
+    {
+      "seed": 11,
+      "split": "fresh_id",
+      "depth": 2,
+      "accuracy": 0.85,
+      "goal_removed_accuracy": 0.7716666666666666,
+      "decision_change_fraction": 0.08,
+      "max_abs_logit_change": 8.884859085083008
+    },
+    {
+      "seed": 11,
+      "split": "fresh_id",
+      "depth": 4,
+      "accuracy": 0.9833333333333333,
+      "goal_removed_accuracy": 0.835,
+      "decision_change_fraction": 0.16833333333333333,
+      "max_abs_logit_change": 11.616647720336914
+    },
+    {
+      "seed": 11,
+      "split": "fresh_id",
+      "depth": 8,
+      "accuracy": 0.9933333333333333,
+      "goal_removed_accuracy": 0.85,
+      "decision_change_fraction": 0.18,
+      "max_abs_logit_change": 12.520151138305664
+    },
+    {
+      "seed": 11,
+      "split": "larger",
+      "depth": 1,
+      "accuracy": 0.5805555555555556,
+      "goal_removed_accuracy": 0.5305555555555556,
+      "decision_change_fraction": 0.05,
+      "max_abs_logit_change": 5.404687881469727
+    },
+    {
+      "seed": 11,
+      "split": "larger",
+      "depth": 2,
+      "accuracy": 0.7888888888888889,
+      "goal_removed_accuracy": 0.7055555555555556,
+      "decision_change_fraction": 0.08333333333333333,
+      "max_abs_logit_change": 8.22498607635498
+    },
+    {
+      "seed": 11,
+      "split": "larger",
+      "depth": 4,
+      "accuracy": 0.9111111111111111,
+      "goal_removed_accuracy": 0.75,
+      "decision_change_fraction": 0.16944444444444445,
+      "max_abs_logit_change": 10.85594367980957
+    },
+    {
+      "seed": 11,
+      "split": "larger",
+      "depth": 8,
+      "accuracy": 0.9777777777777777,
+      "goal_removed_accuracy": 0.7777777777777778,
+      "decision_change_fraction": 0.2111111111111111,
+      "max_abs_logit_change": 11.527717590332031
+    },
+    {
+      "seed": 22,
+      "split": "fresh_id",
+      "depth": 1,
+      "accuracy": 0.6266666666666667,
+      "goal_removed_accuracy": 0.565,
+      "decision_change_fraction": 0.06166666666666667,
+      "max_abs_logit_change": 4.599071502685547
+    },
+    {
+      "seed": 22,
+      "split": "fresh_id",
+      "depth": 2,
+      "accuracy": 0.8633333333333333,
+      "goal_removed_accuracy": 0.77,
+      "decision_change_fraction": 0.09666666666666666,
+      "max_abs_logit_change": 8.667794227600098
+    },
+    {
+      "seed": 22,
+      "split": "fresh_id",
+      "depth": 4,
+      "accuracy": 0.9833333333333333,
+      "goal_removed_accuracy": 0.845,
+      "decision_change_fraction": 0.16333333333333333,
+      "max_abs_logit_change": 10.576730728149414
+    },
+    {
+      "seed": 22,
+      "split": "fresh_id",
+      "depth": 8,
+      "accuracy": 0.9983333333333333,
+      "goal_removed_accuracy": 0.8233333333333334,
+      "decision_change_fraction": 0.20333333333333334,
+      "max_abs_logit_change": 11.070810317993164
+    },
+    {
+      "seed": 22,
+      "split": "larger",
+      "depth": 1,
+      "accuracy": 0.6,
+      "goal_removed_accuracy": 0.5361111111111111,
+      "decision_change_fraction": 0.06388888888888888,
+      "max_abs_logit_change": 4.79616641998291
+    },
+    {
+      "seed": 22,
+      "split": "larger",
+      "depth": 2,
+      "accuracy": 0.8027777777777778,
+      "goal_removed_accuracy": 0.7166666666666667,
+      "decision_change_fraction": 0.09166666666666666,
+      "max_abs_logit_change": 7.420062065124512
+    },
+    {
+      "seed": 22,
+      "split": "larger",
+      "depth": 4,
+      "accuracy": 0.9361111111111111,
+      "goal_removed_accuracy": 0.7722222222222223,
+      "decision_change_fraction": 0.17222222222222222,
+      "max_abs_logit_change": 9.969070434570312
+    },
+    {
+      "seed": 22,
+      "split": "larger",
+      "depth": 8,
+      "accuracy": 0.9777777777777777,
+      "goal_removed_accuracy": 0.8027777777777778,
+      "decision_change_fraction": 0.18333333333333332,
+      "max_abs_logit_change": 11.413289070129395
+    },
+    {
+      "seed": 33,
+      "split": "fresh_id",
+      "depth": 1,
+      "accuracy": 0.6,
+      "goal_removed_accuracy": 0.5316666666666666,
+      "decision_change_fraction": 0.06833333333333333,
+      "max_abs_logit_change": 4.6225433349609375
+    },
+    {
+      "seed": 33,
+      "split": "fresh_id",
+      "depth": 2,
+      "accuracy": 0.8666666666666667,
+      "goal_removed_accuracy": 0.7816666666666666,
+      "decision_change_fraction": 0.08666666666666667,
+      "max_abs_logit_change": 7.384496688842773
+    },
+    {
+      "seed": 33,
+      "split": "fresh_id",
+      "depth": 4,
+      "accuracy": 0.9816666666666667,
+      "goal_removed_accuracy": 0.8483333333333334,
+      "decision_change_fraction": 0.14666666666666667,
+      "max_abs_logit_change": 8.275359153747559
+    },
+    {
+      "seed": 33,
+      "split": "fresh_id",
+      "depth": 8,
+      "accuracy": 0.995,
+      "goal_removed_accuracy": 0.8216666666666667,
+      "decision_change_fraction": 0.2,
+      "max_abs_logit_change": 10.597030639648438
+    },
+    {
+      "seed": 33,
+      "split": "larger",
+      "depth": 1,
+      "accuracy": 0.5638888888888889,
+      "goal_removed_accuracy": 0.5055555555555555,
+      "decision_change_fraction": 0.058333333333333334,
+      "max_abs_logit_change": 4.6225433349609375
+    },
+    {
+      "seed": 33,
+      "split": "larger",
+      "depth": 2,
+      "accuracy": 0.775,
+      "goal_removed_accuracy": 0.6888888888888889,
+      "decision_change_fraction": 0.08888888888888889,
+      "max_abs_logit_change": 6.84943962097168
+    },
+    {
+      "seed": 33,
+      "split": "larger",
+      "depth": 4,
+      "accuracy": 0.9111111111111111,
+      "goal_removed_accuracy": 0.7722222222222223,
+      "decision_change_fraction": 0.15555555555555556,
+      "max_abs_logit_change": 8.48762035369873
+    },
+    {
+      "seed": 33,
+      "split": "larger",
+      "depth": 8,
+      "accuracy": 0.9777777777777777,
+      "goal_removed_accuracy": 0.7833333333333333,
+      "decision_change_fraction": 0.20555555555555555,
+      "max_abs_logit_change": 9.621661186218262
+    }
+  ]
+}

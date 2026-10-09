@@ -1,0 +1,24 @@
+{
+  "frozen": "2026-10-09T12:57:26.519982+00:00",
+  "hashes": {
+    "experiments/experiment_05b/config.json": "e8df6628ab3515419a9e2e68c7b9efe0e160152dab76b70bc79a3b4864dd21cf",
+    "experiments/experiment_05b/plan.md": "ffb2fabb41cad371af8b1c80fbb39ac1ba0e83d12b4c920d85cbe6d73330e46d",
+    "experiments/experiment_05b/dataset_manifest.json": "65ca194ee1e6c70a45c1d836671ba68a59ceb25969bcd85a94d7ed59cc9bf624",
+    "src/latent_loop/planning/qwen.py": "4072391c1005daeef3d21915c63c36c176f2af1c40f36f2f4d2c978911dbcee3",
+    "src/latent_loop/experiment05/model.py": "02fbfed66b1336d5fc3b8f30e02f6ceb97e450d9be3b95afc8ef9fb1479572d2",
+    "artifacts/experiment_05b/checkpoints/qwen_onepass_seed11/best.safetensors": "b366476ae7a5ac92843db7bc7afd35b610bfb0a4b3a683b44a77712e878216d2",
+    "artifacts/experiment_05b/checkpoints/qwen_onepass_seed22/best.safetensors": "f0fefeb717b05c904dedceb7a3703cde5b429f960dd9366ea1e5aaf40b9ebaa3",
+    "artifacts/experiment_05b/checkpoints/qwen_onepass_seed33/best.safetensors": "4af881a8e555ae877b2a274eded0bd88399636be26bd2a3dc2706e83074d6168",
+    "artifacts/experiment_05b/checkpoints/qwen_recurrent_seed11/best.safetensors": "6ca46ae2ecd9b1eac1a0dd4b63821ac0cc067fbf349e5b428c75eb754c7a8bd7",
+    "artifacts/experiment_05b/checkpoints/qwen_recurrent_seed22/best.safetensors": "73287fee7d4ed91ea4244e0818dc4fbb16ee0762b5d74018ddd3b8b93daf1bbc",
+    "artifacts/experiment_05b/checkpoints/qwen_recurrent_seed33/best.safetensors": "10ba7b4b68c7133bbe106f30f70dc347f55f96bca9d1d79f73a1b281eaa47e53"
+  },
+  "primary": "qwen_recurrent depth4 versus qwen_onepass depth1; fixed before training",
+  "depth_comparisons": "1/2/4/8 secondary; no final-depth selection",
+  "privacy_amendment": {
+    "recorded": "2026-10-09T13:08:24.381219+00:00",
+    "change": "Normalize one absolute source-path dictionary key to its repository-relative equivalent; all content hashes, checkpoints, settings and original freeze timestamp unchanged",
+    "original_receipt_sha256": "dce4c36853cd9ac9810240f73fcb0dceab0261ddc5dc4785ffd8288119c67f8a",
+    "original_preserved_in_ignored_artifacts": true
+  }
+}

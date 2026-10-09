@@ -1,0 +1,367 @@
+{
+  "procedure": "Full tokenization, full-prefix Qwen forward, four-label scoring, synchronized argmax host conversion; 2 warmups/3 repeats; first 1/8 validation examples; no checkpoint load",
+  "measurements": [
+    {
+      "condition": "qwen_onepass",
+      "depth": 1,
+      "seed": 11,
+      "batch": 1,
+      "seconds": [
+        0.01917699999467004,
+        0.019165833000442944,
+        0.018871457999921404
+      ],
+      "per_item_ms": 19.165833000442944
+    },
+    {
+      "condition": "qwen_onepass",
+      "depth": 1,
+      "seed": 11,
+      "batch": 8,
+      "seconds": [
+        0.10221366699261125,
+        0.10081245799665339,
+        0.10239158300100826
+      ],
+      "per_item_ms": 12.776708374076406
+    },
+    {
+      "condition": "qwen_onepass",
+      "depth": 1,
+      "seed": 22,
+      "batch": 1,
+      "seconds": [
+        0.01894449999963399,
+        0.018559958989499137,
+        0.0185212920041522
+      ],
+      "per_item_ms": 18.559958989499137
+    },
+    {
+      "condition": "qwen_onepass",
+      "depth": 1,
+      "seed": 22,
+      "batch": 8,
+      "seconds": [
+        0.1003505410044454,
+        0.10209066601237282,
+        0.10192862500844058
+      ],
+      "per_item_ms": 12.741078126055072
+    },
+    {
+      "condition": "qwen_onepass",
+      "depth": 1,
+      "seed": 33,
+      "batch": 1,
+      "seconds": [
+        0.019083166000200436,
+        0.018920500006061047,
+        0.018556791997980326
+      ],
+      "per_item_ms": 18.920500006061047
+    },
+    {
+      "condition": "qwen_onepass",
+      "depth": 1,
+      "seed": 33,
+      "batch": 8,
+      "seconds": [
+        0.10068341699661687,
+        0.10213812500296626,
+        0.10428541598957963
+      ],
+      "per_item_ms": 12.767265625370783
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 1,
+      "seed": 11,
+      "batch": 1,
+      "seconds": [
+        0.01893683300295379,
+        0.01886579098936636,
+        0.018880167001043446
+      ],
+      "per_item_ms": 18.880167001043446
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 1,
+      "seed": 11,
+      "batch": 8,
+      "seconds": [
+        0.10516983299748972,
+        0.10326420799538027,
+        0.10521683299157303
+      ],
+      "per_item_ms": 13.146229124686215
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 1,
+      "seed": 22,
+      "batch": 1,
+      "seconds": [
+        0.018733916003839113,
+        0.01878916700661648,
+        0.018995083009940572
+      ],
+      "per_item_ms": 18.78916700661648
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 1,
+      "seed": 22,
+      "batch": 8,
+      "seconds": [
+        0.10311679200094659,
+        0.10285016699344851,
+        0.10275920800631866
+      ],
+      "per_item_ms": 12.856270874181064
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 1,
+      "seed": 33,
+      "batch": 1,
+      "seconds": [
+        0.019044624990783632,
+        0.01892037499055732,
+        0.01839333400130272
+      ],
+      "per_item_ms": 18.92037499055732
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 1,
+      "seed": 33,
+      "batch": 8,
+      "seconds": [
+        0.10191074998874683,
+        0.10357137498795055,
+        0.10373645799700171
+      ],
+      "per_item_ms": 12.946421873493819
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 2,
+      "seed": 11,
+      "batch": 1,
+      "seconds": [
+        0.021601708998787217,
+        0.02112979200319387,
+        0.021113415990839712
+      ],
+      "per_item_ms": 21.12979200319387
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 2,
+      "seed": 11,
+      "batch": 8,
+      "seconds": [
+        0.1162044579978101,
+        0.11518804098886903,
+        0.11673387500923127
+      ],
+      "per_item_ms": 14.525557249726262
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 2,
+      "seed": 22,
+      "batch": 1,
+      "seconds": [
+        0.02114404199528508,
+        0.02092504099709913,
+        0.021237459004623815
+      ],
+      "per_item_ms": 21.14404199528508
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 2,
+      "seed": 22,
+      "batch": 8,
+      "seconds": [
+        0.12682483298704028,
+        0.11455579199537169,
+        0.11601779100601561
+      ],
+      "per_item_ms": 14.502223875751952
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 2,
+      "seed": 33,
+      "batch": 1,
+      "seconds": [
+        0.021797124994918704,
+        0.02107608300866559,
+        0.02101687500544358
+      ],
+      "per_item_ms": 21.07608300866559
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 2,
+      "seed": 33,
+      "batch": 8,
+      "seconds": [
+        0.11396312501165085,
+        0.11474641700624488,
+        0.11449670800357126
+      ],
+      "per_item_ms": 14.312088500446407
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 4,
+      "seed": 11,
+      "batch": 1,
+      "seconds": [
+        0.02496758299821522,
+        0.025189250009134412,
+        0.02517083298880607
+      ],
+      "per_item_ms": 25.17083298880607
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 4,
+      "seed": 11,
+      "batch": 8,
+      "seconds": [
+        0.13608612499956507,
+        0.13680479100730736,
+        0.13756729201122653
+      ],
+      "per_item_ms": 17.10059887591342
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 4,
+      "seed": 22,
+      "batch": 1,
+      "seconds": [
+        0.025378833001013845,
+        0.02501737499551382,
+        0.025314291997347027
+      ],
+      "per_item_ms": 25.314291997347027
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 4,
+      "seed": 22,
+      "batch": 8,
+      "seconds": [
+        0.1362812080042204,
+        0.13602329199784435,
+        0.13650429199333303
+      ],
+      "per_item_ms": 17.03515100052755
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 4,
+      "seed": 33,
+      "batch": 1,
+      "seconds": [
+        0.02572820799832698,
+        0.02531433300464414,
+        0.025050750002264977
+      ],
+      "per_item_ms": 25.31433300464414
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 4,
+      "seed": 33,
+      "batch": 8,
+      "seconds": [
+        0.13527537501067854,
+        0.13632783299544826,
+        0.13705800000752788
+      ],
+      "per_item_ms": 17.040979124431033
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 8,
+      "seed": 11,
+      "batch": 1,
+      "seconds": [
+        0.03344479200313799,
+        0.03381233300024178,
+        0.033406707996618934
+      ],
+      "per_item_ms": 33.44479200313799
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 8,
+      "seed": 11,
+      "batch": 8,
+      "seconds": [
+        0.18233825000061188,
+        0.1838799170072889,
+        0.1843356669996865
+      ],
+      "per_item_ms": 22.984989625911112
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 8,
+      "seed": 22,
+      "batch": 1,
+      "seconds": [
+        0.03331120799703058,
+        0.03335029100708198,
+        0.03350983400014229
+      ],
+      "per_item_ms": 33.35029100708198
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 8,
+      "seed": 22,
+      "batch": 8,
+      "seconds": [
+        0.18242316599935293,
+        0.18308925000019372,
+        0.18252329200913664
+      ],
+      "per_item_ms": 22.81541150114208
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 8,
+      "seed": 33,
+      "batch": 1,
+      "seconds": [
+        0.03375220899761189,
+        0.033036167005775496,
+        0.033443499996792525
+      ],
+      "per_item_ms": 33.443499996792525
+    },
+    {
+      "condition": "qwen_recurrent",
+      "depth": 8,
+      "seed": 33,
+      "batch": 8,
+      "seconds": [
+        0.1671595000079833,
+        0.16818562500702683,
+        0.16877012500481214
+      ],
+      "per_item_ms": 21.023203125878354
+    }
+  ],
+  "peak_mlx_gib": 3.6861473992466927,
+  "peak_rss_gib": 1.4691162109375
+}
