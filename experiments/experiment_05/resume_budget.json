@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-09T11:30:02.281615+00:00",
+  "original_started_utc": "2026-10-09T01:40:02.203797+00:00",
+  "main_completed_utc_from_log_mtime": "2026-10-09T02:50:41.159467+00:00",
+  "resumed_utc": "2026-10-09T11:30:02.281615+00:00",
+  "excluded_idle_seconds": 31161.122148,
+  "active_seconds_before_resume": 4238.95567,
+  "max_active_seconds": 21600,
+  "reason": "User requested continuation after the session was idle. All 15 fits had exited successfully before this interval. Training code/configuration remain unchanged; only evaluation clock accounting excludes the documented idle interval. Total calendar elapsed time is reported separately."
+}

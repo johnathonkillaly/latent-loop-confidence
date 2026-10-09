@@ -1,6 +1,7 @@
 """Prospective configuration freeze, once-only final evaluation, and measured timing."""
 
 import argparse
+import datetime
 import gzip
 import json
 import resource
@@ -31,6 +32,8 @@ def freeze(config):
         return
     if (EXP / "lockbox_opened.json").exists():
         raise RuntimeError("Cannot select after final consumption")
+    inspected = json.loads((OUT / "implementation_validation.json").read_text())["model_manifest"]
+    assert inspected["id"] == config["model"] and inspected["revision"] == config["model_revision"]
     fits = {}
     scores = {}
     for condition in config["conditions"]:
@@ -41,14 +44,23 @@ def freeze(config):
             assert fit["complete"] and fit["signature"]["config_sha256"] == sha(EXP / "config.json")
             record = next(r for r in fit["epochs"] if r["epoch"] == fit["best_epoch"])
             chosen_depth = "1" if condition.startswith("one_pass") else str(config["primary_inference_depth"])
+            weights = {key: np.array(value) for key, value in mx.load(str(checkpoint(condition, seed))).items()}
+            assert set(weights) == set(fit["trainable_parameters"]["trainable_keys"])
+            assert all(np.isfinite(value).all() for value in weights.values())
+            assert sum(value.size for value in weights.values()) == fit["trainable_parameters"]["trainable"]
+            gates = {"update": float(1 / (1 + np.exp(-weights["update_logit"]))) if "update_logit" in weights else None,
+                     "reinjection": float(0.25 / (1 + np.exp(-weights["reinjection_logit"]))) if "reinjection_logit" in weights else None,
+                     "lora_b_frobenius_norm": float(np.sqrt(sum(np.sum(value.astype(float)**2) for key, value in weights.items() if key.endswith("lora_b"))))}
             fits[condition][str(seed)] = {"checkpoint_sha256": sha(checkpoint(condition, seed)),
                                           "training_record_sha256": sha(path), "best_epoch": fit["best_epoch"],
+                                          "checkpoint_diagnostics": gates,
                                           "validation": record["validation_by_depth"],
                                           "selection_nll": record["validation_by_depth"][chosen_depth]["nll"]}
         scores[condition] = float(np.mean([r["selection_nll"] for r in fits[condition].values()]))
     recurrent = min(("recurrent", "reinjection", "multi_depth"), key=lambda c: (scores[c], c))
     onepass = min(("one_pass", "one_pass_compute"), key=lambda c: (scores[c], c))
-    sources = [EXP / "config.json", EXP / "dataset_manifest.json", EXP / "plan.md", EXP / "class_prior_diagnostic.json", *[p for p in Path("src/latent_loop/experiment05").glob("*.py") if p.name != "report.py"]]
+    sources = [EXP / "config.json", EXP / "dataset_manifest.json", EXP / "plan.md", EXP / "class_prior_diagnostic.json", EXP / "resume_budget.json",
+               *[p for p in Path("src/latent_loop").rglob("*.py") if p != Path("src/latent_loop/experiment05/report.py")]]
     value = {"frozen_utc": utc(), "selected_recurrent_family": recurrent, "selected_one_pass_family": onepass,
              "family_selection_rule": "Mean validation NLL at fixed primary inference depth across seeds; no final data used",
              "primary_inference_depth": config["primary_inference_depth"], "validation_selection_scores": scores,
@@ -142,6 +154,13 @@ def final(config):
                             write_trace(ablation, rows, trace, ref)
         if split == "fresh_id":
             chosen = sorted(i for task in TASKS for i in sorted([i for i, r in enumerate(rows) if r["task"] == task], key=lambda j: rows[j]["id"])[:4])
+            for condition, raw, injection in (("untrained_plain", True, "none"), ("untrained_bounded", False, "fixed")):
+                target = OUT / "stress" / f"{condition}.jsonl.gz"
+                if not target.exists():
+                    model = Thinker(base, [tokenizer.encode(x, add_special_tokens=False)[0] for x in "ABCD"], config["middle_start"], config["middle_count"], 0, injection,
+                                    config["update_initial"], config["norm_cap"])
+                    trace = predict(model, tokenizer, [rows[i] for i in chosen], config, tuple(range(1, 9)), raw_recurrence=raw)
+                    write_trace(target, [rows[i] for i in chosen], trace, ref[chosen])
             for seed in config["seeds"]:
                 for condition in ("recurrent", "reinjection", "multi_depth"):
                     target = OUT / "stress" / f"{condition}_seed{seed}.jsonl.gz"
@@ -203,6 +222,7 @@ def timing(config):
                                         "amortized_ms_per_item": float(np.median(times) / len(items)),
                                         "subset_accuracy": float(np.mean(actual.argmax(-1) == [r["label"] for r in items]))})
     atomic_json(OUT / "latency.json", {"scope": "Full tokenization, padded input arrays, encoder, shared recurrent middle block, late decoder, four-label projection, Metal synchronization and host output conversion; model loading excluded",
+                                       "protocol_sha256": sha(EXP / "frozen_protocol.json"),
                                        "dataset": "24 balanced validation items, same prompts for all conditions and seeds",
                                        "timing_warning": "Batch 8 amortization is throughput, not single-request latency; final accuracy uses a different independent population",
                                        "warmups": config["timing_warmups"], "repeats": config["timing_repeats"], "records": records,
@@ -216,6 +236,13 @@ def main():
     parser.add_argument("stage", choices=("freeze", "final", "timing"))
     args = parser.parse_args()
     config = json.loads((EXP / "config.json").read_text())
+    if args.stage in ("final", "timing"):
+        # No training configuration or checkpoint is changed. The resumed
+        # evaluation excludes only a recorded interval after all fits exited.
+        budget = json.loads((EXP / "resume_budget.json").read_text())
+        assert budget["original_started_utc"] == config["started_utc"]
+        shifted = datetime.datetime.fromisoformat(config["started_utc"]) + datetime.timedelta(seconds=budget["excluded_idle_seconds"])
+        config = {**config, "started_utc": shifted.isoformat()}
     globals()[args.stage](config)
 
 

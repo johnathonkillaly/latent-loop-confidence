@@ -65,6 +65,24 @@ def audit(config):
             p = OUT / "training" / f"main_{condition}_seed{seed}.json"
             assert sha(p) == record["training_record_sha256"]
             sources[str(p)] = sha(p)
+            fit = json.loads(p.read_text())
+            epochs = config["compute_control_epochs"] if condition == "one_pass_compute" else config["epochs"]
+            assert fit["complete"] and fit["examples_processed"] == config["sizes"]["train"] * epochs
+            assert fit["signature"]["config_sha256"] == sha(EXP / "config.json")
+            assert len(fit["epochs"]) == epochs and fit["best_epoch"] == min(fit["epochs"], key=lambda r: r["validation_mean_nll"])["epoch"]
+            assert len(fit["batch_records"]) == epochs * int(np.ceil(config["sizes"]["train"] / config["batch_size"]))
+            assert all(np.isfinite([b["loss"], b["gradient_norm"], b["seconds"]]).all() and b["seconds"] > 0 for b in fit["batch_records"])
+    matched_prefixes = {}
+    for seed in config["seeds"]:
+        shorter = json.loads((OUT / "training" / f"main_one_pass_seed{seed}.json").read_text())
+        longer = json.loads((OUT / "training" / f"main_one_pass_compute_seed{seed}.json").read_text())
+        for a, b in zip(shorter["batch_records"], longer["batch_records"]):
+            assert (a["epoch"], a["batch"], a["depths"]) == (b["epoch"], b["batch"], b["depths"])
+            assert a["loss"] == b["loss"] and a["gradient_norm"] == b["gradient_norm"]
+        assert all(a["validation_by_depth"] == b["validation_by_depth"] for a, b in zip(shorter["epochs"], longer["epochs"]))
+        matched_prefixes[str(seed)] = len(shorter["batch_records"])
+    for name in ("final_execution.json", "latency.json"):
+        assert json.loads((OUT / name).read_text())["protocol_sha256"] == sha(EXP / "frozen_protocol.json")
     prior = json.loads((EXP / "class_prior_diagnostic.json").read_text())
     assert prior["recorded_utc"] < frozen["frozen_utc"]
     for split in ("train", "val", *FINAL):
@@ -108,6 +126,8 @@ def audit(config):
                     expected_paths[OUT / "ablations" / f"{c}_{mode}_{split}_seed{seed}.jsonl.gz"] = (base["ids"], [1, 2, 3, 4])
     rows = split_rows["fresh_id"]
     selected = sorted(i for task in TASKS for i in sorted([i for i, r in enumerate(rows) if r["task"] == task], key=lambda j: rows[j]["id"])[:4])
+    for c in ("untrained_plain", "untrained_bounded"):
+        expected_paths[OUT / "stress" / f"{c}.jsonl.gz"] = ([rows[i]["id"] for i in selected], list(range(1, 9)))
     for seed in config["seeds"]:
         for c in ("recurrent", "reinjection", "multi_depth"):
             expected_paths[OUT / "stress" / f"{c}_seed{seed}.jsonl.gz"] = ([rows[i]["id"] for i in selected], list(range(1, 9)))
@@ -141,7 +161,7 @@ def audit(config):
                 records += 1
     atomic_json(OUT / "public_audit.json", {"all_passed": True, "independent_labels_checked": datasets,
                                             "distinct_final_problems": len(final_ids), "trajectory_examples_checked": records,
-                                            "state_metric_checks": checked, "complete_trajectory_files": len(expected_paths), "record_hashes": sources,
+                                            "state_metric_checks": checked, "complete_trajectory_files": len(expected_paths), "identical_one_pass_training_prefix_batches": matched_prefixes, "record_hashes": sources,
                                             "weights_or_hidden_arrays_required": False})
 
 
@@ -280,7 +300,7 @@ def figures(config, summary, timed, fits, frozen, ablations, stress):
         for j in range(6):plt.text(j, i, f"{matrix[i,j]:+.1f}", ha="center", va="center", fontsize=9)
     plt.title("Small task strata; descriptive, no per-cell significance claim");save("generalization_tasks")
     plt.figure(figsize=(8, 5))
-    for condition, values in stress.items():plt.plot(range(1, 9), [100 * values[str(k)] for k in range(1, 9)], "o-", label=condition)
+    for condition, values in stress.items():plt.plot(range(1, 9), [100 * values[str(k)] for k in range(1, 9)], "o--" if condition.startswith("untrained") else "o-", label=condition)
     plt.xlabel("Depth (5–8 are extrapolation only)");plt.ylabel("Accuracy on 24 prespecified stress items (%)");plt.legend();save("stress_depth")
 
 
@@ -311,6 +331,10 @@ def main():
         rr = [trace(OUT / "stress" / f"{condition}_seed{s}.jsonl.gz") for s in config["seeds"]]
         correct = np.stack([cube(r).argmax(-1) == np.array([q["label"] for q in r]) for r in rr])
         stress[condition] = {str(k + 1): float(correct[:, k].mean()) for k in range(8)}
+    for condition in ("untrained_plain", "untrained_bounded"):
+        rr = trace(OUT / "stress" / f"{condition}.jsonl.gz")
+        correct = cube(rr).argmax(-1) == np.array([q["label"] for q in rr])
+        stress[condition] = {str(k + 1): float(correct[k].mean()) for k in range(8)}
     validation = json.loads((OUT / "implementation_validation.json").read_text())
     final_execution = json.loads((OUT / "final_execution.json").read_text())
     pilots = [json.loads(p.read_text()) for p in (OUT / "training").glob("pilot_*.json")]
@@ -322,12 +346,19 @@ def main():
     else:
         duration = (datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(config["started_utc"])).total_seconds()
         atomic_json(completion_path, {"first_report_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "experiment_duration_seconds": duration})
+    budget = json.loads((EXP / "resume_budget.json").read_text())
+    active_duration = duration - budget["excluded_idle_seconds"]
     output = {"completed_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "experiment_duration_seconds": duration,
               "splits": summary, "timing": timed, "reinjection_inference_ablations": ablations, "stress": stress,
               "selected_recurrent_family": frozen["selected_recurrent_family"], "selected_one_pass_family": frozen["selected_one_pass_family"],
               "seeds": config["seeds"], "peak_mlx_gib": peak, "peak_process_rss_gib": rss,
+              "active_experiment_seconds": active_duration, "excluded_idle_seconds": budget["excluded_idle_seconds"],
               "fit_seconds": {c: sum(f["training_seconds"] for f in fits[c]) for c in CONDITIONS},
               "trainable_parameters": {c: fits[c][0]["trainable_parameters"]["trainable"] for c in CONDITIONS}}
+    output["training_diagnostics"] = {c: {"gradient_norm_median": float(np.median([b["gradient_norm"] for f in fits[c] for b in f["batch_records"]])),
+                                           "gradient_norm_max": float(max(b["gradient_norm"] for f in fits[c] for b in f["batch_records"])),
+                                           "completed_batches": sum(len(f["batch_records"]) for f in fits[c]),
+                                           "checkpoint_diagnostics": {seed: r["checkpoint_diagnostics"] for seed, r in frozen["fits"][c].items()}} for c in CONDITIONS}
     atomic_json(OUT / "summary.json", output)
     figures(config, summary, timed, fits, frozen, ablations, stress)
     selected, onepass = frozen["selected_recurrent_family"], frozen["selected_one_pass_family"]
@@ -340,13 +371,13 @@ def main():
         conclusion = "Trainable recurrence did not establish an accuracy advantage over the validation-selected one-pass adapter. This is the main result; better supervised loss or a favorable point estimate does not establish useful repeated reasoning."
     lines = ["# Experiment 5 — Train the Loop, Not the Judge", "", "## Executive summary", "", conclusion, "",
              f"Selected before final opening: recurrent family **{selected}**, fixed depth **4**; one-pass family **{onepass}**, depth **1**. Fresh-ID accuracies are **{100*fid['systems'][selected]['depths']['4']['accuracy']:.2f}%** versus **{100*fid['systems'][onepass]['depths']['1']['accuracy']:.2f}%**; paired difference **{interval(main_comparison)} percentage points**.", "",
-             f"Completed 15 main fits (five conditions × three seeds), plus two separate pilot fits. Seeds {config['seeds']}. Total study wall time through report: {duration/60:.1f} minutes; synchronized fitting excludes evaluation/checkpoint/report overhead. Peak MLX allocation {peak:.2f} GiB; process RSS {rss:.2f} GiB. All Experiment 5 work is local and excluded from the public v0.1.0 release.", "",
+             f"Completed 15 main fits (five conditions × three seeds), plus two separate pilot fits. Seeds {config['seeds']}. Active study time through report: {active_duration/60:.1f} minutes, within the six-hour active budget. Calendar elapsed time: {duration/3600:.2f} hours, including a documented {budget['excluded_idle_seconds']/3600:.2f}-hour session idle interval after training finished. See [budget receipt](../../experiments/experiment_05/resume_budget.json). Synchronized fitting excludes evaluation/checkpoint/report overhead. Peak MLX allocation {peak:.2f} GiB; process RSS {rss:.2f} GiB. All Experiment 5 work is local and excluded from the public v0.1.0 release.", "",
              "## Architecture", "", "Frozen pinned Qwen3-0.6B: 28 layers, hidden width 1,024, 16 query heads, eight KV heads, 128-dimensional attention heads, SwiGLU width 3,072, tied embeddings. These are inspected model configuration values, not loader assumptions. Early layers 0–11 feed shared middle layers 12–14, followed by late layers 15–27. Rank-8 query/value LoRA is shared across loops. All original arrays stay frozen. No final-state MLP substitutes for the recurrent transformer block.", "",
              "Depth one runs the adapted block once. Later passes RMS-match the original block input to the current token state, optionally convexly reinject it with r in [0, 0.25], apply the same adapted transformer block, cap proposal norm at twice that token's depth-one norm, and mix using sigmoid(u), initialized to 0.1. Reinjection initializes to 0.05. Gates are shared global learned scalars, not input-dependent networks. This bounds growth relative to the learned first state; it does not guarantee preservation of the original model at later depths. LoRA zero-output B gives depth-one initialization parity, while the open update path permits learning.", "",
              "```mermaid\nflowchart LR\n X[Tokens] --> E[Frozen early layers]\n E --> H[Original state h0]\n H --> F[Shared middle transformer + LoRA]\n F --> U[Bounded gated recurrent update]\n H --> U\n U --> F\n U --> L[Frozen late layers]\n L --> Y[Four-label decision]\n```", "",
              "## Research motivation", "", "Earlier probes recognized correctness, loss gains and decision transitions, while additional recurrence often damaged answers. This experiment trains the computation itself. A gain can reflect task-specific adaptation, calibration, extra capacity or computation; shared weights and additional loops do not by themselves demonstrate reasoning.", "",
              "## Differences from RecurTrace", "", "See the [primary-source review](../../experiments/experiment_05/research_references.md). This is a small LoRA/gate study, with bounded updates and four-depth CE rather than a reproduction of loop memory, stochastic-depth large-mixture training, or halting distillation. No author implementation is copied. There is no memory or controller in the primary study.", "",
-             "## Training methodology", "", f"AdamW, learning rate {config['learning_rate']}, decay {config['weight_decay']}, clipping 1, batch {config['batch_size']}. D/E/F/G train {config['epochs']} epochs. E/F uniformly sample one supervised depth 1–4 per batch; G sums equal-weight losses at all four. No model trains only at deepest depth. Mild KL preservation (alpha {config['preservation_alpha']}) applies only where frozen training decisions are correct. Labels supervise fitting and offline metrics; the model inference API receives tokens/lengths only. Confidence increases are not rewarded independently of correctness.", "",
+             "## Training methodology", "", f"AdamW, learning rate {config['learning_rate']}, decay {config['weight_decay']}, clipping 1, batch {config['batch_size']}. D/E/F/G train {config['epochs']} epochs. E/F uniformly sample one supervised depth 1–4 per batch; G averages equal-weight losses at all four. Configured weights are normalized by their sum. No model trains only at deepest depth. Mild KL preservation (alpha {config['preservation_alpha']}) applies only where frozen training decisions are correct, averaging zero for other examples over the full batch. Labels supervise fitting and offline metrics; the model inference API receives tokens/lengths only. Confidence increases are not rewarded independently of correctness.", "",
              f"The additional one-pass control receives {config['compute_control_epochs']} epochs, fixed before main training as ceil(3 × pilot multi-depth/one-pass batch time ratio). This approximates optimization cost, not exact FLOPs or equal wall time. Measured fit seconds are retained. It may select an earlier checkpoint; extra optimization can overfit. All conditions share initial adapter seeds, example order, rank and optimizer. Checkpoints minimize mean validation NLL over their supervised inference depths. Family selection uses mean validation NLL at the prespecified final inference depth, not final accuracy.", "",
              "## Dataset methodology", "", f"Fresh 4A generators: {config['sizes']['train']} training, {config['sizes']['val']} validation, {sum(config['sizes'][s] for s in FINAL)} prospective final problems across five splits. Six task families and nominal difficulty cells stay balanced; no poor-performing task is removed. Independent reference solvers verify labels. Public historical IDs/prompts/alpha structures and compatible original structure exclusions reject prior instances. ID/template shifts share abstract algorithms; structural shift holds out a generator per family. Static predicates do not always become deeper under nominal hard strata. Numeric-range pointer items are unchanged-range controls.", "",
              f"Frozen competence before fitting: training {100*json.loads((OUT/'baseline_competence.json').read_text())['train']['accuracy']:.2f}%, validation {100*json.loads((OUT/'baseline_competence.json').read_text())['val']['accuracy']:.2f}%. Several tasks remain near/below four-choice chance. This limits the study and may make calibration dominate adaptation. Final labels did not select data, hyperparameters, seeds, checkpoints, or depths.", "",
@@ -375,6 +406,12 @@ def main():
         k = 1 if condition.startswith("one_pass") or condition == "frozen" else 4
         lines.append(f"| {condition} | {k} | {timed[f'{condition}:d{k}:b1']['ms_per_item']:.2f} | {timed[f'{condition}:d{k}:b8']['ms_per_item']:.2f} |")
     lines += ["", f"Timing uses 24 validation prompts, batches 1/8, {config['timing_warmups']} warmups and {config['timing_repeats']} synchronized repeats, three seeds, and randomized condition order. Condition runs remain sequential, so between-run thermals/load are not fully controlled. Batch-8 amortization measures throughput; variable prompt lengths add padding work. Model load is excluded. This is full four-candidate decision inference, not open-ended generation with a full-vocabulary output projection. The latency figure uses accuracy on the **same timed validation items**, not final accuracy from different prompts. Matrix FLOPs are not used to claim speedups.", "", "![Accuracy versus end-to-end latency](figures/accuracy_latency.png)", "", "![Parameters versus accuracy](figures/parameters_accuracy.png)", "", "## Generalization", "", "![Generalization by task family](figures/generalization_tasks.png)", "", "All families, nominal strata, withheld structural approaches and numeric shifts remain in the public summary. Cells contain few examples and are descriptive. Added compute, calibrated answer probabilities, memorized templates, or task-specific readouts remain alternative explanations for any accuracy gain.", "", "## Corrected/degraded decision analysis", "", "| Family | W→R rate [95%] | R→W rate [95%] | W→R given wrong | R→W given right |", "|---|---:|---:|---:|---:|"]
+    insertion = lines.index("## Corrected/degraded decision analysis")
+    descriptive = ["| Fresh-ID nominal difficulty | Selected one pass | Selected recurrence, depth 4 |", "|---|---:|---:|"]
+    for stratum in sorted(fid["systems"][selected]["difficulty"]):
+        descriptive.append(f"| {stratum} | {100*fid['systems'][onepass]['difficulty'][stratum]['1']:.2f}% | {100*fid['systems'][selected]['difficulty'][stratum]['4']:.2f}% |")
+    descriptive += ["", "Difficulty is a predefined generator descriptor, not an independently established reasoning-depth scale. Harder-depth shift and every task family are also reported without filtering.", ""]
+    lines[insertion:insertion] = descriptive
     for condition in ("recurrent", "reinjection", "multi_depth"):
         tr = fid["systems"][condition]["transitions"]
         lines.append(f"| {condition} | {interval(tr['WR'])}% | {interval(tr['RW'])}% | {100*tr['WR_given_wrong']:.2f}% | {100*tr['RW_given_right']:.2f}% |")
@@ -386,6 +423,14 @@ def main():
     for c in CONDITIONS:
         r = fid["systems"][c]["depths"]["1" if c.startswith("one_pass") else "4"]
         lines.append(f"| {c} | {' / '.join(f'{100*v:.1f}' for v in r['prediction_class_frequencies'])} | {r['mean_option_entropy']:.4f} | {100*r['accuracy_seed_sd']:.2f} |")
+    lines += ["", "| Family | Selected update gates by seed | Selected reinjection gates by seed | Median / maximum gradient norm before clipping |", "|---|---|---|---|"]
+    for c in CONDITIONS:
+        diag = output["training_diagnostics"][c]
+        values = list(diag["checkpoint_diagnostics"].values())
+        def gates(name):
+            return " / ".join("—" if d[name] is None else f"{d[name]:.4f}" for d in values)
+        lines.append(f"| {c} | {gates('update')} | {gates('reinjection')} | {diag['gradient_norm_median']:.3f} / {diag['gradient_norm_max']:.3f} |")
+    lines += ["", "Gate values and nonzero saved LoRA B norms are checkpoint measurements. A gate staying near initialization is a limitation to investigate, not proof that it caused a failure. All reported gradients were clipped to norm one before the optimizer update."]
     lines += ["", "![Training and validation loss](figures/training_validation_loss.png)", "", "## Limitations", "", "This is a completed small controlled study, not an exhaustive hyperparameter sweep or broad reasoning benchmark. Only rank-8 attention adapters, one block, three short main epochs, one optimizer schedule and few synthetic instances were tested. The additional one-pass control uses approximate training-cost matching; exact hardware budgets differ. A fixed-depth compute control is also available by comparing the same adapted model at depths 1–4, but there is no separate larger nonshared backbone. No full-model fine-tuning, natural task suite, incremental cache optimization, controller retraining, trajectory objective or loop memory was run. Saved weights and large hidden arrays remain ignored. The preserved historical release and reports are unchanged.", "", "## Future work", "", "Use a larger fresh training/validation set and a separately reported diagnostic task mixture where the frozen representation has intermediate competence. Retain the original hard mixture as primary. Test longer training and a small gate-strength ablation before investing in memory/halting. Compare against matched one-pass optimization, and require paired structural-transfer evidence before attributing gains to recurrence. Old C/V/D probes are not assumed compatible with the newly trained states; transfer/recalibration is deferred until useful fixed-depth computation is established. This experiment prioritizes the thinker.", "", "## Reproduction and local status", "", "```sh\nLATENT_LOOP_MLX_TESTS=1 .venv/bin/python -m pytest -q\n.venv/bin/python -m latent_loop.experiment05.validate\n.venv/bin/python -m latent_loop.experiment05.train pilot\n.venv/bin/python -m latent_loop.experiment05.train main\n.venv/bin/python -m latent_loop.experiment05.evaluate freeze\n.venv/bin/python -m latent_loop.experiment05.evaluate final\n.venv/bin/python -m latent_loop.experiment05.evaluate timing\n.venv/bin/python -m latent_loop.experiment05.report\n```", "", "The completed config/protocol is consumed: fitting refuses after final opening. Use a new independent namespace, fresh seeds/runtime clock and manifests for a new experiment, rather than overwriting these files. Public CPU report regeneration reads saved measurements without MLX. Training resumes adapter/optimizer checkpoints and deterministic batch/depth schedules after safe interruptions. Source/config/data hashes reject incompatible resume. No Experiment 5 commit is pushed. Public v0.1.0 is `0a637eb97d66eebbd740b612ab92e9095c496931`.", "", "[Protocol](../../experiments/experiment_05/frozen_protocol.json) · [Dataset manifest](../../experiments/experiment_05/dataset_manifest.json) · [Summary](../../results/experiment_05/summary.json) · [Public audit](../../results/experiment_05/public_audit.json) · [Primary references](../../experiments/experiment_05/research_references.md)"]
     REPORT.mkdir(parents=True, exist_ok=True)
     path = REPORT / "train_the_thinker.md"
