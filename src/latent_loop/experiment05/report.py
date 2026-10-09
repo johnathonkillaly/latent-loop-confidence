@@ -53,6 +53,7 @@ def statistic(logits, labels):
 def audit(config):
     records, datasets, checked = 0, 0, 0
     final_ids = set()
+    expected_labels = {}
     sources = {}
     for split in ("train", "val", *FINAL):
         p = OUT / "datasets" / f"{split}.jsonl.gz"
@@ -60,6 +61,7 @@ def audit(config):
         datasets += len(rows)
         assert len(rows) == config["sizes"][split]
         for row in rows:
+            expected_labels[row["id"]] = (row["label"], row["task"])
             answer = solve(row["generator_id"], row["spec"])
             text = row["entities"][answer] if isinstance(answer, int) else answer
             assert row["choices"][row["label"]] == text
@@ -73,6 +75,7 @@ def audit(config):
             sources[str(p)] = sha(p)
             rows = trace(p)
             for row in rows:
+                assert expected_labels[row["id"]] == (row["label"], row["task"])
                 for k, r in row["depths"].items():
                     l = np.array(r["logits"])
                     probabilities = softmax(l)
@@ -115,7 +118,7 @@ def summarize(config, frozen):
                 systems[condition]["depths"][str(k + 1)] = {**{name: float(np.mean([s[name] for s in stats])) for name in stats[0]},
                                                            "accuracy_interval": bootstrap(correct[:, k], config["bootstrap_repeats"], 550201 + k),
                                                            "accuracy_seed_sd": float(correct[:, k].mean(-1).std(ddof=1)),
-                                                           "prediction_class_frequencies": np.bincount(logits[:, k].argmax(-1).ravel(), minlength=4).astype(float).tolist(),
+                                                           "prediction_class_frequencies": (np.bincount(logits[:, k].argmax(-1).ravel(), minlength=4).astype(float) / (logits.shape[0] * logits.shape[2])).tolist(),
                                                            "mean_option_entropy": float(np.mean([-np.sum(softmax(v[k],axis=-1)*np.log(np.maximum(softmax(v[k],axis=-1),1e-12)),axis=-1).mean() for v in logits])),
                                                            "state_norm": float(np.mean([cube(rr, "state_norm")[k].mean() for rr in allrows])),
                                                            "state_drift": float(np.mean([cube(rr, "state_drift")[k].mean() for rr in allrows]))}

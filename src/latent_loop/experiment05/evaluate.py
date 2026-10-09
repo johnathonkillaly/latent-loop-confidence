@@ -16,7 +16,7 @@ from latent_loop.backbone import environment, get_model
 from latent_loop.experiment04a.data import TASKS, canonical, sha
 from latent_loop.experiment05.data import CACHE, EXP, FINAL, OUT, load
 from latent_loop.experiment05.model import Thinker
-from latent_loop.experiment05.train import baseline, guard, make_model, metrics, predict, utc
+from latent_loop.experiment05.train import baseline, guard, make_model, predict, utc
 from latent_loop.experiment05.validate import batch
 from latent_loop.training import atomic_json
 
